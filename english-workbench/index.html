@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>英语学习工作台 · 艾宾浩斯背单词</title>
+    <style>
+        :root {
+            --bg: #f5f0eb;
+            --card: #ffffff;
+            --primary: #5b7a6e;
+            --primary-light: #e8f0ec;
+            --primary-dark: #3d5a4e;
+            --accent: #d4a373;
+            --accent-light: #faf0e6;
+            --success: #7a9e7e;
+            --danger: #c97b7b;
+            --text: #3d3d3d;
+            --text-light: #8a8a8a;
+            --shadow: 0 4px 24px rgba(91, 122, 110, 0.10);
+            --radius: 20px;
+            --radius-sm: 12px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            min-height: 100vh;
+            color: var(--text);
+            padding: 16px;
+        }
+        .container { max-width: 520px; margin: 0 auto; }
+        .hidden { display: none !important; }
+
+        header {
+            text-align: center;
+            padding: 24px 16px 16px;
+            background: var(--card);
+            border-radius: var(--radius);
+            margin-bottom: 16px;
+            box-shadow: var(--shadow);
+        }
+        header h1 { font-size: 22px; color: var(--primary-dark); font-weight: 600; }
+        header .sub { color: var(--text-light); font-size: 13px; margin-top: 4px; display: flex; justify-content: center; gap: 16px; }
+        header .sub span { cursor: pointer; padding: 2px 8px; border-radius: 8px; transition: background 0.2s; }
+        header .sub span:hover { background: var(--primary-light); }
+        header .sub span.active { background: var(--primary-light); color: var(--primary-dark); font-weight: 500; }
+
+        .nav-tabs {
+            display: flex;
+            gap: 0;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            padding: 4px;
+            margin: 12px 0 0;
+        }
+        .nav-tabs button {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            background: transparent;
+            border-radius: 10px;
+            font-size: 13px;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .nav-tabs button.active {
+            background: var(--card);
+            color: var(--primary-dark);
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .progress-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .progress-track {
+            flex: 1;
+            height: 8px;
+            background: var(--primary-light);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--success));
+            border-radius: 4px;
+            transition: width 0.4s ease;
+        }
+        .progress-text { font-size: 13px; color: var(--text-light); white-space: nowrap; }
+
+        .review-card {
+            text-align: center;
+            padding: 32px 20px 24px;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .review-card .word {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .review-card .word-small {
+            font-size: 26px;
+        }
+        .review-card .hint {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        .review-card .answer-section {
+            width: 100%;
+            padding: 20px;
+            background: var(--accent-light);
+            border-radius: var(--radius-sm);
+            margin-bottom: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .review-card .answer-section .translation {
+            font-size: 22px;
+            color: var(--primary-dark);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .review-card .answer-section .example {
+            font-size: 15px;
+            color: var(--text);
+            line-height: 1.6;
+            font-style: italic;
+        }
+        .review-card .answer-section .example-zh {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-top: 6px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn:active { transform: scale(0.96); }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .btn-accent { background: var(--accent); color: white; }
+        .btn-accent:hover { background: #c4915e; }
+        .btn-success { background: var(--success); color: white; }
+        .btn-success:hover { background: #5f8363; }
+        .btn-danger { background: var(--danger); color: white; }
+        .btn-danger:hover { background: #b56161; }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        .btn-outline:hover { background: var(--primary-light); }
+        .btn-sm { padding: 8px 16px; font-size: 13px; }
+        .btn-icon { padding: 10px 14px; font-size: 18px; }
+
+        .form-group { margin-bottom: 16px; }
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid #eee;
+            border-radius: var(--radius-sm);
+            font-size: 15px;
+            transition: border-color 0.2s;
+            font-family: inherit;
+            background: #fafafa;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+        }
+        .form-group textarea { resize: vertical; min-height: 60px; }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 14px 8px;
+            background: var(--primary-light);
+            border-radius: var(--radius-sm);
+        }
+        .stat-item .num { font-size: 24px; font-weight: 700; color: var(--primary-dark); }
+        .stat-item .label { font-size: 12px; color: var(--text-light); margin-top: 2px; }
+
+        .word-list { list-style: none; max-height: 360px; overflow-y: auto; }
+        .word-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 14px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .word-list li:last-child { border-bottom: none; }
+        .word-list .w-en { font-weight: 500; color: var(--primary-dark); }
+        .word-list .w-zh { color: var(--text-light); font-size: 13px; }
+        .word-list .w-level {
+            font-size: 11px;
+            padding: 2px 10px;
+            border-radius: 10px;
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+        .word-list .w-del {
+            background: none;
+            border: none;
+            color: var(--danger);
+            cursor: pointer;
+            padding: 4px 8px;
+            font-size: 16px;
+            opacity: 0.5;
+            transition: opacity 0.2s;
+        }
+        .word-list .w-del:hover { opacity: 1; }
+
+        .celebration {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .celebration .emoji { font-size: 64px; margin-bottom: 12px; }
+        .celebration h2 { color: var(--primary-dark); font-size: 24px; margin-bottom: 8px; }
+        .celebration p { color: var(--text-light); font-size: 14px; line-height: 1.6; }
+
+        .settings-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .settings-row label { font-size: 14px; color: var(--text); }
+        .settings-row input[type="number"] {
+            width: 72px;
+            padding: 6px 10px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            font-size: 14px;
+            text-align: center;
+        }
+        .settings-row input[type="number"]:focus { outline: none; border-color: var(--primary); }
+
+        .streak-bar {
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+            margin: 12px 0;
+        }
+        .streak-bar .day {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: var(--text-light);
+        }
+        .streak-bar .day.done { background: var(--success); color: white; }
+        .streak-bar .day.today { border: 2px solid var(--primary); }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+        }
+        .empty-state .icon { font-size: 48px; margin-bottom: 12px; opacity: 0.4; }
+
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-dark);
+            color: white;
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 100;
+            pointer-events: none;
+        }
+        .toast.show { opacity: 1; }
+
+        .level-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            color: white;
+        }
+        .level-0 { background: #e0e0e0; color: #666; }
+        .level-1 { background: #c8e6c9; color: #2e7d32; }
+        .level-2 { background: #a5d6a7; color: #1b5e20; }
+        .level-3 { background: #81c784; color: #1b5e20; }
+        .level-4 { background: #66bb6a; color: white; }
+        .level-5 { background: #4caf50; color: white; }
+
+        @media (max-width: 400px) {
+            body { padding: 10px; }
+            .card { padding: 16px; }
+            .review-card { padding: 20px 12px; }
+            .review-card .word { font-size: 26px; }
+            .stats-grid { grid-template-columns: repeat(3, 1fr); }
+            .btn { padding: 10px 16px; font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="app">
+    <header>
+        <h1>📝 英语学习工作台</h1>
+        <div class="sub">
+            <span class="active" data-tab="review" onclick="switchTab('review')">复习</span>
+            <span data-tab="add" onclick="switchTab('add')">录入</span>
+            <span data-tab="stats" onclick="switchTab('stats')">统计</span>
+            <span data-tab="settings" onclick="switchTab('settings')">设置</span>
+        </div>
+    </header>
+
+    <div id="tab-review">
+        <div id="review-ready" class="card">
+            <div class="stats-grid" id="dailyStats">
+                <div class="stat-item">
+                    <div class="num" id="statDue">0</div>
+                    <div class="label">今日待复习</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num" id="statNew">0</div>
+                    <div class="label">新词待录入</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num" id="statTotal">0</div>
+                    <div class="label">总词汇量</div>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFill" style="width:0%"></div>
+                </div>
+                <div class="progress-text" id="progressText">0 / 0</div>
+            </div>
+
+            <div id="reviewContent">
+                <div id="reviewCard" class="review-card hidden">
+                    <div class="word" id="wordDisplay"></div>
+                    <div class="hint">点击【看答案】后选择记得与否</div>
+                    <div id="answerSection" class="answer-section hidden">
+                        <div class="translation" id="translationDisplay"></div>
+                        <div class="example" id="exampleDisplay"></div>
+                        <div class="example-zh" id="exampleZhDisplay"></div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-icon btn-outline" onclick="speakWord()" title="发音">🔊</button>
+                        <button class="btn btn-accent" onclick="showAnswer()">👁 看答案</button>
+                        <button class="btn btn-danger" onclick="markForgot()" id="btnForgot">❌ 没记住</button>
+                        <button class="btn btn-success" onclick="markRemembered()" id="btnRemember">✅ 记下了</button>
+                    </div>
+                </div>
+
+                <div id="reviewEmpty" class="empty-state">
+                    <div class="icon">🎉</div>
+                    <h2 style="color: var(--primary-dark); margin-bottom: 8px;">今日任务完成！</h2>
+                    <p>今天没有待复习的单词了，休息一下或录入新词吧。</p>
+                    <div style="margin-top: 16px;">
+                        <button class="btn btn-primary" onclick="switchTab('add')">➕ 录入新词</button>
+                    </div>
+                </div>
+
+                <div id="reviewWelcome" class="review-card">
+                    <div class="empty-state">
+                        <div class="icon">📚</div>
+                        <h2 style="color: var(--primary-dark); margin-bottom: 8px;">准备就绪</h2>
+                        <p id="welcomeText">正在计算今日复习数量...</p>
+                        <div style="margin-top: 20px;">
+                            <button class="btn btn-primary" onclick="startReview()">🚀 开始复习</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-add" class="hidden">
+        <div class="card">
+            <h2 style="color: var(--primary-dark); font-size: 18px; margin-bottom: 16px;">➕ 录入新单词</h2>
+            <div class="form-group">
+                <label>英文单词 / 短语 *</label>
+                <input type="text" id="inputWord" placeholder="如：ubiquitous" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label>中文释义 *</label>
+                <input type="text" id="inputTranslation" placeholder="如：无处不在的" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label>例句（英文）</label>
+                <textarea id="inputExample" placeholder="如：Smartphones are ubiquitous in modern society." rows="2"></textarea>
+            </div>
+            <div class="form-group">
+                <label>例句翻译（中文）</label>
+                <textarea id="inputExampleTranslation" placeholder="如：智能手机在现代社会无处不在。" rows="2"></textarea>
+            </div>
+            <button class="btn btn-primary" onclick="addWord()" style="width:100%">💾 保存</button>
+        </div>
+    </div>
+
+    <div id="tab-stats" class="hidden">
+        <div class="card">
+            <h2 style="color: var(--primary-dark); font-size: 18px; margin-bottom: 16px;">📊 学习统计</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="num" id="statsTotal">0</div>
+                    <div class="label">总词汇</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num" id="statsMastered">0</div>
+                    <div class="label">已掌握</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num" id="statsLearning">0</div>
+                    <div class="label">学习中</div>
+                </div>
+            </div>
+
+            <div style="margin: 16px 0;">
+                <div style="font-size:14px; color:var(--text); margin-bottom:8px;">📅 今日打卡</div>
+                <div class="streak-bar" id="streakBar"></div>
+            </div>
+
+            <h3 style="font-size: 14px; color: var(--text-light); margin-bottom: 8px;">所有单词</h3>
+            <ul class="word-list" id="wordList"></ul>
+        </div>
+    </div>
+
+    <div id="tab-settings" class="hidden">
+        <div class="card">
+            <h2 style="color: var(--primary-dark); font-size: 18px; margin-bottom: 16px;">⚙️ 设置</h2>
+            <div class="settings-row">
+                <label>每日复习数量</label>
+                <input type="number" id="dailyLimit" min="5" max="100" value="20">
+            </div>
+            <div class="settings-row">
+                <label>自动发音</label>
+                <input type="checkbox" id="autoSpeak" checked>
+            </div>
+            <hr style="border: none; border-top: 1px solid #f0f0f0; margin: 16px 0;">
+            <div class="settings-row">
+                <label style="color: var(--danger);">清空所有数据</label>
+                <button class="btn btn-sm btn-danger" onclick="clearAllData()">🗑 清空</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+</div>
+
+<script>
+    const STORAGE_KEY = 'english_workbench_words';
+    const SETTINGS_KEY = 'english_workbench_settings';
+    const CHECKIN_KEY = 'english_workbench_checkin';
+
+    const INTERVALS = [0, 1, 3, 7, 15, 30];
+
+    let state = {
+        words: [],
+        reviewQueue: [],
+        reviewIndex: 0,
+        currentAnswerShown: false,
+        dailyLimit: 20,
+        autoSpeak: true,
+        todayStr: ''
+    };
+
+    function getToday() {
+        const d = new Date();
+        return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+    }
+
+    function loadData() {
+        try {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            state.words = raw ? JSON.parse(raw) : [];
+        } catch { state.words = []; }
+
+        try {
+            const settings = JSON.parse(localStorage.getItem(SETTINGS_KEY));
+            if (settings) {
+                state.dailyLimit = settings.dailyLimit || 20;
+                state.autoSpeak = settings.autoSpeak !== false;
+            }
+        } catch {}
+
+        state.todayStr = getToday();
+        document.getElementById('dailyLimit').value = state.dailyLimit;
+        document.getElementById('autoSpeak').checked = state.autoSpeak;
+    }
+
+    function saveWords() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state.words));
+    }
+
+    function saveSettings() {
+        localStorage.setItem(SETTINGS_KEY, JSON.stringify({
+            dailyLimit: state.dailyLimit,
+            autoSpeak: state.autoSpeak
+        }));
+    }
+
+    function getCheckinDates() {
+        try {
+            return JSON.parse(localStorage.getItem(CHECKIN_KEY)) || [];
+        } catch { return []; }
+    }
+
+    function addCheckin(date) {
+        const dates = getCheckinDates();
+        if (!dates.includes(date)) {
+            dates.push(date);
+            localStorage.setItem(CHECKIN_KEY, JSON.stringify(dates));
+        }
+    }
+
+    function getDueWords() {
+        return state.words.filter(w => w.nextReviewDate <= state.todayStr);
+    }
+
+    function getLevel(level) {
+        return INTERVALS[level] !== undefined ? INTERVALS[level] : 30;
+    }
+
+    function getLevelLabel(level) {
+        const labels = ['新词', '1天', '3天', '7天', '15天', '30天'];
+        return labels[level] || '30天';
+    }
+
+    function shuffle(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+    }
+
+    function showToast(msg) {
+        const el = document.getElementById('toast');
+        el.textContent = msg;
+        el.classList.add('show');
+        clearTimeout(el._timer);
+        el._timer = setTimeout(() => el.classList.remove('show'), 2000);
+    }
+
+    function formatDate(dateStr) {
+        const parts = dateStr.split('-');
+        return parts[1] + '/' + parts[2];
+    }
+
+    function switchTab(tab) {
+        document.querySelectorAll('[data-tab]').forEach(el => el.classList.remove('active'));
+        document.querySelector(`[data-tab="${tab}"]`)?.classList.add('active');
+
+        ['review','add','stats','settings'].forEach(t => {
+            document.getElementById('tab-' + t).classList.toggle('hidden', t !== tab);
+        });
+
+        if (tab === 'review') prepareReview();
+        if (tab === 'stats') renderStats();
+    }
+
+    function addWord() {
+        const word = document.getElementById('inputWord').value.trim();
+        const translation = document.getElementById('inputTranslation').value.trim();
+        const example = document.getElementById('inputExample').value.trim();
+        const exampleTranslation = document.getElementById('inputExampleTranslation').value.trim();
+
+        if (!word || !translation) {
+            showToast('请至少填写英文和中文释义');
+            return;
+        }
+
+        const exists = state.words.some(w => w.word.toLowerCase() === word.toLowerCase());
+        if (exists) {
+            showToast('这个单词已存在');
+            return;
+        }
+
+        state.words.push({
+            id: Date.now(),
+            word,
+            translation,
+            example,
+            exampleTranslation,
+            createdDate: state.todayStr,
+            level: 0,
+            nextReviewDate: state.todayStr,
+            lastReviewDate: null
+        });
+
+        saveWords();
+
+        document.getElementById('inputWord').value = '';
+        document.getElementById('inputTranslation').value = '';
+        document.getElementById('inputExample').value = '';
+        document.getElementById('inputExampleTranslation').value = '';
+
+        showToast('已保存：' + word);
+        updateDailyStats();
+    }
+
+    function prepareReview() {
+        const due = getDueWords();
+        const masteredToday = state.words.filter(w =>
+            w.lastReviewDate === state.todayStr && w.level >= 5
+        );
+
+        const newDue = due.filter(w => w.lastReviewDate !== state.todayStr);
+        const limit = state.dailyLimit;
+
+        let pool = newDue.slice(0, limit);
+        pool = shuffle(pool);
+
+        state.reviewQueue = pool;
+        state.reviewIndex = 0;
+        state.currentAnswerShown = false;
+
+        const welcome = document.getElementById('reviewWelcome');
+        const card = document.getElementById('reviewCard');
+        const empty = document.getElementById('reviewEmpty');
+
+        if (pool.length === 0 && masteredToday.length > 0) {
+            welcome.classList.add('hidden');
+            card.classList.add('hidden');
+            empty.classList.remove('hidden');
+        } else if (pool.length === 0) {
+            welcome.classList.remove('hidden');
+            card.classList.add('hidden');
+            empty.classList.add('hidden');
+            document.getElementById('welcomeText').textContent = '今日没有待复习的单词，录入新词开始学习吧！';
+        } else {
+            welcome.classList.add('hidden');
+            empty.classList.add('hidden');
+            card.classList.remove('hidden');
+            showCurrentWord();
+        }
+
+        updateDailyStats();
+        updateProgress();
+    }
+
+    function showCurrentWord() {
+        if (state.reviewIndex >= state.reviewQueue.length) {
+            prepareReview();
+            return;
+        }
+
+        const w = state.reviewQueue[state.reviewIndex];
+        document.getElementById('wordDisplay').textContent = w.word;
+        document.getElementById('wordDisplay').className = 'word' + (w.word.length > 12 ? ' word-small' : '');
+
+        document.getElementById('answerSection').classList.add('hidden');
+        document.getElementById('translationDisplay').textContent = '';
+        document.getElementById('exampleDisplay').textContent = '';
+        document.getElementById('exampleZhDisplay').textContent = '';
+
+        state.currentAnswerShown = false;
+        updateProgress();
+
+        if (state.autoSpeak) {
+            speakText(w.word);
+        }
+    }
+
+    function showAnswer() {
+        if (state.currentAnswerShown) return;
+        const w = state.reviewQueue[state.reviewIndex];
+        if (!w) return;
+
+        document.getElementById('translationDisplay').textContent = w.translation;
+        document.getElementById('exampleDisplay').textContent = w.example || '';
+        document.getElementById('exampleZhDisplay').textContent = w.exampleTranslation || '';
+        document.getElementById('answerSection').classList.remove('hidden');
+
+        state.currentAnswerShown = true;
+
+        if (w.example) {
+            setTimeout(() => speakText(w.example), 300);
+        }
+    }
+
+    function markRemembered() {
+        if (!state.currentAnswerShown) {
+            showToast('先看答案再判断');
+            return;
+        }
+        const w = state.reviewQueue[state.reviewIndex];
+        if (!w) return;
+
+        const wordObj = state.words.find(x => x.id === w.id);
+        if (!wordObj) return;
+
+        wordObj.level = Math.min(wordObj.level + 1, 5);
+        wordObj.lastReviewDate = state.todayStr;
+        const interval = getLevel(wordObj.level);
+        const next = new Date();
+        next.setDate(next.getDate() + interval);
+        wordObj.nextReviewDate = next.getFullYear() + '-' +
+            String(next.getMonth()+1).padStart(2,'0') + '-' +
+            String(next.getDate()).padStart(2,'0');
+
+        saveWords();
+        state.reviewIndex++;
+        showToast('记下了！下次复习：' + getLevelLabel(wordObj.level));
+
+        if (state.reviewIndex >= state.reviewQueue.length) {
+            addCheckin(state.todayStr);
+            prepareReview();
+        } else {
+            showCurrentWord();
+        }
+    }
+
+    function markForgot() {
+        if (!state.currentAnswerShown) {
+            showToast('先看答案再判断');
+            return;
+        }
+        const w = state.reviewQueue[state.reviewIndex];
+        if (!w) return;
+
+        const wordObj = state.words.find(x => x.id === w.id);
+        if (!wordObj) return;
+
+        wordObj.level = 0;
+        wordObj.lastReviewDate = state.todayStr;
+        const next = new Date();
+        next.setDate(next.getDate() + 1);
+        wordObj.nextReviewDate = next.getFullYear() + '-' +
+            String(next.getMonth()+1).padStart(2,'0') + '-' +
+            String(next.getDate()).padStart(2,'0');
+
+        saveWords();
+        state.reviewIndex++;
+        showToast('没记住，已重置为 1 天后复习');
+
+        if (state.reviewIndex >= state.reviewQueue.length) {
+            addCheckin(state.todayStr);
+            prepareReview();
+        } else {
+            showCurrentWord();
+        }
+    }
+
+    function speakText(text) {
+        if (!text || !window.speechSynthesis) return;
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = 'en-US';
+        u.rate = 0.9;
+        u.pitch = 1;
+        window.speechSynthesis.speak(u);
+    }
+
+    function speakWord() {
+        const w = state.reviewQueue[state.reviewIndex];
+        if (w) speakText(w.word);
+    }
+
+    function startReview() {
+        prepareReview();
+    }
+
+    function updateProgress() {
+        const total = state.reviewQueue.length;
+        const done = state.reviewIndex;
+        const pct = total > 0 ? (done / total * 100) : 0;
+        document.getElementById('progressFill').style.width = pct + '%';
+        document.getElementById('progressText').textContent = done + ' / ' + total;
+    }
+
+    function updateDailyStats() {
+        const due = getDueWords().filter(w => w.lastReviewDate !== state.todayStr).length;
+        document.getElementById('statDue').textContent = due;
+        document.getElementById('statNew').textContent = state.words.filter(w => w.level === 0).length;
+        document.getElementById('statTotal').textContent = state.words.length;
+    }
+
+    function renderStats() {
+        const total = state.words.length;
+        const mastered = state.words.filter(w => w.level >= 5).length;
+        const learning = total - mastered;
+
+        document.getElementById('statsTotal').textContent = total;
+        document.getElementById('statsMastered').textContent = mastered;
+        document.getElementById('statsLearning').textContent = learning;
+
+        const list = document.getElementById('wordList');
+        list.innerHTML = '';
+        const sorted = [...state.words].sort((a,b) => a.nextReviewDate.localeCompare(b.nextReviewDate));
+        sorted.forEach(w => {
+            const li = document.createElement('li');
+            const levelClass = 'level-' + Math.min(w.level, 5);
+            li.innerHTML = `
+                <div>
+                    <div class="w-en">${escHtml(w.word)}</div>
+                    <div class="w-zh">${escHtml(w.translation)} · ${formatDate(w.nextReviewDate)}到期</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;">
+                    <span class="w-level ${levelClass}">${getLevelLabel(w.level)}</span>
+                    <button class="w-del" onclick="deleteWord(${w.id})">✕</button>
+                </div>
+            `;
+            list.appendChild(li);
+        });
+
+        renderStreakBar();
+    }
+
+    function renderStreakBar() {
+        const bar = document.getElementById('streakBar');
+        bar.innerHTML = '';
+        const dates = getCheckinDates();
+        const today = state.todayStr;
+
+        for (let i = 6; i >= 0; i--) {
+            const d = new Date();
+            d.setDate(d.getDate() - i);
+            const dateStr = d.getFullYear() + '-' +
+                String(d.getMonth()+1).padStart(2,'0') + '-' +
+                String(d.getDate()).padStart(2,'0');
+            const day = document.createElement('div');
+            day.className = 'day';
+            if (dates.includes(dateStr)) day.classList.add('done');
+            if (dateStr === today) day.classList.add('today');
+            day.textContent = d.getDate();
+            day.title = dateStr;
+            bar.appendChild(day);
+        }
+    }
+
+    function deleteWord(id) {
+        if (!confirm('确定删除这个单词？')) return;
+        state.words = state.words.filter(w => w.id !== id);
+        saveWords();
+        renderStats();
+        updateDailyStats();
+        showToast('已删除');
+    }
+
+    function clearAllData() {
+        if (!confirm('⚠️ 确定清空所有单词数据和打卡记录？此操作不可恢复！')) return;
+        if (!confirm('再次确认：真的要清空吗？')) return;
+        state.words = [];
+        localStorage.removeItem(STORAGE_KEY);
+        localStorage.removeItem(CHECKIN_KEY);
+        saveWords();
+        renderStats();
+        updateDailyStats();
+        prepareReview();
+        showToast('数据已清空');
+    }
+
+    function escHtml(s) {
+        const div = document.createElement('div');
+        div.textContent = s;
+        return div.innerHTML;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        loadData();
+
+        document.getElementById('dailyLimit').addEventListener('change', function() {
+            state.dailyLimit = parseInt(this.value) || 20;
+            saveSettings();
+        });
+
+        document.getElementById('autoSpeak').addEventListener('change', function() {
+            state.autoSpeak = this.checked;
+            saveSettings();
+        });
+
+        document.getElementById('inputWord').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') document.getElementById('inputTranslation').focus();
+        });
+        document.getElementById('inputTranslation').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') document.getElementById('inputExample').focus();
+        });
+
+        updateDailyStats();
+        prepareReview();
+
+        if (state.reviewQueue.length > 0) {
+            document.getElementById('reviewWelcome').classList.remove('hidden');
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.venv*/
+
+# Environment
+.env
+.env.*
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# Node
+node_modules/
+
+# Ignore .horizon sub-project (forked from Thysrael/Horizon)
+.horizon/
+
+# Ignore nested .git (cloud-workbench will be merged)
+cloud-workbench/.git
+
+# Ignore data backup
+*.bak

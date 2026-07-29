@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自生长知识库 · 工作台</title>
+    <style>
+        :root {
+            --green-50: #e8f5e9;
+            --green-100: #c8e6c9;
+            --green-200: #a5d6a7;
+            --green-400: #66bb6a;
+            --green-500: #4caf50;
+            --green-700: #388e3c;
+            --green-800: #2e7d32;
+            --green-900: #1b5e20;
+            --bg: #f0f7f0;
+            --card-bg: #ffffff;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --shadow: 0 4px 24px rgba(0,0,0,0.06);
+            --radius: 20px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            min-height: 100vh;
+            padding: 24px;
+            color: var(--text);
+        }
+        .container { max-width: 960px; margin: 0 auto; }
+
+        header {
+            text-align: center;
+            padding: 36px 24px;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+        header h1 { color: var(--green-800); font-size: 28px; letter-spacing: 1px; }
+        header .sub { color: var(--green-400); font-size: 14px; margin-top: 8px; }
+        header .badge {
+            display: inline-block;
+            background: var(--green-50);
+            color: var(--green-700);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 12px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+        .stat-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px 12px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            display: block;
+        }
+        .stat-card:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(0,0,0,0.1); }
+        .stat-card .icon { font-size: 28px; margin-bottom: 8px; }
+        .stat-card .num { font-size: 24px; font-weight: 700; color: var(--green-800); }
+        .stat-card .label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+        .stat-card .status {
+            font-size: 11px;
+            padding: 2px 10px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 8px;
+        }
+        .status.ready { background: #fff3e0; color: #e65100; }
+        .status.done { background: var(--green-50); color: var(--green-700); }
+        .status.empty { background: #f5f5f5; color: #9e9e9e; }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .tool-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .tool-card:hover { transform: translateY(-2px); }
+        .tool-card .icon { font-size: 40px; margin-bottom: 12px; }
+        .tool-card h3 { color: var(--green-800); font-size: 18px; margin-bottom: 6px; }
+        .tool-card p { color: var(--text-light); font-size: 13px; line-height: 1.6; }
+        .tool-card .tag {
+            display: inline-block;
+            background: var(--green-50);
+            color: var(--green-700);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            margin-top: 10px;
+        }
+        .tool-card.featured {
+            border: 2px solid var(--green-400);
+            position: relative;
+        }
+        .tool-card.featured::after {
+            content: '推荐';
+            position: absolute;
+            top: -8px;
+            right: 16px;
+            background: var(--green-500);
+            color: white;
+            padding: 2px 12px;
+            border-radius: 10px;
+            font-size: 11px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            color: var(--green-800);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-title .count {
+            font-size: 13px;
+            color: var(--green-400);
+            font-weight: 400;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+        .card h2 { color: var(--green-800); font-size: 20px; margin-bottom: 4px; }
+        .card .meta { color: var(--green-400); font-size: 13px; margin-bottom: 12px; }
+
+        .recent-list { list-style: none; }
+        .recent-list li {
+            padding: 12px 16px;
+            border-radius: 12px;
+            background: #fafffa;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .recent-list li .name { font-weight: 500; color: var(--green-800); }
+        .recent-list li .info { color: var(--text-light); font-size: 12px; }
+        .recent-list li .tag {
+            background: var(--green-50);
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            color: var(--green-700);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+        }
+        .empty-state .icon { font-size: 48px; margin-bottom: 12px; opacity: 0.5; }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--green-200);
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 12px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .tools-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>🌱 自生长知识库</h1>
+        <div class="sub">基于 Karpathy 理论 · Obsidian + AI 驱动</div>
+        <div class="badge">2026-07-29 · 4 个领域 · 2 个工具</div>
+    </header>
+
+    <div class="stats-grid">
+        <a class="stat-card" href="../01-AI高效使用/AI高效使用-MOC.md">
+            <div class="icon">🤖</div>
+            <div class="num">4</div>
+            <div class="label">AI 高效使用</div>
+            <div class="status done">raw 有资料</div>
+        </a>
+        <a class="stat-card" href="../02-Unity学习/Unity学习-MOC.md">
+            <div class="icon">🎮</div>
+            <div class="num">0</div>
+            <div class="label">Unity 学习</div>
+            <div class="status empty">待填充</div>
+        </a>
+        <a class="stat-card" href="../03-英语学习/英语学习-MOC.md">
+            <div class="icon">📖</div>
+            <div class="num">0</div>
+            <div class="label">英语学习</div>
+            <div class="status empty">待填充</div>
+        </a>
+        <a class="stat-card" href="../04-共享方法库/共享方法库-MOC.md">
+            <div class="icon">🧰</div>
+            <div class="num">0</div>
+            <div class="label">共享方法库</div>
+            <div class="status empty">待填充</div>
+        </a>
+    </div>
+
+    <div class="section-title">🧰 工作台工具 <span class="count">可直接使用的工具</span></div>
+
+    <div class="tools-grid">
+        <a class="tool-card featured" href="../english-workbench/index.html">
+            <div class="icon">📝</div>
+            <h3>英语学习工作台</h3>
+            <p>艾宾浩斯遗忘曲线背单词 · 每日复习池 · 发音 · 打卡</p>
+            <span class="tag">新增 · 已上线</span>
+        </a>
+        <a class="tool-card" href="../cloud-workbench/index.html">
+            <div class="icon">☁️</div>
+            <h3>云端资讯工作台</h3>
+            <p>AI 日报 / Unity 周报 · 自动抓取 · 微信推送</p>
+            <span class="tag">已上线</span>
+        </a>
+    </div>
+
+    <div class="card">
+        <h2>📥 最近原始资料</h2>
+        <div class="meta">待 AI 整理为知识页</div>
+        <ul class="recent-list">
+            <li>
+                <div>
+                    <div class="name">Horizon AI 日报 2026-07-27</div>
+                    <div class="info">Claude Opus 5 · 形式化验证 · AI Token 欺诈</div>
+                </div>
+                <span class="tag">AI</span>
+            </li>
+            <li>
+                <div>
+                    <div class="name">Horizon AI 日报 2026-07-25</div>
+                    <div class="info">GrapheneOS 边境案 · 数据导向设计 · 火积雨云</div>
+                </div>
+                <span class="tag">AI</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>⚡ 快速操作</h2>
+        <div class="meta" style="margin-bottom: 16px;">告诉 AI 帮你做这些事</div>
+        <ul class="recent-list">
+            <li>
+                <div class="name">📂 整理 AI 领域的原始资料</div>
+                <span class="tag">知识蒸馏</span>
+            </li>
+            <li>
+                <div class="name">🔗 检查并补全知识页间的双向链接</div>
+                <span class="tag">链接补全</span>
+            </li>
+            <li>
+                <div class="name">🔍 检查 wiki 中重复内容并合并</div>
+                <span class="tag">去重合并</span>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        用 <a href="https://obsidian.md" style="color: var(--green-400);">Obsidian</a> 打开效果更佳 · 由 AI 持续维护
+    </footer>
+</div>
+</body>
+</html>
