@@ -218,8 +218,7 @@
 </div>
 
 <script>
-    const REPO = 'LCC0528/knowledge-workbench';
-    const RAW_DIR = '01-AI高效使用/raw';
+    const FEED_URL = 'https://raw.githubusercontent.com/LCC0528/knowledge-workbench/main/data/ai-news.json';
 
     async function loadNews() {
         document.getElementById('loading').classList.remove('hidden');
@@ -227,92 +226,18 @@
         document.getElementById('newsContent').classList.add('hidden');
 
         try {
-            const files = await listRawFiles();
-            const zhFiles = files.filter(f => f.name.endsWith('-zh.md') && f.name.startsWith('2026'));
-            zhFiles.sort((a,b) => b.name.localeCompare(a.name));
+            const resp = await fetch(FEED_URL + '?t=' + Date.now());
+            if (!resp.ok) throw new Error('HTTP ' + resp.status);
+            const feed = await resp.json();
 
-            if (zhFiles.length === 0) throw new Error('No Chinese news files found');
-
-            let allItems = [];
-            for (const file of zhFiles) {
-                const items = await parseNewsFile(file);
-                allItems = allItems.concat(items);
-            }
-
-            allItems.sort((a,b) => b.date - a.date);
-            renderNews(allItems);
+            const aiItems = feed.items.filter(i => i.topic === 'ai');
+            aiItems.sort((a,b) => b.date.localeCompare(a.date));
+            renderNews(aiItems);
         } catch (e) {
             console.error(e);
             document.getElementById('loading').classList.add('hidden');
             document.getElementById('error').classList.remove('hidden');
         }
-    }
-
-    async function listRawFiles() {
-        const encoded = encodeURIComponent(RAW_DIR);
-        const url = `https://api.github.com/repos/${REPO}/contents/${encoded}`;
-        const resp = await fetch(url);
-        if (!resp.ok) throw new Error('Failed to list files: ' + resp.status);
-        return await resp.json();
-    }
-
-    async function parseNewsFile(file) {
-        const resp = await fetch(file.download_url);
-        if (!resp.ok) throw new Error('Failed to fetch ' + file.name);
-        const text = await resp.text();
-
-        const dateMatch = file.name.match(/2026-\d{2}-\d{2}/);
-        const fileDate = dateMatch ? dateMatch[0] : '';
-
-        const items = [];
-        const blocks = text.split(/---\n/);
-
-        for (const block of blocks) {
-            if (!block.includes('⭐️')) continue;
-
-            const lines = block.split('\n').filter(l => l.trim());
-
-            const titleLine = lines.find(l => l.startsWith('## ['));
-            if (!titleLine) continue;
-
-            const titleMatch = titleLine.match(/## \[(.+?)\]\((.+?)\)/);
-            if (!titleMatch) continue;
-            const title = titleMatch[1];
-            const link = titleMatch[2];
-
-            const scoreMatch = titleLine.match(/⭐️\s*([\d.]+)\/10/);
-            const score = scoreMatch ? parseFloat(scoreMatch[1]) : 0;
-
-            const summaryStart = lines.findIndex(l => l.startsWith(titleLine));
-            let summary = '';
-            for (let i = summaryStart + 1; i < lines.length; i++) {
-                if (lines[i].startsWith('hackernews') || lines[i].startsWith('rss') || lines[i].startsWith('**标签**')) break;
-                if (lines[i].startsWith('## [') || lines[i].startsWith('#')) break;
-                summary += lines[i];
-            }
-            summary = summary.replace(/\s+/g, ' ').trim();
-
-            const tagLine = lines.find(l => l.startsWith('**标签**'));
-            const tags = tagLine ? tagLine.replace('**标签**:', '').replace(/`/g, '').split(',').map(s => s.trim()).filter(Boolean) : [];
-
-            const discussLine = lines.find(l => l.includes('[社区讨论]'));
-            const discussUrl = discussLine ? (discussLine.match(/\((.+?)\)/) || [])[1] || '' : '';
-
-            const sourceLine = lines.find(l => l.startsWith('hackernews') || l.startsWith('rss'));
-            let source = '';
-            if (sourceLine) {
-                const parts = sourceLine.split('·').map(s => s.trim());
-                source = parts[0] || '';
-            }
-
-            items.push({
-                title, link, score, summary, tags, source, discussUrl,
-                date: new Date(fileDate).getTime(),
-                dateStr: fileDate
-            });
-        }
-
-        return items;
     }
 
     function renderNews(items) {
@@ -330,8 +255,9 @@
 
         const groups = {};
         items.forEach(item => {
-            if (!groups[item.dateStr]) groups[item.dateStr] = [];
-            groups[item.dateStr].push(item);
+            const d = item.date || '';
+            if (!groups[d]) groups[d] = [];
+            groups[d].push(item);
         });
 
         const sortedDates = Object.keys(groups).sort((a,b) => b.localeCompare(a));
@@ -349,18 +275,32 @@
                 const card = document.createElement('div');
                 card.className = 'news-card';
 
-                const pct = Math.round(item.score / 10 * 100);
+                const score = item.ai_score || 0;
+                const pct = Math.round(score / 10 * 100);
+                const title = item.title || '';
+                const url = item.url || '#';
+                const source = item.source || '';
+                const tags = item.tags || [];
+
+                let summary = '';
+                if (item.summary_zh) {
+                    summary = item.summary_zh;
+                } else if (item.title_zh && item.title_zh !== title) {
+                    summary = item.title_zh;
+                } else {
+                    summary = title;
+                }
+
                 const cardContent = `
                     <div class="score">
-                        ⭐ ${item.score.toFixed(1)}
+                        ⭐ ${score.toFixed(1)}
                         <div class="bar"><div class="bar-fill" style="width:${pct}%"></div></div>
                     </div>
-                    <h2><a href="${item.link}" target="_blank" rel="noopener">${escHtml(item.title)}</a></h2>
-                    <div class="summary">${escHtml(item.summary)}</div>
+                    <h2><a href="${url}" target="_blank" rel="noopener">${escHtml(title)}</a></h2>
+                    <div class="summary">${escHtml(summary)}</div>
                     <div class="meta">
-                        ${item.source ? `<span class="source">${escHtml(item.source)}</span>` : ''}
-                        ${item.tags.slice(0, 4).map(t => `<span class="tag">${escHtml(t)}</span>`).join('')}
-                        ${item.discussUrl ? `<span class="discuss"><a href="${item.discussUrl}" target="_blank" rel="noopener">💬 社区讨论</a></span>` : ''}
+                        ${source ? `<span class="source">${escHtml(source)}</span>` : ''}
+                        ${tags.slice(0, 4).map(t => `<span class="tag">${escHtml(t)}</span>`).join('')}
                     </div>
                 `;
                 card.innerHTML = cardContent;
