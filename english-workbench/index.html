@@ -778,7 +778,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             document.getElementById('tab-' + t).classList.toggle('hidden', t !== tab);
         });
 
-        if (tab === 'review') prepareReview();
+        if (tab === 'review') { initSpeech(); prepareReview(); }
         if (tab === 'stats') renderStats();
     }
 
@@ -965,13 +965,35 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         }
     }
 
+    let speechReady = false;
+
+    function initSpeech() {
+        if (speechReady || !window.speechSynthesis) return;
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance('');
+        u.lang = 'en-US';
+        window.speechSynthesis.speak(u);
+        speechReady = true;
+    }
+
+    function getEnVoice() {
+        if (!window.speechSynthesis) return null;
+        const voices = window.speechSynthesis.getVoices();
+        return voices.find(v => v.lang.startsWith('en') && v.name.includes('Google'))
+            || voices.find(v => v.lang.startsWith('en'))
+            || null;
+    }
+
     function speakText(text) {
-        if (!text || !window.speechSynthesis) return;
+        if (!text || !window.speechSynthesis) { showToast('当前浏览器不支持发音'); return; }
         window.speechSynthesis.cancel();
         const u = new SpeechSynthesisUtterance(text);
         u.lang = 'en-US';
-        u.rate = 0.9;
+        u.rate = 0.85;
         u.pitch = 1;
+        const voice = getEnVoice();
+        if (voice) u.voice = voice;
+        u.onerror = () => showToast('发音失败，请检查浏览器设置');
         window.speechSynthesis.speak(u);
     }
 
@@ -981,6 +1003,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
     }
 
     function startReview() {
+        initSpeech();
         prepareReview();
     }
 
@@ -1166,6 +1189,9 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('touchstart', initSpeech, { once: true });
+        document.addEventListener('click', initSpeech, { once: true });
+
         const params = new URLSearchParams(window.location.search);
         const urlToken = params.get('token');
         if (urlToken && urlToken.startsWith('ghp_')) {
