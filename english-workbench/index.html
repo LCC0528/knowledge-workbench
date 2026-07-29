@@ -966,7 +966,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
     }
 
     function speakText(text) {
-        if (!text) return;
+        if (!text || !window) return;
         try {
             if (window.speechSynthesis) {
                 window.speechSynthesis.cancel();
@@ -978,8 +978,12 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             }
         } catch (e) {}
         try {
-            const audio = new Audio('https://dict.youdao.com/dictvoice?audio=' + encodeURIComponent(text.split(' ')[0]) + '&type=1');
-            audio.play().catch(() => {});
+            const el = document.createElement('audio');
+            el.style.display = 'none';
+            el.src = 'https://dict.youdao.com/dictvoice?audio=' + encodeURIComponent(text.substring(0, 60)) + '&type=1';
+            document.body.appendChild(el);
+            el.play().then(() => {}).catch(() => {});
+            setTimeout(() => { try { document.body.removeChild(el); } catch(e) {} }, 5000);
         } catch (e) {}
     }
 
