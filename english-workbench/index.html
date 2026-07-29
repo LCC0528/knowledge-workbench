@@ -438,8 +438,11 @@
     </div>
 
     <div id="tab-add" class="hidden">
-        <div class="card">
-            <h2 style="color: var(--primary-dark); font-size: 18px; margin-bottom: 16px;">➕ 录入新单词</h2>
+        <div class="card" id="singleEntry">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                <h2 style="color: var(--primary-dark); font-size: 18px;">➕ 录入新单词</h2>
+                <button class="btn btn-sm btn-outline" onclick="toggleBatchMode()">📋 批量录入</button>
+            </div>
             <div class="form-group">
                 <label>英文单词 / 短语 *</label>
                 <input type="text" id="inputWord" placeholder="如：ubiquitous" autocomplete="off">
@@ -457,6 +460,25 @@
                 <textarea id="inputExampleTranslation" placeholder="如：智能手机在现代社会无处不在。" rows="2"></textarea>
             </div>
             <button class="btn btn-primary" onclick="addWord()" style="width:100%">💾 保存</button>
+        </div>
+
+        <div class="card hidden" id="batchEntry">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                <h2 style="color: var(--primary-dark); font-size: 18px;">📋 批量录入</h2>
+                <button class="btn btn-sm btn-outline" onclick="toggleBatchMode()">✏️ 单个录入</button>
+            </div>
+            <div class="form-group">
+                <label>每行一个单词，格式：<code>英文 | 中文 | 例句 | 例句翻译</code></label>
+                <textarea id="batchInput" placeholder="ubiquitous | 无处不在的 | Smartphones are ubiquitous. | 智能手机无处不在。
+diligent | 勤奋的 | She is a diligent student. | 她是个勤奋的学生。
+eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows="8" style="font-size:14px;font-family:Consolas,monospace;"></textarea>
+            </div>
+            <div style="font-size:12px;color:var(--text-light);margin-bottom:12px;line-height:1.6;">
+                <strong>支持的分隔符：</strong><code>|</code>（竖线）、<code>TAB</code>（制表符）、<code>-</code>（短横）
+                <br>例句和例句翻译可选填
+            </div>
+            <button class="btn btn-primary" onclick="batchAdd()" style="width:100%">📦 批量导入</button>
+            <div id="batchResult" class="hidden" style="margin-top:12px;padding:12px;border-radius:10px;background:var(--primary-light);font-size:14px;"></div>
         </div>
     </div>
 
@@ -1050,6 +1072,77 @@
         updateDailyStats();
         prepareReview();
         showToast('数据已清空');
+    }
+
+    function toggleBatchMode() {
+        document.getElementById('singleEntry').classList.toggle('hidden');
+        document.getElementById('batchEntry').classList.toggle('hidden');
+    }
+
+    function batchAdd() {
+        const text = document.getElementById('batchInput').value.trim();
+        if (!text) { showToast('请先输入单词'); return; }
+
+        const lines = text.split('\n').map(l => l.trim()).filter(l => l);
+        let added = 0, skipped = 0, errors = [];
+
+        lines.forEach((line, idx) => {
+            let parts;
+            if (line.includes('|')) {
+                parts = line.split('|').map(s => s.trim());
+            } else if (line.includes('\t')) {
+                parts = line.split('\t').map(s => s.trim());
+            } else if (line.match(/^[^-]+-[^-]+/)) {
+                parts = line.split(/-(.+)/).map(s => s.trim());
+                if (parts.length > 2) parts = [parts[0], parts[1]];
+            } else {
+                errors.push('第 ' + (idx+1) + ' 行：无法识别分隔符');
+                return;
+            }
+
+            const word = parts[0];
+            const translation = parts[1] || '';
+            const example = parts[2] || '';
+            const exampleTranslation = parts[3] || '';
+
+            if (!word || !translation) {
+                errors.push('第 ' + (idx+1) + ' 行：缺少英文或中文');
+                return;
+            }
+
+            const exists = state.words.some(w => w.word.toLowerCase() === word.toLowerCase());
+            if (exists) { skipped++; return; }
+
+            state.words.push({
+                id: Date.now() + added,
+                word, translation, example, exampleTranslation,
+                createdDate: state.todayStr,
+                level: 0,
+                nextReviewDate: state.todayStr,
+                lastReviewDate: null
+            });
+            added++;
+        });
+
+        if (added > 0) {
+            saveWords();
+            updateDailyStats();
+        }
+
+        const result = document.getElementById('batchResult');
+        result.classList.remove('hidden');
+        result.style.background = added > 0 ? 'var(--primary-light)' : '#fff3e0';
+        result.innerHTML = '';
+        const msgs = [];
+        if (added > 0) msgs.push('✅ 成功导入 <strong>' + added + '</strong> 个单词');
+        if (skipped > 0) msgs.push('⏭ 跳过重复 <strong>' + skipped + '</strong> 个');
+        if (errors.length > 0) msgs.push('⚠️ ' + errors.slice(0, 3).join('<br>') + (errors.length > 3 ? '<br>...还有 ' + (errors.length-3) + ' 条错误' : ''));
+        result.innerHTML = msgs.join('<br>');
+
+        if (added > 0) {
+            document.getElementById('batchInput').value = '';
+            showToast('成功导入 ' + added + ' 个单词');
+        }
     }
 
     function manualSync() {
