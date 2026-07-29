@@ -778,7 +778,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             document.getElementById('tab-' + t).classList.toggle('hidden', t !== tab);
         });
 
-        if (tab === 'review') { initSpeech(); prepareReview(); }
+        if (tab === 'review') { prepareReview(); }
         if (tab === 'stats') renderStats();
     }
 
@@ -965,48 +965,22 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         }
     }
 
-    let useNativeSpeech = true;
-
-    function initSpeech() {
-        if (window.speechSynthesis && window.speechSynthesis.getVoices().length > 0) {
-            useNativeSpeech = true;
-            return;
-        }
-        if (window.speechSynthesis) {
-            window.speechSynthesis.getVoices();
-            window.speechSynthesis.onvoiceschanged = () => {
-                if (window.speechSynthesis.getVoices().length > 0) useNativeSpeech = true;
-            };
-            const u = new SpeechSynthesisUtterance('');
-            u.lang = 'en-US';
-            window.speechSynthesis.speak(u);
-            window.speechSynthesis.cancel();
-        }
-    }
-
-    function speakFallback(text) {
-        const audio = new Audio();
-        audio.src = 'https://translate.google.com/translate_tts?ie=UTF-8&tl=en&q=' + encodeURIComponent(text) + '&client=tw-ob&ttsspeed=0.9';
-        audio.play().catch(() => {});
-    }
-
     function speakText(text) {
         if (!text) return;
-        if (useNativeSpeech && window.speechSynthesis) {
-            window.speechSynthesis.cancel();
-            const u = new SpeechSynthesisUtterance(text);
-            u.lang = 'en-US';
-            u.rate = 0.85;
-            const voices = window.speechSynthesis.getVoices();
-            const voice = voices.find(v => v.lang.startsWith('en') && v.name.includes('Google'))
-                || voices.find(v => v.lang.startsWith('en'))
-                || null;
-            if (voice) u.voice = voice;
-            u.onerror = () => speakFallback(text);
-            window.speechSynthesis.speak(u);
-        } else {
-            speakFallback(text);
-        }
+        try {
+            if (window.speechSynthesis) {
+                window.speechSynthesis.cancel();
+                const u = new SpeechSynthesisUtterance(text);
+                u.lang = 'en-US';
+                u.rate = 0.85;
+                window.speechSynthesis.speak(u);
+                return;
+            }
+        } catch (e) {}
+        try {
+            const audio = new Audio('https://dict.youdao.com/dictvoice?audio=' + encodeURIComponent(text.split(' ')[0]) + '&type=1');
+            audio.play().catch(() => {});
+        } catch (e) {}
     }
 
     function speakWord() {
@@ -1015,7 +989,6 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
     }
 
     function startReview() {
-        initSpeech();
         prepareReview();
     }
 
@@ -1201,9 +1174,6 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-        document.addEventListener('touchstart', initSpeech, { once: true });
-        document.addEventListener('click', initSpeech, { once: true });
-
         const params = new URLSearchParams(window.location.search);
         const urlToken = params.get('token');
         if (urlToken && urlToken.startsWith('ghp_')) {
