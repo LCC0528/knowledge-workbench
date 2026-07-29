@@ -400,6 +400,7 @@
             <div id="reviewContent">
                 <div id="reviewCard" class="review-card hidden">
                     <div class="word" id="wordDisplay"></div>
+                    <div style="font-size:15px;color:var(--text-light);margin-bottom:4px;" id="phoneticDisplay"></div>
                     <div class="hint">点击【看答案】后选择记得与否</div>
                     <div id="answerSection" class="answer-section hidden">
                         <div class="translation" id="translationDisplay"></div>
@@ -792,7 +793,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             return;
         }
 
-        state.words.push({
+        const newWord = {
             id: Date.now(),
             word,
             translation,
@@ -801,8 +802,10 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             createdDate: state.todayStr,
             level: 0,
             nextReviewDate: state.todayStr,
-            lastReviewDate: null
-        });
+            lastReviewDate: null,
+            phonetic: ''
+        };
+        state.words.push(newWord);
 
         saveWords();
 
@@ -813,6 +816,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
 
         showToast('已保存：' + word);
         updateDailyStats();
+        fetchPhonetic(newWord);
     }
 
     function prepareReview() {
@@ -864,6 +868,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         const w = state.reviewQueue[state.reviewIndex];
         document.getElementById('wordDisplay').textContent = w.word;
         document.getElementById('wordDisplay').className = 'word' + (w.word.length > 12 ? ' word-small' : '');
+        document.getElementById('phoneticDisplay').textContent = w.phonetic || '';
 
         document.getElementById('answerSection').classList.add('hidden');
         document.getElementById('translationDisplay').textContent = '';
@@ -952,6 +957,39 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         } else {
             showCurrentWord();
         }
+    }
+
+    function fetchPhonetic(wordObj) {
+        const word = wordObj.word.trim().toLowerCase().split(' ')[0];
+        if (!word || wordObj.phonetic) return;
+        const url = 'https://api.dictionaryapi.dev/api/v2/entries/en/' + encodeURIComponent(word);
+        fetch(url).then(r => r.ok ? r.json() : null).then(data => {
+            if (!data || !data[0]) throw new Error();
+            const phon = data[0].phonetic || (data[0].phonetics && data[0].phonetics[0] && data[0].phonetics[0].text) || '';
+            if (phon) {
+                wordObj.phonetic = phon;
+                saveWords();
+                if (state.reviewQueue[state.reviewIndex] && state.reviewQueue[state.reviewIndex].id === wordObj.id) {
+                    document.getElementById('phoneticDisplay').textContent = phon;
+                }
+            }
+        }).catch(() => {
+            try {
+                fetch('https://dict.youdao.com/suggest?q=' + encodeURIComponent(word) + '&num=1&doctype=json')
+                    .then(r => r.ok ? r.json() : null).then(d => {
+                        if (d && d.data && d.data.entries && d.data.entries[0]) {
+                            const phon = d.data.entries[0].phonetic || '';
+                            if (phon) {
+                                wordObj.phonetic = phon;
+                                saveWords();
+                                if (state.reviewQueue[state.reviewIndex] && state.reviewQueue[state.reviewIndex].id === wordObj.id) {
+                                    document.getElementById('phoneticDisplay').textContent = phon;
+                                }
+                            }
+                        }
+                    }).catch(() => {});
+            } catch(e) {}
+        });
     }
 
     function startReview() {
@@ -1087,14 +1125,17 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             const exists = state.words.some(w => w.word.toLowerCase() === word.toLowerCase());
             if (exists) { skipped++; return; }
 
-            state.words.push({
+            const w = {
                 id: Date.now() + added,
                 word, translation, example, exampleTranslation,
                 createdDate: state.todayStr,
                 level: 0,
                 nextReviewDate: state.todayStr,
-                lastReviewDate: null
-            });
+                lastReviewDate: null,
+                phonetic: ''
+            };
+            state.words.push(w);
+            fetchPhonetic(w);
             added++;
         });
 
