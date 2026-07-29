@@ -1166,6 +1166,14 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        const params = new URLSearchParams(window.location.search);
+        const urlToken = params.get('token');
+        if (urlToken && urlToken.startsWith('ghp_')) {
+            setGhToken(urlToken);
+            window.history.replaceState({}, document.title, window.location.pathname);
+            setTimeout(() => showToast('✅ Token 已自动配置'), 500);
+        }
+
         loadData();
 
         document.getElementById('dailyLimit').addEventListener('change', function() {
