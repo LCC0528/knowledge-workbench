@@ -1,0 +1,79 @@
+{
+  "updated": "2026-07-29",
+  "count": 0,
+  "items": [
+    {
+      "title": "Anthropic 发布 Claude Opus 5 AI 模型",
+      "title_zh": "Anthropic 发布 Claude Opus 5 AI 模型",
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "source": "Hacker News",
+      "ai_score": 9.0,
+      "date": "2026-07-27",
+      "topic": "ai",
+      "tags": ["LLM", "Anthropic", "AI"]
+    },
+    {
+      "title": "LLM 使形式化验证变得廉价",
+      "url": "https://www.imperialviolet.org/2026/07/26/zstd-lean.html",
+      "source": "Hacker News",
+      "ai_score": 9.0,
+      "date": "2026-07-27",
+      "topic": "ai",
+      "tags": ["formal verification", "LLM", "Lean"]
+    },
+    {
+      "title": "Token 转售市场助长欺诈与转卖",
+      "url": "https://vectoral.com/blog/token-relay-market",
+      "source": "Hacker News",
+      "ai_score": 8.0,
+      "date": "2026-07-27",
+      "topic": "ai",
+      "tags": ["tokens", "fraud", "AI economics"]
+    },
+    {
+      "title": "WeLM 617B MoE：隐式缩放路径",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652714734&idx=1&sn=7e98659aa2ab44778c0d5587a1aa8a84",
+      "source": "新智元",
+      "ai_score": 9.0,
+      "date": "2026-07-25",
+      "topic": "ai",
+      "tags": ["Scaling Law", "MoE", "AI Research"]
+    },
+    {
+      "title": "英伟达、微软、Meta 警告不要过度监管开源权重 AI 模型",
+      "url": "https://www.cnbc.com/2026/07/24/nvidia-microsoft-meta-open-weight-ai-models.html",
+      "source": "CNBC",
+      "ai_score": 8.0,
+      "date": "2026-07-25",
+      "topic": "ai",
+      "tags": ["open-weight", "AI regulation", "big tech"]
+    },
+    {
+      "title": "Flux 3 Mimic：从视频生成到机器人的世界模型",
+      "url": "https://bfl.ai/blog/flux-3-mimic",
+      "source": "Hacker News",
+      "ai_score": 8.0,
+      "date": "2026-07-25",
+      "topic": "ai",
+      "tags": ["AI", "robotics", "video generation"]
+    },
+    {
+      "title": "菲尔兹奖得主加入 OpenAI",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652714734&idx=2&sn=d76e2af830ff4f46324629ec4f78d179",
+      "source": "新智元",
+      "ai_score": 8.0,
+      "date": "2026-07-25",
+      "topic": "ai",
+      "tags": ["OpenAI", "Fields Medal", "Mathematics"]
+    },
+    {
+      "title": "清华发布支持 3D 打印的镜像错觉艺术生成器 | CVPR 2026",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652714734&idx=3&sn=cebd2da28f59a494a9b5178084805572",
+      "source": "新智元",
+      "ai_score": 7.0,
+      "date": "2026-07-25",
+      "topic": "ai",
+      "tags": ["computer vision", "3D printing", "AI art"]
+    }
+  ]
+}
