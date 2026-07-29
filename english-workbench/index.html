@@ -789,48 +789,49 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         document.getElementById('btnAutoFill').disabled = true;
 
         const wordOnly = word.split(' ')[0];
-        let fetched = false;
+        let cnOk = false;
 
-        fetch('https://dict.youdao.com/suggest?q=' + encodeURIComponent(wordOnly) + '&num=1&doctype=json')
+        fetch('https://api.shanbay.com/bdc/search/?word=' + encodeURIComponent(wordOnly))
             .then(r => r.ok ? r.json() : null).then(d => {
-                if (d && d.data && d.data.entries && d.data.entries[0]) {
-                    const e = d.data.entries[0];
-                    if (e.explain) {
-                        const trans = e.explain.replace(/<[^>]+>/g, '').trim();
-                        if (trans) { document.getElementById('inputTranslation').value = trans; fetched = true; }
-                    }
-                }
-            }).catch(() => {});
-
-        fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + encodeURIComponent(wordOnly))
-            .then(r => r.ok ? r.json() : null).then(data => {
-                if (!data || !data[0]) throw new Error();
-                const meanings = data[0].meanings || [];
-                if (meanings.length > 0) {
-                    const posSet = new Set();
-                    meanings.forEach(m => {
-                        if (m.partOfSpeech) posSet.add(m.partOfSpeech);
-                    });
-                    const pos = [...posSet].join(', ');
-                    document.getElementById('autoFillStatus').textContent = pos ? '📎 词性：' + pos : '';
-                    if (!fetched && meanings[0].definitions && meanings[0].definitions[0]) {
-                        const def = meanings[0].definitions[0].definition || '';
-                        if (def && !document.getElementById('inputTranslation').value) {
-                            document.getElementById('inputTranslation').value = def;
+                if (d && d.status_code === 0 && d.data) {
+                    const data = d.data;
+                    let trans = '';
+                    if (data.definition) {
+                        trans = data.definition.replace(/<[^>]+>/g, '').trim();
+                        if (trans) {
+                            document.getElementById('inputTranslation').value = trans;
+                            cnOk = true;
+                            status.textContent = '✅ 中文释义已填充';
                         }
                     }
-                    if (data[0].phonetic || (data[0].phonetics && data[0].phonetics[0] && data[0].phonetics[0].text)) {
-                        const phon = data[0].phonetic || data[0].phonetics[0].text;
-                        document.getElementById('inputTranslation').dataset.phonetic = phon;
-                        if (!status.textContent.includes('词性')) status.textContent = '🔊 ' + phon;
-                        else status.textContent += ' · ' + phon;
+                    if (data.audio_name && data.audio_name !== '') {
+                        const ipa = data.audio_name.split('__')[0] || '';
+                        if (ipa) document.getElementById('inputTranslation').dataset.phonetic = '/' + ipa + '/';
                     }
                 }
-            }).catch(() => {
-                if (!fetched) status.textContent = '⚠️ 未找到释义，请手动填写';
-            }).finally(() => {
-                document.getElementById('btnAutoFill').disabled = false;
-                if (fetched) status.textContent = '✅ 已填充，请检查后保存';
+            }).catch(() => {}).then(() => {
+                fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + encodeURIComponent(wordOnly))
+                    .then(r => r.ok ? r.json() : null).then(data => {
+                        if (!data || !data[0]) throw new Error();
+                        const meanings = data[0].meanings || [];
+                        const posSet = new Set();
+                        meanings.forEach(m => { if (m.partOfSpeech) posSet.add(m.partOfSpeech); });
+                        const pos = [...posSet].join(', ');
+                        const phon = data[0].phonetic || (data[0].phonetics && data[0].phonetics[0] && data[0].phonetics[0].text) || '';
+                        if (phon && !document.getElementById('inputTranslation').dataset.phonetic) {
+                            document.getElementById('inputTranslation').dataset.phonetic = phon;
+                        }
+                        const parts = [];
+                        if (pos) parts.push('📎 ' + pos);
+                        const finalPhon = document.getElementById('inputTranslation').dataset.phonetic || phon;
+                        if (finalPhon) parts.push('🔊 ' + finalPhon);
+                        if (parts.length > 0 && !cnOk) status.textContent = parts.join(' · ') + ' · ⚠️ 未找到中文释义';
+                        else if (parts.length > 0) status.textContent = parts.join(' · ');
+                    }).catch(() => {
+                        if (!cnOk) status.textContent = '⚠️ 未找到中文释义，请手动填写';
+                    }).finally(() => {
+                        document.getElementById('btnAutoFill').disabled = false;
+                    });
             });
     }
 
