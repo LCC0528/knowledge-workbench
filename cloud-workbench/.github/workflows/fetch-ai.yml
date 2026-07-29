@@ -49,6 +49,10 @@ jobs:
             cp "data/ai/latest.md" "data/ai/$DATE.md"
           fi
 
+      - name: Generate news feed
+        run: |
+          python generate_feed.py
+
       - name: Update index
         run: |
           python update_index.py
