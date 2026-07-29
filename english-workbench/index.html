@@ -400,7 +400,8 @@
             <div id="reviewContent">
                 <div id="reviewCard" class="review-card hidden">
                     <div class="word" id="wordDisplay"></div>
-                    <div style="font-size:15px;color:var(--text-light);margin-bottom:4px;" id="phoneticDisplay"></div>
+                    <div style="font-size:14px;color:var(--text-light);margin-bottom:2px;" id="phoneticDisplay"></div>
+                    <div style="font-size:13px;color:var(--accent);margin-bottom:6px;" id="posDisplay"></div>
                     <div class="hint">点击【看答案】后选择记得与否</div>
                     <div id="answerSection" class="answer-section hidden">
                         <div class="translation" id="translationDisplay"></div>
@@ -445,7 +446,11 @@
             </div>
             <div class="form-group">
                 <label>英文单词 / 短语 *</label>
-                <input type="text" id="inputWord" placeholder="如：ubiquitous" autocomplete="off">
+                <div style="display:flex;gap:8px;">
+                    <input type="text" id="inputWord" placeholder="如：ubiquitous" autocomplete="off" style="flex:1;">
+                    <button class="btn btn-sm btn-outline" onclick="autoFillWord()" id="btnAutoFill" style="white-space:nowrap;">🔄 自动</button>
+                </div>
+                <div id="autoFillStatus" style="font-size:12px;color:var(--text-light);margin-top:4px;"></div>
             </div>
             <div class="form-group">
                 <label>中文释义 *</label>
@@ -776,11 +781,66 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         if (tab === 'stats') renderStats();
     }
 
+    function autoFillWord() {
+        const word = document.getElementById('inputWord').value.trim().toLowerCase();
+        if (!word) { showToast('请先输入英文单词'); return; }
+        const status = document.getElementById('autoFillStatus');
+        status.textContent = '⏳ 查询中...';
+        document.getElementById('btnAutoFill').disabled = true;
+
+        const wordOnly = word.split(' ')[0];
+        let fetched = false;
+
+        fetch('https://dict.youdao.com/suggest?q=' + encodeURIComponent(wordOnly) + '&num=1&doctype=json')
+            .then(r => r.ok ? r.json() : null).then(d => {
+                if (d && d.data && d.data.entries && d.data.entries[0]) {
+                    const e = d.data.entries[0];
+                    if (e.explain) {
+                        const trans = e.explain.replace(/<[^>]+>/g, '').trim();
+                        if (trans) { document.getElementById('inputTranslation').value = trans; fetched = true; }
+                    }
+                }
+            }).catch(() => {});
+
+        fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + encodeURIComponent(wordOnly))
+            .then(r => r.ok ? r.json() : null).then(data => {
+                if (!data || !data[0]) throw new Error();
+                const meanings = data[0].meanings || [];
+                if (meanings.length > 0) {
+                    const posSet = new Set();
+                    meanings.forEach(m => {
+                        if (m.partOfSpeech) posSet.add(m.partOfSpeech);
+                    });
+                    const pos = [...posSet].join(', ');
+                    document.getElementById('autoFillStatus').textContent = pos ? '📎 词性：' + pos : '';
+                    if (!fetched && meanings[0].definitions && meanings[0].definitions[0]) {
+                        const def = meanings[0].definitions[0].definition || '';
+                        if (def && !document.getElementById('inputTranslation').value) {
+                            document.getElementById('inputTranslation').value = def;
+                        }
+                    }
+                    if (data[0].phonetic || (data[0].phonetics && data[0].phonetics[0] && data[0].phonetics[0].text)) {
+                        const phon = data[0].phonetic || data[0].phonetics[0].text;
+                        document.getElementById('inputTranslation').dataset.phonetic = phon;
+                        if (!status.textContent.includes('词性')) status.textContent = '🔊 ' + phon;
+                        else status.textContent += ' · ' + phon;
+                    }
+                }
+            }).catch(() => {
+                if (!fetched) status.textContent = '⚠️ 未找到释义，请手动填写';
+            }).finally(() => {
+                document.getElementById('btnAutoFill').disabled = false;
+                if (fetched) status.textContent = '✅ 已填充，请检查后保存';
+            });
+    }
+
     function addWord() {
         const word = document.getElementById('inputWord').value.trim();
-        const translation = document.getElementById('inputTranslation').value.trim();
+        let translation = document.getElementById('inputTranslation').value.trim();
         const example = document.getElementById('inputExample').value.trim();
         const exampleTranslation = document.getElementById('inputExampleTranslation').value.trim();
+        const phonetic = document.getElementById('inputTranslation').dataset.phonetic || '';
+        const posHint = document.getElementById('autoFillStatus').textContent || '';
 
         if (!word || !translation) {
             showToast('请至少填写英文和中文释义');
@@ -803,7 +863,8 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             level: 0,
             nextReviewDate: state.todayStr,
             lastReviewDate: null,
-            phonetic: ''
+            phonetic: phonetic,
+            pos: posHint.replace(/^📎 词性：/, '').replace(/ · .*$/, '').replace(/^✅.*$/, '').replace(/^⚠️.*$/, '').trim()
         };
         state.words.push(newWord);
 
@@ -811,12 +872,13 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
 
         document.getElementById('inputWord').value = '';
         document.getElementById('inputTranslation').value = '';
+        document.getElementById('inputTranslation').dataset.phonetic = '';
         document.getElementById('inputExample').value = '';
         document.getElementById('inputExampleTranslation').value = '';
+        document.getElementById('autoFillStatus').textContent = '';
 
         showToast('已保存：' + word);
         updateDailyStats();
-        fetchPhonetic(newWord);
     }
 
     function prepareReview() {
@@ -869,6 +931,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         document.getElementById('wordDisplay').textContent = w.word;
         document.getElementById('wordDisplay').className = 'word' + (w.word.length > 12 ? ' word-small' : '');
         document.getElementById('phoneticDisplay').textContent = w.phonetic || '';
+        document.getElementById('posDisplay').textContent = w.pos || '';
 
         document.getElementById('answerSection').classList.add('hidden');
         document.getElementById('translationDisplay').textContent = '';
