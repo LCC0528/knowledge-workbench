@@ -339,6 +339,11 @@
             font-size: 11px;
             color: white;
         }
+        .sync-idle { color: var(--text-light); }
+        .sync-syncing { color: var(--accent); animation: spin 1s linear infinite; display:inline-block; }
+        .sync-ok { color: var(--success); }
+        .sync-fail { color: var(--danger); }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .level-0 { background: #e0e0e0; color: #666; }
         .level-1 { background: #c8e6c9; color: #2e7d32; }
         .level-2 { background: #a5d6a7; color: #1b5e20; }
@@ -495,6 +500,22 @@
                 <input type="checkbox" id="autoSpeak" checked>
             </div>
             <hr style="border: none; border-top: 1px solid #f0f0f0; margin: 16px 0;">
+            <h3 style="font-size:14px; color:var(--text-light); margin-bottom:12px;">☁️ GitHub 数据同步</h3>
+            <div class="form-group">
+                <label>Personal Access Token</label>
+                <input type="password" id="githubTokenInput" placeholder="ghp_xxxxxxxxxxxx" autocomplete="off">
+            </div>
+            <div class="settings-row" style="margin-bottom:8px;">
+                <label>同步状态 <span id="syncStatus" class="sync-idle">○</span></label>
+                <button class="btn btn-sm btn-outline" onclick="manualSync()">⟳ 立即同步</button>
+            </div>
+            <div style="font-size:12px; color:var(--text-light); line-height:1.6; background:#fafafa; padding:10px 14px; border-radius:10px;">
+                <strong>如何获取 Token？</strong><br>
+                1. 打开 <a href="https://github.com/settings/tokens/new" target="_blank" style="color:var(--primary);">GitHub Token 创建页</a><br>
+                2. Note 填任意名称，勾选 <strong>repo</strong> 权限<br>
+                3. Generate 后复制粘贴到上方输入框
+            </div>
+            <hr style="border: none; border-top: 1px solid #f0f0f0; margin: 16px 0;">
             <div class="settings-row">
                 <label style="color: var(--danger);">清空所有数据</label>
                 <button class="btn btn-sm btn-danger" onclick="clearAllData()">🗑 清空</button>
@@ -509,6 +530,13 @@
     const STORAGE_KEY = 'english_workbench_words';
     const SETTINGS_KEY = 'english_workbench_settings';
     const CHECKIN_KEY = 'english_workbench_checkin';
+    const GITHUB_TOKEN_KEY = 'ew_github_token';
+
+    const GITHUB_OWNER = 'LCC0528';
+    const GITHUB_REPO = 'knowledge-workbench';
+    const GITHUB_PATH = 'data/english-words.json';
+    const GITHUB_RAW = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/main/${GITHUB_PATH}`;
+    const GITHUB_API = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_PATH}`;
 
     const INTERVALS = [0, 1, 3, 7, 15, 30];
 
@@ -519,7 +547,10 @@
         currentAnswerShown: false,
         dailyLimit: 20,
         autoSpeak: true,
-        todayStr: ''
+        todayStr: '',
+        syncStatus: 'idle',
+        ghToken: '',
+        ghFileSha: null
     };
 
     function getToday() {
@@ -542,12 +573,20 @@
         } catch {}
 
         state.todayStr = getToday();
+        state.ghToken = getGhToken();
         document.getElementById('dailyLimit').value = state.dailyLimit;
         document.getElementById('autoSpeak').checked = state.autoSpeak;
+        document.getElementById('githubToken').value = state.ghToken ? state.ghToken.substring(0, 10) + '···' : '';
+        document.getElementById('githubTokenInput').value = state.ghToken;
+
+        if (state.ghToken) {
+            pullFromGitHub();
+        }
     }
 
     function saveWords() {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(state.words));
+        syncToGitHub();
     }
 
     function saveSettings() {
@@ -590,6 +629,110 @@
             [arr[i], arr[j]] = [arr[j], arr[i]];
         }
         return arr;
+    }
+
+    function getGhToken() {
+        try { return localStorage.getItem(GITHUB_TOKEN_KEY) || ''; } catch { return ''; }
+    }
+
+    function setGhToken(token) {
+        state.ghToken = token;
+        try { localStorage.setItem(GITHUB_TOKEN_KEY, token); } catch {}
+    }
+
+    function setSyncStatus(status) {
+        state.syncStatus = status;
+        const el = document.getElementById('syncStatus');
+        if (el) {
+            const icons = { idle: '○', syncing: '⟳', ok: '✓', fail: '✗' };
+            el.textContent = icons[status] || '○';
+            el.className = 'sync-' + status;
+        }
+    }
+
+    async function fetchFromGitHub() {
+        try {
+            const resp = await fetch(GITHUB_RAW, { cache: 'no-cache' });
+            if (!resp.ok) throw new Error('HTTP ' + resp.status);
+            return await resp.json();
+        } catch { return null; }
+    }
+
+    async function syncToGitHub() {
+        const token = getGhToken();
+        if (!token) { setSyncStatus('idle'); return; }
+
+        setSyncStatus('syncing');
+        try {
+            let sha = null;
+            const getResp = await fetch(GITHUB_API, {
+                headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github.v3+json' }
+            });
+            if (getResp.ok) {
+                const existing = await getResp.json();
+                sha = existing.sha;
+            } else if (getResp.status !== 404) {
+                throw new Error('GET failed: ' + getResp.status);
+            }
+
+            const content = btoa(unescape(encodeURIComponent(JSON.stringify(state.words, null, 2))));
+            const body = { message: 'sync english words ' + state.todayStr, content: content };
+            if (sha) body.sha = sha;
+
+            const putResp = await fetch(GITHUB_API, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': 'Bearer ' + token,
+                    'Accept': 'application/vnd.github.v3+json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(body)
+            });
+            if (!putResp.ok) throw new Error('PUT failed: ' + putResp.status + ' ' + (await putResp.text()));
+            setSyncStatus('ok');
+        } catch (e) {
+            console.error('GitHub sync error:', e);
+            setSyncStatus('fail');
+            showToast('同步失败，数据已保存在本地');
+        }
+    }
+
+    async function pullFromGitHub() {
+        const token = getGhToken();
+        if (!token) return;
+
+        setSyncStatus('syncing');
+        try {
+            const remote = await fetchFromGitHub();
+            if (!remote) { setSyncStatus('idle'); return; }
+            if (!Array.isArray(remote) || remote.length === 0) { setSyncStatus('idle'); return; }
+
+            const localMap = new Map(state.words.map(w => [w.id, w]));
+            let merged = false;
+            remote.forEach(rw => {
+                const local = localMap.get(rw.id);
+                if (!local) {
+                    state.words.push(rw);
+                    merged = true;
+                } else {
+                    const rTime = new Date(rw.lastReviewDate || rw.createdDate || 0).getTime();
+                    const lTime = new Date(local.lastReviewDate || local.createdDate || 0).getTime();
+                    if (rTime > lTime) {
+                        Object.assign(local, rw);
+                        merged = true;
+                    }
+                }
+            });
+
+            if (merged) {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(state.words));
+                showToast('已同步其他设备的数据');
+            }
+            setSyncStatus('ok');
+        } catch (e) {
+            console.error('GitHub pull error:', e);
+            setSyncStatus('idle');
+        }
     }
 
     function showToast(msg) {
@@ -909,6 +1052,20 @@
         showToast('数据已清空');
     }
 
+    function manualSync() {
+        const input = document.getElementById('githubTokenInput');
+        const token = input.value.trim();
+        if (token) {
+            setGhToken(token);
+            document.getElementById('githubToken').value = token.substring(0, 10) + '···';
+            showToast('Token 已保存');
+        }
+        pullFromGitHub().then(() => {
+            updateDailyStats();
+            if (state.words.length > 0) saveWords();
+        });
+    }
+
     function escHtml(s) {
         const div = document.createElement('div');
         div.textContent = s;
@@ -933,6 +1090,14 @@
         });
         document.getElementById('inputTranslation').addEventListener('keydown', function(e) {
             if (e.key === 'Enter') document.getElementById('inputExample').focus();
+        });
+
+        document.getElementById('githubTokenInput').addEventListener('change', function() {
+            const token = this.value.trim();
+            if (token) {
+                setGhToken(token);
+                showToast('Token 已保存');
+            }
         });
 
         updateDailyStats();
