@@ -965,36 +965,48 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         }
     }
 
-    let speechReady = false;
+    let useNativeSpeech = true;
 
     function initSpeech() {
-        if (speechReady || !window.speechSynthesis) return;
-        window.speechSynthesis.cancel();
-        const u = new SpeechSynthesisUtterance('');
-        u.lang = 'en-US';
-        window.speechSynthesis.speak(u);
-        speechReady = true;
+        if (window.speechSynthesis && window.speechSynthesis.getVoices().length > 0) {
+            useNativeSpeech = true;
+            return;
+        }
+        if (window.speechSynthesis) {
+            window.speechSynthesis.getVoices();
+            window.speechSynthesis.onvoiceschanged = () => {
+                if (window.speechSynthesis.getVoices().length > 0) useNativeSpeech = true;
+            };
+            const u = new SpeechSynthesisUtterance('');
+            u.lang = 'en-US';
+            window.speechSynthesis.speak(u);
+            window.speechSynthesis.cancel();
+        }
     }
 
-    function getEnVoice() {
-        if (!window.speechSynthesis) return null;
-        const voices = window.speechSynthesis.getVoices();
-        return voices.find(v => v.lang.startsWith('en') && v.name.includes('Google'))
-            || voices.find(v => v.lang.startsWith('en'))
-            || null;
+    function speakFallback(text) {
+        const audio = new Audio();
+        audio.src = 'https://translate.google.com/translate_tts?ie=UTF-8&tl=en&q=' + encodeURIComponent(text) + '&client=tw-ob&ttsspeed=0.9';
+        audio.play().catch(() => {});
     }
 
     function speakText(text) {
-        if (!text || !window.speechSynthesis) { showToast('当前浏览器不支持发音'); return; }
-        window.speechSynthesis.cancel();
-        const u = new SpeechSynthesisUtterance(text);
-        u.lang = 'en-US';
-        u.rate = 0.85;
-        u.pitch = 1;
-        const voice = getEnVoice();
-        if (voice) u.voice = voice;
-        u.onerror = () => showToast('发音失败，请检查浏览器设置');
-        window.speechSynthesis.speak(u);
+        if (!text) return;
+        if (useNativeSpeech && window.speechSynthesis) {
+            window.speechSynthesis.cancel();
+            const u = new SpeechSynthesisUtterance(text);
+            u.lang = 'en-US';
+            u.rate = 0.85;
+            const voices = window.speechSynthesis.getVoices();
+            const voice = voices.find(v => v.lang.startsWith('en') && v.name.includes('Google'))
+                || voices.find(v => v.lang.startsWith('en'))
+                || null;
+            if (voice) u.voice = voice;
+            u.onerror = () => speakFallback(text);
+            window.speechSynthesis.speak(u);
+        } else {
+            speakFallback(text);
+        }
     }
 
     function speakWord() {
