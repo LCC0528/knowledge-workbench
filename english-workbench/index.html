@@ -407,7 +407,6 @@
                         <div class="example-zh" id="exampleZhDisplay"></div>
                     </div>
                     <div class="btn-group">
-                        <button class="btn btn-icon btn-outline" onclick="speakWord()" title="发音">🔊</button>
                         <button class="btn btn-accent" onclick="showAnswer()">👁 看答案</button>
                         <button class="btn btn-danger" onclick="markForgot()" id="btnForgot">❌ 没记住</button>
                         <button class="btn btn-success" onclick="markRemembered()" id="btnRemember">✅ 记下了</button>
@@ -517,10 +516,6 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
                 <label>每日复习数量</label>
                 <input type="number" id="dailyLimit" min="5" max="100" value="20">
             </div>
-            <div class="settings-row">
-                <label>自动发音</label>
-                <input type="checkbox" id="autoSpeak" checked>
-            </div>
             <hr style="border: none; border-top: 1px solid #f0f0f0; margin: 16px 0;">
             <h3 style="font-size:14px; color:var(--text-light); margin-bottom:12px;">☁️ GitHub 数据同步</h3>
             <div class="form-group">
@@ -568,7 +563,6 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         reviewIndex: 0,
         currentAnswerShown: false,
         dailyLimit: 20,
-        autoSpeak: true,
         todayStr: '',
         syncStatus: 'idle',
         ghToken: '',
@@ -590,7 +584,6 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             const settings = JSON.parse(localStorage.getItem(SETTINGS_KEY));
             if (settings) {
                 state.dailyLimit = settings.dailyLimit || 20;
-                state.autoSpeak = settings.autoSpeak !== false;
             }
         } catch {}
 
@@ -880,9 +873,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         state.currentAnswerShown = false;
         updateProgress();
 
-        if (state.autoSpeak) {
-            speakText(w.word);
-        }
+
     }
 
     function showAnswer() {
@@ -897,9 +888,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
 
         state.currentAnswerShown = true;
 
-        if (w.example) {
-            setTimeout(() => speakText(w.example), 300);
-        }
+
     }
 
     function markRemembered() {
@@ -963,33 +952,6 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         } else {
             showCurrentWord();
         }
-    }
-
-    function speakText(text) {
-        if (!text || !window) return;
-        try {
-            if (window.speechSynthesis) {
-                window.speechSynthesis.cancel();
-                const u = new SpeechSynthesisUtterance(text);
-                u.lang = 'en-US';
-                u.rate = 0.85;
-                window.speechSynthesis.speak(u);
-                return;
-            }
-        } catch (e) {}
-        try {
-            const el = document.createElement('audio');
-            el.style.display = 'none';
-            el.src = 'https://dict.youdao.com/dictvoice?audio=' + encodeURIComponent(text.substring(0, 60)) + '&type=1';
-            document.body.appendChild(el);
-            el.play().then(() => {}).catch(() => {});
-            setTimeout(() => { try { document.body.removeChild(el); } catch(e) {} }, 5000);
-        } catch (e) {}
-    }
-
-    function speakWord() {
-        const w = state.reviewQueue[state.reviewIndex];
-        if (w) speakText(w.word);
     }
 
     function startReview() {
