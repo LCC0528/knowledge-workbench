@@ -387,6 +387,7 @@
             <span class="active" data-tab="review" onclick="switchTab('review')">复习</span>
             <span data-tab="add" onclick="switchTab('add')">录入</span>
             <span data-tab="stats" onclick="switchTab('stats')">统计</span>
+            <span data-tab="wrong" onclick="switchTab('wrong')">错词</span>
             <span data-tab="settings" onclick="switchTab('settings')">设置</span>
         </div>
     </header>
@@ -547,6 +548,30 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
 
             <h3 style="font-size: 14px; color: var(--text-light); margin-bottom: 8px;">所有单词</h3>
             <ul class="word-list" id="wordList"></ul>
+        </div>
+    </div>
+
+    <div id="tab-wrong" class="hidden">
+        <div class="card">
+            <h2 style="color: var(--primary-dark); font-size: 18px; margin-bottom: 12px;">❌ 错词本</h2>
+            <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
+                <button class="btn btn-primary btn-sm" onclick="practiceWrongWords()">📖 复习错词</button>
+                <button class="btn btn-outline btn-sm" onclick="clearWrongLog()">🗑 清空记录</button>
+            </div>
+            <div class="stats-grid" style="margin-bottom:14px">
+                <div class="stat-item"><div class="num" id="wrongTotal">0</div><div class="label">错词总数</div></div>
+                <div class="stat-item"><div class="num" id="wrongAccuracy">0%</div><div class="label">正确率</div></div>
+                <div class="stat-item"><div class="num" id="wrongTop">0</div><div class="label">最易错(次)</div></div>
+            </div>
+            <div id="wrongFilter" style="display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap">
+                <button class="btn btn-sm" style="flex:1;background:var(--primary);color:#fff;border:none;border-radius:8px;padding:6px" onclick="renderWrongWords('all')">全部</button>
+                <button class="btn btn-sm" style="flex:1;background:var(--danger);color:#fff;border:none;border-radius:8px;padding:6px;opacity:0.6" onclick="renderWrongWords('top')">高频错</button>
+                <button class="btn btn-sm" style="flex:1;background:var(--success);color:#fff;border:none;border-radius:8px;padding:6px;opacity:0.6" onclick="renderWrongWords('recent')">近期错</button>
+            </div>
+            <ul class="word-list" id="wrongList" style="max-height:400px"></ul>
+            <div id="wrongEmpty" class="hidden" style="text-align:center;padding:30px;color:var(--text-light);font-size:14px">
+                ✅ 暂无错词，继续保持！
+            </div>
         </div>
     </div>
 
@@ -820,12 +845,13 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         document.querySelectorAll('[data-tab]').forEach(el => el.classList.remove('active'));
         document.querySelector(`[data-tab="${tab}"]`)?.classList.add('active');
 
-        ['review','add','stats','settings'].forEach(t => {
+        ['review','add','stats','wrong','settings'].forEach(t => {
             document.getElementById('tab-' + t).classList.toggle('hidden', t !== tab);
         });
 
         if (tab === 'review') { prepareReview(); }
         if (tab === 'stats') renderStats();
+        if (tab === 'wrong') renderWrongWords();
     }
 
     function autoFillWord() {
@@ -1264,6 +1290,116 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             day.title = dateStr;
             bar.appendChild(day);
         }
+    }
+
+    function getWeakWords() {
+        const logs = getReviewLogs();
+        const forgetCount = {};
+        const totalCount = {};
+        logs.forEach(function(l) {
+            if (!totalCount[l.wordId]) totalCount[l.wordId] = 0;
+            totalCount[l.wordId]++;
+            if (l.date !== 'forgot' && l.date !== 'remembered') {
+                // Old format: wordId = result (date stored as wordId field)
+                return;
+            }
+        });
+        logs.forEach(function(l) {
+            if (l.wordId !== 'remembered' && l.wordId !== 'forgot') {
+                if (!totalCount[l.wordId]) totalCount[l.wordId] = 0;
+                totalCount[l.wordId]++;
+            }
+        });
+        return state.words.map(function(w) {
+            var total = totalCount[w.id] || 0;
+            var forgot = logs.filter(function(l) {
+                return l.wordId === w.id && l.date === 'forgot';
+            }).length;
+            var remembered = logs.filter(function(l) {
+                return l.wordId === w.id && l.date === 'remembered';
+            }).length;
+            return { word: w, total: total, forgot: forgot, remembered: remembered };
+        });
+    }
+
+    function renderWrongWords(filter) {
+        filter = filter || 'all';
+        var weak = getWeakWords().filter(function(x) { return x.forgot > 0; });
+        weak.sort(function(a,b) { return b.forgot - a.forgot || b.total - a.total; });
+
+        var total = weak.length;
+        var totalForgot = weak.reduce(function(s,x) { return s + x.forgot; }, 0);
+        var totalRemembered = weak.reduce(function(s,x) { return s + x.remembered; }, 0);
+        var accuracy = (totalForgot + totalRemembered) > 0
+            ? Math.round(totalRemembered / (totalForgot + totalRemembered) * 100) : 0;
+        var maxForgot = weak.length > 0 ? weak[0].forgot : 0;
+
+        document.getElementById('wrongTotal').textContent = total;
+        document.getElementById('wrongAccuracy').textContent = accuracy + '%';
+        document.getElementById('wrongTop').textContent = maxForgot;
+
+        var filtered = weak;
+        if (filter === 'top') filtered = weak.filter(function(x) { return x.forgot >= Math.max(2, maxForgot * 0.5); });
+        if (filter === 'recent') {
+            var logs = getReviewLogs().filter(function(l) { return l.date === 'forgot'; });
+            var recentIds = {};
+            logs.slice(-20).forEach(function(l) { recentIds[l.wordId] = true; });
+            filtered = weak.filter(function(x) { return recentIds[x.wordId]; });
+        }
+
+        var list = document.getElementById('wrongList');
+        var empty = document.getElementById('wrongEmpty');
+        list.innerHTML = '';
+
+        if (filtered.length === 0) {
+            empty.classList.remove('hidden');
+            list.classList.add('hidden');
+            return;
+        }
+        empty.classList.add('hidden');
+        list.classList.remove('hidden');
+
+        filtered.forEach(function(x) {
+            var li = document.createElement('li');
+            li.style.cursor = 'pointer';
+            li.onclick = function() {
+                document.getElementById('inputWord').value = x.word.word;
+                switchTab('add');
+                autoFillWord();
+            };
+            var pct = x.total > 0 ? Math.round((1 - x.forgot / x.total) * 100) : 0;
+            li.innerHTML =
+                '<div><div class="w-en">' + escHtml(x.word.word) + '</div>' +
+                '<div class="w-zh">' + escHtml(x.word.translation) + ' · 记错' + x.forgot + '次</div></div>' +
+                '<span class="w-level" style="background:' + (pct < 50 ? 'var(--danger)' : pct < 80 ? 'var(--accent)' : 'var(--success)') + ';color:#fff">' + pct + '%</span>';
+            list.appendChild(li);
+        });
+    }
+
+    function practiceWrongWords() {
+        var weak = getWeakWords().filter(function(x) { return x.forgot > 0; });
+        if (weak.length === 0) { showToast('✅ 没有错词需要复习'); return; }
+        weak.sort(function(a,b) { return b.forgot - a.forgot; });
+        state.reviewQueue = weak.map(function(x) { return x.word; });
+        state.reviewIndex = 0;
+        state.currentAnswerShown = false;
+        switchTab('review');
+        var welcome = document.getElementById('reviewWelcome');
+        var card = document.getElementById('reviewCard');
+        var empty = document.getElementById('reviewEmpty');
+        welcome.classList.add('hidden');
+        empty.classList.add('hidden');
+        card.classList.remove('hidden');
+        showCurrentWord();
+        updateProgress();
+        showToast('📖 错词复习：共 ' + state.reviewQueue.length + ' 个');
+    }
+
+    function clearWrongLog() {
+        if (!confirm('确定清空所有错词记录？')) return;
+        localStorage.removeItem(REVIEW_LOG_KEY);
+        renderWrongWords();
+        showToast('错词记录已清空');
     }
 
     function deleteWord(id) {
