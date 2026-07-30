@@ -632,8 +632,9 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         state.todayStr = getToday();
         state.ghToken = getGhToken();
         document.getElementById('dailyLimit').value = state.dailyLimit;
-        document.getElementById('autoSpeak').checked = state.autoSpeak;
-        document.getElementById('githubToken').value = state.ghToken ? state.ghToken.substring(0, 10) + '···' : '';
+        if (document.getElementById('githubToken')) {
+            document.getElementById('githubToken').value = state.ghToken ? state.ghToken.substring(0, 10) + '···' : '';
+        }
         document.getElementById('githubTokenInput').value = state.ghToken;
 
         if (state.ghToken) {
@@ -648,8 +649,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
 
     function saveSettings() {
         localStorage.setItem(SETTINGS_KEY, JSON.stringify({
-            dailyLimit: state.dailyLimit,
-            autoSpeak: state.autoSpeak
+            dailyLimit: state.dailyLimit
         }));
     }
 
@@ -1393,13 +1393,8 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
 
         loadData();
 
-        document.getElementById('dailyLimit').addEventListener('change', function() {
+        document.getElementById('dailyLimit').addEventListener('input', function() {
             state.dailyLimit = parseInt(this.value) || 20;
-            saveSettings();
-        });
-
-        document.getElementById('autoSpeak').addEventListener('change', function() {
-            state.autoSpeak = this.checked;
             saveSettings();
         });
 
