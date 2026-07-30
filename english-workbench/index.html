@@ -351,6 +351,24 @@
         .level-4 { background: #66bb6a; color: white; }
         .level-5 { background: #4caf50; color: white; }
 
+        .chart-block { margin: 16px 0; }
+        .chart-title { font-size:14px; color:var(--primary-dark); font-weight:600; margin-bottom:8px; }
+
+        .bar-chart-h { display:flex; flex-direction:column; gap:6px; }
+        .bar-row { display:grid; grid-template-columns:56px 1fr 28px; align-items:center; gap:8px; }
+        .bar-label { font-size:11px; color:var(--text-light); text-align:right; }
+        .bar-track { height:16px; background:#f0f0f0; border-radius:8px; overflow:hidden; }
+        .bar-fill { height:100%; border-radius:8px; transition:width 0.5s ease; min-width:0; }
+        .bar-count { font-size:11px; color:var(--primary-dark); font-weight:600; }
+
+        .bar-chart-v { display:flex; align-items:flex-end; gap:4px; height:80px; padding:0 2px; }
+        .bar-v { flex:1; display:flex; flex-direction:column; align-items:center; gap:2px; }
+        .bar-v .col { width:100%; border-radius:4px 4px 0 0; min-height:2px; transition:height 0.5s ease; }
+        .bar-v .day-label { font-size:9px; color:var(--text-light); }
+
+        .sparkline { display:flex; align-items:flex-end; gap:2px; height:60px; padding:4px 0; }
+        .sparkline .dot { flex:1; border-radius:2px 2px 0 0; min-height:2px; transition:height 0.5s ease; }
+
         @media (max-width: 400px) {
             body { padding: 10px; }
             .card { padding: 16px; }
@@ -505,6 +523,23 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
                 </div>
             </div>
 
+            <div id="chartSection">
+                <div class="chart-block">
+                    <div class="chart-title">📈 掌握分布</div>
+                    <div id="levelChart"></div>
+                </div>
+
+                <div class="chart-block">
+                    <div class="chart-title">📊 本周复习</div>
+                    <div class="bar-chart-v" id="weeklyChart"></div>
+                </div>
+
+                <div class="chart-block">
+                    <div class="chart-title">📈 累计增长</div>
+                    <div id="growthChart" class="sparkline"></div>
+                </div>
+            </div>
+
             <div style="margin: 16px 0;">
                 <div style="font-size:14px; color:var(--text); margin-bottom:8px;">📅 今日打卡</div>
                 <div class="streak-bar" id="streakBar"></div>
@@ -554,6 +589,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
     const SETTINGS_KEY = 'english_workbench_settings';
     const CHECKIN_KEY = 'english_workbench_checkin';
     const GITHUB_TOKEN_KEY = 'ew_github_token';
+    const REVIEW_LOG_KEY = 'english_workbench_review_log';
 
     const GITHUB_OWNER = 'LCC0528';
     const GITHUB_REPO = 'knowledge-workbench';
@@ -629,6 +665,17 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             dates.push(date);
             localStorage.setItem(CHECKIN_KEY, JSON.stringify(dates));
         }
+    }
+
+    function addReviewLog(wordId, result) {
+        const logs = JSON.parse(localStorage.getItem(REVIEW_LOG_KEY) || '[]');
+        logs.push({ date: state.todayStr, wordId: result });
+        localStorage.setItem(REVIEW_LOG_KEY, JSON.stringify(logs));
+    }
+
+    function getReviewLogs() {
+        try { return JSON.parse(localStorage.getItem(REVIEW_LOG_KEY)) || []; }
+        catch { return []; }
     }
 
     function getDueWords() {
@@ -1002,6 +1049,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             String(next.getMonth()+1).padStart(2,'0') + '-' +
             String(next.getDate()).padStart(2,'0');
 
+        addReviewLog(w.id, 'remembered');
         saveWords();
         state.reviewIndex++;
         showToast('记下了！下次复习：' + getLevelLabel(wordObj.level));
@@ -1033,6 +1081,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             String(next.getMonth()+1).padStart(2,'0') + '-' +
             String(next.getDate()).padStart(2,'0');
 
+        addReviewLog(w.id, 'forgot');
         saveWords();
         state.reviewIndex++;
         showToast('没记住，已重置为 1 天后复习');
@@ -1106,6 +1155,10 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         document.getElementById('statsMastered').textContent = mastered;
         document.getElementById('statsLearning').textContent = learning;
 
+        renderLevelChart();
+        renderWeeklyChart();
+        renderGrowthChart();
+
         const list = document.getElementById('wordList');
         list.innerHTML = '';
         const sorted = [...state.words].sort((a,b) => a.nextReviewDate.localeCompare(b.nextReviewDate));
@@ -1126,6 +1179,69 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         });
 
         renderStreakBar();
+    }
+
+    function renderLevelChart() {
+        const levels = [0,0,0,0,0,0];
+        const labels = ['新词','1天','3天','7天','15天','已掌握'];
+        const colors = ['#e0e0e0','#c8e6c9','#a5d6a7','#81c784','#66bb6a','#4caf50'];
+        state.words.forEach(w => { if (w.level >= 0 && w.level <= 5) levels[w.level]++; });
+        const max = Math.max(...levels, 1);
+
+        const container = document.getElementById('levelChart');
+        container.innerHTML = '<div class="bar-chart-h">' +
+            levels.map((count, i) =>
+                `<div class="bar-row">
+                    <span class="bar-label">${labels[i]}</span>
+                    <div class="bar-track"><div class="bar-fill" style="width:${count/max*100}%;background:${colors[i]}"></div></div>
+                    <span class="bar-count">${count}</span>
+                </div>`
+            ).join('') +
+        '</div>';
+    }
+
+    function renderWeeklyChart() {
+        const logs = getReviewLogs();
+        const days = [];
+        const dayLabels = [];
+        for (let i = 6; i >= 0; i--) {
+            const d = new Date();
+            d.setDate(d.getDate() - i);
+            const dateStr = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+            days.push(logs.filter(l => l.date === dateStr).length);
+            dayLabels.push(['日','一','二','三','四','五','六'][d.getDay()]);
+        }
+        const max = Math.max(...days, 1);
+
+        const container = document.getElementById('weeklyChart');
+        container.innerHTML = days.map((count, i) =>
+            `<div class="bar-v">
+                <div class="col" style="height:${count/max*100}%;background:var(--success)"></div>
+                <span class="day-label">${dayLabels[i]}</span>
+            </div>`
+        ).join('');
+    }
+
+    function renderGrowthChart() {
+        const sorted = [...state.words].sort((a,b) => a.createdDate.localeCompare(b.createdDate));
+        if (sorted.length === 0) {
+            document.getElementById('growthChart').innerHTML = '<div style="font-size:12px;color:var(--text-light);padding:10px">暂无数据</div>';
+            return;
+        }
+        const total = sorted.length;
+        const segments = Math.min(total, 14);
+        const step = Math.max(1, Math.floor(total / segments));
+        const points = [];
+        for (let i = 1; i <= segments; i++) {
+            points.push(Math.min(i * step, total));
+        }
+        if (points[points.length-1] !== total) points.push(total);
+        const max = total;
+
+        const container = document.getElementById('growthChart');
+        container.innerHTML = points.map(count =>
+            `<div class="dot" style="height:${count/max*100}%;background:var(--primary)"></div>`
+        ).join('');
     }
 
     function renderStreakBar() {
