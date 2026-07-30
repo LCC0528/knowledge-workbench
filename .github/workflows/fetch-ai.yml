@@ -3,6 +3,8 @@ on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   fetch-and-push:
     runs-on: ubuntu-latest
@@ -11,9 +13,6 @@ jobs:
         working-directory: cloud-workbench
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -26,10 +25,6 @@ jobs:
         run: python generate_summary.py
       - name: Generate news feed
         run: python generate_feed.py
-      - name: Push to WeChat
-        env:
-          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
-        run: python push_to_wechat.py
       - name: Save report
         run: |
           DATE=$(date +'%Y-%m-%d')
