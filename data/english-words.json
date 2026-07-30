@@ -1318,5 +1318,18 @@
     "level": 0,
     "nextReviewDate": "2026-07-29",
     "lastReviewDate": null
+  },
+  {
+    "id": 1785387762228,
+    "word": "dependent",
+    "translation": "adj. 依赖的，依靠的；取决于；有瘾的; n. 受供养者",
+    "example": "",
+    "exampleTranslation": "",
+    "createdDate": "2026-07-30",
+    "level": 0,
+    "nextReviewDate": "2026-07-30",
+    "lastReviewDate": null,
+    "phonetic": "/dɪˈpɛndənt/",
+    "pos": "📎 noun, adjective"
   }
 ]
