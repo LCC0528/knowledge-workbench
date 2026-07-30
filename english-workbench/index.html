@@ -665,6 +665,8 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         if (state.ghToken) {
             pullFromGitHub();
         }
+
+        migrateReviewLogs();
     }
 
     function saveWords() {
@@ -701,6 +703,24 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
     function getReviewLogs() {
         try { return JSON.parse(localStorage.getItem(REVIEW_LOG_KEY)) || []; }
         catch { return []; }
+    }
+
+    function migrateReviewLogs() {
+        var logs = getReviewLogs();
+        var changed = false;
+        logs = logs.filter(function(l) {
+            return typeof l.wordId === 'number';
+        });
+        logs = logs.map(function(l) {
+            if (!l.result) {
+                l.result = l.date === 'forgot' ? 'forgot' : 'remembered';
+                changed = true;
+            }
+            return l;
+        });
+        if (changed) {
+            localStorage.setItem(REVIEW_LOG_KEY, JSON.stringify(logs));
+        }
     }
 
     function getDueWords() {
