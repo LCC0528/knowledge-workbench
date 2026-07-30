@@ -986,8 +986,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         const newDue = due.filter(w => w.lastReviewDate !== state.todayStr);
         const limit = state.dailyLimit;
 
-        let pool = newDue.slice(0, limit);
-        pool = shuffle(pool);
+        let pool = shuffle(newDue).slice(0, limit);
 
         state.reviewQueue = pool;
         state.reviewIndex = 0;
@@ -1380,7 +1379,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         var weak = getWeakWords().filter(function(x) { return x.forgot > 0; });
         if (weak.length === 0) { showToast('✅ 没有错词需要复习'); return; }
         weak.sort(function(a,b) { return b.forgot - a.forgot; });
-        state.reviewQueue = weak.map(function(x) { return x.word; });
+        state.reviewQueue = shuffle(weak.map(function(x) { return x.word; }));
         state.reviewIndex = 0;
         state.currentAnswerShown = false;
         switchTab('review');
