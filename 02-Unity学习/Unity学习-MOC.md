@@ -8,28 +8,26 @@ tags: [MOC, Unity]
 > Unity 引擎学习路径：从基础到实战。
 
 ## 📥 原始资料（raw/）
-教程、文档、视频转录等原始素材。
+- [[raw/2026-07-30-麦扣Unity动画系统课程]] — 麦扣长官 B 站 30 集动画教程
+- [[raw/2026-07-30-麦扣UnityShader课程]] — 麦扣长官 B 站 28 集 Shader 教程
 
 ## 📚 知识库（wiki/）
-<!-- AI 整理后自动填充 -->
-
-### 基础概念
-- （待填充）
-
-### C# 脚本
-- （待填充）
-
-### 组件系统
-- （待填充）
-
-### 物理系统
-- （待填充）
-
-### UI 系统
-- （待填充）
 
 ### 动画系统
-- （待填充）
+- [[Unity动画系统]] — Animator Controller、状态机、混合树、IK、动画重定向
+- [[Unity寻路系统]] — NavMesh、NavMeshAgent、动态障碍物
+
+### 图形与渲染
+- [[Unity Shader入门]] — 顶点/片元着色器、光照模型、法线贴图、透明混合、URP
+
+### UI 系统
+- [[Unity UI系统]] — Canvas、RectTransform、UGUI 组件、响应式布局
+
+### 性能优化
+- [[Unity性能优化]] — Draw Call、批处理、LOD、Profiler、内存管理
+
+### 底层架构
+- [[Unity底层架构]] — Scriptable Object、设计模式、DOTS/ECS、Addressables
 
 ## 🧰 方法论（skills/）
 - （待填充）
