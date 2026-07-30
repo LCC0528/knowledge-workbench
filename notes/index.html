@@ -52,6 +52,13 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 .modal .modal-header h2{font-size:17px;color:var(--primary-dark)}
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#333;color:#fff;padding:8px 20px;border-radius:10px;font-size:13px;z-index:50;transition:opacity .3s;opacity:0;pointer-events:none}
 .toast.show{opacity:1}
+.sync-status{display:flex;align-items:center;gap:6px;justify-content:center;padding:8px;font-size:12px;color:var(--text-light);margin-bottom:8px}
+.sync-status button{background:none;border:1px solid var(--border);border-radius:8px;padding:4px 12px;font-size:12px;cursor:pointer;color:var(--primary)}
+.sync-status .indicator{width:8px;height:8px;border-radius:50%;display:inline-block}
+.sync-status .indicator.idle{background:#ccc}
+.sync-status .indicator.syncing{background:orange;animation:pulse .6s infinite}
+.sync-status .indicator.ok{background:#4caf50}
+@keyframes pulse{0%{opacity:1}50%{opacity:0.4}100%{opacity:1}}
 </style>
 </head>
 <body>
@@ -69,6 +76,11 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
       <option value="english">英语</option>
       <option value="general">通用</option>
     </select>
+  </div>
+  <div class="sync-status">
+    <span class="indicator idle" id="syncIndicator"></span>
+    <span id="syncLabel">本地</span>
+    <button onclick="syncNotes()">⟳ 同步</button>
   </div>
   <div id="emptyState" class="empty-state">
     <div class="icon">📝</div>
@@ -115,6 +127,9 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 
 <script>
 const STORAGE_KEY = 'kb_notes';
+const GITHUB_TOKEN_KEY = 'ew_github_token';
+const NOTES_GITHUB_PATH = 'data/notes.json';
+const REPO = 'LCC0528/knowledge-workbench';
 let state = { notes: [], editingId: null };
 
 function loadNotes() {
@@ -287,6 +302,101 @@ function showToast(msg) {
 
 loadNotes();
 renderList();
+
+function getGhToken() {
+    try { return localStorage.getItem(GITHUB_TOKEN_KEY) || ''; }
+    catch { return ''; }
+}
+
+function setSyncStatus(type, label) {
+    var indicator = document.getElementById('syncIndicator');
+    indicator.className = 'indicator ' + type;
+    document.getElementById('syncLabel').textContent = label || type;
+}
+
+function syncNotes() {
+    var token = getGhToken();
+    if (!token) {
+        showToast('⚠️ 请先在英语工作台设置 GitHub Token');
+        return;
+    }
+    setSyncStatus('syncing', '同步中...');
+
+    var headers = {
+        'Authorization': 'Bearer ' + token,
+        'Accept': 'application/vnd.github.v3+json'
+    };
+
+    // First pull remote
+    fetch('https://api.github.com/repos/' + REPO + '/contents/' + NOTES_GITHUB_PATH, { headers: headers })
+        .then(function(r) {
+            if (r.status === 404) return null;
+            if (!r.ok) throw new Error('Pull failed');
+            return r.json();
+        })
+        .then(function(remote) {
+            var remoteNotes = [];
+            var remoteSha = null;
+            if (remote && remote.content) {
+                try {
+                    remoteNotes = JSON.parse(atob(remote.content.replace(/-/g, '+').replace(/_/g, '/')));
+                    remoteSha = remote.sha;
+                } catch(e) {}
+            }
+
+            // Merge: remote wins on same-id conflict (newer updatedAt wins)
+            var localMap = {};
+            state.notes.forEach(function(n) { localMap[n.id] = n; });
+
+            var merged = false;
+            if (Array.isArray(remoteNotes)) {
+                remoteNotes.forEach(function(rn) {
+                    var local = localMap[rn.id];
+                    if (!local) {
+                        state.notes.push(rn);
+                        merged = true;
+                    } else if (rn.updatedAt > local.updatedAt) {
+                        var idx = state.notes.indexOf(local);
+                        state.notes[idx] = rn;
+                        merged = true;
+                    }
+                });
+            }
+
+            // Now push merged data to GitHub
+            var allNotes = JSON.stringify(state.notes);
+            var content = btoa(unescape(encodeURIComponent(allNotes)));
+            var body = {
+                message: 'Sync notes: ' + state.notes.length + ' notes',
+                content: content
+            };
+            if (remoteSha) body.sha = remoteSha;
+
+            return fetch('https://api.github.com/repos/' + REPO + '/contents/' + NOTES_GITHUB_PATH, {
+                method: 'PUT',
+                headers: headers,
+                body: JSON.stringify(body)
+            }).then(function(r) {
+                if (!r.ok) throw new Error('Push failed');
+                saveNotes();
+                renderList();
+                setSyncStatus('ok', '已同步');
+                showToast(merged ? '✅ 已同步其他设备的笔记' : '✅ 同步完成');
+            });
+        })
+        .catch(function(err) {
+            setSyncStatus('idle', '同步失败');
+            showToast('❌ ' + err.message);
+        });
+}
+
+// Auto-pull on load if token exists
+if (getGhToken()) {
+    setTimeout(function() {
+        syncNotes();
+    }, 500);
+}
+
 document.addEventListener('touchmove', function() {
     document.activeElement && document.activeElement.blur();
 }, { passive: true });
