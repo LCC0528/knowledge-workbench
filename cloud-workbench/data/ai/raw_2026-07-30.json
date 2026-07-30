@@ -1,0 +1,70 @@
+{
+  "date": "2026-07-30",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Anatomy of a Frontier Lab Agent Intrusion: A Timeline of the July 2026 Incident",
+      "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+      "source": "Hacker News",
+      "score": 365,
+      "text": "",
+      "ai_score": 9.0
+    },
+    {
+      "title": "Moonshot AI Open-Sources MoonEP: A Perfectly Balanced Expert Parallelism Library for MoE Training",
+      "url": "https://www.marktechpost.com/2026/07/29/moonshot-ai-open-sources-moonep-a-perfectly-balanced-expert-parallelism-library-for-moe-training/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Moonshot AI has open-sourced MoonEP, an Expert Parallelism (EP) communication library for distributed Mixture-of-Experts (MoE) workloads. The team announced the release as a library built to make e",
+      "ai_score": 9.0
+    },
+    {
+      "title": "OpenAI pushes ChatGPT into patient health records",
+      "url": "https://www.artificialintelligence-news.com/news/openai-pushes-chatgpt-into-patient-health-records/",
+      "source": "www.artificialintelligence-news.com",
+      "score": 0,
+      "text": "<p>OpenAI is deploying a Health feature inside ChatGPT, giving users the option to connect Apple Health data and medical records to the chatbot. Logged-in users aged 18 and older can access it now on ",
+      "ai_score": 9.0
+    },
+    {
+      "title": "Kuna: Decompiler Development in the Age of Coding Agents",
+      "url": "https://noelo.org/blog/kuna-release/",
+      "source": "Hacker News",
+      "score": 27,
+      "text": "",
+      "ai_score": 8.0
+    },
+    {
+      "title": "Meet Token Saver: An Open-Source MCP Extension Using Local Hybrid RAG to Cut Claude PDF Token Costs 90-99%",
+      "url": "https://www.marktechpost.com/2026/07/30/token-saver-an-open-source-mcp-extension-using-local-hybrid-rag/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Marktechpost AI has released Token Saver, an open-source MCP extension for Claude Desktop that uses local Hybrid RAG to slash PDF token consumption by up to 99% while ensuring absolute document pri",
+      "ai_score": 8.0
+    },
+    {
+      "title": "Google AI Overviews become more common in search",
+      "url": "https://www.artificialintelligence-news.com/news/google-ai-overviews-us-searches/",
+      "source": "www.artificialintelligence-news.com",
+      "score": 0,
+      "text": "<p>Google’s AI-generated summaries appeared in 43% of US searches measured by Similarweb, up from 15% a year earlier, according to the market intelligence firm’s 2026 Generative AI Landscape report. A",
+      "ai_score": 8.0
+    },
+    {
+      "title": "How AI is shortening drug discovery timelines in China",
+      "url": "https://www.artificialintelligence-news.com/news/ai-drug-discovery-china/",
+      "source": "www.artificialintelligence-news.com",
+      "score": 0,
+      "text": "<p>Insilico Medicine has reduced the time needed to produce some drug development candidates to about one year by combining artificial intelligence with laboratory research in China, according to CEO ",
+      "ai_score": 8.0
+    },
+    {
+      "title": "Meta, Microsoft, Nvidia, IBM, and others back open-weight AI",
+      "url": "https://www.artificialintelligence-news.com/news/meta-microsoft-nvidia-ibm-others-back-open-weight-ai/",
+      "source": "www.artificialintelligence-news.com",
+      "score": 0,
+      "text": "<p>Two dozen companies and organisations signed an open letter urging US policymakers to protect open-weight AI models. The letter, published today (PDF), carries signatures from a list that spans dir",
+      "ai_score": 8.0
+    }
+  ]
+}
