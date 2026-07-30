@@ -347,9 +347,151 @@
         </ul>
     </div>
 
+    <div class="section-title">📊 学习统计 <span class="count">Unity 知识库进度</span></div>
+
+    <div class="card">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+            <div style="text-align:center;padding:16px;background:var(--bg);border-radius:16px">
+                <div style="font-size:28px;font-weight:700;color:var(--green-700)">5</div>
+                <div style="font-size:12px;color:var(--text-light);margin-top:4px">知识页</div>
+            </div>
+            <div style="text-align:center;padding:16px;background:var(--bg);border-radius:16px">
+                <div style="font-size:28px;font-weight:700;color:var(--green-700)">18</div>
+                <div style="font-size:12px;color:var(--text-light);margin-top:4px">代码文件</div>
+            </div>
+            <div style="text-align:center;padding:16px;background:var(--bg);border-radius:16px">
+                <div style="font-size:28px;font-weight:700;color:var(--green-700)">2</div>
+                <div style="font-size:12px;color:var(--text-light);margin-top:4px">原始资料</div>
+            </div>
+            <div style="text-align:center;padding:16px;background:var(--bg);border-radius:16px">
+                <div style="font-size:28px;font-weight:700;color:var(--green-700)">4</div>
+                <div style="font-size:12px;color:var(--text-light);margin-top:4px">主题领域</div>
+            </div>
+        </div>
+
+        <div style="font-size:14px;font-weight:600;margin-bottom:12px;color:var(--green-800)">各主题代码量</div>
+
+        <div class="bar-chart" id="topicChart">
+            <div class="bar-row"><span class="bar-label">动画系统</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-count">6</span></div>
+            <div class="bar-row"><span class="bar-label">寻路系统</span><div class="bar-track"><div class="bar-fill" style="width:auto" data-pct="67"></div></div><span class="bar-count">4</span></div>
+            <div class="bar-row"><span class="bar-label">UI 系统</span><div class="bar-track"><div class="bar-fill" style="width:auto" data-pct="67"></div></div><span class="bar-count">4</span></div>
+            <div class="bar-row"><span class="bar-label">性能优化</span><div class="bar-track"><div class="bar-fill" style="width:auto" data-pct="50"></div></div><span class="bar-count">3</span></div>
+            <div class="bar-row"><span class="bar-label">底层架构</span><div class="bar-track"><div class="bar-fill" style="width:auto" data-pct="67"></div></div><span class="bar-count">4</span></div>
+        </div>
+    </div>
+
+    <div class="section-title">📅 每日学习进度 <span class="count">打卡记录</span></div>
+
+    <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+            <div id="todayStatus" style="font-size:14px;color:var(--text-light)">今天还没学习</div>
+            <button id="btnCheckin" onclick="checkin()" style="background:var(--green-500);color:#fff;border:none;padding:8px 20px;border-radius:10px;font-size:14px;cursor:pointer">✅ 打卡</button>
+        </div>
+
+        <div class="streak" id="streakBar"></div>
+
+        <div style="margin-top:14px;font-size:13px;color:var(--text-light);text-align:center">
+            连续学习 <strong id="streakCount" style="color:var(--green-700)">0</strong> 天
+        </div>
+    </div>
+
     <footer>
         用 <a href="https://obsidian.md" style="color: var(--green-400);">Obsidian</a> 打开效果更佳 · 由 AI 持续维护
     </footer>
 </div>
+
+<style>
+    .bar-chart { display:flex; flex-direction:column; gap:8px; }
+    .bar-row { display:grid; grid-template-columns:80px 1fr 36px; align-items:center; gap:10px; }
+    .bar-label { font-size:12px; color:var(--text-light); text-align:right; white-space:nowrap; }
+    .bar-track { height:18px; background:var(--green-50); border-radius:9px; overflow:hidden; }
+    .bar-fill { height:100%; background:linear-gradient(90deg,var(--green-400),var(--green-500)); border-radius:9px; transition:width 0.6s ease; }
+    .bar-count { font-size:12px; color:var(--green-700); font-weight:600; }
+
+    .streak { display:flex; gap:6px; justify-content:center; }
+    .streak .day { width:38px; height:44px; border-radius:10px; background:var(--green-50); display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:12px; color:var(--text-light); font-weight:600; border:2px solid transparent; }
+    .streak .day.done { background:var(--green-500); color:#fff; }
+    .streak .day.today { border-color:var(--green-700); }
+    .streak .day .dow { font-size:9px; font-weight:400; opacity:0.7; }
+</style>
+
+<script>
+(function(){
+    const KEY = 'kb_checkin_dates';
+    function getDates() {
+        try { return JSON.parse(localStorage.getItem(KEY) || '[]'); }
+        catch { return []; }
+    }
+    function saveDates(dates) {
+        localStorage.setItem(KEY, JSON.stringify(dates));
+    }
+
+    function todayStr() {
+        var d = new Date();
+        return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+    }
+
+    function calcStreak(dates) {
+        if (dates.length === 0) return 0;
+        var sorted = dates.sort().reverse();
+        var streak = 0;
+        var d = new Date();
+        for (var i = 0; i < sorted.length; i++) {
+            var expected = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+            if (sorted[i] === expected) {
+                streak++;
+                d.setDate(d.getDate() - 1);
+            } else {
+                break;
+            }
+        }
+        return streak;
+    }
+
+    function renderStreak() {
+        var bar = document.getElementById('streakBar');
+        bar.innerHTML = '';
+        var dates = getDates();
+        var today = todayStr();
+        var days = ['日','一','二','三','四','五','六'];
+
+        for (var i = 6; i >= 0; i--) {
+            var d = new Date();
+            d.setDate(d.getDate() - i);
+            var dateStr = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+            var day = document.createElement('div');
+            day.className = 'day';
+            if (dates.includes(dateStr)) day.classList.add('done');
+            if (dateStr === today) day.classList.add('today');
+            day.innerHTML = d.getDate() + '<span class="dow">' + days[d.getDay()] + '</span>';
+            day.title = dateStr;
+            bar.appendChild(day);
+        }
+
+        document.getElementById('streakCount').textContent = calcStreak(dates);
+        document.getElementById('todayStatus').textContent = dates.includes(today) ? '✅ 今日已打卡' : '⏳ 今天还没学习';
+        document.getElementById('btnCheckin').textContent = dates.includes(today) ? '✅ 已打卡' : '✅ 打卡';
+    }
+
+    window.checkin = function() {
+        var dates = getDates();
+        var today = todayStr();
+        if (!dates.includes(today)) {
+            dates.push(today);
+            saveDates(dates);
+        }
+        renderStreak();
+    };
+
+    renderStreak();
+
+    // animate bar widths on load
+    setTimeout(function(){
+        document.querySelectorAll('.bar-fill[data-pct]').forEach(function(el){
+            el.style.width = el.getAttribute('data-pct') + '%';
+        });
+    }, 100);
+})();
+</script>
 </body>
 </html>
