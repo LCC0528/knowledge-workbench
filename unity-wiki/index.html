@@ -50,6 +50,7 @@ body{background:var(--bg);color:var(--text);padding:16px;min-height:100vh}
   <a href="#" data-page="ui">UI 系统</a>
   <a href="#" data-page="optimization">性能优化</a>
   <a href="#" data-page="architecture">底层架构</a>
+  <a href="#" data-page="shader">Shader</a>
 </div>
 
 <div id="page-animation" class="page active"></div>
@@ -57,9 +58,10 @@ body{background:var(--bg);color:var(--text);padding:16px;min-height:100vh}
 <div id="page-ui" class="page"></div>
 <div id="page-optimization" class="page"></div>
 <div id="page-architecture" class="page"></div>
+<div id="page-shader" class="page"></div>
 
 <script>
-const pages = ['animation','navigation','ui','optimization','architecture'];
+const pages = ['animation','navigation','ui','optimization','architecture','shader'];
 
 const content = {
   animation: {
@@ -1719,6 +1721,77 @@ namespace GameFramework.Architecture
         T Create();
     }
 }</code></pre>
+      </div>
+    `
+  },
+  shader: {
+    title: 'Unity Shader 入门',
+    source: 'raw/2026-07-30-麦扣UnityShader课程',
+    html: `
+      <div class="wiki-card">
+        <h2>渲染管线</h2>
+        <ol>
+          <li><strong>应用阶段</strong> — CPU 准备模型/纹理/光源数据</li>
+          <li><strong>几何阶段</strong> — 顶点着色器处理顶点变换</li>
+          <li><strong>光栅化</strong> — 片元着色器计算每个像素颜色</li>
+          <li><strong>输出合并</strong> — 深度测试、模板测试、颜色混合</li>
+        </ol>
+      </div>
+      <div class="wiki-card">
+        <h2>ShaderLab 基本结构</h2>
+        <pre>Shader "GameFramework/MyShader"
+{
+    Properties { /* 材质面板参数 */ }
+    SubShader
+    {
+        Tags { "RenderType"="Opaque" }
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            // 顶点着色器
+            // 片元着色器
+            ENDCG
+        }
+    }
+}</pre>
+      </div>
+      <div class="wiki-card">
+        <h2>Blinn-Phong 光照</h2>
+        <pre>float3 N = normalize(i.worldNormal);
+float3 L = normalize(_WorldSpaceLightPos0.xyz);
+float3 V = normalize(_WorldSpaceCameraPos.xyz - i.worldPos);
+float3 H = normalize(L + V);
+
+// 漫反射 (Lambert)
+float diff = max(0, dot(N, L));
+// 高光 (Blinn-Phong)
+float spec = pow(max(0, dot(N, H)), _Gloss);
+fixed3 final = (diff + spec) * _LightColor0.rgb;</pre>
+      </div>
+      <div class="wiki-card">
+        <h2>法线贴图采样</h2>
+        <pre>// 切线空间转世界空间
+float3 bump = UnpackNormal(tex2D(_BumpMap, i.uv));
+bump.xy *= _BumpScale;
+bump.z = sqrt(1 - saturate(dot(bump.xy, bump.xy)));
+
+float3 N = normalize(float3(
+    dot(i.tspace0, bump),
+    dot(i.tspace1, bump),
+    dot(i.tspace2, bump)
+));</pre>
+      </div>
+      <div class="wiki-card">
+        <h2>透明混合</h2>
+        <pre>Tags { "RenderType"="Transparent" "Queue"="Transparent" }
+Pass {
+    ZWrite Off
+    Blend SrcAlpha OneMinusSrcAlpha
+    // 片元输出带 Alpha 的颜色
+    return fixed4(rgb, a);
+}</pre>
       </div>
     `
   }
