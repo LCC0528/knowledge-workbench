@@ -694,7 +694,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
 
     function addReviewLog(wordId, result) {
         const logs = JSON.parse(localStorage.getItem(REVIEW_LOG_KEY) || '[]');
-        logs.push({ date: state.todayStr, wordId: result });
+        logs.push({ date: state.todayStr, wordId: wordId, result: result });
         localStorage.setItem(REVIEW_LOG_KEY, JSON.stringify(logs));
     }
 
@@ -1293,30 +1293,10 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
 
     function getWeakWords() {
         const logs = getReviewLogs();
-        const forgetCount = {};
-        const totalCount = {};
-        logs.forEach(function(l) {
-            if (!totalCount[l.wordId]) totalCount[l.wordId] = 0;
-            totalCount[l.wordId]++;
-            if (l.date !== 'forgot' && l.date !== 'remembered') {
-                // Old format: wordId = result (date stored as wordId field)
-                return;
-            }
-        });
-        logs.forEach(function(l) {
-            if (l.wordId !== 'remembered' && l.wordId !== 'forgot') {
-                if (!totalCount[l.wordId]) totalCount[l.wordId] = 0;
-                totalCount[l.wordId]++;
-            }
-        });
         return state.words.map(function(w) {
-            var total = totalCount[w.id] || 0;
-            var forgot = logs.filter(function(l) {
-                return l.wordId === w.id && l.date === 'forgot';
-            }).length;
-            var remembered = logs.filter(function(l) {
-                return l.wordId === w.id && l.date === 'remembered';
-            }).length;
+            var total = logs.filter(function(l) { return l.wordId === w.id; }).length;
+            var forgot = logs.filter(function(l) { return l.wordId === w.id && l.result === 'forgot'; }).length;
+            var remembered = logs.filter(function(l) { return l.wordId === w.id && l.result === 'remembered'; }).length;
             return { word: w, total: total, forgot: forgot, remembered: remembered };
         });
     }
@@ -1340,7 +1320,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         var filtered = weak;
         if (filter === 'top') filtered = weak.filter(function(x) { return x.forgot >= Math.max(2, maxForgot * 0.5); });
         if (filter === 'recent') {
-            var logs = getReviewLogs().filter(function(l) { return l.date === 'forgot'; });
+            var logs = getReviewLogs().filter(function(l) { return l.result === 'forgot'; });
             var recentIds = {};
             logs.slice(-20).forEach(function(l) { recentIds[l.wordId] = true; });
             filtered = weak.filter(function(x) { return recentIds[x.wordId]; });
