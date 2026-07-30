@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>Unity 知识库</title>
+<style>
+:root{--bg:#0f0f13;--card:#1a1a24;--text:#e4e4ec;--text-light:#9898b0;--accent:#6c7bff;--accent-dim:#4a55cc;--border:#2a2a3a;--radius:12px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif}
+body{background:var(--bg);color:var(--text);padding:16px;min-height:100vh}
+.header{text-align:center;padding:20px 0 16px}
+.header h1{font-size:22px;font-weight:700;background:linear-gradient(135deg,#6c7bff,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header p{font-size:13px;color:var(--text-light);margin-top:4px}
+.back{display:inline-block;margin-bottom:12px;color:var(--accent);text-decoration:none;font-size:14px}
+.back:hover{text-decoration:underline}
+.nav{display:flex;gap:8px;overflow-x:auto;padding:4px 0 16px;-webkit-overflow-scrolling:touch}
+.nav a{flex-shrink:0;padding:8px 16px;border-radius:8px;background:var(--card);color:var(--text-light);text-decoration:none;font-size:13px;border:1px solid var(--border);transition:.2s}
+.nav a.active,.nav a:active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.page{display:none}
+.page.active{display:block}
+.wiki-card{background:var(--card);border-radius:var(--radius);padding:16px;margin-bottom:12px;border:1px solid var(--border)}
+.wiki-card h2{font-size:16px;font-weight:600;margin-bottom:10px;color:var(--accent)}
+.wiki-card h3{font-size:14px;font-weight:600;margin:14px 0 6px;color:var(--text)}
+.wiki-card p{font-size:13px;line-height:1.7;color:var(--text-light);margin-bottom:8px}
+.wiki-card ul,.wiki-card ol{padding-left:18px;font-size:13px;color:var(--text-light);line-height:1.8;margin-bottom:8px}
+.wiki-card li{margin-bottom:2px}
+.wiki-card table{width:100%;border-collapse:collapse;font-size:12px;margin:8px 0}
+.wiki-card td,.wiki-card th{border:1px solid var(--border);padding:6px 8px;text-align:left}
+.wiki-card th{background:var(--border);color:var(--text);font-weight:600}
+.wiki-card code{font-size:12px;background:var(--bg);padding:2px 6px;border-radius:4px;color:#e4a0f7}
+.wiki-card pre{background:var(--bg);padding:12px;border-radius:8px;overflow-x:auto;font-size:12px;line-height:1.6;margin:8px 0;border:1px solid var(--border)}
+.tag{display:inline-block;padding:2px 8px;border-radius:4px;background:var(--accent-dim);color:#fff;font-size:11px;margin:2px}
+.link{color:var(--accent);text-decoration:none}
+.link:hover{text-decoration:underline}
+.source{margin-top:12px;font-size:12px;color:var(--text-light);border-top:1px solid var(--border);padding-top:10px}
+</style>
+</head>
+<body>
+<a class="back" href="/knowledge-workbench/web/index.html">← 返回工作台</a>
+<div class="header">
+  <h1>🎮 Unity 知识库</h1>
+  <p>麦扣长官动画教程 · 持续更新中</p>
+</div>
+
+<div class="nav" id="nav">
+  <a href="#" data-page="animation" class="active">动画系统</a>
+  <a href="#" data-page="navigation">寻路系统</a>
+  <a href="#" data-page="ui">UI 系统</a>
+  <a href="#" data-page="optimization">性能优化</a>
+  <a href="#" data-page="architecture">底层架构</a>
+</div>
+
+<div id="page-animation" class="page active"></div>
+<div id="page-navigation" class="page"></div>
+<div id="page-ui" class="page"></div>
+<div id="page-optimization" class="page"></div>
+<div id="page-architecture" class="page"></div>
+
+<script>
+const pages = ['animation','navigation','ui','optimization','architecture'];
+
+const content = {
+  animation: {
+    title: 'Unity 动画系统',
+    source: 'raw/2026-07-30-麦扣Unity动画系统课程',
+    html: `
+      <div class="wiki-card">
+        <h2>关键组件</h2>
+        <table>
+          <tr><th>组件</th><th>作用</th></tr>
+          <tr><td>Animation Clip</td><td>单个动画片段</td></tr>
+          <tr><td>Animator Controller</td><td>状态机容器</td></tr>
+          <tr><td>Avatar</td><td>骨骼映射（人形/泛型）</td></tr>
+          <tr><td>Animator</td><td>挂载组件，执行动画</td></tr>
+        </table>
+      </div>
+      <div class="wiki-card">
+        <h2>工作流</h2>
+        <ol>
+          <li>导入模型，Rig 选项卡选择 Humanoid / Generic</li>
+          <li>Animation 选项卡拆分 Clip、设置循环</li>
+          <li>创建 Animator Controller，添加状态</li>
+          <li>设置参数（Float/Int/Bool/Trigger）驱动状态转换</li>
+          <li>代码控制</li>
+          <li>Blend Tree 平滑混合</li>
+          <li>Layer 分层控制身体不同部位</li>
+        </ol>
+      </div>
+      <div class="wiki-card">
+        <h2>代码控制</h2>
+        <pre>Animator anim = GetComponent&lt;Animator&gt;();
+anim.Play("Idle");
+anim.SetTrigger("Attack");
+anim.SetFloat("Speed", 5f);
+anim.SetBool("IsRunning", true);
+anim.GetCurrentAnimatorStateInfo(0);</pre>
+      </div>
+      <div class="wiki-card">
+        <h2>混合树（Blend Tree）</h2>
+        <table>
+          <tr><th>类型</th><th>用途</th></tr>
+          <tr><td>1D Blend</td><td>单一参数（速度→走/跑）</td></tr>
+          <tr><td>2D Simple Directional</td><td>方向+速度</td></tr>
+          <tr><td>2D Freeform Cartesian</td><td>两个独立参数交叉</td></tr>
+          <tr><td>Direct Blend</td><td>直接权重控制（表情）</td></tr>
+        </table>
+      </div>
+      <div class="wiki-card">
+        <h2>进阶</h2>
+        <ul>
+          <li><strong>Root Motion</strong> — 勾选 Apply Root Motion，动画驱动位移</li>
+          <li><strong>IK Pass</strong> — OnAnimatorIK 中 SetIKPosition，手脚贴合地形</li>
+          <li><strong>动画重定向</strong> — Humanoid 动画复用到不同角色</li>
+          <li><strong>Animation Rigging</strong> — 程序化骨骼控制</li>
+        </ul>
+      </div>
+    `
+  },
+  navigation: {
+    title: 'Unity 寻路系统',
+    source: 'raw/2026-07-30-麦扣Unity动画系统课程',
+    html: `
+      <div class="wiki-card">
+        <h2>工作流程</h2>
+        <ol>
+          <li><strong>烘焙 NavMesh</strong>: Window → AI → Navigation，Bake</li>
+          <li><strong>挂载 NavMeshAgent</strong>: 角色添加 NavMeshAgent 组件</li>
+          <li><strong>设置目标</strong>: <code>agent.SetDestination(target)</code></li>
+          <li><strong>自动寻路</strong>: Agent 自动计算路径</li>
+        </ol>
+      </div>
+      <div class="wiki-card">
+        <h2>关键组件</h2>
+        <table>
+          <tr><th>组件</th><th>作用</th></tr>
+          <tr><td>NavMesh</td><td>烘焙出的可行走区域</td></tr>
+          <tr><td>NavMeshAgent</td><td>角色移动控制</td></tr>
+          <tr><td>NavMeshObstacle</td><td>动态障碍物</td></tr>
+          <tr><td>OffMeshLink</td><td>跳跃/梯子特殊路径</td></tr>
+        </table>
+      </div>
+      <div class="wiki-card">
+        <h2>常用 API</h2>
+        <pre>agent.speed = 5f;
+agent.angularSpeed = 120f;
+agent.stoppingDistance = 1f;
+agent.radius = 0.5f;
+agent.SetDestination(pos);
+agent.isStopped = true;
+agent.remainingDistance;
+agent.pathPending;</pre>
+      </div>
+    `
+  },
+  ui: {
+    title: 'Unity UI 系统',
+    source: 'raw/2026-07-30-Unity中级学习路径',
+    html: `
+      <div class="wiki-card">
+        <h2>Canvas 渲染模式</h2>
+        <table>
+          <tr><th>模式</th><th>场景</th></tr>
+          <tr><td>Screen Space - Overlay</td><td>始终最上层（默认）</td></tr>
+          <tr><td>Screen Space - Camera</td><td>相机渲染，可加特效</td></tr>
+          <tr><td>World Space</td><td>3D 空间 UI（血条、对话气泡）</td></tr>
+        </table>
+      </div>
+      <div class="wiki-card">
+        <h2>常用组件</h2>
+        <table>
+          <tr><th>组件</th><th>用途</th></tr>
+          <tr><td>TextMeshPro (TMP)</td><td>文字渲染</td></tr>
+          <tr><td>Image</td><td>图片显示</td></tr>
+          <tr><td>Button</td><td>可点击按钮</td></tr>
+          <tr><td>Slider</td><td>滑块（音量等）</td></tr>
+          <tr><td>ScrollRect</td><td>可滚动列表</td></tr>
+          <tr><td>Layout Group</td><td>自动排列（H/V/Grid）</td></tr>
+        </table>
+      </div>
+      <div class="wiki-card">
+        <h2>响应式 UI 策略</h2>
+        <ul>
+          <li><strong>Canvas Scaler</strong> — Scale With Screen Size 统一缩放</li>
+          <li><strong>Anchor 预设</strong> — 固定 UI 相对位置</li>
+          <li><strong>Layout Group + Content Size Fitter</strong> — 自适应内容</li>
+        </ul>
+      </div>
+    `
+  },
+  optimization: {
+    title: 'Unity 性能优化',
+    source: 'raw/2026-07-30-Unity中级学习路径',
+    html: `
+      <div class="wiki-card">
+        <h2>渲染优化</h2>
+        <table>
+          <tr><th>技术</th><th>原理</th></tr>
+          <tr><td>静态批处理</td><td>合并同材质静态物体</td></tr>
+          <tr><td>动态批处理</td><td>合并小网格（&lt;300顶点）</td></tr>
+          <tr><td>GPU Instancing</td><td>一次绘制多个相同模型</td></tr>
+          <tr><td>LOD</td><td>距离远用低模替代</td></tr>
+          <tr><td>Occlusion Culling</td><td>遮挡跳过渲染</td></tr>
+        </table>
+      </div>
+      <div class="wiki-card">
+        <h2>CPU / 内存优化</h2>
+        <ul>
+          <li><strong>对象池</strong> — 复用 GameObject，减少 Instantiate</li>
+          <li><strong>协程 / Job System</strong> — 分散耗时计算</li>
+          <li><strong>Profiler</strong> — 定位热点函数</li>
+          <li><strong>AssetBundle 分包</strong> — 按场景拆分</li>
+          <li><strong>纹理压缩</strong> — ASTC（移动）/ DXT（PC）/ ETC2</li>
+          <li><strong>音频压缩</strong> — Vorbis / 强制单声道</li>
+        </ul>
+      </div>
+      <div class="wiki-card">
+        <h2>工具链</h2>
+        <ul>
+          <li><strong>Profiler</strong> — CPU/GPU/Memory 时间线</li>
+          <li><strong>Frame Debugger</strong> — 逐帧查看 Draw Call</li>
+          <li><strong>RenderDoc</strong> — GPU 调试</li>
+        </ul>
+      </div>
+    `
+  },
+  architecture: {
+    title: 'Unity 底层架构',
+    source: 'raw/2026-07-30-Unity中级学习路径',
+    html: `
+      <div class="wiki-card">
+        <h2>Scriptable Object</h2>
+        <ul>
+          <li><strong>数据容器</strong> — 配置表、关卡数据、角色属性</li>
+          <li><strong>事件通道</strong> — 解耦发布者/订阅者</li>
+          <li>可序列化、可复用、编辑器友好</li>
+        </ul>
+      </div>
+      <div class="wiki-card">
+        <h2>设计模式</h2>
+        <table>
+          <tr><th>模式</th><th>Unity 实现</th></tr>
+          <tr><td>状态机 (FSM)</td><td>Idle / Walk / Attack 切换</td></tr>
+          <tr><td>对象池</td><td>子弹/粒子复用</td></tr>
+          <tr><td>事件驱动</td><td>C# event / UnityEvent / SO Event</td></tr>
+          <tr><td>依赖注入</td><td>Zenject / VContainer</td></tr>
+        </table>
+      </div>
+      <div class="wiki-card">
+        <h2>DOTS (ECS)</h2>
+        <ul>
+          <li><strong>Entity</strong> — 轻量 ID，替代 GameObject</li>
+          <li><strong>Component</strong> — 纯数据（struct）</li>
+          <li><strong>System</strong> — 批量处理同构数据</li>
+          <li>适用：大量实体（10万+）、物理模拟、RTS</li>
+        </ul>
+      </div>
+      <div class="wiki-card">
+        <h2>Addressables</h2>
+        <ul>
+          <li>替代 Resources / AssetBundle</li>
+          <li>按需加载/卸载</li>
+          <li>远程资源管理</li>
+          <li>依赖自动处理</li>
+        </ul>
+      </div>
+    `
+  }
+};
+
+// Render all pages
+pages.forEach(p => {
+  const d = content[p];
+  if (!d) return;
+  document.getElementById('page-' + p).innerHTML = d.html +
+    '<div class="source">📖 来源：' + d.source + '</div>';
+});
+
+// Nav switching
+document.querySelectorAll('.nav a').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const page = a.dataset.page;
+    document.querySelectorAll('.nav a').forEach(x => x.classList.remove('active'));
+    a.classList.add('active');
+    document.querySelectorAll('.page').forEach(x => x.classList.remove('active'));
+    document.getElementById('page-' + page).classList.add('active');
+    window.scrollTo(0,0);
+  });
+});
+</script>
+</body>
+</html>
