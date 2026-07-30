@@ -27,19 +27,21 @@ body{background:var(--bg);color:var(--text);padding:16px;min-height:100vh}
 .wiki-card table{width:100%;border-collapse:collapse;font-size:12px;margin:8px 0}
 .wiki-card td,.wiki-card th{border:1px solid var(--border);padding:6px 8px;text-align:left}
 .wiki-card th{background:var(--border);color:var(--text);font-weight:600}
-.wiki-card code{font-size:12px;background:var(--bg);padding:2px 6px;border-radius:4px;color:#e4a0f7}
-.wiki-card pre{background:var(--bg);padding:12px;border-radius:8px;overflow-x:auto;font-size:12px;line-height:1.6;margin:8px 0;border:1px solid var(--border)}
+.wiki-card code{font-size:12px;background:var(--bg);padding:2px 6px;border-radius:4px;color:#e4a0f7;font-family:'Cascadia Code','Fira Code','Consolas',monospace}
+.wiki-card pre{background:var(--bg);padding:12px;border-radius:8px;overflow-x:auto;font-size:12px;line-height:1.6;margin:8px 0;border:1px solid var(--border);font-family:'Cascadia Code','Fira Code','Consolas',monospace;white-space:pre;word-wrap:normal;tab-size:4}
+.wiki-card pre code{font-size:12px;background:transparent;padding:0;border-radius:0;color:var(--text);font-family:inherit}
 .tag{display:inline-block;padding:2px 8px;border-radius:4px;background:var(--accent-dim);color:#fff;font-size:11px;margin:2px}
 .link{color:var(--accent);text-decoration:none}
 .link:hover{text-decoration:underline}
 .source{margin-top:12px;font-size:12px;color:var(--text-light);border-top:1px solid var(--border);padding-top:10px}
+.section-label{font-size:13px;color:var(--text-light);margin:-4px 0 10px;font-style:italic}
 </style>
 </head>
 <body>
-<a class="back" href="/knowledge-workbench/web/index.html">← 返回工作台</a>
+<a class="back" href="/knowledge-workbench/web/index.html">&larr; 返回工作台</a>
 <div class="header">
-  <h1>🎮 Unity 知识库</h1>
-  <p>麦扣长官动画教程 · 持续更新中</p>
+  <h1>Unity 知识库</h1>
+  <p>生产级 C# 代码实战</p>
 </div>
 
 <div class="nav" id="nav">
@@ -87,32 +89,483 @@ const content = {
         </ol>
       </div>
       <div class="wiki-card">
-        <h2>代码控制</h2>
-        <pre>Animator anim = GetComponent&lt;Animator&gt;();
-anim.Play("Idle");
-anim.SetTrigger("Attack");
-anim.SetFloat("Speed", 5f);
-anim.SetBool("IsRunning", true);
-anim.GetCurrentAnimatorStateInfo(0);</pre>
-      </div>
-      <div class="wiki-card">
         <h2>混合树（Blend Tree）</h2>
         <table>
           <tr><th>类型</th><th>用途</th></tr>
-          <tr><td>1D Blend</td><td>单一参数（速度→走/跑）</td></tr>
+          <tr><td>1D Blend</td><td>单一参数（速度&rarr;走/跑）</td></tr>
           <tr><td>2D Simple Directional</td><td>方向+速度</td></tr>
           <tr><td>2D Freeform Cartesian</td><td>两个独立参数交叉</td></tr>
           <tr><td>Direct Blend</td><td>直接权重控制（表情）</td></tr>
         </table>
       </div>
       <div class="wiki-card">
-        <h2>进阶</h2>
+        <h2>进阶功能</h2>
         <ul>
-          <li><strong>Root Motion</strong> — 勾选 Apply Root Motion，动画驱动位移</li>
-          <li><strong>IK Pass</strong> — OnAnimatorIK 中 SetIKPosition，手脚贴合地形</li>
-          <li><strong>动画重定向</strong> — Humanoid 动画复用到不同角色</li>
-          <li><strong>Animation Rigging</strong> — 程序化骨骼控制</li>
+          <li><strong>Root Motion</strong> &mdash; 勾选 Apply Root Motion，动画驱动位移</li>
+          <li><strong>IK Pass</strong> &mdash; OnAnimatorIK 中 SetIKPosition，手脚贴合地形</li>
+          <li><strong>动画重定向</strong> &mdash; Humanoid 动画复用到不同角色</li>
+          <li><strong>Animation Rigging</strong> &mdash; 程序化骨骼控制</li>
         </ul>
+      </div>
+      <div class="wiki-card">
+        <h2>生产级代码</h2>
+        <p class="section-label">以下代码来自 GameFramework.Animation 命名空间</p>
+
+        <h3>1. AnimationController &mdash; 动画管理器</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+using System;
+
+namespace GameFramework.Animation
+{
+    public sealed class AnimationController : MonoBehaviour
+    {
+        [SerializeField] private Animator _animator;
+        [SerializeField] private float _crossFadeDuration = 0.1f;
+
+        private readonly int _speedHash = Animator.StringToHash(&quot;Speed&quot;);
+        private readonly int _directionHash = Animator.StringToHash(&quot;Direction&quot;);
+        private readonly int _triggerAttackHash = Animator.StringToHash(&quot;Attack&quot;);
+        private readonly int _triggerHitHash = Animator.StringToHash(&quot;Hit&quot;);
+        private readonly int _triggerDeathHash = Animator.StringToHash(&quot;Death&quot;);
+        private readonly int _stateHash = Animator.StringToHash(&quot;State&quot;);
+        private readonly int _isMovingHash = Animator.StringToHash(&quot;IsMoving&quot;);
+        private readonly int _isGroundedHash = Animator.StringToHash(&quot;IsGrounded&quot;);
+
+        private void Awake()
+        {
+            if (_animator == null)
+                _animator = GetComponent&lt;Animator&gt;();
+        }
+
+        public void SetMovement(float speed, float direction)
+        {
+            _animator.SetFloat(_speedHash, speed, 0.1f, Time.deltaTime);
+            _animator.SetFloat(_directionHash, direction, 0.1f, Time.deltaTime);
+            _animator.SetBool(_isMovingHash, speed &gt; 0.1f);
+        }
+
+        public void SetGrounded(bool grounded)
+        {
+            _animator.SetBool(_isGroundedHash, grounded);
+        }
+
+        public void SetState(int state)
+        {
+            _animator.SetInteger(_stateHash, state);
+        }
+
+        public void PlayAttack()
+        {
+            _animator.SetTrigger(_triggerAttackHash);
+        }
+
+        public void PlayHit()
+        {
+            _animator.SetTrigger(_triggerHitHash);
+        }
+
+        public void PlayDeath()
+        {
+            _animator.SetTrigger(_triggerDeathHash);
+            _animator.SetInteger(_stateHash, -1);
+        }
+
+        public void CrossFade(string stateName)
+        {
+            _animator.CrossFade(stateName, _crossFadeDuration);
+        }
+
+        public AnimatorStateInfo GetCurrentState(int layer = 0)
+        {
+            return _animator.GetCurrentAnimatorStateInfo(layer);
+        }
+
+        public bool IsPlaying(string stateName, int layer = 0)
+        {
+            var state = _animator.GetCurrentAnimatorStateInfo(layer);
+            return state.IsName(stateName) &amp;&amp; state.normalizedTime &lt; 1f;
+        }
+
+        public float GetNormalizedTime(int layer = 0)
+        {
+            return _animator.GetCurrentAnimatorStateInfo(layer).normalizedTime;
+        }
+
+        public void SetLayerWeight(int layer, float weight)
+        {
+            _animator.SetLayerWeight(layer, Mathf.Clamp01(weight));
+        }
+
+        public void ResetTriggers()
+        {
+            _animator.ResetTrigger(_triggerAttackHash);
+            _animator.ResetTrigger(_triggerHitHash);
+            _animator.ResetTrigger(_triggerDeathHash);
+        }
+    }
+}</code></pre>
+
+        <h3>2. StateMachineBehaviour &amp; IState &mdash; 状态机基类</h3>
+        <pre><code class="language-csharp">using System;
+using UnityEngine;
+
+namespace GameFramework.FSM
+{
+    public abstract class StateMachineBehaviour : MonoBehaviour
+    {
+        private IState _currentState;
+        private IState _previousState;
+
+        protected void TransitionTo(IState nextState)
+        {
+            _currentState?.Exit();
+            _previousState = _currentState;
+            _currentState = nextState;
+            _currentState.Enter();
+        }
+
+        protected void TransitionTo&lt;T&gt;() where T : IState
+        {
+        }
+
+        public bool IsInState&lt;T&gt;() where T : IState
+        {
+            return _currentState is T;
+        }
+
+        private void Update()
+        {
+            _currentState?.Tick(Time.deltaTime);
+        }
+
+        private void FixedUpdate()
+        {
+            _currentState?.FixedTick(Time.fixedDeltaTime);
+        }
+
+        private void LateUpdate()
+        {
+            _currentState?.LateTick(Time.deltaTime);
+        }
+    }
+
+    public interface IState
+    {
+        void Enter();
+        void Tick(float delta);
+        void FixedTick(float delta);
+        void LateTick(float delta);
+        void Exit();
+    }
+}</code></pre>
+
+        <h3>3. CharacterStateMachine &mdash; 角色战斗状态机</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+using GameFramework.Animation;
+
+namespace GameFramework.FSM.Character
+{
+    public class CharacterStateMachine : StateMachineBehaviour
+    {
+        [SerializeField] private AnimationController _anim;
+
+        private IdleState _idle;
+        private MoveState _move;
+        private AttackState _attack;
+        private HitState _hit;
+        private DeathState _death;
+
+        private void Start()
+        {
+            _idle = new IdleState(_anim);
+            _move = new MoveState(_anim);
+            _attack = new AttackState(_anim);
+            _hit = new HitState(_anim);
+            _death = new DeathState(_anim);
+
+            TransitionTo(_idle);
+        }
+
+        public void OnMoveInput(float speed, float direction)
+        {
+            if (IsInState&lt;IdleState&gt;() || IsInState&lt;MoveState&gt;())
+            {
+                if (speed &gt; 0.1f)
+                    TransitionTo(_move);
+                else
+                    TransitionTo(_idle);
+            }
+            _anim.SetMovement(speed, direction);
+        }
+
+        public void OnAttackInput()
+        {
+            if (IsInState&lt;IdleState&gt;() || IsInState&lt;MoveState&gt;())
+                TransitionTo(_attack);
+        }
+
+        public void OnTakeDamage()
+        {
+            if (!IsInState&lt;DeathState&gt;())
+                TransitionTo(_hit);
+        }
+
+        public void OnDeath()
+        {
+            TransitionTo(_death);
+        }
+    }
+
+    public class IdleState : IState
+    {
+        private readonly AnimationController _anim;
+        public IdleState(AnimationController anim) =&gt; _anim = anim;
+        public void Enter() =&gt; _anim.SetState(0);
+        public void Tick(float delta) {}
+        public void FixedTick(float delta) {}
+        public void LateTick(float delta) {}
+        public void Exit() {}
+    }
+
+    public class MoveState : IState
+    {
+        private readonly AnimationController _anim;
+        public MoveState(AnimationController anim) =&gt; _anim = anim;
+        public void Enter() =&gt; _anim.SetState(1);
+        public void Tick(float delta) {}
+        public void FixedTick(float delta) {}
+        public void LateTick(float delta) {}
+        public void Exit() {}
+    }
+
+    public class AttackState : IState
+    {
+        private readonly AnimationController _anim;
+        private float _timer;
+        public AttackState(AnimationController anim) =&gt; _anim = anim;
+        public void Enter()
+        {
+            _timer = 0f;
+            _anim.PlayAttack();
+        }
+        public void Tick(float delta) =&gt; _timer += delta;
+        public void FixedTick(float delta) {}
+        public void LateTick(float delta) {}
+        public void Exit() =&gt; _anim.ResetTriggers();
+    }
+
+    public class HitState : IState
+    {
+        private readonly AnimationController _anim;
+        private float _timer;
+        public HitState(AnimationController anim) =&gt; _anim = anim;
+        public void Enter()
+        {
+            _timer = 0f;
+            _anim.PlayHit();
+        }
+        public void Tick(float delta) =&gt; _timer += delta;
+        public void FixedTick(float delta) {}
+        public void LateTick(float delta) {}
+        public void Exit() =&gt; _anim.ResetTriggers();
+    }
+
+    public class DeathState : IState
+    {
+        private readonly AnimationController _anim;
+        public DeathState(AnimationController anim) =&gt; _anim = anim;
+        public void Enter() =&gt; _anim.PlayDeath();
+        public void Tick(float delta) {}
+        public void FixedTick(float delta) {}
+        public void LateTick(float delta) {}
+        public void Exit() {}
+    }
+}</code></pre>
+
+        <h3>4. IKController &mdash; 手脚贴合地形</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+
+namespace GameFramework.Animation
+{
+    public sealed class IKController : MonoBehaviour
+    {
+        [Header(&quot;IK Settings&quot;)]
+        [SerializeField] private Animator _animator;
+        [SerializeField] private bool _enableIK = true;
+        [SerializeField] private float _ikWeight = 1f;
+
+        [Header(&quot;Foot IK&quot;)]
+        [SerializeField] private LayerMask _groundLayer = 1;
+        [SerializeField] private float _footOffset = 0.05f;
+        [SerializeField] private float _raycastDistance = 1.5f;
+
+        [Header(&quot;Hand IK&quot;)]
+        [SerializeField] private Transform _leftHandTarget;
+        [SerializeField] private Transform _rightHandTarget;
+        [SerializeField] private float _handIKWeight = 0.5f;
+
+        private void Awake()
+        {
+            if (_animator == null)
+                _animator = GetComponent&lt;Animator&gt;();
+        }
+
+        private void OnAnimatorIK(int layerIndex)
+        {
+            if (!_enableIK || _animator == null) return;
+
+            HandleFootIK(AvatarIKGoal.LeftFoot);
+            HandleFootIK(AvatarIKGoal.RightFoot);
+            HandleHandIK(AvatarIKGoal.LeftHand, _leftHandTarget);
+            HandleHandIK(AvatarIKGoal.RightHand, _rightHandTarget);
+        }
+
+        private void HandleFootIK(AvatarIKGoal foot)
+        {
+            var weight = _ikWeight * _animator.GetIKPositionWeight(foot);
+            _animator.SetIKPositionWeight(foot, weight);
+            _animator.SetIKRotationWeight(foot, weight);
+
+            var origin = _animator.GetIKPosition(foot);
+            origin.y += _raycastDistance * 0.5f;
+
+            if (Physics.Raycast(origin, Vector3.down, out var hit, _raycastDistance, _groundLayer))
+            {
+                var targetPos = hit.point + Vector3.up * _footOffset;
+                _animator.SetIKPosition(foot, targetPos);
+
+                var forward = Vector3.ProjectOnPlane(transform.forward, hit.normal);
+                var targetRot = Quaternion.LookRotation(forward, hit.normal);
+                _animator.SetIKRotation(foot, targetRot);
+            }
+        }
+
+        private void HandleHandIK(AvatarIKGoal hand, Transform target)
+        {
+            if (target == null) return;
+
+            _animator.SetIKPositionWeight(hand, _handIKWeight);
+            _animator.SetIKRotationWeight(hand, _handIKWeight);
+            _animator.SetIKPosition(hand, target.position);
+            _animator.SetIKRotation(hand, target.rotation);
+        }
+
+        public void SetIKEnable(bool enable)
+        {
+            _enableIK = enable;
+        }
+
+        public void SetHandTargets(Transform left, Transform right)
+        {
+            _leftHandTarget = left;
+            _rightHandTarget = right;
+        }
+    }
+}</code></pre>
+
+        <h3>5. RootMotionController &mdash; Root Motion 控制器</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+
+namespace GameFramework.Animation
+{
+    [RequireComponent(typeof(CharacterController))]
+    public sealed class RootMotionController : MonoBehaviour
+    {
+        [SerializeField] private Animator _animator;
+        [SerializeField] private float _rotationSpeed = 10f;
+        [SerializeField] private float _forwardSpeed = 1f;
+
+        private CharacterController _charController;
+        private Vector3 _rootMotionDelta;
+        private Vector3 _rootRotationDelta;
+
+        private void Awake()
+        {
+            _charController = GetComponent&lt;CharacterController&gt;();
+            if (_animator == null)
+                _animator = GetComponent&lt;Animator&gt;();
+
+            _animator.applyRootMotion = true;
+        }
+
+        private void OnAnimatorMove()
+        {
+            _rootMotionDelta = _animator.deltaPosition;
+            _rootRotationDelta = _animator.deltaRotation.eulerAngles;
+        }
+
+        private void Update()
+        {
+            ApplyRootMotion();
+        }
+
+        private void ApplyRootMotion()
+        {
+            var forward = _rootMotionDelta.z * _forwardSpeed * transform.forward;
+            var right = _rootMotionDelta.x * _forwardSpeed * transform.right;
+            var vertical = _rootMotionDelta.y * Vector3.up;
+
+            _charController.Move(forward + right + vertical);
+
+            transform.Rotate(0, _rootRotationDelta.y * _rotationSpeed, 0);
+        }
+
+        public void SetRootMotionMultiplier(float speed)
+        {
+            _forwardSpeed = Mathf.Max(0f, speed);
+        }
+    }
+}</code></pre>
+
+        <h3>6. AnimationEventReceiver &mdash; 动画事件接收器</h3>
+        <pre><code class="language-csharp">using System;
+using UnityEngine;
+
+namespace GameFramework.Animation
+{
+    public sealed class AnimationEventReceiver : MonoBehaviour
+    {
+        public event Action&lt;int&gt; OnHitFrame;
+        public event Action&lt;int&gt; OnFootstep;
+        public event Action OnAttackFinished;
+        public event Action OnSkillCast;
+        public event Action OnAnimationEnd;
+
+        public void HitFrame(int damageMultiplier)
+        {
+            OnHitFrame?.Invoke(damageMultiplier);
+        }
+
+        public void Footstep(int footIndex)
+        {
+            OnFootstep?.Invoke(footIndex);
+        }
+
+        public void AttackFinished()
+        {
+            OnAttackFinished?.Invoke();
+        }
+
+        public void SkillCast()
+        {
+            OnSkillCast?.Invoke();
+        }
+
+        public void AnimationEnd()
+        {
+            OnAnimationEnd?.Invoke();
+        }
+
+        private void OnDestroy()
+        {
+            OnHitFrame = null;
+            OnFootstep = null;
+            OnAttackFinished = null;
+            OnSkillCast = null;
+            OnAnimationEnd = null;
+        }
+    }
+}</code></pre>
       </div>
     `
   },
@@ -123,7 +576,7 @@ anim.GetCurrentAnimatorStateInfo(0);</pre>
       <div class="wiki-card">
         <h2>工作流程</h2>
         <ol>
-          <li><strong>烘焙 NavMesh</strong>: Window → AI → Navigation，Bake</li>
+          <li><strong>烘焙 NavMesh</strong>: Window &rarr; AI &rarr; Navigation，Bake</li>
           <li><strong>挂载 NavMeshAgent</strong>: 角色添加 NavMeshAgent 组件</li>
           <li><strong>设置目标</strong>: <code>agent.SetDestination(target)</code></li>
           <li><strong>自动寻路</strong>: Agent 自动计算路径</li>
@@ -141,14 +594,273 @@ anim.GetCurrentAnimatorStateInfo(0);</pre>
       </div>
       <div class="wiki-card">
         <h2>常用 API</h2>
-        <pre>agent.speed = 5f;
+        <pre><code>agent.speed = 5f;
 agent.angularSpeed = 120f;
 agent.stoppingDistance = 1f;
 agent.radius = 0.5f;
 agent.SetDestination(pos);
 agent.isStopped = true;
 agent.remainingDistance;
-agent.pathPending;</pre>
+agent.pathPending;</code></pre>
+      </div>
+      <div class="wiki-card">
+        <h2>生产级代码</h2>
+        <p class="section-label">NavMeshAgent 封装 + 完整 AI 状态机（巡逻/追击/逃跑）</p>
+
+        <h3>1. NavMeshAgentWrapper &mdash; Agent 封装</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+using UnityEngine.AI;
+
+namespace GameFramework.Navigation
+{
+    public sealed class NavMeshAgentWrapper : MonoBehaviour
+    {
+        [SerializeField] private NavMeshAgent _agent;
+        [SerializeField] private float _defaultSpeed = 3.5f;
+        [SerializeField] private float _chaseSpeed = 6f;
+        [SerializeField] private float _turnSpeed = 10f;
+
+        private void Awake()
+        {
+            if (_agent == null)
+                _agent = GetComponent&lt;NavMeshAgent&gt;();
+            _agent.speed = _defaultSpeed;
+        }
+
+        public void SetDestination(Vector3 target)
+        {
+            _agent.SetDestination(target);
+            _agent.isStopped = false;
+        }
+
+        public void Stop()
+        {
+            _agent.isStopped = true;
+            _agent.ResetPath();
+        }
+
+        public void Resume()
+        {
+            _agent.isStopped = false;
+        }
+
+        public void SetSpeed(float speed)
+        {
+            _agent.speed = speed;
+        }
+
+        public bool HasReachedDestination =&gt;
+            !_agent.pathPending &amp;&amp; _agent.remainingDistance &lt;= _agent.stoppingDistance;
+
+        public bool IsPathValid =&gt; _agent.hasPath || _agent.pathPending;
+        public float RemainingDistance =&gt; _agent.remainingDistance;
+        public Vector3 Velocity =&gt; _agent.velocity;
+        public NavMeshAgent Agent =&gt; _agent;
+
+        public void Warp(Vector3 position)
+        {
+            _agent.Warp(position);
+        }
+    }
+}</code></pre>
+
+        <h3>2. AIStateController &mdash; 巡逻 / 追击 / 逃跑</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+using GameFramework.FSM;
+
+namespace GameFramework.Navigation
+{
+    public class AIStateController : StateMachineBehaviour
+    {
+        [SerializeField] private NavMeshAgentWrapper _agent;
+        [SerializeField] private Transform[] _patrolPoints;
+        [SerializeField] private float _detectionRadius = 10f;
+        [SerializeField] private float _fleeRadius = 15f;
+        [SerializeField] private LayerMask _targetLayer;
+
+        private PatrolState _patrol;
+        private ChaseState _chase;
+        private FleeState _flee;
+        private Transform _target;
+
+        private void Start()
+        {
+            _patrol = new PatrolState(_agent, _patrolPoints);
+            _chase = new ChaseState(_agent, () =&gt; _target);
+            _flee = new FleeState(_agent, () =&gt; _target, transform, _fleeRadius);
+            TransitionTo(_patrol);
+        }
+
+        private void Update()
+        {
+            DetectTarget();
+            base.Update();
+        }
+
+        private void DetectTarget()
+        {
+            var colliders = Physics.OverlapSphere(transform.position, _detectionRadius, _targetLayer);
+            if (colliders.Length &gt; 0)
+            {
+                _target = colliders[0].transform;
+                float dist = Vector3.Distance(transform.position, _target.position);
+
+                if (dist &lt; _fleeRadius * 0.4f &amp;&amp; !IsInState&lt;FleeState&gt;())
+                    TransitionTo(_flee);
+                else if (!IsInState&lt;ChaseState&gt;())
+                    TransitionTo(_chase);
+            }
+            else
+            {
+                _target = null;
+                if (!IsInState&lt;PatrolState&gt;())
+                    TransitionTo(_patrol);
+            }
+        }
+    }
+
+    public class PatrolState : IState
+    {
+        private readonly NavMeshAgentWrapper _agent;
+        private readonly Transform[] _points;
+        private int _index;
+
+        public PatrolState(NavMeshAgentWrapper agent, Transform[] points)
+        {
+            _agent = agent;
+            _points = points;
+        }
+
+        public void Enter()
+        {
+            _agent.SetSpeed(3.5f);
+            MoveToNext();
+        }
+
+        public void Tick(float delta)
+        {
+            if (_agent.HasReachedDestination)
+                MoveToNext();
+        }
+
+        private void MoveToNext()
+        {
+            if (_points.Length == 0) return;
+            _index = (_index + 1) % _points.Length;
+            _agent.SetDestination(_points[_index].position);
+        }
+
+        public void FixedTick(float delta) {}
+        public void LateTick(float delta) {}
+        public void Exit() {}
+    }
+
+    public class ChaseState : IState
+    {
+        private readonly NavMeshAgentWrapper _agent;
+        private readonly System.Func&lt;Transform&gt; _targetProvider;
+
+        public ChaseState(NavMeshAgentWrapper agent, System.Func&lt;Transform&gt; targetProvider)
+        {
+            _agent = agent;
+            _targetProvider = targetProvider;
+        }
+
+        public void Enter() =&gt; _agent.SetSpeed(6f);
+
+        public void Tick(float delta)
+        {
+            var target = _targetProvider();
+            if (target != null)
+                _agent.SetDestination(target.position);
+        }
+
+        public void FixedTick(float delta) {}
+        public void LateTick(float delta) {}
+        public void Exit() {}
+    }
+
+    public class FleeState : IState
+    {
+        private readonly NavMeshAgentWrapper _agent;
+        private readonly System.Func&lt;Transform&gt; _targetProvider;
+        private readonly Transform _self;
+        private readonly float _radius;
+
+        public FleeState(NavMeshAgentWrapper agent, System.Func&lt;Transform&gt; targetProvider,
+                         Transform self, float radius)
+        {
+            _agent = agent;
+            _targetProvider = targetProvider;
+            _self = self;
+            _radius = radius;
+        }
+
+        public void Enter() =&gt; _agent.SetSpeed(8f);
+
+        public void Tick(float delta)
+        {
+            var target = _targetProvider();
+            if (target == null) return;
+
+            var fleeDir = (_self.position - target.position).normalized;
+            var fleePos = _self.position + fleeDir * _radius;
+
+            if (NavMesh.SamplePosition(fleePos, out var hit, _radius, NavMesh.AllAreas))
+                _agent.SetDestination(hit.position);
+        }
+
+        public void FixedTick(float delta) {}
+        public void LateTick(float delta) {}
+        public void Exit() {}
+    }
+}</code></pre>
+
+        <h3>3. 动态障碍物控制</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+using UnityEngine.AI;
+
+namespace GameFramework.Navigation
+{
+    [RequireComponent(typeof(NavMeshObstacle))]
+    public class DynamicObstacle : MonoBehaviour
+    {
+        [SerializeField] private bool _activateOnStart = true;
+        private NavMeshObstacle _obstacle;
+
+        private void Awake()
+        {
+            _obstacle = GetComponent&lt;NavMeshObstacle&gt;();
+        }
+
+        private void Start()
+        {
+            SetActive(_activateOnStart);
+        }
+
+        public void SetActive(bool active)
+        {
+            _obstacle.enabled = active;
+        }
+
+        public void Toggle()
+        {
+            _obstacle.enabled = !_obstacle.enabled;
+        }
+
+        public void SetCarve(bool carve)
+        {
+            _obstacle.carving = carve;
+        }
+
+        public void MoveAndCarve(Vector3 position)
+        {
+            _obstacle.enabled = false;
+            transform.position = position;
+            _obstacle.enabled = true;
+        }
+    }
+}</code></pre>
       </div>
     `
   },
@@ -180,10 +892,257 @@ agent.pathPending;</pre>
       <div class="wiki-card">
         <h2>响应式 UI 策略</h2>
         <ul>
-          <li><strong>Canvas Scaler</strong> — Scale With Screen Size 统一缩放</li>
-          <li><strong>Anchor 预设</strong> — 固定 UI 相对位置</li>
-          <li><strong>Layout Group + Content Size Fitter</strong> — 自适应内容</li>
+          <li><strong>Canvas Scaler</strong> &mdash; Scale With Screen Size 统一缩放</li>
+          <li><strong>Anchor 预设</strong> &mdash; 固定 UI 相对位置</li>
+          <li><strong>Layout Group + Content Size Fitter</strong> &mdash; 自适应内容</li>
         </ul>
+      </div>
+      <div class="wiki-card">
+        <h2>生产级代码</h2>
+        <p class="section-label">UI 管理器、对象池列表、按钮冷却、拖拽处理</p>
+
+        <h3>1. UIManager &mdash; 单例 UI 管理器</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+
+namespace GameFramework.UI
+{
+    public sealed class UIManager : MonoBehaviour
+    {
+        private static UIManager _instance;
+        public static UIManager Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    var go = new GameObject(&quot;[UIManager]&quot;);
+                    _instance = go.AddComponent&lt;UIManager&gt;();
+                    DontDestroyOnLoad(go);
+                }
+                return _instance;
+            }
+        }
+
+        [SerializeField] private Canvas _mainCanvas;
+        [SerializeField] private RectTransform _dynamicParent;
+
+        private void Awake()
+        {
+            if (_instance != null &amp;&amp; _instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        public Canvas MainCanvas =&gt; _mainCanvas;
+        public RectTransform DynamicParent =&gt; _dynamicParent;
+
+        public T OpenPanel&lt;T&gt;(T prefab) where T : Component
+        {
+            var panel = Instantiate(prefab, _dynamicParent);
+            panel.transform.SetAsLastSibling();
+            return panel;
+        }
+
+        public void ClosePanel(Component panel)
+        {
+            if (panel != null)
+                Destroy(panel.gameObject);
+        }
+
+        public void ShowMessage(string text, float duration = 2f)
+        {
+            // Toast notification implementation
+        }
+    }
+}</code></pre>
+
+        <h3>2. DynamicListWithObjectPool &mdash; 对象池动态列表</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
+
+namespace GameFramework.UI
+{
+    public class DynamicListWithObjectPool&lt;T&gt; : MonoBehaviour where T : Component
+    {
+        [SerializeField] private T _itemPrefab;
+        [SerializeField] private ScrollRect _scrollRect;
+        [SerializeField] private int _initialPoolSize = 20;
+
+        private readonly Queue&lt;T&gt; _pool = new Queue&lt;T&gt;();
+        private readonly List&lt;T&gt; _activeItems = new List&lt;T&gt;();
+
+        private void Awake()
+        {
+            for (int i = 0; i &lt; _initialPoolSize; i++)
+            {
+                var item = CreateNewItem();
+                item.gameObject.SetActive(false);
+                _pool.Enqueue(item);
+            }
+        }
+
+        private T CreateNewItem()
+        {
+            return Instantiate(_itemPrefab, _scrollRect.content);
+        }
+
+        public T Get()
+        {
+            T item;
+            if (_pool.Count &gt; 0)
+            {
+                item = _pool.Dequeue();
+                item.gameObject.SetActive(true);
+            }
+            else
+            {
+                item = CreateNewItem();
+            }
+            item.transform.SetAsLastSibling();
+            _activeItems.Add(item);
+            return item;
+        }
+
+        public void Release(T item)
+        {
+            item.gameObject.SetActive(false);
+            _activeItems.Remove(item);
+            _pool.Enqueue(item);
+        }
+
+        public void ReleaseAll()
+        {
+            foreach (var item in _activeItems.ToArray())
+                Release(item);
+        }
+
+        public int ActiveCount =&gt; _activeItems.Count;
+        public int PooledCount =&gt; _pool.Count;
+    }
+}</code></pre>
+
+        <h3>3. ButtonCooldown &mdash; 按钮冷却</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+namespace GameFramework.UI
+{
+    [RequireComponent(typeof(Button))]
+    public class ButtonCooldown : MonoBehaviour
+    {
+        [SerializeField] private float _cooldownTime = 1f;
+        [SerializeField] private Image _cooldownOverlay;
+        [SerializeField] private bool _interactable = true;
+
+        private Button _button;
+        private bool _onCooldown;
+
+        private void Awake()
+        {
+            _button = GetComponent&lt;Button&gt;();
+            _button.onClick.AddListener(OnClick);
+        }
+
+        private void OnClick()
+        {
+            if (_onCooldown || !_interactable) return;
+            StartCoroutine(CooldownRoutine());
+        }
+
+        private IEnumerator CooldownRoutine()
+        {
+            _onCooldown = true;
+            _button.interactable = false;
+
+            if (_cooldownOverlay != null)
+            {
+                _cooldownOverlay.fillAmount = 1f;
+                float elapsed = 0f;
+                while (elapsed &lt; _cooldownTime)
+                {
+                    elapsed += Time.deltaTime;
+                    _cooldownOverlay.fillAmount = 1f - (elapsed / _cooldownTime);
+                    yield return null;
+                }
+                _cooldownOverlay.fillAmount = 0f;
+            }
+            else
+            {
+                yield return new WaitForSeconds(_cooldownTime);
+            }
+
+            _button.interactable = true;
+            _onCooldown = false;
+        }
+
+        private void OnDestroy()
+        {
+            StopAllCoroutines();
+        }
+    }
+}</code></pre>
+
+        <h3>4. DragHandler &mdash; 拖拽处理</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+using UnityEngine.EventSystems;
+
+namespace GameFramework.UI
+{
+    [RequireComponent(typeof(RectTransform))]
+    public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+    {
+        [SerializeField] private bool _returnOnInvalidDrop = true;
+        [SerializeField] private Canvas _canvas;
+
+        private RectTransform _rectTransform;
+        private CanvasGroup _canvasGroup;
+        private Vector2 _originalPosition;
+        private Transform _originalParent;
+
+        private void Awake()
+        {
+            _rectTransform = GetComponent&lt;RectTransform&gt;();
+            _canvasGroup = GetComponent&lt;CanvasGroup&gt;();
+            if (_canvasGroup == null)
+                _canvasGroup = gameObject.AddComponent&lt;CanvasGroup&gt;();
+            if (_canvas == null)
+                _canvas = GetComponentInParent&lt;Canvas&gt;();
+        }
+
+        public void OnBeginDrag(PointerEventData eventData)
+        {
+            _originalPosition = _rectTransform.anchoredPosition;
+            _originalParent = transform.parent;
+            _canvasGroup.blocksRaycasts = false;
+            _canvasGroup.alpha = 0.8f;
+            transform.SetParent(_canvas.transform, true);
+            transform.SetAsLastSibling();
+        }
+
+        public void OnDrag(PointerEventData eventData)
+        {
+            _rectTransform.anchoredPosition += eventData.delta / _canvas.scaleFactor;
+        }
+
+        public void OnEndDrag(PointerEventData eventData)
+        {
+            _canvasGroup.blocksRaycasts = true;
+            _canvasGroup.alpha = 1f;
+
+            if (_returnOnInvalidDrop)
+            {
+                transform.SetParent(_originalParent, true);
+                _rectTransform.anchoredPosition = _originalPosition;
+            }
+        }
+    }
+}</code></pre>
       </div>
     `
   },
@@ -205,21 +1164,289 @@ agent.pathPending;</pre>
       <div class="wiki-card">
         <h2>CPU / 内存优化</h2>
         <ul>
-          <li><strong>对象池</strong> — 复用 GameObject，减少 Instantiate</li>
-          <li><strong>协程 / Job System</strong> — 分散耗时计算</li>
-          <li><strong>Profiler</strong> — 定位热点函数</li>
-          <li><strong>AssetBundle 分包</strong> — 按场景拆分</li>
-          <li><strong>纹理压缩</strong> — ASTC（移动）/ DXT（PC）/ ETC2</li>
-          <li><strong>音频压缩</strong> — Vorbis / 强制单声道</li>
+          <li><strong>对象池</strong> &mdash; 复用 GameObject，减少 Instantiate</li>
+          <li><strong>协程 / Job System</strong> &mdash; 分散耗时计算</li>
+          <li><strong>Profiler</strong> &mdash; 定位热点函数</li>
+          <li><strong>AssetBundle 分包</strong> &mdash; 按场景拆分</li>
+          <li><strong>纹理压缩</strong> &mdash; ASTC（移动）/ DXT（PC）/ ETC2</li>
+          <li><strong>音频压缩</strong> &mdash; Vorbis / 强制单声道</li>
         </ul>
       </div>
       <div class="wiki-card">
         <h2>工具链</h2>
         <ul>
-          <li><strong>Profiler</strong> — CPU/GPU/Memory 时间线</li>
-          <li><strong>Frame Debugger</strong> — 逐帧查看 Draw Call</li>
-          <li><strong>RenderDoc</strong> — GPU 调试</li>
+          <li><strong>Profiler</strong> &mdash; CPU/GPU/Memory 时间线</li>
+          <li><strong>Frame Debugger</strong> &mdash; 逐帧查看 Draw Call</li>
+          <li><strong>Memory Profiler</strong> &mdash; 快照对比内存泄漏</li>
+          <li><strong>RenderDoc</strong> &mdash; GPU 调试</li>
         </ul>
+      </div>
+      <div class="wiki-card">
+        <h2>生产级代码</h2>
+        <p class="section-label">对象池、LOD 控制器、内存分析器、帧率管理</p>
+
+        <h3>1. ObjectPool &mdash; 通用对象池</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+using System.Collections.Generic;
+
+namespace GameFramework.Optimization
+{
+    public sealed class ObjectPool : MonoBehaviour
+    {
+        [SerializeField] private GameObject _prefab;
+        [SerializeField] private int _prewarmCount = 10;
+        [SerializeField] private bool _expandable = true;
+        [SerializeField] private int _maxSize = 100;
+
+        private readonly Queue&lt;GameObject&gt; _pool = new Queue&lt;GameObject&gt;();
+        private int _activeCount;
+
+        private void Awake()
+        {
+            for (int i = 0; i &lt; _prewarmCount; i++)
+            {
+                var obj = Instantiate(_prefab, transform);
+                obj.SetActive(false);
+                _pool.Enqueue(obj);
+            }
+        }
+
+        public GameObject Get()
+        {
+            GameObject result;
+            if (_pool.Count &gt; 0)
+            {
+                result = _pool.Dequeue();
+            }
+            else if (_expandable &amp;&amp; _activeCount &lt; _maxSize)
+            {
+                result = Instantiate(_prefab, transform);
+            }
+            else
+            {
+                return null;
+            }
+
+            result.SetActive(true);
+            _activeCount++;
+            return result;
+        }
+
+        public T Get&lt;T&gt;() where T : Component
+        {
+            var obj = Get();
+            return obj != null ? obj.GetComponent&lt;T&gt;() : null;
+        }
+
+        public void Release(GameObject obj)
+        {
+            if (obj == null) return;
+            obj.SetActive(false);
+            obj.transform.SetParent(transform);
+            _activeCount--;
+            _pool.Enqueue(obj);
+        }
+
+        public void ReleaseAll()
+        {
+            var children = GetComponentsInChildren&lt;Transform&gt;(false);
+            foreach (var t in children)
+            {
+                if (t.gameObject.activeInHierarchy &amp;&amp; t != transform)
+                    Release(t.gameObject);
+            }
+        }
+
+        public void Clear()
+        {
+            while (_pool.Count &gt; 0)
+            {
+                var obj = _pool.Dequeue();
+                Destroy(obj);
+            }
+            _activeCount = 0;
+        }
+
+        public int ActiveCount =&gt; _activeCount;
+        public int PooledCount =&gt; _pool.Count;
+    }
+}</code></pre>
+
+        <h3>2. LODController &mdash; LOD 控制器</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+
+namespace GameFramework.Optimization
+{
+    public sealed class LODController : MonoBehaviour
+    {
+        [System.Serializable]
+        public struct LODLevel
+        {
+            public GameObject renderer;
+            public float distance;
+        }
+
+        [SerializeField] private LODLevel[] _levels;
+        [SerializeField] private float _updateInterval = 0.2f;
+        [SerializeField] private Transform _target;
+
+        private int _currentLevel;
+        private float _lastUpdateTime;
+
+        private void Awake()
+        {
+            if (_target == null)
+                _target = Camera.main?.transform;
+            ApplyLevel(0);
+        }
+
+        private void Update()
+        {
+            if (Time.time - _lastUpdateTime &lt; _updateInterval) return;
+            _lastUpdateTime = Time.time;
+
+            if (_target == null) return;
+            float dist = Vector3.Distance(transform.position, _target.position);
+
+            int newLevel = _levels.Length - 1;
+            for (int i = 0; i &lt; _levels.Length; i++)
+            {
+                if (dist &lt; _levels[i].distance)
+                {
+                    newLevel = i;
+                    break;
+                }
+            }
+
+            if (newLevel != _currentLevel)
+                ApplyLevel(newLevel);
+        }
+
+        private void ApplyLevel(int level)
+        {
+            _currentLevel = level;
+            for (int i = 0; i &lt; _levels.Length; i++)
+            {
+                if (_levels[i].renderer != null)
+                    _levels[i].renderer.SetActive(i == level);
+            }
+        }
+    }
+}</code></pre>
+
+        <h3>3. MemoryProfilerHelper &mdash; 内存分析助手</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+using System.Text;
+
+namespace GameFramework.Optimization
+{
+    public static class MemoryProfilerHelper
+    {
+        private static readonly StringBuilder _sb = new StringBuilder(256);
+
+        public static long GetAllocatedMemory()
+        {
+            return Profiler.GetTotalAllocatedMemoryLong();
+        }
+
+        public static long GetReservedMemory()
+        {
+            return Profiler.GetTotalReservedMemoryLong();
+        }
+
+        public static long GetMonoHeap()
+        {
+            return Profiler.GetMonoHeapSizeLong();
+        }
+
+        public static long GetMonoUsed()
+        {
+            return Profiler.GetMonoUsedSizeLong();
+        }
+
+        public static string GetReport()
+        {
+            _sb.Clear();
+            _sb.AppendLine(&quot;=== Memory Report ===&quot;);
+            _sb.AppendLine(Format(&quot;Allocated&quot;, GetAllocatedMemory()));
+            _sb.AppendLine(Format(&quot;Reserved&quot;, GetReservedMemory()));
+            _sb.AppendLine(Format(&quot;Mono Heap&quot;, GetMonoHeap()));
+            _sb.AppendLine(Format(&quot;Mono Used&quot;, GetMonoUsed()));
+            return _sb.ToString();
+        }
+
+        private static string Format(string label, long bytes)
+        {
+            string size;
+            if (bytes &lt; 1024)
+                size = $&quot;{bytes} B&quot;;
+            else if (bytes &lt; 1024 * 1024)
+                size = $&quot;{bytes / 1024f:F1} KB&quot;;
+            else
+                size = $&quot;{bytes / (1024f * 1024f):F1} MB&quot;;
+            return $&quot;{label}: {size}&quot;;
+        }
+    }
+}</code></pre>
+
+        <h3>4. FrameRateManager &mdash; 帧率管理器</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+
+namespace GameFramework.Optimization
+{
+    public sealed class FrameRateManager : MonoBehaviour
+    {
+        [SerializeField] private int _targetFrameRate = 60;
+        [SerializeField] private bool _vsyncEnabled;
+        [SerializeField] private float _lowPerfThreshold = 30f;
+        [SerializeField] private float _sampleInterval = 1f;
+
+        private float _timer;
+        private int _frameCount;
+        private float _currentFps;
+
+        private void Awake()
+        {
+            Application.targetFrameRate = _targetFrameRate;
+            QualitySettings.vSyncCount = _vsyncEnabled ? 1 : 0;
+        }
+
+        private void Update()
+        {
+            _frameCount++;
+            _timer += Time.unscaledDeltaTime;
+
+            if (_timer &gt;= _sampleInterval)
+            {
+                _currentFps = _frameCount / _timer;
+                _frameCount = 0;
+                _timer = 0f;
+
+                if (_currentFps &lt; _lowPerfThreshold)
+                    OnLowPerformance();
+            }
+        }
+
+        private void OnLowPerformance()
+        {
+            Debug.LogWarning($&quot;[FrameRateManager] Low FPS: {_currentFps:F1}&quot;);
+        }
+
+        public void SetTargetFrameRate(int fps)
+        {
+            _targetFrameRate = Mathf.Max(15, fps);
+            Application.targetFrameRate = _targetFrameRate;
+        }
+
+        public float CurrentFPS =&gt; _currentFps;
+        public int TargetFrameRate =&gt; _targetFrameRate;
+
+        private void OnGUI()
+        {
+            GUI.Label(new Rect(10, 10, 200, 20), $&quot;FPS: {_currentFps:F1}&quot;);
+        }
+    }
+}</code></pre>
       </div>
     `
   },
@@ -230,8 +1457,8 @@ agent.pathPending;</pre>
       <div class="wiki-card">
         <h2>Scriptable Object</h2>
         <ul>
-          <li><strong>数据容器</strong> — 配置表、关卡数据、角色属性</li>
-          <li><strong>事件通道</strong> — 解耦发布者/订阅者</li>
+          <li><strong>数据容器</strong> &mdash; 配置表、关卡数据、角色属性</li>
+          <li><strong>事件通道</strong> &mdash; 解耦发布者/订阅者</li>
           <li>可序列化、可复用、编辑器友好</li>
         </ul>
       </div>
@@ -248,9 +1475,9 @@ agent.pathPending;</pre>
       <div class="wiki-card">
         <h2>DOTS (ECS)</h2>
         <ul>
-          <li><strong>Entity</strong> — 轻量 ID，替代 GameObject</li>
-          <li><strong>Component</strong> — 纯数据（struct）</li>
-          <li><strong>System</strong> — 批量处理同构数据</li>
+          <li><strong>Entity</strong> &mdash; 轻量 ID，替代 GameObject</li>
+          <li><strong>Component</strong> &mdash; 纯数据（struct）</li>
+          <li><strong>System</strong> &mdash; 批量处理同构数据</li>
           <li>适用：大量实体（10万+）、物理模拟、RTS</li>
         </ul>
       </div>
@@ -263,6 +1490,236 @@ agent.pathPending;</pre>
           <li>依赖自动处理</li>
         </ul>
       </div>
+      <div class="wiki-card">
+        <h2>生产级代码</h2>
+        <p class="section-label">ScriptableObject 事件系统、服务定位器、泛型状态机、工厂模式</p>
+
+        <h3>1. GameEvent / GameEventListener &mdash; SO 事件系统</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+using UnityEngine.Events;
+using System.Collections.Generic;
+
+namespace GameFramework.Architecture
+{
+    [CreateAssetMenu(menuName = &quot;Game Framework/Game Event&quot;, fileName = &quot;GameEvent&quot;)]
+    public class GameEvent : ScriptableObject
+    {
+        private readonly List&lt;GameEventListener&gt; _listeners =
+            new List&lt;GameEventListener&gt;();
+
+        public void Raise()
+        {
+            for (int i = _listeners.Count - 1; i &gt;= 0; i--)
+                _listeners[i].OnEventRaised();
+        }
+
+        public void RegisterListener(GameEventListener listener)
+        {
+            if (!_listeners.Contains(listener))
+                _listeners.Add(listener);
+        }
+
+        public void UnregisterListener(GameEventListener listener)
+        {
+            _listeners.Remove(listener);
+        }
+    }
+
+    public class GameEventListener : MonoBehaviour
+    {
+        [SerializeField] private GameEvent _gameEvent;
+        [SerializeField] private UnityEvent _response;
+
+        private void OnEnable() =&gt; _gameEvent?.RegisterListener(this);
+        private void OnDisable() =&gt; _gameEvent?.UnregisterListener(this);
+
+        public void OnEventRaised() =&gt; _response?.Invoke();
+    }
+
+    [CreateAssetMenu(menuName = &quot;Game Framework/Game Event (Typed)&quot;,
+                     fileName = &quot;GameEvent_T&quot;)]
+    public class GameEvent&lt;T&gt; : ScriptableObject
+    {
+        private readonly List&lt;IGameEventListener&lt;T&gt;&gt; _listeners =
+            new List&lt;IGameEventListener&lt;T&gt;&gt;();
+
+        public void Raise(T value)
+        {
+            for (int i = _listeners.Count - 1; i &gt;= 0; i--)
+                _listeners[i].OnEventRaised(value);
+        }
+
+        public void RegisterListener(IGameEventListener&lt;T&gt; listener)
+        {
+            if (!_listeners.Contains(listener))
+                _listeners.Add(listener);
+        }
+
+        public void UnregisterListener(IGameEventListener&lt;T&gt; listener)
+        {
+            _listeners.Remove(listener);
+        }
+    }
+
+    public interface IGameEventListener&lt;T&gt;
+    {
+        void OnEventRaised(T value);
+    }
+}</code></pre>
+
+        <h3>2. ServiceLocator &mdash; 服务定位器</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+using System;
+using System.Collections.Generic;
+
+namespace GameFramework.Architecture
+{
+    public static class ServiceLocator
+    {
+        private static readonly Dictionary&lt;Type, object&gt; _services =
+            new Dictionary&lt;Type, object&gt;();
+
+        public static void Register&lt;T&gt;(T service) where T : class
+        {
+            Type type = typeof(T);
+            if (_services.ContainsKey(type))
+            {
+                Debug.LogWarning(
+                    $&quot;[ServiceLocator] {type.Name} already registered. Overwriting.&quot;);
+                _services[type] = service;
+            }
+            else
+            {
+                _services.Add(type, service);
+            }
+        }
+
+        public static void Register(Type type, object service)
+        {
+            if (_services.ContainsKey(type))
+            {
+                Debug.LogWarning(
+                    $&quot;[ServiceLocator] {type.Name} already registered. Overwriting.&quot;);
+                _services[type] = service;
+            }
+            else
+            {
+                _services.Add(type, service);
+            }
+        }
+
+        public static T Get&lt;T&gt;() where T : class
+        {
+            if (_services.TryGetValue(typeof(T), out var service))
+                return service as T;
+            Debug.LogError(
+                $&quot;[ServiceLocator] Service {typeof(T).Name} not registered.&quot;);
+            return null;
+        }
+
+        public static bool IsRegistered&lt;T&gt;() where T : class
+        {
+            return _services.ContainsKey(typeof(T));
+        }
+
+        public static void Unregister&lt;T&gt;() where T : class
+        {
+            _services.Remove(typeof(T));
+        }
+
+        public static void Clear()
+        {
+            _services.Clear();
+        }
+    }
+}</code></pre>
+
+        <h3>3. BaseStateMachine &mdash; 可复用泛型状态机</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+
+namespace GameFramework.Architecture
+{
+    public interface IState
+    {
+        void Enter();
+        void Tick(float deltaTime);
+        void FixedTick(float fixedDeltaTime);
+        void LateTick(float deltaTime);
+        void Exit();
+    }
+
+    public class BaseStateMachine : MonoBehaviour
+    {
+        private IState _currentState;
+        private IState _previousState;
+
+        public IState CurrentState =&gt; _currentState;
+        public IState PreviousState =&gt; _previousState;
+
+        public void TransitionTo(IState newState)
+        {
+            if (_currentState == newState) return;
+            _currentState?.Exit();
+            _previousState = _currentState;
+            _currentState = newState;
+            _currentState.Enter();
+        }
+
+        public void TransitionToPrevious()
+        {
+            if (_previousState != null)
+                TransitionTo(_previousState);
+        }
+
+        public bool IsInState&lt;T&gt;() where T : IState
+        {
+            return _currentState is T;
+        }
+
+        private void Update() =&gt; _currentState?.Tick(Time.deltaTime);
+        private void FixedUpdate() =&gt; _currentState?.FixedTick(Time.fixedDeltaTime);
+        private void LateUpdate() =&gt; _currentState?.LateTick(Time.deltaTime);
+    }
+}</code></pre>
+
+        <h3>4. Factory 模式 &mdash; 工厂</h3>
+        <pre><code class="language-csharp">using UnityEngine;
+
+namespace GameFramework.Architecture
+{
+    public abstract class FactorySO&lt;T&gt; : ScriptableObject
+    {
+        public abstract T Create();
+    }
+
+    public class GameObjectFactory : FactorySO&lt;GameObject&gt;
+    {
+        [SerializeField] private GameObject _prefab;
+        [SerializeField] private Transform _parent;
+
+        public override GameObject Create()
+        {
+            return Instantiate(_prefab, _parent);
+        }
+
+        public T Create&lt;T&gt;() where T : Component
+        {
+            var obj = Create();
+            return obj != null ? obj.GetComponent&lt;T&gt;() : null;
+        }
+    }
+
+    public static class Factory&lt;T&gt; where T : new()
+    {
+        public static T Create() =&gt; new T();
+    }
+
+    public interface IFactory&lt;T&gt;
+    {
+        T Create();
+    }
+}</code></pre>
+      </div>
     `
   }
 };
@@ -272,7 +1729,7 @@ pages.forEach(p => {
   const d = content[p];
   if (!d) return;
   document.getElementById('page-' + p).innerHTML = d.html +
-    '<div class="source">📖 来源：' + d.source + '</div>';
+    '<div class="source">来源：' + d.source + '</div>';
 });
 
 // Nav switching
