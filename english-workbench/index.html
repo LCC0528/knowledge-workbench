@@ -501,8 +501,12 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
                 <strong>支持的分隔符：</strong><code>|</code>（竖线）、<code>TAB</code>（制表符）、<code>-</code>（短横）
                 <br>例句和例句翻译可选填
             </div>
-            <button class="btn btn-primary" onclick="batchAdd()" style="width:100%">📦 批量导入</button>
-            <div id="batchResult" class="hidden" style="margin-top:12px;padding:12px;border-radius:10px;background:var(--primary-light);font-size:14px;"></div>
+            <div style="display:flex;gap:8px;margin-bottom:12px">
+                <button class="btn btn-outline btn-sm" onclick="batchAutoFill()" style="flex:1">🔄 批量自动翻译</button>
+                <button class="btn btn-primary btn-sm" onclick="batchAdd()" style="flex:1">📦 批量导入</button>
+            </div>
+            <div id="batchStatus" style="font-size:12px;color:var(--text-light);margin-bottom:6px;"></div>
+            <div id="batchResult" class="hidden" style="padding:12px;border-radius:10px;background:var(--primary-light);font-size:13px;line-height:1.6;"></div>
         </div>
     </div>
 
@@ -1428,9 +1432,95 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         document.getElementById('batchEntry').classList.toggle('hidden');
     }
 
-    function batchAdd() {
-        const text = document.getElementById('batchInput').value.trim();
+    window._batchEntries = null;
+
+    function batchAutoFill() {
+        var text = document.getElementById('batchInput').value.trim();
         if (!text) { showToast('请先输入单词'); return; }
+        var lines = text.split('\n').map(function(l) { return l.trim(); }).filter(function(l) { return l; });
+        var status = document.getElementById('batchStatus');
+        var result = document.getElementById('batchResult');
+        result.classList.remove('hidden');
+        status.textContent = '⏳ 正在翻译 0/' + lines.length + ' ...';
+        result.innerHTML = '';
+
+        var entries = [];
+        lines.forEach(function(line) {
+            var parts;
+            if (line.includes('|')) parts = line.split('|').map(function(s) { return s.trim(); });
+            else if (line.includes('\t')) parts = line.split('\t').map(function(s) { return s.trim(); });
+            else if (line.match(/^[^-]+-[^-]+/)) { parts = line.split(/-(.+)/).map(function(s) { return s.trim(); }); if (parts.length > 2) parts = [parts[0], parts[1]]; }
+            else parts = [line];
+            entries.push({ word: parts[0], translation: parts[1] || '', example: parts[2] || '', exampleTranslation: parts[3] || '' });
+        });
+
+        var completed = 0;
+        var html = '';
+        window._batchEntries = entries;
+
+        function next(i) {
+            if (i >= entries.length) {
+                status.textContent = '✅ 翻译完成。检查无误后点击"批量导入"';
+                result.innerHTML = '<div style="border-bottom:1px solid rgba(0,0,0,0.06);padding-bottom:8px;margin-bottom:8px;font-weight:600;color:var(--primary-dark)">预览（' + entries.length + ' 个单词）</div>' + html;
+                return;
+            }
+            var e = entries[i];
+            if (e.translation) {
+                html += '<div style="display:flex;gap:4px;margin-bottom:4px"><span style="font-weight:500;min-width:80px">' + escHtml(e.word) + '</span><span>' + escHtml(e.translation) + '</span></div>';
+                completed++;
+                status.textContent = '⏳ 正在翻译 ' + completed + '/' + entries.length + ' ...';
+                result.innerHTML = '<div style="border-bottom:1px solid rgba(0,0,0,0.06);padding-bottom:8px;margin-bottom:8px;font-weight:600;color:var(--primary-dark)">翻译中...</div>' + html;
+                next(i + 1);
+                return;
+            }
+            fetchYoudaoJSONP(e.word).then(function(data) {
+                if (data && data.translation) {
+                    e.translation = data.translation;
+                    if (data.phonetic) e.phonetic = data.phonetic;
+                }
+                html += '<div style="display:flex;gap:4px;margin-bottom:4px"><span style="font-weight:500;min-width:80px">' + escHtml(e.word) + '</span><span>' + escHtml(e.translation || '⚠️ 未找到') + '</span></div>';
+                completed++;
+                status.textContent = '⏳ 正在翻译 ' + completed + '/' + entries.length + ' ...';
+                result.innerHTML = '<div style="border-bottom:1px solid rgba(0,0,0,0.06);padding-bottom:8px;margin-bottom:8px;font-weight:600;color:var(--primary-dark)">翻译中...</div>' + html;
+                next(i + 1);
+            });
+        }
+        next(0);
+    }
+
+    function batchAdd() {
+        if (window._batchEntries && window._batchEntries.length > 0) {
+            var entries = window._batchEntries;
+            window._batchEntries = null;
+            var added = 0, skipped = 0;
+            entries.forEach(function(e) {
+                if (!e.word || !e.translation) return;
+                var exists = state.words.some(function(w) { return w.word.toLowerCase() === e.word.toLowerCase(); });
+                if (exists) { skipped++; return; }
+                var w = {
+                    id: Date.now() + added,
+                    word: e.word,
+                    translation: e.translation,
+                    example: e.example || '',
+                    exampleTranslation: e.exampleTranslation || '',
+                    createdDate: state.todayStr,
+                    level: 0,
+                    nextReviewDate: state.todayStr,
+                    lastReviewDate: null,
+                    phonetic: e.phonetic || ''
+                };
+                state.words.push(w);
+                fetchPhonetic(w);
+                added++;
+            });
+            if (added > 0) { saveWords(); updateDailyStats(); }
+            showToast('✅ 导入 ' + added + ' 个单词' + (skipped ? '，跳过 ' + skipped + ' 个重复' : ''));
+            document.getElementById('batchInput').value = '';
+            document.getElementById('batchResult').classList.add('hidden');
+            return;
+        }
+
+        const text = document.getElementById('batchInput').value.trim();
 
         const lines = text.split('\n').map(l => l.trim()).filter(l => l);
         let added = 0, skipped = 0, errors = [];
