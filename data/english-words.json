@@ -1357,5 +1357,18 @@
     "lastReviewDate": null,
     "phonetic": "/ˈæksɛs/",
     "pos": ""
+  },
+  {
+    "id": 1785684072288,
+    "word": "accident",
+    "translation": "n. 交通事故，车祸；（不幸的）意外遭遇，不测事件；意外，偶然的事；运气，机遇；大便（或小便）失禁；...",
+    "example": "",
+    "exampleTranslation": "",
+    "createdDate": "2026-08-02",
+    "level": 0,
+    "nextReviewDate": "2026-08-02",
+    "lastReviewDate": null,
+    "phonetic": "/bɛl/",
+    "pos": ""
   }
 ]
