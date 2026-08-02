@@ -1435,5 +1435,18 @@
     "lastReviewDate": null,
     "phonetic": "",
     "pos": ""
+  },
+  {
+    "id": 1785684198147,
+    "word": "according to",
+    "translation": "adj. 相符的；相应的；一致的; v. 给予；符合，一致；正式协议（accord的现在分词）",
+    "example": "",
+    "exampleTranslation": "",
+    "createdDate": "2026-08-02",
+    "level": 0,
+    "nextReviewDate": "2026-08-02",
+    "lastReviewDate": null,
+    "phonetic": "/əˈkɔːdɪŋ/",
+    "pos": "📎 verb, adjective, adverb"
   }
 ]
