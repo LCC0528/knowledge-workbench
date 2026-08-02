@@ -1344,5 +1344,18 @@
     "lastReviewDate": null,
     "phonetic": "",
     "pos": ""
+  },
+  {
+    "id": 1785684038615,
+    "word": "bell",
+    "translation": "n. 钟，铃；钟声，铃声（the bell）；钟状物; v. 系铃，装；发出响铃（或敲钟）般的声音；...",
+    "example": "",
+    "exampleTranslation": "",
+    "createdDate": "2026-08-02",
+    "level": 0,
+    "nextReviewDate": "2026-08-02",
+    "lastReviewDate": null,
+    "phonetic": "/ˈæksɛs/",
+    "pos": ""
   }
 ]
