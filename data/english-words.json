@@ -1487,5 +1487,18 @@
     "lastReviewDate": null,
     "phonetic": "",
     "pos": ""
+  },
+  {
+    "id": 1785684318490,
+    "word": "weather",
+    "translation": "n. 天气，气象；恶劣天气（指寒冷、潮湿等），自然力；气象预报；处境；气候; v. （受风吹雨打而）...",
+    "example": "",
+    "exampleTranslation": "",
+    "createdDate": "2026-08-02",
+    "level": 0,
+    "nextReviewDate": "2026-08-02",
+    "lastReviewDate": null,
+    "phonetic": "",
+    "pos": ""
   }
 ]
