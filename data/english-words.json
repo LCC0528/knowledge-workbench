@@ -1526,5 +1526,18 @@
     "lastReviewDate": null,
     "phonetic": "/ˈɔːfəl/",
     "pos": ""
+  },
+  {
+    "id": 1785684369346,
+    "word": "customer",
+    "translation": "n. 顾客；（某一类型的）家伙",
+    "example": "",
+    "exampleTranslation": "",
+    "createdDate": "2026-08-02",
+    "level": 0,
+    "nextReviewDate": "2026-08-02",
+    "lastReviewDate": null,
+    "phonetic": "",
+    "pos": ""
   }
 ]
