@@ -1,7 +1,87 @@
 {
-  "updated": "2026-08-02",
-  "count": 28,
+  "updated": "2026-08-03",
+  "count": 36,
   "items": [
+    {
+      "title": "NVIDIA AI Releases Molt: A PyTorch-Native Agentic Reinforcement Learning Framework",
+      "url": "https://www.marktechpost.com/2026/08/01/nvidia-ai-releases-molt-a-pytorch-native-agentic-reinforcement-learning-framework/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Agentic RL research is constant algorithm modification, and in mainstream frameworks every change threads through trainer, distributed backend, and rollout glue. NVIDIA's Molt targets that cost wit",
+      "ai_score": 8.0,
+      "date": "2026-08-03",
+      "topic": "ai"
+    },
+    {
+      "title": "End-to-End Forecasting with TimesFM 2.5: Backtesting, Covariates, Anomaly Detection, and Scalable Colab Deployment",
+      "url": "https://www.marktechpost.com/2026/08/01/end-to-end-forecasting-with-timesfm-2-5-backtesting-covariates-anomaly-detection-and-scalable-colab-deployment/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>In this tutorial, we build an advanced end-to-end time-series forecasting workflow with TimesFM 2.5. We begin by configuring the runtime, installing the required dependencies, detecting available h",
+      "ai_score": 8.0,
+      "date": "2026-08-03",
+      "topic": "ai"
+    },
+    {
+      "title": "Accelerating Transformer Training with NVIDIA Transformer Engine, Fused Kernels, BF16, FP8, and GPU Benchmarking",
+      "url": "https://www.marktechpost.com/2026/08/01/accelerating-transformer-training-with-nvidia-transformer-engine-fused-kernels-bf16-fp8-and-gpu-benchmarking/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Discover how to optimize transformer workloads using the NVIDIA Transformer Engine. This tutorial guides you through configuring fused GPU kernels, implementing FP8 delayed scaling, and benchmarkin",
+      "ai_score": 8.0,
+      "date": "2026-08-03",
+      "topic": "ai"
+    },
+    {
+      "title": "MiniMax Releases MiniMax H3: An Omni-Modal Video Model That Generates 15-Second 2K Clips With Native Stereo Audio",
+      "url": "https://www.marktechpost.com/2026/08/01/minimax-releases-minimax-h3-an-omni-modal-video-model-that-generates-15-second-2k-clips-with-native-stereo-audio/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>MiniMax releases MiniMax H3, a general-purpose multimodal generation model. MiniMax H3 is not a text-to-video model with add-ons. MiniMax describes it as a general-purpose multimodal generation mod",
+      "ai_score": 8.0,
+      "date": "2026-08-03",
+      "topic": "ai"
+    },
+    {
+      "title": "Google AI Overviews become more common in search",
+      "url": "https://www.artificialintelligence-news.com/news/google-ai-overviews-us-searches/",
+      "source": "www.artificialintelligence-news.com",
+      "score": 0,
+      "text": "<p>Google’s AI-generated summaries appeared in 43% of US searches measured by Similarweb, up from 15% a year earlier, according to the market intelligence firm’s 2026 Generative AI Landscape report. A",
+      "ai_score": 8.0,
+      "date": "2026-08-03",
+      "topic": "ai"
+    },
+    {
+      "title": "How AI is shortening drug discovery timelines in China",
+      "url": "https://www.artificialintelligence-news.com/news/ai-drug-discovery-china/",
+      "source": "www.artificialintelligence-news.com",
+      "score": 0,
+      "text": "<p>Insilico Medicine has reduced the time needed to produce some drug development candidates to about one year by combining artificial intelligence with laboratory research in China, according to CEO ",
+      "ai_score": 8.0,
+      "date": "2026-08-03",
+      "topic": "ai"
+    },
+    {
+      "title": "America’s AI Investment Boom Is Reshaping the Economy",
+      "url": "https://www.artificialintelligence-news.com/news/americas-ai-investment-boom-is-reshaping-the-economy/",
+      "source": "www.artificialintelligence-news.com",
+      "score": 0,
+      "text": "<p>America&#8217;s AI Investment Boom Is Reshaping the Economy Artificial intelligence has become one of the defining investment stories in the United States, and the numbers continue to grow. Microso",
+      "ai_score": 8.0,
+      "date": "2026-08-03",
+      "topic": "ai"
+    },
+    {
+      "title": "Meta, Microsoft, Nvidia, IBM, and others back open-weight AI",
+      "url": "https://www.artificialintelligence-news.com/news/meta-microsoft-nvidia-ibm-others-back-open-weight-ai/",
+      "source": "www.artificialintelligence-news.com",
+      "score": 0,
+      "text": "<p>Two dozen companies and organisations signed an open letter urging US policymakers to protect open-weight AI models. The letter, published today (PDF), carries signatures from a list that spans dir",
+      "ai_score": 8.0,
+      "date": "2026-08-03",
+      "topic": "ai"
+    },
     {
       "title": "Kaisel – Routes as Values. Dart 3 Native Router for Flutter",
       "url": "https://kaisel.dev/",
