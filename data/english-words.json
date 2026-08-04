@@ -1029,9 +1029,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 1,
-    "nextReviewDate": "2026-08-04",
-    "lastReviewDate": "2026-08-03"
+    "level": 2,
+    "nextReviewDate": "2026-08-07",
+    "lastReviewDate": "2026-08-04"
   },
   {
     "id": 1785328044719,
@@ -1580,5 +1580,16 @@
     "lastReviewDate": "2026-08-03",
     "phonetic": "",
     "pos": ""
+  },
+  {
+    "id": 1785328044726,
+    "word": "gambling",
+    "translation": "赌博",
+    "example": "",
+    "exampleTranslation": "",
+    "createdDate": "2026-07-29",
+    "level": 1,
+    "nextReviewDate": "2026-08-03",
+    "lastReviewDate": "2026-08-02"
   }
 ]
