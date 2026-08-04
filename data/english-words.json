@@ -1604,5 +1604,77 @@
     "lastReviewDate": "2026-08-04",
     "phonetic": "/ɪɡˈzɔːst/",
     "pos": "📎 noun, verb, adjective"
+  },
+  {
+    "id": 1785856048063,
+    "word": "directly",
+    "translation": "adv. 直接地，径直地；立即；坦率地",
+    "example": "",
+    "exampleTranslation": "",
+    "createdDate": "2026-08-04",
+    "level": 0,
+    "nextReviewDate": "2026-08-04",
+    "lastReviewDate": null,
+    "phonetic": ""
+  },
+  {
+    "id": 1785856048065,
+    "word": "dorm",
+    "translation": "n. （集体）宿舍",
+    "example": "",
+    "exampleTranslation": "",
+    "createdDate": "2026-08-04",
+    "level": 0,
+    "nextReviewDate": "2026-08-04",
+    "lastReviewDate": null,
+    "phonetic": ""
+  },
+  {
+    "id": 1785856048067,
+    "word": "accustomed to",
+    "translation": "phr. 习惯于",
+    "example": "",
+    "exampleTranslation": "",
+    "createdDate": "2026-08-04",
+    "level": 0,
+    "nextReviewDate": "2026-08-04",
+    "lastReviewDate": null,
+    "phonetic": ""
+  },
+  {
+    "id": 1785856048069,
+    "word": "open",
+    "translation": "v. 打开，开门；睁开；开张，开业，开放",
+    "example": "",
+    "exampleTranslation": "",
+    "createdDate": "2026-08-04",
+    "level": 0,
+    "nextReviewDate": "2026-08-04",
+    "lastReviewDate": null,
+    "phonetic": ""
+  },
+  {
+    "id": 1785856048071,
+    "word": "duty",
+    "translation": "n. 责任，义务，本分；值班，职责；税",
+    "example": "",
+    "exampleTranslation": "",
+    "createdDate": "2026-08-04",
+    "level": 0,
+    "nextReviewDate": "2026-08-04",
+    "lastReviewDate": null,
+    "phonetic": ""
+  },
+  {
+    "id": 1785856048073,
+    "word": "acquaint oneself with",
+    "translation": "phr. 熟悉（知道）",
+    "example": "",
+    "exampleTranslation": "",
+    "createdDate": "2026-08-04",
+    "level": 0,
+    "nextReviewDate": "2026-08-04",
+    "lastReviewDate": null,
+    "phonetic": ""
   }
 ]
