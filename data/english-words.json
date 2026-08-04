@@ -1591,5 +1591,18 @@
     "level": 1,
     "nextReviewDate": "2026-08-03",
     "lastReviewDate": "2026-08-02"
+  },
+  {
+    "id": 1785818837929,
+    "word": "exhaust",
+    "translation": "v. 使精疲力尽；耗尽；详尽讨论；排放，排出（气体，蒸汽）; n. 废气；排气管，排气装置",
+    "example": "",
+    "exampleTranslation": "",
+    "createdDate": "2026-08-04",
+    "level": 0,
+    "nextReviewDate": "2026-08-04",
+    "lastReviewDate": null,
+    "phonetic": "/ɪɡˈzɔːst/",
+    "pos": "📎 noun, verb, adjective"
   }
 ]
