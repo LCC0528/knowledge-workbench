@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>鑻辫瀛︿範宸ヤ綔鍙?路 鑹惧娴╂柉鑳屽崟璇?/title>
+    <title>英语学习工作台 · 艾宾浩斯背单词</title>
     <style>
         :root {
             --bg: #f5f0eb;
@@ -382,13 +382,13 @@
 <body>
 <div class="container" id="app">
     <header>
-        <h1>馃摑 鑻辫瀛︿範宸ヤ綔鍙?/h1>
+        <h1>📝 英语学习工作台</h1>
         <div class="sub">
-            <span class="active" data-tab="review" onclick="switchTab('review')">澶嶄範</span>
-            <span data-tab="add" onclick="switchTab('add')">褰曞叆</span>
-            <span data-tab="stats" onclick="switchTab('stats')">缁熻</span>
-            <span data-tab="wrong" onclick="switchTab('wrong')">閿欒瘝</span>
-            <span data-tab="settings" onclick="switchTab('settings')">璁剧疆</span>
+            <span class="active" data-tab="review" onclick="switchTab('review')">复习</span>
+            <span data-tab="add" onclick="switchTab('add')">录入</span>
+            <span data-tab="stats" onclick="switchTab('stats')">统计</span>
+            <span data-tab="wrong" onclick="switchTab('wrong')">错词</span>
+            <span data-tab="settings" onclick="switchTab('settings')">设置</span>
         </div>
     </header>
 
@@ -397,15 +397,15 @@
             <div class="stats-grid" id="dailyStats">
                 <div class="stat-item">
                     <div class="num" id="statDue">0</div>
-                    <div class="label">浠婃棩寰呭涔?/div>
+                    <div class="label">今日待复习</div>
                 </div>
                 <div class="stat-item">
                     <div class="num" id="statNew">0</div>
-                    <div class="label">鏂拌瘝寰呭綍鍏?/div>
+                    <div class="label">新词待录入</div>
                 </div>
                 <div class="stat-item">
                     <div class="num" id="statTotal">0</div>
-                    <div class="label">鎬昏瘝姹囬噺</div>
+                    <div class="label">总词汇量</div>
                 </div>
             </div>
 
@@ -421,35 +421,35 @@
                     <div class="word" id="wordDisplay"></div>
                     <div style="font-size:14px;color:var(--text-light);margin-bottom:2px;" id="phoneticDisplay"></div>
                     <div style="font-size:13px;color:var(--accent);margin-bottom:6px;" id="posDisplay"></div>
-                    <div class="hint">鐐瑰嚮銆愮湅绛旀銆戝悗閫夋嫨璁板緱涓庡惁</div>
+                    <div class="hint">点击【看答案】后选择记得与否</div>
                     <div id="answerSection" class="answer-section hidden">
                         <div class="translation" id="translationDisplay"></div>
                         <div class="example" id="exampleDisplay"></div>
                         <div class="example-zh" id="exampleZhDisplay"></div>
                     </div>
                     <div class="btn-group">
-                        <button class="btn btn-accent" onclick="showAnswer()">馃憗 鐪嬬瓟妗?/button>
-                        <button class="btn btn-danger" onclick="markForgot()" id="btnForgot">鉂?娌¤浣?/button>
-                        <button class="btn btn-success" onclick="markRemembered()" id="btnRemember">鉁?璁颁笅浜?/button>
+                        <button class="btn btn-accent" onclick="showAnswer()">👁 看答案</button>
+                        <button class="btn btn-danger" onclick="markForgot()" id="btnForgot">❌ 没记住</button>
+                        <button class="btn btn-success" onclick="markRemembered()" id="btnRemember">✅ 记下了</button>
                     </div>
                 </div>
 
                 <div id="reviewEmpty" class="empty-state">
-                    <div class="icon">馃帀</div>
-                    <h2 style="color: var(--primary-dark); margin-bottom: 8px;">浠婃棩浠诲姟瀹屾垚锛?/h2>
-                    <p>浠婂ぉ娌℃湁寰呭涔犵殑鍗曡瘝浜嗭紝浼戞伅涓€涓嬫垨褰曞叆鏂拌瘝鍚с€?/p>
+                    <div class="icon">🎉</div>
+                    <h2 style="color: var(--primary-dark); margin-bottom: 8px;">今日任务完成！</h2>
+                    <p>今天没有待复习的单词了，休息一下或录入新词吧。</p>
                     <div style="margin-top: 16px;">
-                        <button class="btn btn-primary" onclick="switchTab('add')">鉃?褰曞叆鏂拌瘝</button>
+                        <button class="btn btn-primary" onclick="switchTab('add')">➕ 录入新词</button>
                     </div>
                 </div>
 
                 <div id="reviewWelcome" class="review-card">
                     <div class="empty-state">
-                        <div class="icon">馃摎</div>
-                        <h2 style="color: var(--primary-dark); margin-bottom: 8px;">鍑嗗灏辩华</h2>
-                        <p id="welcomeText">姝ｅ湪璁＄畻浠婃棩澶嶄範鏁伴噺...</p>
+                        <div class="icon">📚</div>
+                        <h2 style="color: var(--primary-dark); margin-bottom: 8px;">准备就绪</h2>
+                        <p id="welcomeText">正在计算今日复习数量...</p>
                         <div style="margin-top: 20px;">
-                            <button class="btn btn-primary" onclick="startReview()">馃殌 寮€濮嬪涔?/button>
+                            <button class="btn btn-primary" onclick="startReview()">🚀 开始复习</button>
                         </div>
                     </div>
                 </div>
@@ -460,48 +460,50 @@
     <div id="tab-add" class="hidden">
         <div class="card" id="singleEntry">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-                <h2 style="color: var(--primary-dark); font-size: 18px;">鉃?褰曞叆鏂板崟璇?/h2>
-                <button class="btn btn-sm btn-outline" onclick="toggleBatchMode()">馃搵 鎵归噺褰曞叆</button>
+                <h2 style="color: var(--primary-dark); font-size: 18px;">➕ 录入新单词</h2>
+                <button class="btn btn-sm btn-outline" onclick="toggleBatchMode()">📋 批量录入</button>
             </div>
             <div class="form-group">
-                <label>鑻辨枃鍗曡瘝 / 鐭 *</label>
+                <label>英文单词 / 短语 *</label>
                 <div style="display:flex;gap:8px;">
-                    <input type="text" id="inputWord" placeholder="濡傦細ubiquitous" autocomplete="off" style="flex:1;">
-                    <button class="btn btn-sm btn-outline" onclick="autoFillWord()" id="btnAutoFill" style="white-space:nowrap;">馃攧 鑷姩</button>
+                    <input type="text" id="inputWord" placeholder="如：ubiquitous" autocomplete="off" style="flex:1;">
+                    <button class="btn btn-sm btn-outline" onclick="autoFillWord()" id="btnAutoFill" style="white-space:nowrap;">🔄 自动</button>
                 </div>
                 <div id="autoFillStatus" style="font-size:12px;color:var(--text-light);margin-top:4px;"></div>
             </div>
             <div class="form-group">
-                <label>涓枃閲婁箟 *</label>
-                <input type="text" id="inputTranslation" placeholder="濡傦細鏃犲涓嶅湪鐨? autocomplete="off">
+                <label>中文释义 *</label>
+                <input type="text" id="inputTranslation" placeholder="如：无处不在的" autocomplete="off">
             </div>
             <div class="form-group">
-                <label>渚嬪彞锛堣嫳鏂囷級</label>
-                <textarea id="inputExample" placeholder="濡傦細Smartphones are ubiquitous in modern society." rows="2"></textarea>
+                <label>例句（英文）</label>
+                <textarea id="inputExample" placeholder="如：Smartphones are ubiquitous in modern society." rows="2"></textarea>
             </div>
             <div class="form-group">
-                <label>渚嬪彞缈昏瘧锛堜腑鏂囷級</label>
-                <textarea id="inputExampleTranslation" placeholder="濡傦細鏅鸿兘鎵嬫満鍦ㄧ幇浠ｇぞ浼氭棤澶勪笉鍦ㄣ€? rows="2"></textarea>
+                <label>例句翻译（中文）</label>
+                <textarea id="inputExampleTranslation" placeholder="如：智能手机在现代社会无处不在。" rows="2"></textarea>
             </div>
-            <button class="btn btn-primary" onclick="addWord()" style="width:100%">馃捑 淇濆瓨</button>
+            <button class="btn btn-primary" onclick="addWord()" style="width:100%">💾 保存</button>
         </div>
 
         <div class="card hidden" id="batchEntry">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-                <h2 style="color: var(--primary-dark); font-size: 18px;">馃搵 鎵归噺褰曞叆</h2>
-                <button class="btn btn-sm btn-outline" onclick="toggleBatchMode()">鉁忥笍 鍗曚釜褰曞叆</button>
+                <h2 style="color: var(--primary-dark); font-size: 18px;">📋 批量录入</h2>
+                <button class="btn btn-sm btn-outline" onclick="toggleBatchMode()">✏️ 单个录入</button>
             </div>
             <div class="form-group">
-                <label>姣忚涓€涓崟璇嶏紝鏍煎紡锛?code>鑻辨枃 | 涓枃 | 渚嬪彞 | 渚嬪彞缈昏瘧</code></label>
-                <textarea id="batchInput" placeholder="ubiquitous | 鏃犲涓嶅湪鐨?| Smartphones are ubiquitous. | 鏅鸿兘鎵嬫満鏃犲涓嶅湪銆?diligent | 鍕ゅ鐨?| She is a diligent student. | 濂规槸涓嫟濂嬬殑瀛︾敓銆?eloquent | 闆勮京鐨?| His speech was eloquent. | 浠栫殑婕旇寰堥泟杈┿€? rows="8" style="font-size:14px;font-family:Consolas,monospace;"></textarea>
+                <label>每行一个单词，格式：<code>英文 | 中文 | 例句 | 例句翻译</code></label>
+                <textarea id="batchInput" placeholder="ubiquitous | 无处不在的 | Smartphones are ubiquitous. | 智能手机无处不在。
+diligent | 勤奋的 | She is a diligent student. | 她是个勤奋的学生。
+eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows="8" style="font-size:14px;font-family:Consolas,monospace;"></textarea>
             </div>
             <div style="font-size:12px;color:var(--text-light);margin-bottom:12px;line-height:1.6;">
-                <strong>鏀寔鐨勫垎闅旂锛?/strong><code>|</code>锛堢珫绾匡級銆?code>TAB</code>锛堝埗琛ㄧ锛夈€?code>-</code>锛堢煭妯級
-                <br>渚嬪彞鍜屼緥鍙ョ炕璇戝彲閫夊～
+                <strong>支持的分隔符：</strong><code>|</code>（竖线）、<code>TAB</code>（制表符）、<code>-</code>（短横）
+                <br>例句和例句翻译可选填
             </div>
             <div style="display:flex;gap:8px;margin-bottom:12px">
-                <button class="btn btn-outline btn-sm" onclick="batchAutoFill()" style="flex:1">馃攧 鎵归噺鑷姩缈昏瘧</button>
-                <button class="btn btn-primary btn-sm" onclick="batchAdd()" style="flex:1">馃摝 鎵归噺瀵煎叆</button>
+                <button class="btn btn-outline btn-sm" onclick="batchAutoFill()" style="flex:1">🔄 批量自动翻译</button>
+                <button class="btn btn-primary btn-sm" onclick="batchAdd()" style="flex:1">📦 批量导入</button>
             </div>
             <div id="batchStatus" style="font-size:12px;color:var(--text-light);margin-bottom:6px;"></div>
             <div id="batchResult" class="hidden" style="padding:12px;border-radius:10px;background:var(--primary-light);font-size:13px;line-height:1.6;"></div>
@@ -510,99 +512,100 @@
 
     <div id="tab-stats" class="hidden">
         <div class="card">
-            <h2 style="color: var(--primary-dark); font-size: 18px; margin-bottom: 16px;">馃搳 瀛︿範缁熻</h2>
+            <h2 style="color: var(--primary-dark); font-size: 18px; margin-bottom: 16px;">📊 学习统计</h2>
             <div class="stats-grid">
                 <div class="stat-item">
                     <div class="num" id="statsTotal">0</div>
-                    <div class="label">鎬昏瘝姹?/div>
+                    <div class="label">总词汇</div>
                 </div>
                 <div class="stat-item">
                     <div class="num" id="statsMastered">0</div>
-                    <div class="label">宸叉帉鎻?/div>
+                    <div class="label">已掌握</div>
                 </div>
                 <div class="stat-item">
                     <div class="num" id="statsLearning">0</div>
-                    <div class="label">瀛︿範涓?/div>
+                    <div class="label">学习中</div>
                 </div>
             </div>
 
             <div id="chartSection">
                 <div class="chart-block">
-                    <div class="chart-title">馃搱 鎺屾彙鍒嗗竷</div>
+                    <div class="chart-title">📈 掌握分布</div>
                     <div id="levelChart"></div>
                 </div>
 
                 <div class="chart-block">
-                    <div class="chart-title">馃搳 鏈懆澶嶄範</div>
+                    <div class="chart-title">📊 本周复习</div>
                     <div class="bar-chart-v" id="weeklyChart"></div>
                 </div>
 
                 <div class="chart-block">
-                    <div class="chart-title">馃搱 绱澧為暱</div>
+                    <div class="chart-title">📈 累计增长</div>
                     <div id="growthChart" class="sparkline"></div>
                 </div>
             </div>
 
             <div style="margin: 16px 0;">
-                <div style="font-size:14px; color:var(--text); margin-bottom:8px;">馃搮 浠婃棩鎵撳崱</div>
+                <div style="font-size:14px; color:var(--text); margin-bottom:8px;">📅 今日打卡</div>
                 <div class="streak-bar" id="streakBar"></div>
             </div>
 
-            <h3 style="font-size: 14px; color: var(--text-light); margin-bottom: 8px;">鎵€鏈夊崟璇?/h3>
+            <h3 style="font-size: 14px; color: var(--text-light); margin-bottom: 8px;">所有单词</h3>
             <ul class="word-list" id="wordList"></ul>
         </div>
     </div>
 
     <div id="tab-wrong" class="hidden">
         <div class="card">
-            <h2 style="color: var(--primary-dark); font-size: 18px; margin-bottom: 12px;">鉂?閿欒瘝鏈?/h2>
+            <h2 style="color: var(--primary-dark); font-size: 18px; margin-bottom: 12px;">❌ 错词本</h2>
             <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
-                <button class="btn btn-primary btn-sm" onclick="practiceWrongWords()">馃摉 澶嶄範閿欒瘝</button>
-                <button class="btn btn-outline btn-sm" onclick="clearWrongLog()">馃棏 娓呯┖璁板綍</button>
+                <button class="btn btn-primary btn-sm" onclick="practiceWrongWords()">📖 复习错词</button>
+                <button class="btn btn-outline btn-sm" onclick="clearWrongLog()">🗑 清空记录</button>
             </div>
             <div class="stats-grid" style="margin-bottom:14px">
-                <div class="stat-item"><div class="num" id="wrongTotal">0</div><div class="label">閿欒瘝鎬绘暟</div></div>
-                <div class="stat-item"><div class="num" id="wrongAccuracy">0%</div><div class="label">姝ｇ‘鐜?/div></div>
-                <div class="stat-item"><div class="num" id="wrongTop">0</div><div class="label">鏈€鏄撻敊(娆?</div></div>
+                <div class="stat-item"><div class="num" id="wrongTotal">0</div><div class="label">错词总数</div></div>
+                <div class="stat-item"><div class="num" id="wrongAccuracy">0%</div><div class="label">正确率</div></div>
+                <div class="stat-item"><div class="num" id="wrongTop">0</div><div class="label">最易错(次)</div></div>
             </div>
             <div id="wrongFilter" style="display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap">
-                <button class="btn btn-sm" style="flex:1;background:var(--primary);color:#fff;border:none;border-radius:8px;padding:6px" onclick="renderWrongWords('all')">鍏ㄩ儴</button>
-                <button class="btn btn-sm" style="flex:1;background:var(--danger);color:#fff;border:none;border-radius:8px;padding:6px;opacity:0.6" onclick="renderWrongWords('top')">楂橀閿?/button>
-                <button class="btn btn-sm" style="flex:1;background:var(--success);color:#fff;border:none;border-radius:8px;padding:6px;opacity:0.6" onclick="renderWrongWords('recent')">杩戞湡閿?/button>
+                <button class="btn btn-sm" style="flex:1;background:var(--primary);color:#fff;border:none;border-radius:8px;padding:6px" onclick="renderWrongWords('all')">全部</button>
+                <button class="btn btn-sm" style="flex:1;background:var(--danger);color:#fff;border:none;border-radius:8px;padding:6px;opacity:0.6" onclick="renderWrongWords('top')">高频错</button>
+                <button class="btn btn-sm" style="flex:1;background:var(--success);color:#fff;border:none;border-radius:8px;padding:6px;opacity:0.6" onclick="renderWrongWords('recent')">近期错</button>
             </div>
             <ul class="word-list" id="wrongList" style="max-height:400px"></ul>
             <div id="wrongEmpty" class="hidden" style="text-align:center;padding:30px;color:var(--text-light);font-size:14px">
-                鉁?鏆傛棤閿欒瘝锛岀户缁繚鎸侊紒
+                ✅ 暂无错词，继续保持！
             </div>
         </div>
     </div>
 
     <div id="tab-settings" class="hidden">
         <div class="card">
-            <h2 style="color: var(--primary-dark); font-size: 18px; margin-bottom: 16px;">鈿欙笍 璁剧疆</h2>
+            <h2 style="color: var(--primary-dark); font-size: 18px; margin-bottom: 16px;">⚙️ 设置</h2>
             <div class="settings-row">
-                <label>姣忔棩澶嶄範鏁伴噺</label>
+                <label>每日复习数量</label>
                 <input type="number" id="dailyLimit" min="5" max="100" value="20">
             </div>
             <hr style="border: none; border-top: 1px solid #f0f0f0; margin: 16px 0;">
-            <h3 style="font-size:14px; color:var(--text-light); margin-bottom:12px;">鈽侊笍 GitHub 鏁版嵁鍚屾</h3>
+            <h3 style="font-size:14px; color:var(--text-light); margin-bottom:12px;">☁️ GitHub 数据同步</h3>
             <div class="form-group">
                 <label>Personal Access Token</label>
                 <input type="password" id="githubTokenInput" placeholder="ghp_xxxxxxxxxxxx" autocomplete="off">
             </div>
             <div class="settings-row" style="margin-bottom:8px;">
-                <label>鍚屾鐘舵€?<span id="syncStatus" class="sync-idle">鈼?/span></label>
-                <button class="btn btn-sm btn-outline" onclick="manualSync()">鉄?绔嬪嵆鍚屾</button>
+                <label>同步状态 <span id="syncStatus" class="sync-idle">○</span></label>
+                <button class="btn btn-sm btn-outline" onclick="manualSync()">⟳ 立即同步</button>
             </div>
             <div style="font-size:12px; color:var(--text-light); line-height:1.6; background:#fafafa; padding:10px 14px; border-radius:10px;">
-                <strong>濡備綍鑾峰彇 Token锛?/strong><br>
-                1. 鎵撳紑 <a href="https://github.com/settings/tokens/new" target="_blank" style="color:var(--primary);">GitHub Token 鍒涘缓椤?/a><br>
-                2. Note 濉换鎰忓悕绉帮紝鍕鹃€?<strong>repo</strong> 鏉冮檺<br>
-                3. Generate 鍚庡鍒剁矘璐村埌涓婃柟杈撳叆妗?            </div>
+                <strong>如何获取 Token？</strong><br>
+                1. 打开 <a href="https://github.com/settings/tokens/new" target="_blank" style="color:var(--primary);">GitHub Token 创建页</a><br>
+                2. Note 填任意名称，勾选 <strong>repo</strong> 权限<br>
+                3. Generate 后复制粘贴到上方输入框
+            </div>
             <hr style="border: none; border-top: 1px solid #f0f0f0; margin: 16px 0;">
             <div class="settings-row">
-                <label style="color: var(--danger);">娓呯┖鎵€鏈夋暟鎹?/label>
-                <button class="btn btn-sm btn-danger" onclick="clearAllData()">馃棏 娓呯┖</button>
+                <label style="color: var(--danger);">清空所有数据</label>
+                <button class="btn btn-sm btn-danger" onclick="clearAllData()">🗑 清空</button>
             </div>
         </div>
     </div>
@@ -659,7 +662,7 @@
         state.ghToken = getGhToken();
         document.getElementById('dailyLimit').value = state.dailyLimit;
         if (document.getElementById('githubToken')) {
-            document.getElementById('githubToken').value = state.ghToken ? state.ghToken.substring(0, 10) + '路路路' : '';
+            document.getElementById('githubToken').value = state.ghToken ? state.ghToken.substring(0, 10) + '···' : '';
         }
         document.getElementById('githubTokenInput').value = state.ghToken;
 
@@ -733,8 +736,8 @@
     }
 
     function getLevelLabel(level) {
-        const labels = ['鏂拌瘝', '1澶?, '3澶?, '7澶?, '15澶?, '30澶?];
-        return labels[level] || '30澶?;
+        const labels = ['新词', '1天', '3天', '7天', '15天', '30天'];
+        return labels[level] || '30天';
     }
 
     function shuffle(arr) {
@@ -758,8 +761,8 @@
         state.syncStatus = status;
         const el = document.getElementById('syncStatus');
         if (el) {
-            const icons = { idle: '鈼?, syncing: '鉄?, ok: '鉁?, fail: '鉁? };
-            el.textContent = icons[status] || '鈼?;
+            const icons = { idle: '○', syncing: '⟳', ok: '✓', fail: '✗' };
+            el.textContent = icons[status] || '○';
             el.className = 'sync-' + status;
         }
     }
@@ -807,7 +810,7 @@
         } catch (e) {
             console.error('GitHub sync error:', e);
             setSyncStatus('fail');
-            showToast('鍚屾澶辫触锛屾暟鎹凡淇濆瓨鍦ㄦ湰鍦?);
+            showToast('同步失败，数据已保存在本地');
         }
     }
 
@@ -840,7 +843,7 @@
 
             if (merged) {
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(state.words));
-                showToast('宸插悓姝ュ叾浠栬澶囩殑鏁版嵁');
+                showToast('已同步其他设备的数据');
             }
             setSyncStatus('ok');
         } catch (e) {
@@ -883,9 +886,9 @@
 
     function autoFillWord() {
         const word = document.getElementById('inputWord').value.trim().toLowerCase();
-        if (!word) { showToast('璇峰厛杈撳叆鑻辨枃鍗曡瘝'); return; }
+        if (!word) { showToast('请先输入英文单词'); return; }
         const status = document.getElementById('autoFillStatus');
-        status.textContent = '鈴?鏌ヨ涓?..';
+        status.textContent = '⏳ 查询中...';
         document.getElementById('btnAutoFill').disabled = true;
         document.getElementById('inputTranslation').dataset.phonetic = '';
 
@@ -931,7 +934,7 @@
                 if (result.phonetic) {
                     document.getElementById('inputTranslation').dataset.phonetic = result.phonetic;
                 }
-                status.textContent = '鉁?涓枃閲婁箟宸插～鍏?;
+                status.textContent = '✅ 中文释义已填充';
             }
             fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + encodeURIComponent(wordOnly))
                 .then(r => r.ok ? r.json() : null).then(data => {
@@ -945,13 +948,13 @@
                         document.getElementById('inputTranslation').dataset.phonetic = phon;
                     }
                     const parts = [];
-                    if (pos) parts.push('馃搸 ' + pos);
+                    if (pos) parts.push('📎 ' + pos);
                     const finalPhon = document.getElementById('inputTranslation').dataset.phonetic || phon;
-                    if (finalPhon) parts.push('馃攰 ' + finalPhon);
-                    if (parts.length > 0 && !cnOk) status.textContent = parts.join(' 路 ') + ' 路 鈿狅笍 鏈壘鍒颁腑鏂囬噴涔?;
-                    else if (parts.length > 0) status.textContent = parts.join(' 路 ');
+                    if (finalPhon) parts.push('🔊 ' + finalPhon);
+                    if (parts.length > 0 && !cnOk) status.textContent = parts.join(' · ') + ' · ⚠️ 未找到中文释义';
+                    else if (parts.length > 0) status.textContent = parts.join(' · ');
                 }).catch(() => {
-                    if (!cnOk) status.textContent = '鈿狅笍 鏈壘鍒颁腑鏂囬噴涔夛紝璇锋墜鍔ㄥ～鍐?;
+                    if (!cnOk) status.textContent = '⚠️ 未找到中文释义，请手动填写';
                 }).finally(() => {
                     document.getElementById('btnAutoFill').disabled = false;
                 });
@@ -967,13 +970,13 @@
         const posHint = document.getElementById('autoFillStatus').textContent || '';
 
         if (!word || !translation) {
-            showToast('璇疯嚦灏戝～鍐欒嫳鏂囧拰涓枃閲婁箟');
+            showToast('请至少填写英文和中文释义');
             return;
         }
 
         const exists = state.words.some(w => w.word.toLowerCase() === word.toLowerCase());
         if (exists) {
-            showToast('杩欎釜鍗曡瘝宸插瓨鍦?);
+            showToast('这个单词已存在');
             return;
         }
 
@@ -988,7 +991,7 @@
             nextReviewDate: state.todayStr,
             lastReviewDate: null,
             phonetic: phonetic,
-            pos: posHint.replace(/^馃搸 璇嶆€э細/, '').replace(/ 路 .*$/, '').replace(/^鉁?*$/, '').replace(/^鈿狅笍.*$/, '').trim()
+            pos: posHint.replace(/^📎 词性：/, '').replace(/ · .*$/, '').replace(/^✅.*$/, '').replace(/^⚠️.*$/, '').trim()
         };
         state.words.push(newWord);
 
@@ -1001,7 +1004,7 @@
         document.getElementById('inputExampleTranslation').value = '';
         document.getElementById('autoFillStatus').textContent = '';
 
-        showToast('宸蹭繚瀛橈細' + word);
+        showToast('已保存：' + word);
         updateDailyStats();
     }
 
@@ -1032,7 +1035,7 @@
             welcome.classList.remove('hidden');
             card.classList.add('hidden');
             empty.classList.add('hidden');
-            document.getElementById('welcomeText').textContent = '浠婃棩娌℃湁寰呭涔犵殑鍗曡瘝锛屽綍鍏ユ柊璇嶅紑濮嬪涔犲惂锛?;
+            document.getElementById('welcomeText').textContent = '今日没有待复习的单词，录入新词开始学习吧！';
         } else {
             welcome.classList.add('hidden');
             empty.classList.add('hidden');
@@ -1084,7 +1087,7 @@
 
     function markRemembered() {
         if (!state.currentAnswerShown) {
-            showToast('鍏堢湅绛旀鍐嶅垽鏂?);
+            showToast('先看答案再判断');
             return;
         }
         const w = state.reviewQueue[state.reviewIndex];
@@ -1105,7 +1108,7 @@
         addReviewLog(w.id, 'remembered');
         saveWords();
         state.reviewIndex++;
-        showToast('璁颁笅浜嗭紒涓嬫澶嶄範锛? + getLevelLabel(wordObj.level));
+        showToast('记下了！下次复习：' + getLevelLabel(wordObj.level));
 
         if (state.reviewIndex >= state.reviewQueue.length) {
             addCheckin(state.todayStr);
@@ -1117,7 +1120,7 @@
 
     function markForgot() {
         if (!state.currentAnswerShown) {
-            showToast('鍏堢湅绛旀鍐嶅垽鏂?);
+            showToast('先看答案再判断');
             return;
         }
         const w = state.reviewQueue[state.reviewIndex];
@@ -1137,7 +1140,7 @@
         addReviewLog(w.id, 'forgot');
         saveWords();
         state.reviewIndex++;
-        showToast('娌¤浣忥紝宸查噸缃负 1 澶╁悗澶嶄範');
+        showToast('没记住，已重置为 1 天后复习');
 
         if (state.reviewIndex >= state.reviewQueue.length) {
             addCheckin(state.todayStr);
@@ -1221,11 +1224,11 @@
             li.innerHTML = `
                 <div>
                     <div class="w-en">${escHtml(w.word)}</div>
-                    <div class="w-zh">${escHtml(w.translation)} 路 ${formatDate(w.nextReviewDate)}鍒版湡</div>
+                    <div class="w-zh">${escHtml(w.translation)} · ${formatDate(w.nextReviewDate)}到期</div>
                 </div>
                 <div style="display:flex;align-items:center;gap:8px;">
                     <span class="w-level ${levelClass}">${getLevelLabel(w.level)}</span>
-                    <button class="w-del" onclick="deleteWord(${w.id})">鉁?/button>
+                    <button class="w-del" onclick="deleteWord(${w.id})">✕</button>
                 </div>
             `;
             list.appendChild(li);
@@ -1236,7 +1239,7 @@
 
     function renderLevelChart() {
         const levels = [0,0,0,0,0,0];
-        const labels = ['鏂拌瘝','1澶?,'3澶?,'7澶?,'15澶?,'宸叉帉鎻?];
+        const labels = ['新词','1天','3天','7天','15天','已掌握'];
         const colors = ['#e0e0e0','#c8e6c9','#a5d6a7','#81c784','#66bb6a','#4caf50'];
         state.words.forEach(w => { if (w.level >= 0 && w.level <= 5) levels[w.level]++; });
         const max = Math.max(...levels, 1);
@@ -1262,7 +1265,7 @@
             d.setDate(d.getDate() - i);
             const dateStr = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
             days.push(logs.filter(l => l.date === dateStr).length);
-            dayLabels.push(['鏃?,'涓€','浜?,'涓?,'鍥?,'浜?,'鍏?][d.getDay()]);
+            dayLabels.push(['日','一','二','三','四','五','六'][d.getDay()]);
         }
         const max = Math.max(...days, 1);
 
@@ -1278,7 +1281,7 @@
     function renderGrowthChart() {
         const sorted = [...state.words].sort((a,b) => a.createdDate.localeCompare(b.createdDate));
         if (sorted.length === 0) {
-            document.getElementById('growthChart').innerHTML = '<div style="font-size:12px;color:var(--text-light);padding:10px">鏆傛棤鏁版嵁</div>';
+            document.getElementById('growthChart').innerHTML = '<div style="font-size:12px;color:var(--text-light);padding:10px">暂无数据</div>';
             return;
         }
         const total = sorted.length;
@@ -1377,7 +1380,7 @@
             var pct = x.total > 0 ? Math.round((1 - x.forgot / x.total) * 100) : 0;
             li.innerHTML =
                 '<div><div class="w-en">' + escHtml(x.word.word) + '</div>' +
-                '<div class="w-zh">' + escHtml(x.word.translation) + ' 路 璁伴敊' + x.forgot + '娆?/div></div>' +
+                '<div class="w-zh">' + escHtml(x.word.translation) + ' · 记错' + x.forgot + '次</div></div>' +
                 '<span class="w-level" style="background:' + (pct < 50 ? 'var(--danger)' : pct < 80 ? 'var(--accent)' : 'var(--success)') + ';color:#fff">' + pct + '%</span>';
             list.appendChild(li);
         });
@@ -1385,7 +1388,7 @@
 
     function practiceWrongWords() {
         var weak = getWeakWords().filter(function(x) { return x.forgot > 0; });
-        if (weak.length === 0) { showToast('鉁?娌℃湁閿欒瘝闇€瑕佸涔?); return; }
+        if (weak.length === 0) { showToast('✅ 没有错词需要复习'); return; }
         weak.sort(function(a,b) { return b.forgot - a.forgot; });
         state.reviewQueue = shuffle(weak.map(function(x) { return x.word; }));
         state.reviewIndex = 0;
@@ -1400,28 +1403,28 @@
         card.classList.remove('hidden');
         showCurrentWord();
         updateProgress();
-        showToast('馃摉 閿欒瘝澶嶄範锛氬叡 ' + state.reviewQueue.length + ' 涓?);
+        showToast('📖 错词复习：共 ' + state.reviewQueue.length + ' 个');
     }
 
     function clearWrongLog() {
-        if (!confirm('纭畾娓呯┖鎵€鏈夐敊璇嶈褰曪紵')) return;
+        if (!confirm('确定清空所有错词记录？')) return;
         localStorage.removeItem(REVIEW_LOG_KEY);
         renderWrongWords();
-        showToast('閿欒瘝璁板綍宸叉竻绌?);
+        showToast('错词记录已清空');
     }
 
     function deleteWord(id) {
-        if (!confirm('纭畾鍒犻櫎杩欎釜鍗曡瘝锛?)) return;
+        if (!confirm('确定删除这个单词？')) return;
         state.words = state.words.filter(w => w.id !== id);
         saveWords();
         renderStats();
         updateDailyStats();
-        showToast('宸插垹闄?);
+        showToast('已删除');
     }
 
     function clearAllData() {
-        if (!confirm('鈿狅笍 纭畾娓呯┖鎵€鏈夊崟璇嶆暟鎹拰鎵撳崱璁板綍锛熸鎿嶄綔涓嶅彲鎭㈠锛?)) return;
-        if (!confirm('鍐嶆纭锛氱湡鐨勮娓呯┖鍚楋紵')) return;
+        if (!confirm('⚠️ 确定清空所有单词数据和打卡记录？此操作不可恢复！')) return;
+        if (!confirm('再次确认：真的要清空吗？')) return;
         state.words = [];
         localStorage.removeItem(STORAGE_KEY);
         localStorage.removeItem(CHECKIN_KEY);
@@ -1429,7 +1432,7 @@
         renderStats();
         updateDailyStats();
         prepareReview();
-        showToast('鏁版嵁宸叉竻绌?);
+        showToast('数据已清空');
     }
 
     function toggleBatchMode() {
@@ -1441,12 +1444,12 @@
 
     function batchAutoFill() {
         var text = document.getElementById('batchInput').value.trim();
-        if (!text) { showToast('璇峰厛杈撳叆鍗曡瘝'); return; }
+        if (!text) { showToast('请先输入单词'); return; }
         var lines = text.split('\n').map(function(l) { return l.trim(); }).filter(function(l) { return l; });
         var status = document.getElementById('batchStatus');
         var result = document.getElementById('batchResult');
         result.classList.remove('hidden');
-        status.textContent = '鈴?姝ｅ湪缈昏瘧 0/' + lines.length + ' ...';
+        status.textContent = '⏳ 正在翻译 0/' + lines.length + ' ...';
         result.innerHTML = '';
 
         var entries = [];
@@ -1465,16 +1468,16 @@
 
         function next(i) {
             if (i >= entries.length) {
-                status.textContent = '鉁?缈昏瘧瀹屾垚銆傛鏌ユ棤璇悗鐐瑰嚮"鎵归噺瀵煎叆"';
-                result.innerHTML = '<div style="border-bottom:1px solid rgba(0,0,0,0.06);padding-bottom:8px;margin-bottom:8px;font-weight:600;color:var(--primary-dark)">棰勮锛? + entries.length + ' 涓崟璇嶏級</div>' + html;
+                status.textContent = '✅ 翻译完成。检查无误后点击"批量导入"';
+                result.innerHTML = '<div style="border-bottom:1px solid rgba(0,0,0,0.06);padding-bottom:8px;margin-bottom:8px;font-weight:600;color:var(--primary-dark)">预览（' + entries.length + ' 个单词）</div>' + html;
                 return;
             }
             var e = entries[i];
             if (e.translation) {
                 html += '<div style="display:flex;gap:4px;margin-bottom:4px"><span style="font-weight:500;min-width:80px">' + escHtml(e.word) + '</span><span>' + escHtml(e.translation) + '</span></div>';
                 completed++;
-                status.textContent = '鈴?姝ｅ湪缈昏瘧 ' + completed + '/' + entries.length + ' ...';
-                result.innerHTML = '<div style="border-bottom:1px solid rgba(0,0,0,0.06);padding-bottom:8px;margin-bottom:8px;font-weight:600;color:var(--primary-dark)">缈昏瘧涓?..</div>' + html;
+                status.textContent = '⏳ 正在翻译 ' + completed + '/' + entries.length + ' ...';
+                result.innerHTML = '<div style="border-bottom:1px solid rgba(0,0,0,0.06);padding-bottom:8px;margin-bottom:8px;font-weight:600;color:var(--primary-dark)">翻译中...</div>' + html;
                 next(i + 1);
                 return;
             }
@@ -1483,10 +1486,10 @@
                     e.translation = data.translation;
                     if (data.phonetic) e.phonetic = data.phonetic;
                 }
-                html += '<div style="display:flex;gap:4px;margin-bottom:4px"><span style="font-weight:500;min-width:80px">' + escHtml(e.word) + '</span><span>' + escHtml(e.translation || '鈿狅笍 鏈壘鍒?) + '</span></div>';
+                html += '<div style="display:flex;gap:4px;margin-bottom:4px"><span style="font-weight:500;min-width:80px">' + escHtml(e.word) + '</span><span>' + escHtml(e.translation || '⚠️ 未找到') + '</span></div>';
                 completed++;
-                status.textContent = '鈴?姝ｅ湪缈昏瘧 ' + completed + '/' + entries.length + ' ...';
-                result.innerHTML = '<div style="border-bottom:1px solid rgba(0,0,0,0.06);padding-bottom:8px;margin-bottom:8px;font-weight:600;color:var(--primary-dark)">缈昏瘧涓?..</div>' + html;
+                status.textContent = '⏳ 正在翻译 ' + completed + '/' + entries.length + ' ...';
+                result.innerHTML = '<div style="border-bottom:1px solid rgba(0,0,0,0.06);padding-bottom:8px;margin-bottom:8px;font-weight:600;color:var(--primary-dark)">翻译中...</div>' + html;
                 next(i + 1);
             });
         }
@@ -1519,7 +1522,7 @@
                 addedAuto++;
             });
             if (addedAuto > 0) { saveWords(); updateDailyStats(); }
-            showToast('鉁?瀵煎叆 ' + addedAuto + ' 涓崟璇? + (skippedAuto ? '锛岃烦杩?' + skippedAuto + ' 涓噸澶? : ''));
+            showToast('✅ 导入 ' + addedAuto + ' 个单词' + (skippedAuto ? '，跳过 ' + skippedAuto + ' 个重复' : ''));
             document.getElementById('batchInput').value = '';
             document.getElementById('batchResult').classList.add('hidden');
             return;
@@ -1540,7 +1543,7 @@
                 parts = line.split(/-(.+)/).map(s => s.trim());
                 if (parts.length > 2) parts = [parts[0], parts[1]];
             } else {
-                errors.push('绗?' + (idx+1) + ' 琛岋細鏃犳硶璇嗗埆鍒嗛殧绗?);
+                errors.push('第 ' + (idx+1) + ' 行：无法识别分隔符');
                 return;
             }
 
@@ -1550,7 +1553,7 @@
             const exampleTranslation = parts[3] || '';
 
             if (!word || !translation) {
-                errors.push('绗?' + (idx+1) + ' 琛岋細缂哄皯鑻辨枃鎴栦腑鏂?);
+                errors.push('第 ' + (idx+1) + ' 行：缺少英文或中文');
                 return;
             }
 
@@ -1581,14 +1584,14 @@
         result.style.background = added > 0 ? 'var(--primary-light)' : '#fff3e0';
         result.innerHTML = '';
         const msgs = [];
-        if (added > 0) msgs.push('鉁?鎴愬姛瀵煎叆 <strong>' + added + '</strong> 涓崟璇?);
-        if (skipped > 0) msgs.push('鈴?璺宠繃閲嶅 <strong>' + skipped + '</strong> 涓?);
-        if (errors.length > 0) msgs.push('鈿狅笍 ' + errors.slice(0, 3).join('<br>') + (errors.length > 3 ? '<br>...杩樻湁 ' + (errors.length-3) + ' 鏉￠敊璇? : ''));
+        if (added > 0) msgs.push('✅ 成功导入 <strong>' + added + '</strong> 个单词');
+        if (skipped > 0) msgs.push('⏭ 跳过重复 <strong>' + skipped + '</strong> 个');
+        if (errors.length > 0) msgs.push('⚠️ ' + errors.slice(0, 3).join('<br>') + (errors.length > 3 ? '<br>...还有 ' + (errors.length-3) + ' 条错误' : ''));
         result.innerHTML = msgs.join('<br>');
 
         if (added > 0) {
             document.getElementById('batchInput').value = '';
-            showToast('鎴愬姛瀵煎叆 ' + added + ' 涓崟璇?);
+            showToast('成功导入 ' + added + ' 个单词');
         }
     }
 
@@ -1597,8 +1600,8 @@
         const token = input.value.trim();
         if (token) {
             setGhToken(token);
-            document.getElementById('githubToken').value = token.substring(0, 10) + '路路路';
-            showToast('Token 宸蹭繚瀛?);
+            document.getElementById('githubToken').value = token.substring(0, 10) + '···';
+            showToast('Token 已保存');
         }
         pullFromGitHub().then(() => {
             updateDailyStats();
@@ -1618,7 +1621,7 @@
         if (urlToken && urlToken.startsWith('ghp_')) {
             setGhToken(urlToken);
             window.history.replaceState({}, document.title, window.location.pathname);
-            setTimeout(() => showToast('鉁?Token 宸茶嚜鍔ㄩ厤缃?), 500);
+            setTimeout(() => showToast('✅ Token 已自动配置'), 500);
         }
 
         loadData();
@@ -1639,7 +1642,7 @@
             const token = this.value.trim();
             if (token) {
                 setGhToken(token);
-                showToast('Token 宸蹭繚瀛?);
+                showToast('Token 已保存');
             }
         });
 
