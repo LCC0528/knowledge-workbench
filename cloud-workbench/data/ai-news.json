@@ -1,7 +1,87 @@
 {
-  "updated": "2026-08-07",
-  "count": 67,
+  "updated": "2026-08-08",
+  "count": 75,
   "items": [
+    {
+      "title": "U.S. Department of Energy Launches the Genesis Open Models Initiative",
+      "url": "https://genesisopenmodels.anl.gov/",
+      "source": "Hacker News",
+      "score": 41,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-08-08",
+      "topic": "ai"
+    },
+    {
+      "title": "Managing AI Coding Costs at Scale",
+      "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
+      "source": "Hacker News",
+      "score": 154,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-08-08",
+      "topic": "ai"
+    },
+    {
+      "title": "Kitesurf: Agent-first browser that runs in V8 isolates",
+      "url": "https://blog.cloudflare.com/kitesurf/",
+      "source": "Hacker News",
+      "score": 160,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-08-08",
+      "topic": "ai"
+    },
+    {
+      "title": "AMD acquires Taalas to boost inference performance by etching models in silicon",
+      "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344",
+      "source": "Hacker News",
+      "score": 881,
+      "text": "<a href=\"https:&#x2F;&#x2F;ir.amd.com&#x2F;news-events&#x2F;press-releases&#x2F;detail&#x2F;1296&#x2F;amd-acquires-taalas-to-advance-compute-solutions-for-rapidly-growing-ai-inference-market\" rel=\"nofollow\">https:&#x2F;&#x2F;ir.amd.com&#x2F;news-events&#x2F;press-releases&#x2F;detail&#x2F;1296&#x2F;am...</a><p><a href=\"https:&#x2F;&#x2F;chatjimmy.ai&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;chatjimmy.ai&#x2F;</a>",
+      "ai_score": 8.0,
+      "date": "2026-08-08",
+      "topic": "ai"
+    },
+    {
+      "title": "Prime Intellect Releases Prime Agent: An Open-Source RLM Harness Where Sub-Agents Are Function Calls Inside Persistent IPython Kernel",
+      "url": "https://www.marktechpost.com/2026/08/06/prime-intellect-releases-prime-agent/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Prime Intellect has open-sourced Prime Agent, a coding and research harness built on two abstractions: the Recursive Language Model, which turns sub-agent calls into functions inside a persistent I",
+      "ai_score": 8.0,
+      "date": "2026-08-08",
+      "topic": "ai"
+    },
+    {
+      "title": "Microsoft’s SkillOpt Shows Optimized Agent Skill Artifacts Transfer Across Model Scales and Between Codex and Claude Code Harnesses",
+      "url": "https://www.marktechpost.com/2026/08/05/microsoft-skillopt-agent-skill-transfer-portability/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Most coverage of Microsoft's SkillOpt centers on its 52/52 result. The more consequential finding is in Section 4.3: the exported best_skill.md keeps working in environments it was never trained on",
+      "ai_score": 8.0,
+      "date": "2026-08-08",
+      "topic": "ai"
+    },
+    {
+      "title": "What happens if an entire class of workers loses faith in their careers",
+      "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
+      "source": "Hacker News",
+      "score": 383,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-08-08",
+      "topic": "ai"
+    },
+    {
+      "title": "Oracle bans AI-generated code from OpenJDK",
+      "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
+      "source": "Hacker News",
+      "score": 370,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-08-08",
+      "topic": "ai"
+    },
     {
       "title": "Inside vLLM: Anatomy of a High-Throughput LLM Inference System (2025)",
       "url": "https://www.aleksagordic.com/blog/vllm",
