@@ -1,7 +1,67 @@
 {
-  "updated": "2026-08-09",
-  "count": 83,
+  "updated": "2026-08-10",
+  "count": 89,
   "items": [
+    {
+      "title": "The tragedy of the commons, AI edition",
+      "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
+      "source": "Hacker News",
+      "score": 68,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-08-10",
+      "topic": "ai"
+    },
+    {
+      "title": "The Hacker's Renaissance",
+      "url": "https://phrack.org/issues/72/19#article",
+      "source": "Hacker News",
+      "score": 87,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-08-10",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenChamber: An Agentic Development Environment",
+      "url": "https://openchamber.dev/",
+      "source": "Hacker News",
+      "score": 100,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-08-10",
+      "topic": "ai"
+    },
+    {
+      "title": "AI assistant hacks gym website in first known Australian autonomous cyber attack",
+      "url": "https://www.abc.net.au/news/2026-08-10/ai-assistant-hacks-gym-website-aus-cyber-attack/107007986",
+      "source": "Hacker News",
+      "score": 32,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-08-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
+      "url": "https://github.com/eighttrigrams/us-vs-them",
+      "source": "Hacker News",
+      "score": 44,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-08-10",
+      "topic": "ai"
+    },
+    {
+      "title": "How I use LLMs to learn complex topics",
+      "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
+      "source": "Hacker News",
+      "score": 359,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-08-10",
+      "topic": "ai"
+    },
     {
       "title": "EU AI Act Article 50 transparency rules enter force",
       "url": "https://www.artificialintelligence-news.com/news/eu-ai-act-article-50-transparency-rules-enter-force/",
