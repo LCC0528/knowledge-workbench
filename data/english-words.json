@@ -83,9 +83,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 1,
-    "nextReviewDate": "2026-08-13",
-    "lastReviewDate": "2026-08-12"
+    "level": 2,
+    "nextReviewDate": "2026-08-17",
+    "lastReviewDate": "2026-08-14"
   },
   {
     "id": 1785328044629,
@@ -138,9 +138,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 3,
-    "nextReviewDate": "2026-08-12",
-    "lastReviewDate": "2026-08-05"
+    "level": 4,
+    "nextReviewDate": "2026-08-29",
+    "lastReviewDate": "2026-08-14"
   },
   {
     "id": 1785328044635,
@@ -182,9 +182,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 0,
-    "nextReviewDate": "2026-08-13",
-    "lastReviewDate": "2026-08-12"
+    "level": 1,
+    "nextReviewDate": "2026-08-15",
+    "lastReviewDate": "2026-08-14"
   },
   {
     "id": 1785328044639,
@@ -314,9 +314,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 3,
-    "nextReviewDate": "2026-08-11",
-    "lastReviewDate": "2026-08-04"
+    "level": 4,
+    "nextReviewDate": "2026-08-29",
+    "lastReviewDate": "2026-08-14"
   },
   {
     "id": 1785328044651,
@@ -446,9 +446,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 2,
-    "nextReviewDate": "2026-08-06",
-    "lastReviewDate": "2026-08-03"
+    "level": 0,
+    "nextReviewDate": "2026-08-15",
+    "lastReviewDate": "2026-08-14"
   },
   {
     "id": 1785328044663,
@@ -501,9 +501,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 2,
-    "nextReviewDate": "2026-08-12",
-    "lastReviewDate": "2026-08-09"
+    "level": 3,
+    "nextReviewDate": "2026-08-21",
+    "lastReviewDate": "2026-08-14"
   },
   {
     "id": 1785328044669,
@@ -765,9 +765,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 1,
-    "nextReviewDate": "2026-08-13",
-    "lastReviewDate": "2026-08-12"
+    "level": 2,
+    "nextReviewDate": "2026-08-17",
+    "lastReviewDate": "2026-08-14"
   },
   {
     "id": 1785328044694,
@@ -974,9 +974,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 0,
-    "nextReviewDate": "2026-08-13",
-    "lastReviewDate": "2026-08-12"
+    "level": 1,
+    "nextReviewDate": "2026-08-15",
+    "lastReviewDate": "2026-08-14"
   },
   {
     "id": 1785328044713,
@@ -1282,9 +1282,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 2,
-    "nextReviewDate": "2026-08-12",
-    "lastReviewDate": "2026-08-09"
+    "level": 3,
+    "nextReviewDate": "2026-08-21",
+    "lastReviewDate": "2026-08-14"
   },
   {
     "id": 1785328044744,
@@ -1380,9 +1380,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-02",
-    "level": 0,
-    "nextReviewDate": "2026-08-13",
-    "lastReviewDate": "2026-08-12",
+    "level": 1,
+    "nextReviewDate": "2026-08-15",
+    "lastReviewDate": "2026-08-14",
     "phonetic": "",
     "pos": ""
   },
@@ -1877,8 +1877,8 @@
     "exampleTranslation": "",
     "createdDate": "2026-08-04",
     "level": 0,
-    "nextReviewDate": "2026-08-06",
-    "lastReviewDate": "2026-08-05",
+    "nextReviewDate": "2026-08-15",
+    "lastReviewDate": "2026-08-14",
     "phonetic": ""
   },
   {
@@ -2044,9 +2044,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-04",
-    "level": 1,
-    "nextReviewDate": "2026-08-14",
-    "lastReviewDate": "2026-08-13",
+    "level": 2,
+    "nextReviewDate": "2026-08-17",
+    "lastReviewDate": "2026-08-14",
     "phonetic": ""
   },
   {
