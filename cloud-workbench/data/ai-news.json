@@ -1,7 +1,37 @@
 {
-  "updated": "2026-08-13",
-  "count": 102,
+  "updated": "2026-08-14",
+  "count": 105,
   "items": [
+    {
+      "title": "Accelerating GPT-5.6 Sol Ultrafast",
+      "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
+      "source": "Hacker News",
+      "score": 402,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-14",
+      "topic": "ai"
+    },
+    {
+      "title": "Nine PBS sues Iron Mountain over blocked access to archival data",
+      "url": "https://current.org/2026/08/nine-pbs-sues-iron-mountain-over-blocked-access-to-archival-data/",
+      "source": "Hacker News",
+      "score": 231,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-14",
+      "topic": "ai"
+    },
+    {
+      "title": "Choosing an AI model: one prompt, 11 models, different results",
+      "url": "https://www.netlify.com/blog/one-prompt-11-models-very-different-results/",
+      "source": "Hacker News",
+      "score": 175,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-14",
+      "topic": "ai"
+    },
     {
       "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
       "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
