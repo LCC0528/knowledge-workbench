@@ -1,0 +1,22 @@
+{
+  "date": "2026-08-15",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Google is making private AI practical with homomorphic encryption",
+      "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
+      "source": "Hacker News",
+      "score": 263,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "AI by Hand",
+      "url": "https://www.byhand.ai/",
+      "source": "Hacker News",
+      "score": 185,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}
