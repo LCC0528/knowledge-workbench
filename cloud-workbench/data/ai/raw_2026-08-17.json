@@ -1,0 +1,30 @@
+{
+  "date": "2026-08-17",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Models Are Getting Dumber on Purpose",
+      "url": "https://w4g1.dev/blog/models-are-getting-dumber-on-purpose",
+      "source": "Hacker News",
+      "score": 244,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "The AI Credit Resale Economy",
+      "url": "https://vectoral.com/blog/who-are-the-token-brokers",
+      "source": "Hacker News",
+      "score": 219,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Stripe Clinches over $7B Deal to Buy AI Firm OpenRouter",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion",
+      "source": "Hacker News",
+      "score": 161,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}
