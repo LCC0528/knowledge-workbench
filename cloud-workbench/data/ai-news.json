@@ -1,7 +1,47 @@
 {
-  "updated": "2026-08-17",
-  "count": 112,
+  "updated": "2026-08-18",
+  "count": 116,
   "items": [
+    {
+      "title": "AI;DR (AI; Didn't Read)",
+      "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
+      "source": "Hacker News",
+      "score": 548,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-08-18",
+      "topic": "ai"
+    },
+    {
+      "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
+      "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+      "source": "Hacker News",
+      "score": 305,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-18",
+      "topic": "ai"
+    },
+    {
+      "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
+      "url": "https://blog.roboflow.com/openai-gpt-5-6/",
+      "source": "Hacker News",
+      "score": 294,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-18",
+      "topic": "ai"
+    },
+    {
+      "title": "How to disable or avoid intrusive AI",
+      "url": "https://www.librarian.net/notoai/",
+      "source": "Hacker News",
+      "score": 245,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-18",
+      "topic": "ai"
+    },
     {
       "title": "Models Are Getting Dumber on Purpose",
       "url": "https://w4g1.dev/blog/models-are-getting-dumber-on-purpose",
