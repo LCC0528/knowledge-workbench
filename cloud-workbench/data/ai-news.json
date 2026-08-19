@@ -1,7 +1,27 @@
 {
-  "updated": "2026-08-18",
-  "count": 116,
+  "updated": "2026-08-19",
+  "count": 118,
   "items": [
+    {
+      "title": "Using the railway network as a flatbed scanner",
+      "url": "https://philo.gay/linecam/",
+      "source": "Hacker News",
+      "score": 387,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Norway should buy OpenAI",
+      "url": "https://www.onethousandmeans.com/p/norway-should-buy-openai",
+      "source": "Hacker News",
+      "score": 196,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-19",
+      "topic": "ai"
+    },
     {
       "title": "AI;DR (AI; Didn't Read)",
       "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
