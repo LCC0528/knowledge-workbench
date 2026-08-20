@@ -1,7 +1,67 @@
 {
-  "updated": "2026-08-19",
-  "count": 118,
+  "updated": "2026-08-20",
+  "count": 124,
   "items": [
+    {
+      "title": "A joke domain purchase turned in geopolitical warfare",
+      "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
+      "source": "Hacker News",
+      "score": 721,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-08-20",
+      "topic": "ai"
+    },
+    {
+      "title": "Google replaced Git tags for certain source code with obtaining via Google Drive",
+      "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
+      "source": "Hacker News",
+      "score": 267,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-20",
+      "topic": "ai"
+    },
+    {
+      "title": "Feature Request: Support AGENTS.md",
+      "url": "https://github.com/anthropics/claude-code/issues/6235",
+      "source": "Hacker News",
+      "score": 113,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-20",
+      "topic": "ai"
+    },
+    {
+      "title": "Mathematics in the age of AI",
+      "url": "https://arxiv.org/abs/2608.16753",
+      "source": "Hacker News",
+      "score": 115,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-20",
+      "topic": "ai"
+    },
+    {
+      "title": "fx :Tiny, open, native coding agent.",
+      "url": "https://fx.sh",
+      "source": "Hacker News",
+      "score": 162,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-20",
+      "topic": "ai"
+    },
+    {
+      "title": "Air Theremin – A browser theremin you play by waving at your webcam",
+      "url": "https://theremin.bizibah.com/",
+      "source": "Hacker News",
+      "score": 243,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-20",
+      "topic": "ai"
+    },
     {
       "title": "Using the railway network as a flatbed scanner",
       "url": "https://philo.gay/linecam/",
