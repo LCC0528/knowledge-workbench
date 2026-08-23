@@ -1,0 +1,30 @@
+{
+  "date": "2026-08-23",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Why your local LLM feels dumber than it is",
+      "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+      "source": "Hacker News",
+      "score": 158,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Munder Difflin – Agent harness to run an office of your clones",
+      "url": "https://munderdiffl.in/",
+      "source": "Hacker News",
+      "score": 244,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Autolith: A programming agent with a live runtime",
+      "url": "https://www.lambda-symbolics.com/autolith",
+      "source": "Hacker News",
+      "score": 107,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}
