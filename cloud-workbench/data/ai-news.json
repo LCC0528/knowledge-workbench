@@ -1,7 +1,17 @@
 {
-  "updated": "2026-08-25",
-  "count": 143,
+  "updated": "2026-08-26",
+  "count": 144,
   "items": [
+    {
+      "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
+      "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
+      "source": "Hacker News",
+      "score": 293,
+      "text": "<a href=\"https:&#x2F;&#x2F;www.bloomberg.com&#x2F;news&#x2F;articles&#x2F;2026-08-25&#x2F;openai-claims-its-new-chips-can-outperform-nvidia-processors-in-tests\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bloomberg.com&#x2F;news&#x2F;articles&#x2F;2026-08-25&#x2F;openai-cl...</a>, <a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;yCTrr\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;yCTrr</a>",
+      "ai_score": 6.0,
+      "date": "2026-08-26",
+      "topic": "ai"
+    },
     {
       "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
       "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
