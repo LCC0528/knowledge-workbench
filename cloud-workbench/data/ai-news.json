@@ -1,7 +1,37 @@
 {
-  "updated": "2026-08-26",
-  "count": 144,
+  "updated": "2026-08-27",
+  "count": 147,
   "items": [
+    {
+      "title": "Tailcat – Like netcat, but over Tailscale’s data plane",
+      "url": "https://github.com/tailscale/tailcat",
+      "source": "Hacker News",
+      "score": 517,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-08-27",
+      "topic": "ai"
+    },
+    {
+      "title": "CEO fired developers to make room for AI. Developers create open source AI CEO",
+      "url": "https://github.com/SenteLabsAI/OpenExecutive",
+      "source": "Hacker News",
+      "score": 269,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-27",
+      "topic": "ai"
+    },
+    {
+      "title": "Serve Markdown to AI Agents with Accept Headers",
+      "url": "https://acceptmarkdown.com/",
+      "source": "Hacker News",
+      "score": 110,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-27",
+      "topic": "ai"
+    },
     {
       "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
       "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
