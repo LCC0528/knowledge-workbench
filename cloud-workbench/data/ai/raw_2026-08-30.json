@@ -1,0 +1,22 @@
+{
+  "date": "2026-08-30",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Good Culture Is the Biggest Productivity Hack, Not AI",
+      "url": "https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity",
+      "source": "Hacker News",
+      "score": 251,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "StemDeck, a free, open-source and local AI stem separator",
+      "url": "https://github.com/stemdeckapp/stemdeck",
+      "source": "Hacker News",
+      "score": 208,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}
