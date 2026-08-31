@@ -1,7 +1,27 @@
 {
-  "updated": "2026-08-30",
-  "count": 155,
+  "updated": "2026-08-31",
+  "count": 157,
   "items": [
+    {
+      "title": "Haiku R1/beta6 has been released",
+      "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
+      "source": "Hacker News",
+      "score": 256,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-31",
+      "topic": "ai"
+    },
+    {
+      "title": "Longest Straight Line Paths on Water or Land on the Earth (2018)",
+      "url": "https://arxiv.org/abs/1804.07389",
+      "source": "Hacker News",
+      "score": 192,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-08-31",
+      "topic": "ai"
+    },
     {
       "title": "Good Culture Is the Biggest Productivity Hack, Not AI",
       "url": "https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity",
