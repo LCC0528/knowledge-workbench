@@ -1,7 +1,57 @@
 {
-  "updated": "2026-08-31",
-  "count": 157,
+  "updated": "2026-09-01",
+  "count": 162,
   "items": [
+    {
+      "title": "Terence Tao explains 6 essential mathematical concepts [video]",
+      "url": "https://www.youtube.com/watch?v=OOMx2BHHWtE",
+      "source": "Hacker News",
+      "score": 217,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-01",
+      "topic": "ai"
+    },
+    {
+      "title": "Apple caught off guard by AI demand for Mac Mini and Mac Studio",
+      "url": "https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/",
+      "source": "Hacker News",
+      "score": 295,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-01",
+      "topic": "ai"
+    },
+    {
+      "title": "Smartphone LED detects hidden cameras with AI",
+      "url": "https://www.chosun.com/english/industry-en/2026/08/30/SBFXUIJQYZEARKP5T4FBAY25HQ/",
+      "source": "Hacker News",
+      "score": 146,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-01",
+      "topic": "ai"
+    },
+    {
+      "title": "ChatGPT Work Tool and Skill Reference",
+      "url": "https://codex-tool-reference.simonw.chatgpt.site/",
+      "source": "Hacker News",
+      "score": 184,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-01",
+      "topic": "ai"
+    },
+    {
+      "title": "The safest job from AI may be writing",
+      "url": "http://muratbuffalo.blogspot.com/2026/08/the-safest-job-from-ai-may-be-writing.html",
+      "source": "Hacker News",
+      "score": 106,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-01",
+      "topic": "ai"
+    },
     {
       "title": "Haiku R1/beta6 has been released",
       "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
