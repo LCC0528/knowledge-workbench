@@ -1,7 +1,47 @@
 {
-  "updated": "2026-09-01",
-  "count": 162,
+  "updated": "2026-09-02",
+  "count": 166,
   "items": [
+    {
+      "title": "I trained a small transformer in 1.5hrs and it beats many LLMs",
+      "url": "https://mvakde.github.io/blog/44-on-arc-1/",
+      "source": "Hacker News",
+      "score": 576,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-09-02",
+      "topic": "ai"
+    },
+    {
+      "title": "How accurate have Ed Zitron's AI skeptic predictions been?",
+      "url": "https://danluu.com/zitron/",
+      "source": "Hacker News",
+      "score": 407,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-02",
+      "topic": "ai"
+    },
+    {
+      "title": "The ChatGPT/Codex app bundles a full copy of LibreOffice",
+      "url": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/",
+      "source": "Hacker News",
+      "score": 240,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-02",
+      "topic": "ai"
+    },
+    {
+      "title": "Atlas: A World Model for Spatial Intelligence",
+      "url": "https://www.worldlabs.ai/blog/atlas",
+      "source": "Hacker News",
+      "score": 145,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-02",
+      "topic": "ai"
+    },
     {
       "title": "Terence Tao explains 6 essential mathematical concepts [video]",
       "url": "https://www.youtube.com/watch?v=OOMx2BHHWtE",
