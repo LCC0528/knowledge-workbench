@@ -1,0 +1,70 @@
+{
+  "date": "2026-08-04",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "LLMs reward expertise",
+      "url": "https://www.seangoedecke.com/llms-reward-expertise/",
+      "source": "Hacker News",
+      "score": 391,
+      "text": "",
+      "ai_score": 8.0
+    },
+    {
+      "title": "Frame selection is the whole game: notes on making LLMs watch video",
+      "url": "https://leoaido.com/how-llms-watch-video/",
+      "source": "Hacker News",
+      "score": 5,
+      "text": "",
+      "ai_score": 8.0
+    },
+    {
+      "title": "AirLLM 70B inference with single 4GB GPU",
+      "url": "https://github.com/lyogavin/airllm",
+      "source": "Hacker News",
+      "score": 185,
+      "text": "",
+      "ai_score": 8.0
+    },
+    {
+      "title": "What's the largest software project AI can complete on its own?",
+      "url": "https://epoch.ai/MirrorCode",
+      "source": "Hacker News",
+      "score": 66,
+      "text": "",
+      "ai_score": 8.0
+    },
+    {
+      "title": "How to Secure AI Agents, MCP Servers, and LLM Apps in Production",
+      "url": "https://www.marktechpost.com/2026/08/03/how-to-secure-ai-agents-mcp-servers-and-llm-apps-in-production/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>AI agents, MCP servers, and LLM apps break the core AppSec assumption that applications do what their code says. This guide walks through a practical see-fix-protect framework: a five-layer agentic",
+      "ai_score": 8.0
+    },
+    {
+      "title": "Alibaba Qwen Releases Qwen3.8-Max: A 2.4 Trillion Parameter MoE Model and the Most Capable One in the Qwen Family to Date",
+      "url": "https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Alibaba's Qwen team moved Qwen3.8-Max from preview to general availability, with published per-token pricing and open weights due next week. The 2.4T parameter MoE model accepts text, image and vid",
+      "ai_score": 8.0
+    },
+    {
+      "title": "Cogent AI Team Releases VR-1: A Frontier Cyber Reasoning Model That Composes and Verifies Enterprise Attack Paths",
+      "url": "https://www.marktechpost.com/2026/08/03/ogent-ai-team-releases-vr-1/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Cogent AI team released Cogent VR-1, a reasoning model post-trained specifically for cybersecurity rather than picking up cyber capability as a side effect of general coding strength. It ships with",
+      "ai_score": 8.0
+    },
+    {
+      "title": "Thinking Machines Lab Releases Inkling-Small: A 276B Total, 12B Active Open Weights Multimodal MoE Model",
+      "url": "https://www.marktechpost.com/2026/08/02/thinking-machines-lab-releases-inkling-small-276b-open-weights-multimodal-moe-model/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Inkling-Small matches Inkling at a quarter the size, and its NVFP4 checkpoint runs on one NVIDIA B300 GPU</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/02/thinking-machines-lab-rele",
+      "ai_score": 8.0
+    }
+  ]
+}

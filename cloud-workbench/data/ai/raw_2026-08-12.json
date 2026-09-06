@@ -1,0 +1,38 @@
+{
+  "date": "2026-08-12",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
+      "url": "https://stolen-thoughts.com/",
+      "source": "Hacker News",
+      "score": 477,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "OpenAI’s head of ethics leaves less than a year after joining",
+      "url": "https://www.ft.com/content/e49dfb75-f841-4466-a577-f7aaff8779a0",
+      "source": "Hacker News",
+      "score": 266,
+      "text": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;W48UV\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;W48UV</a><p><a href=\"https:&#x2F;&#x2F;aimagazine.com&#x2F;news&#x2F;why-did-openai-head-of-ethics-chloe-bakalar-leave\" rel=\"nofollow\">https:&#x2F;&#x2F;aimagazine.com&#x2F;news&#x2F;why-did-openai-head-of-ethics-ch...</a>",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Go is an ideal language for AI-assisted software engineering",
+      "url": "https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/",
+      "source": "Hacker News",
+      "score": 248,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Apple Silicon and macOS VMs: Faster LLM Inference with llama.cpp",
+      "url": "https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md",
+      "source": "Hacker News",
+      "score": 281,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

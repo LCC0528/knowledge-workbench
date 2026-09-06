@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-03",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Fable 5.1 World Modeling",
+      "url": "https://github.com/PhiloLabs/fable51-worlds",
+      "source": "Hacker News",
+      "score": 142,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Three sites made 215,128 “best software” pages for AI. Perplexity cites them",
+      "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/",
+      "source": "Hacker News",
+      "score": 309,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Can I opt out of my input or output data being used for training?",
+      "url": "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training",
+      "source": "Hacker News",
+      "score": 370,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Aging brains blend memories together instead of just forgetting them",
+      "url": "https://studyfinds.com/aging-brains-blend-memories-together-instead-of-forgetting-them-study-finds/",
+      "source": "Hacker News",
+      "score": 211,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

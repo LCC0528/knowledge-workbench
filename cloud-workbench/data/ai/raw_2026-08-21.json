@@ -1,0 +1,38 @@
+{
+  "date": "2026-08-21",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Show HN: Huzzah – a novel approach to coding with AI",
+      "url": "https://www.danielvaughn.dev/posts/huzzah/",
+      "source": "Hacker News",
+      "score": 200,
+      "text": "Hello everyone. I&#x27;ve been working on this experimental editor called Huzzah.<p>I&#x27;ve been working almost exclusively with coding agents since January of this year, and over the past few months I began to feel utterly exhausted by them. They&#x27;re great, but I&#x27;m finding it more and more tedious to write full sentences for every change I want. Not only that, but it seems there&#x27;s a complexity limit for codebases - beyond a certain point the agent begins confusing itself.<p>I&#x27;d like to go back to writing code, but I don&#x27;t want to go all the way back to fully manual coding. So I&#x27;ve come up with this interaction paradigm where you:<p><pre><code>  1. write pseudocode in whatever way makes the most sense to you\n  2. on save, the editor synchronizes your work to real source code\n  3. the pseudocode is persisted alongside the generated code, making your prompt effectively a stored record of intent.\n</code></pre>\nIt may not work for every use case, but in my initial playthroughs I&#x27;ve found it very enjoyable.<p>Right now it&#x27;s just a proof of concept - installation instructions are here in the readme: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;danielvaughn&#x2F;hz\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;danielvaughn&#x2F;hz</a><p>You can also watch a video of it in action here: <a href=\"https:&#x2F;&#x2F;x.com&#x2F;danielvaughn&#x2F;status&#x2F;2090456808431165715\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;danielvaughn&#x2F;status&#x2F;2090456808431165715</a><p>Cheers!",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
+      "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
+      "source": "Hacker News",
+      "score": 481,
+      "text": "I trained a 125M-parameter transformer to autocomplete piano performances in real time (~108 notes&#x2F;sec on an iPhone 15).<p>The idea is basically GitHub Copilot or Tabnine, except instead of prompting it with code, you prompt it by playing a few notes on a MIDI piano. The model then continues what you played, entirely on-device.<p>The app is free if anyone wants to try it. Happy to answer questions about the model, training, Core ML, or the many things that didn&#x27;t work.",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
+      "url": "https://github.com/zachahn/vomit",
+      "source": "Hacker News",
+      "score": 173,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Anti-AI fonts are useless and harmful",
+      "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
+      "source": "Hacker News",
+      "score": 105,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "date": "2026-08-07",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Inside vLLM: Anatomy of a High-Throughput LLM Inference System (2025)",
+      "url": "https://www.aleksagordic.com/blog/vllm",
+      "source": "Hacker News",
+      "score": 59,
+      "text": "",
+      "ai_score": 10
+    },
+    {
+      "title": "AMD acquires Taalas to boost inference performance by etching models in silicon",
+      "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344",
+      "source": "Hacker News",
+      "score": 372,
+      "text": "<a href=\"https:&#x2F;&#x2F;ir.amd.com&#x2F;news-events&#x2F;press-releases&#x2F;detail&#x2F;1296&#x2F;amd-acquires-taalas-to-advance-compute-solutions-for-rapidly-growing-ai-inference-market\" rel=\"nofollow\">https:&#x2F;&#x2F;ir.amd.com&#x2F;news-events&#x2F;press-releases&#x2F;detail&#x2F;1296&#x2F;am...</a><p><a href=\"https:&#x2F;&#x2F;chatjimmy.ai&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;chatjimmy.ai&#x2F;</a>",
+      "ai_score": 8.0
+    },
+    {
+      "title": "Improving GPT‑5.6 Sol in ChatGPT, expanding GPT‑5.6 Luna access for free users",
+      "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
+      "source": "Hacker News",
+      "score": 149,
+      "text": "",
+      "ai_score": 8.0
+    },
+    {
+      "title": "Humans missed 1 in 3 threats approving AI agent commands across 40k game runs",
+      "url": "https://scalex.dev/blog/ai-agent-permissions-stats/",
+      "source": "Hacker News",
+      "score": 257,
+      "text": "",
+      "ai_score": 8.0
+    },
+    {
+      "title": "The Sylvester–Gallai Theorem",
+      "url": "https://www.futilitycloset.com/2026/07/26/the-sylvester-gallai-theorem/",
+      "source": "Hacker News",
+      "score": 15,
+      "text": "",
+      "ai_score": 7.0
+    },
+    {
+      "title": "Show HN: The Channels SDK – Bring Any Agent to Any Channel (Slack, MS Teams)",
+      "url": "https://github.com/CopilotKit/channels-sdk",
+      "source": "Hacker News",
+      "score": 86,
+      "text": "",
+      "ai_score": 7.0
+    },
+    {
+      "title": "Qwen3.8 Max now ranked as the best overall model by agentic index",
+      "url": "https://artificialanalysis.ai/?intelligence=agentic-index",
+      "source": "Hacker News",
+      "score": 429,
+      "text": "",
+      "ai_score": 7.0
+    }
+  ]
+}

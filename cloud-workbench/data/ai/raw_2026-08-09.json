@@ -1,0 +1,70 @@
+{
+  "date": "2026-08-09",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "EU AI Act Article 50 transparency rules enter force",
+      "url": "https://www.artificialintelligence-news.com/news/eu-ai-act-article-50-transparency-rules-enter-force/",
+      "source": "www.artificialintelligence-news.com",
+      "score": 0,
+      "text": "<p>Article 50 of the EU AI Act has entered into force, setting transparency obligations for AI providers and deployers operating across the bloc. Enterprises running generative AI tools now have to co",
+      "ai_score": 9.0
+    },
+    {
+      "title": "DeepMind's WeatherNext model achieves breakthrough forecasting cyclones",
+      "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+      "source": "Hacker News",
+      "score": 372,
+      "text": "",
+      "ai_score": 8.0
+    },
+    {
+      "title": "U.S. Department of Energy Launches the Genesis Open Models Initiative",
+      "url": "https://genesisopenmodels.anl.gov/",
+      "source": "Hacker News",
+      "score": 344,
+      "text": "",
+      "ai_score": 8.0
+    },
+    {
+      "title": "Building a Multimodal RAG Pipeline with NVIDIA NeMo Retriever, Hosted NIMs, LanceDB, Reranking, and Grounded Generation",
+      "url": "https://www.marktechpost.com/2026/08/07/building-a-multimodal-rag-pipeline-with-nvidia-nemo-retriever-hosted-nims-lancedb-reranking-and-grounded-generation/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>In this tutorial, we build an advanced multimodal retrieval-augmented generation pipeline with NVIDIA NeMo Retriever. We begin by configuring a Python 3.12 environment, installing the required pack",
+      "ai_score": 8.0
+    },
+    {
+      "title": "Microsoft Open Sources code-testing-generator: a Polyglot Unit-Test Agent That Hits 92.1% Task Completion Versus 78.9% for Stock Copilot",
+      "url": "https://www.marktechpost.com/2026/08/06/microsoft-open-sources-code-testing-generator/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Microsoft has open sourced code-testing-generator, a polyglot unit-test agent shipping in the MIT-licensed dotnet/skills repository. It reads a repository before writing anything — detecting the la",
+      "ai_score": 8.0
+    },
+    {
+      "title": "Alibaba, DeepSeek push China’s AI model race towards lower costs",
+      "url": "https://www.artificialintelligence-news.com/news/china-ai-model-race-alibaba-deepseek-costs/",
+      "source": "www.artificialintelligence-news.com",
+      "score": 0,
+      "text": "<p>Alibaba has launched Qwen3.8-Max, its largest AI model to date, as DeepSeek’s latest V4-Flash model draws attention for inference pricing that is lower than several competing systems. Qwen3.8-Max h",
+      "ai_score": 8.0
+    },
+    {
+      "title": "Red Hat, NVIDIA, IBM back project turning AI policy into code",
+      "url": "https://www.artificialintelligence-news.com/news/red-hat-nvidia-ibm-back-project-turning-ai-policy-into-code/",
+      "source": "www.artificialintelligence-news.com",
+      "score": 0,
+      "text": "<p>Red Hat has launched asago, an open-source community project that aims to turn AI governance policy into production-ready deployment code. The project describes itself as an automated, auditable wo",
+      "ai_score": 8.0
+    },
+    {
+      "title": "Why biological data matters more in AI drug discovery",
+      "url": "https://www.artificialintelligence-news.com/news/gsk-relation-therapeutics-ai-drug-discovery-biological-data/",
+      "source": "www.artificialintelligence-news.com",
+      "score": 0,
+      "text": "<p>GSK has entered into a research collaboration with British biotechnology company Relation Therapeutics worth up to $110 million, expanding the companies’ existing work in AI-assisted drug discovery",
+      "ai_score": 8.0
+    }
+  ]
+}

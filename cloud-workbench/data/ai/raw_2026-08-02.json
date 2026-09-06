@@ -1,0 +1,38 @@
+{
+  "date": "2026-08-02",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Kaisel – Routes as Values. Dart 3 Native Router for Flutter",
+      "url": "https://kaisel.dev/",
+      "source": "Hacker News",
+      "score": 52,
+      "text": "",
+      "ai_score": 8.0
+    },
+    {
+      "title": "AI financial advice is surprisingly good, especially if you ask right questions",
+      "url": "https://mitsloan.mit.edu/ideas-made-to-matter/ai-financial-advice-surprisingly-good-especially-if-you-ask-right-questions",
+      "source": "Hacker News",
+      "score": 140,
+      "text": "",
+      "ai_score": 7.0
+    },
+    {
+      "title": "Explorative modeling: Train on the best of K guesses",
+      "url": "https://alexiglad.github.io/blog/2026/explorative_modeling/",
+      "source": "Hacker News",
+      "score": 75,
+      "text": "",
+      "ai_score": 7.0
+    },
+    {
+      "title": "Flint: A Visualization Language for the AI Era",
+      "url": "https://microsoft.github.io/flint-chart/",
+      "source": "Hacker News",
+      "score": 255,
+      "text": "",
+      "ai_score": 7.0
+    }
+  ]
+}
