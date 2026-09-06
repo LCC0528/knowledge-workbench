@@ -873,7 +873,13 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             document.getElementById('tab-' + t).classList.toggle('hidden', t !== tab);
         });
 
-        if (tab === 'review') { prepareReview(); }
+        if (tab === 'review') {
+            if (window._wrongPractice) {
+                window._wrongPractice = false;
+            } else {
+                prepareReview();
+            }
+        }
         if (tab === 'stats') renderStats();
         if (tab === 'wrong') renderWrongWords();
     }
@@ -884,6 +890,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         const status = document.getElementById('autoFillStatus');
         status.textContent = '⏳ 查询中...';
         document.getElementById('btnAutoFill').disabled = true;
+        document.getElementById('inputTranslation').dataset.phonetic = '';
 
         const wordOnly = word.split(' ')[0];
         let cnOk = false;
@@ -1386,6 +1393,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         state.reviewQueue = shuffle(weak.map(function(x) { return x.word; }));
         state.reviewIndex = 0;
         state.currentAnswerShown = false;
+        window._wrongPractice = true;
         switchTab('review');
         var welcome = document.getElementById('reviewWelcome');
         var card = document.getElementById('reviewCard');
@@ -1492,13 +1500,13 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         if (window._batchEntries && window._batchEntries.length > 0) {
             var entries = window._batchEntries;
             window._batchEntries = null;
-            var added = 0, skipped = 0;
+            var addedAuto = 0, skippedAuto = 0;
             entries.forEach(function(e) {
                 if (!e.word || !e.translation) return;
                 var exists = state.words.some(function(w) { return w.word.toLowerCase() === e.word.toLowerCase(); });
-                if (exists) { skipped++; return; }
+                if (exists) { skippedAuto++; return; }
                 var w = {
-                    id: Date.now() + added,
+                    id: Date.now() + addedAuto,
                     word: e.word,
                     translation: e.translation,
                     example: e.example || '',
@@ -1511,10 +1519,10 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
                 };
                 state.words.push(w);
                 fetchPhonetic(w);
-                added++;
+                addedAuto++;
             });
-            if (added > 0) { saveWords(); updateDailyStats(); }
-            showToast('✅ 导入 ' + added + ' 个单词' + (skipped ? '，跳过 ' + skipped + ' 个重复' : ''));
+            if (addedAuto > 0) { saveWords(); updateDailyStats(); }
+            showToast('✅ 导入 ' + addedAuto + ' 个单词' + (skippedAuto ? '，跳过 ' + skippedAuto + ' 个重复' : ''));
             document.getElementById('batchInput').value = '';
             document.getElementById('batchResult').classList.add('hidden');
             return;
