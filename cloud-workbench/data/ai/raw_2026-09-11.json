@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-11",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "More questions about whether researchers can trust OpenAI with unpublished math",
+      "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
+      "source": "Hacker News",
+      "score": 663,
+      "text": "<a href=\"https:&#x2F;&#x2F;mathstodon.xyz&#x2F;@andreasthom&#x2F;117240536885387540\" rel=\"nofollow\">https:&#x2F;&#x2F;mathstodon.xyz&#x2F;@andreasthom&#x2F;117240536885387540</a><p><a href=\"https:&#x2F;&#x2F;mathstodon.xyz&#x2F;@andreasthom&#x2F;117240537520615623\" rel=\"nofollow\">https:&#x2F;&#x2F;mathstodon.xyz&#x2F;@andreasthom&#x2F;117240537520615623</a><p><a href=\"https:&#x2F;&#x2F;x.com&#x2F;ValerioCapraro&#x2F;status&#x2F;2097791836269977996\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;ValerioCapraro&#x2F;status&#x2F;2097791836269977996</a>, <a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;ValerioCapraro&#x2F;status&#x2F;2097791836269977996\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;ValerioCapraro&#x2F;status&#x2F;209779183626997799...</a><p><a href=\"https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;did:plc:ckaz32jwl6t2cno6fmuw2nhn&#x2F;post&#x2F;3mv4mt4ikss2d\" rel=\"nofollow\">https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;did:plc:ckaz32jwl6t2cno6fmuw2nhn&#x2F;po...</a>",
+      "ai_score": 7.0
+    },
+    {
+      "title": "OpenAI Agents API",
+      "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+      "source": "Hacker News",
+      "score": 128,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+      "url": "https://cognition.com/blog/swe-2",
+      "source": "Hacker News",
+      "score": 352,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "OpenAI’s Navier-Stokes release included a Lean 4 formal proof",
+      "url": "https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/",
+      "source": "Hacker News",
+      "score": 139,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}
