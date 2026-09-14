@@ -908,9 +908,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 0,
-    "nextReviewDate": "2026-09-12",
-    "lastReviewDate": "2026-09-11"
+    "level": 1,
+    "nextReviewDate": "2026-09-15",
+    "lastReviewDate": "2026-09-14"
   },
   {
     "id": 1785328044707,
@@ -1084,9 +1084,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 3,
-    "nextReviewDate": "2026-09-14",
-    "lastReviewDate": "2026-09-07"
+    "level": 4,
+    "nextReviewDate": "2026-09-29",
+    "lastReviewDate": "2026-09-14"
   },
   {
     "id": 1785328044724,
@@ -1511,8 +1511,8 @@
     "exampleTranslation": "",
     "createdDate": "2026-08-02",
     "level": 0,
-    "nextReviewDate": "2026-08-15",
-    "lastReviewDate": "2026-08-14",
+    "nextReviewDate": "2026-09-15",
+    "lastReviewDate": "2026-09-14",
     "phonetic": "/ˈɔːfəl/",
     "pos": ""
   },
