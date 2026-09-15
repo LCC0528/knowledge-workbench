@@ -2561,8 +2561,8 @@
     "exampleTranslation": "",
     "createdDate": "2026-08-30",
     "level": 0,
-    "nextReviewDate": "2026-08-30",
-    "lastReviewDate": null,
+    "nextReviewDate": "2026-09-16",
+    "lastReviewDate": "2026-09-15",
     "phonetic": ""
   },
   {
@@ -3279,6 +3279,18 @@
     "translation": "phr. 引起，唤起；使产生",
     "example": "The difficult task called forth all his energies.",
     "exampleTranslation": "这项艰巨的任务激发了他所有的精力。",
+    "createdDate": "2026-09-15",
+    "level": 0,
+    "nextReviewDate": "2026-09-15",
+    "lastReviewDate": null,
+    "phonetic": ""
+  },
+  {
+    "id": 1789481841896,
+    "word": "immediate",
+    "translation": "adj. 立即的，直接的；紧靠的 (形容词，无过去式/过去分词)",
+    "example": "Faced with the unexpected crisis, the government took immediate action to stabilize the economy.",
+    "exampleTranslation": "面对突如其来的危机，政府立即采取了行动以稳定经济。",
     "createdDate": "2026-09-15",
     "level": 0,
     "nextReviewDate": "2026-09-15",
