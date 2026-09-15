@@ -1419,9 +1419,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-02",
-    "level": 0,
-    "nextReviewDate": "2026-09-08",
-    "lastReviewDate": "2026-09-07",
+    "level": 1,
+    "nextReviewDate": "2026-09-16",
+    "lastReviewDate": "2026-09-15",
     "phonetic": "",
     "pos": ""
   },
@@ -2861,8 +2861,8 @@
     "exampleTranslation": "",
     "createdDate": "2026-08-30",
     "level": 0,
-    "nextReviewDate": "2026-08-30",
-    "lastReviewDate": null,
+    "nextReviewDate": "2026-09-16",
+    "lastReviewDate": "2026-09-15",
     "phonetic": ""
   },
   {
