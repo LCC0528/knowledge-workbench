@@ -737,17 +737,6 @@
     "lastReviewDate": "2026-08-14"
   },
   {
-    "id": 1785328044690,
-    "word": "audience",
-    "translation": "观众；听众",
-    "example": "",
-    "exampleTranslation": "",
-    "createdDate": "2026-07-29",
-    "level": 0,
-    "nextReviewDate": "2026-09-15",
-    "lastReviewDate": "2026-09-14"
-  },
-  {
     "id": 1785328044692,
     "word": "accommodation",
     "translation": "住宿；膳宿",
@@ -902,17 +891,6 @@
     "lastReviewDate": "2026-08-26"
   },
   {
-    "id": 1785328044706,
-    "word": "blame",
-    "translation": "责备；归咎",
-    "example": "",
-    "exampleTranslation": "",
-    "createdDate": "2026-07-29",
-    "level": 1,
-    "nextReviewDate": "2026-09-15",
-    "lastReviewDate": "2026-09-14"
-  },
-  {
     "id": 1785328044707,
     "word": "enough",
     "translation": "足够的",
@@ -922,17 +900,6 @@
     "level": 2,
     "nextReviewDate": "2026-09-18",
     "lastReviewDate": "2026-09-15"
-  },
-  {
-    "id": 1785328044708,
-    "word": "worship",
-    "translation": "崇拜；礼拜",
-    "example": "",
-    "exampleTranslation": "",
-    "createdDate": "2026-07-29",
-    "level": 1,
-    "nextReviewDate": "2026-09-15",
-    "lastReviewDate": "2026-09-14"
   },
   {
     "id": 1785328044709,
@@ -1021,28 +988,6 @@
     "level": 1,
     "nextReviewDate": "2026-09-16",
     "lastReviewDate": "2026-09-15"
-  },
-  {
-    "id": 1785328044718,
-    "word": "cash",
-    "translation": "现金",
-    "example": "",
-    "exampleTranslation": "",
-    "createdDate": "2026-07-29",
-    "level": 0,
-    "nextReviewDate": "2026-09-15",
-    "lastReviewDate": "2026-09-14"
-  },
-  {
-    "id": 1785328044719,
-    "word": "counter",
-    "translation": "柜台；反对",
-    "example": "",
-    "exampleTranslation": "",
-    "createdDate": "2026-07-29",
-    "level": 0,
-    "nextReviewDate": "2026-09-15",
-    "lastReviewDate": "2026-09-14"
   },
   {
     "id": 1785328044720,
