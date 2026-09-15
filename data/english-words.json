@@ -424,9 +424,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 0,
-    "nextReviewDate": "2026-09-15",
-    "lastReviewDate": "2026-09-14"
+    "level": 1,
+    "nextReviewDate": "2026-09-16",
+    "lastReviewDate": "2026-09-15"
   },
   {
     "id": 1785328044661,
@@ -545,9 +545,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 3,
-    "nextReviewDate": "2026-09-14",
-    "lastReviewDate": "2026-09-07"
+    "level": 4,
+    "nextReviewDate": "2026-09-30",
+    "lastReviewDate": "2026-09-15"
   },
   {
     "id": 1785328044673,
@@ -2800,9 +2800,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-30",
-    "level": 0,
-    "nextReviewDate": "2026-08-30",
-    "lastReviewDate": null,
+    "level": 1,
+    "nextReviewDate": "2026-09-16",
+    "lastReviewDate": "2026-09-15",
     "phonetic": ""
   },
   {
