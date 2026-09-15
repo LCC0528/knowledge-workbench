@@ -1351,9 +1351,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-02",
-    "level": 0,
-    "nextReviewDate": "2026-09-15",
-    "lastReviewDate": "2026-09-14",
+    "level": 1,
+    "nextReviewDate": "2026-09-16",
+    "lastReviewDate": "2026-09-15",
     "phonetic": "",
     "pos": ""
   },
@@ -1581,9 +1581,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-04",
-    "level": 1,
-    "nextReviewDate": "2026-09-15",
-    "lastReviewDate": "2026-09-14",
+    "level": 2,
+    "nextReviewDate": "2026-09-18",
+    "lastReviewDate": "2026-09-15",
     "phonetic": "/ə.ˈkʌs.təmd/"
   },
   {
