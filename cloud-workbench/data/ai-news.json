@@ -1,7 +1,47 @@
 {
-  "updated": "2026-09-14",
-  "count": 213,
+  "updated": "2026-09-15",
+  "count": 217,
   "items": [
+    {
+      "title": "Pion, an agent designed to run any company autonomously",
+      "url": "https://andonlabs.com/blog/why-we-built-pion",
+      "source": "Hacker News",
+      "score": 291,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-15",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI bots knew about the RubyGems caching vulnerability",
+      "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
+      "source": "Hacker News",
+      "score": 379,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-15",
+      "topic": "ai"
+    },
+    {
+      "title": "Why don't machine learning research agents overfit?",
+      "url": "https://www.amazon.science/blog/why-dont-machine-learning-research-agents-overfit",
+      "source": "Hacker News",
+      "score": 107,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-15",
+      "topic": "ai"
+    },
+    {
+      "title": "GPT-5.6 Luna vs. GPT-6 Astra: Is a $1.20 Model Good Enough for Code Review?",
+      "url": "https://entelligence.ai/blogs/gpt-5.6-luna-vs-gpt-6-astra-is-a-1.20-model-good-enough-for-code-review",
+      "source": "Hacker News",
+      "score": 110,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-15",
+      "topic": "ai"
+    },
     {
       "title": "Garry Tan wants US open-weight AI labs to 'distill' frontier models, too",
       "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
