@@ -61,9 +61,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 0,
-    "nextReviewDate": "2026-09-15",
-    "lastReviewDate": "2026-09-14"
+    "level": 1,
+    "nextReviewDate": "2026-09-17",
+    "lastReviewDate": "2026-09-16"
   },
   {
     "id": 1785328044627,
@@ -1570,8 +1570,8 @@
     "exampleTranslation": "",
     "createdDate": "2026-08-04",
     "level": 0,
-    "nextReviewDate": "2026-09-16",
-    "lastReviewDate": "2026-09-15",
+    "nextReviewDate": "2026-09-17",
+    "lastReviewDate": "2026-09-16",
     "phonetic": "/dɔːm/"
   },
   {
@@ -3009,9 +3009,9 @@
     "example": "Sometimes I go to bed late.",
     "exampleTranslation": "有时我睡得晚。",
     "createdDate": "2026-09-15",
-    "level": 1,
-    "nextReviewDate": "2026-09-16",
-    "lastReviewDate": "2026-09-15",
+    "level": 2,
+    "nextReviewDate": "2026-09-19",
+    "lastReviewDate": "2026-09-16",
     "phonetic": ""
   },
   {
