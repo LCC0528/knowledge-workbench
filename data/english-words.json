@@ -336,9 +336,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 0,
-    "nextReviewDate": "2026-09-16",
-    "lastReviewDate": "2026-09-15"
+    "level": 1,
+    "nextReviewDate": "2026-09-17",
+    "lastReviewDate": "2026-09-16"
   },
   {
     "id": 1785328044653,
@@ -1364,9 +1364,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-02",
-    "level": 1,
-    "nextReviewDate": "2026-09-16",
-    "lastReviewDate": "2026-09-15",
+    "level": 2,
+    "nextReviewDate": "2026-09-19",
+    "lastReviewDate": "2026-09-16",
     "phonetic": "",
     "pos": ""
   },
@@ -1725,9 +1725,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-04",
-    "level": 1,
-    "nextReviewDate": "2026-09-15",
-    "lastReviewDate": "2026-09-14",
+    "level": 2,
+    "nextReviewDate": "2026-09-19",
+    "lastReviewDate": "2026-09-16",
     "phonetic": ""
   },
   {
@@ -1833,9 +1833,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-04",
-    "level": 0,
-    "nextReviewDate": "2026-09-16",
-    "lastReviewDate": "2026-09-15",
+    "level": 1,
+    "nextReviewDate": "2026-09-17",
+    "lastReviewDate": "2026-09-16",
     "phonetic": ""
   },
   {
