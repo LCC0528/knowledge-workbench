@@ -1494,9 +1494,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-02",
-    "level": 0,
-    "nextReviewDate": "2026-09-16",
-    "lastReviewDate": "2026-09-15",
+    "level": 1,
+    "nextReviewDate": "2026-09-18",
+    "lastReviewDate": "2026-09-17",
     "phonetic": "",
     "pos": ""
   },
@@ -3106,8 +3106,8 @@
     "exampleTranslation": "英语在世界各地被广泛使用。",
     "createdDate": "2026-09-15",
     "level": 0,
-    "nextReviewDate": "2026-09-15",
-    "lastReviewDate": null,
+    "nextReviewDate": "2026-09-18",
+    "lastReviewDate": "2026-09-17",
     "phonetic": ""
   },
   {
