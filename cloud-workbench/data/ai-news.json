@@ -1,7 +1,57 @@
 {
-  "updated": "2026-09-17",
-  "count": 225,
+  "updated": "2026-09-18",
+  "count": 230,
   "items": [
+    {
+      "title": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
+      "url": "https://prismml.com/news/bonsai-2-27b",
+      "source": "Hacker News",
+      "score": 216,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Bend – A language that blocks AI mistakes via proof, on CPU and GPU",
+      "url": "https://bend-lang.com/",
+      "source": "Hacker News",
+      "score": 280,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data",
+      "url": "https://arxiv.org/abs/2609.18842",
+      "source": "Hacker News",
+      "score": 109,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-18",
+      "topic": "ai"
+    },
+    {
+      "title": "CCC invites all model citizens to 40C3",
+      "url": "https://events.ccc.de/en/2026/09/12/40c3-model-citizens/",
+      "source": "Hacker News",
+      "score": 336,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Show HN: Share your AI Setup, Learn from others",
+      "url": "https://mysetup.ai/",
+      "source": "Hacker News",
+      "score": 184,
+      "text": "I kept seeing engineers share what they were building with AI; however, I was always more curious about how they worked. Which agents did they use? What skills and tools had stuck or been thrown out the window? How did they manage longer-running tasks?   So I built this with the hope we could have a dedicated space to share and be open about our setups.",
+      "ai_score": 6.0,
+      "date": "2026-09-18",
+      "topic": "ai"
+    },
     {
       "title": "Training a 4B model to produce 81% faster query plans than Postgres",
       "url": "https://rohanbansal.com/qorl",
