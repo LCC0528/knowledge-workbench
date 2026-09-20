@@ -446,9 +446,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 2,
-    "nextReviewDate": "2026-09-20",
-    "lastReviewDate": "2026-09-17"
+    "level": 3,
+    "nextReviewDate": "2026-09-27",
+    "lastReviewDate": "2026-09-20"
   },
   {
     "id": 1785328044663,
@@ -1468,9 +1468,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-02",
-    "level": 2,
-    "nextReviewDate": "2026-09-19",
-    "lastReviewDate": "2026-09-16",
+    "level": 3,
+    "nextReviewDate": "2026-09-27",
+    "lastReviewDate": "2026-09-20",
     "phonetic": "",
     "pos": ""
   },
@@ -4672,9 +4672,9 @@
     "example": "You need to apply for a visa before traveling to that country.",
     "exampleTranslation": "去那个国家旅行之前，你需要申请签证。(词根：ply (折叠) / 构词：ap- (向) + ply (折叠) → 折叠向 → 申请；应用)",
     "createdDate": "2026-09-20",
-    "level": 0,
-    "nextReviewDate": "2026-09-20",
-    "lastReviewDate": null,
+    "level": 1,
+    "nextReviewDate": "2026-09-21",
+    "lastReviewDate": "2026-09-20",
     "phonetic": ""
   },
   {
