@@ -434,6 +434,15 @@
         </div>
 
         <div class="card">
+            <h3 style="font-size:16px;color:var(--primary-dark);margin-bottom:12px">📅 今日支出</h3>
+            <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:12px">
+                <span style="font-size:28px;font-weight:700;color:var(--danger)" id="todayExpense">0.00</span>
+                <span style="font-size:13px;color:var(--text-light)" id="todayExpenseCount">0 笔</span>
+            </div>
+            <ul class="record-list" id="todayExpenseList"></ul>
+        </div>
+
+        <div class="card">
             <h3 style="font-size:16px;color:var(--primary-dark);margin-bottom:12px">最近记录</h3>
             <ul class="record-list" id="recentRecords"></ul>
         </div>
@@ -983,6 +992,35 @@
         document.getElementById('monthBalance').textContent = formatAmount(income - expense);
     }
 
+    function renderTodayExpense() {
+        const today = formatDate(new Date());
+        const todayRecords = state.records.filter(r => r.date === today && r.type === 'expense');
+        const total = todayRecords.reduce((sum, r) => sum + r.amount, 0);
+
+        document.getElementById('todayExpense').textContent = formatAmount(total);
+        document.getElementById('todayExpenseCount').textContent = todayRecords.length + ' 笔';
+
+        const list = document.getElementById('todayExpenseList');
+        if (todayRecords.length === 0) {
+            list.innerHTML = '<div class="empty-state" style="padding:20px"><div class="icon">📝</div><div>今日暂无支出</div></div>';
+            return;
+        }
+
+        list.innerHTML = todayRecords.map(r => {
+            const cat = getCategoryInfo(r.category);
+            return `
+                <li class="record-item">
+                    <div class="icon expense">${cat.icon}</div>
+                    <div class="info">
+                        <div class="category">${cat.name}</div>
+                        <div class="note">${r.note || '-'}</div>
+                    </div>
+                    <div class="amount expense">-${formatAmount(r.amount)}</div>
+                </li>
+            `;
+        }).join('');
+    }
+
     function renderMonthlyChart() {
         const chart = document.getElementById('monthlyChart');
         const months = [];
@@ -1063,6 +1101,7 @@
 
     function renderAll() {
         renderSummary();
+        renderTodayExpense();
         renderCategories();
         renderRecentRecords();
         renderRecords();

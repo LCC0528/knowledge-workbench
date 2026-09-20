@@ -183,6 +183,8 @@
         .btn-success:hover { background: #5f8363; }
         .btn-danger { background: var(--danger); color: white; }
         .btn-danger:hover { background: #b56161; }
+        .btn-warning { background: #e6a817; color: white; }
+        .btn-warning:hover { background: #d49c15; }
         .btn-outline {
             background: transparent;
             border: 2px solid var(--primary);
@@ -430,6 +432,7 @@
                     <div class="btn-group">
                         <button class="btn btn-accent" onclick="showAnswer()">👁 看答案</button>
                         <button class="btn btn-danger" onclick="markForgot()" id="btnForgot">❌ 没记住</button>
+                        <button class="btn btn-warning" onclick="markReviewAgain()" id="btnReviewAgain">🔄 再看一次</button>
                         <button class="btn btn-success" onclick="markRemembered()" id="btnRemember">✅ 记下了</button>
                     </div>
                 </div>
@@ -1141,6 +1144,28 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         saveWords();
         state.reviewIndex++;
         showToast('没记住，已重置为 1 天后复习');
+
+        if (state.reviewIndex >= state.reviewQueue.length) {
+            addCheckin(state.todayStr);
+            prepareReview();
+        } else {
+            showCurrentWord();
+        }
+    }
+
+    function markReviewAgain() {
+        if (!state.currentAnswerShown) {
+            showToast('先看答案再判断');
+            return;
+        }
+        const w = state.reviewQueue[state.reviewIndex];
+        if (!w) return;
+
+        state.reviewQueue.push({...w});
+        addReviewLog(w.id, 'review_again');
+        saveWords();
+        state.reviewIndex++;
+        showToast('好的，待会儿再看一次');
 
         if (state.reviewIndex >= state.reviewQueue.length) {
             addCheckin(state.todayStr);
