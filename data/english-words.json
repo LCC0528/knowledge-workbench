@@ -589,9 +589,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 0,
-    "nextReviewDate": "2026-09-15",
-    "lastReviewDate": "2026-09-14"
+    "level": 1,
+    "nextReviewDate": "2026-09-21",
+    "lastReviewDate": "2026-09-20"
   },
   {
     "id": 1785328044677,
@@ -985,9 +985,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 2,
-    "nextReviewDate": "2026-09-20",
-    "lastReviewDate": "2026-09-17"
+    "level": 3,
+    "nextReviewDate": "2026-09-27",
+    "lastReviewDate": "2026-09-20"
   },
   {
     "id": 1785328044720,
@@ -1073,9 +1073,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 0,
-    "nextReviewDate": "2026-09-16",
-    "lastReviewDate": "2026-09-15"
+    "level": 1,
+    "nextReviewDate": "2026-09-21",
+    "lastReviewDate": "2026-09-20"
   },
   {
     "id": 1785328044729,
@@ -1183,9 +1183,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 2,
-    "nextReviewDate": "2026-09-20",
-    "lastReviewDate": "2026-09-17"
+    "level": 3,
+    "nextReviewDate": "2026-09-27",
+    "lastReviewDate": "2026-09-20"
   },
   {
     "id": 1785328044739,
@@ -1494,9 +1494,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-02",
-    "level": 1,
-    "nextReviewDate": "2026-09-18",
-    "lastReviewDate": "2026-09-17",
+    "level": 2,
+    "nextReviewDate": "2026-09-23",
+    "lastReviewDate": "2026-09-20",
     "phonetic": "",
     "pos": ""
   },
@@ -2937,9 +2937,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-30",
-    "level": 2,
-    "nextReviewDate": "2026-09-20",
-    "lastReviewDate": "2026-09-17",
+    "level": 3,
+    "nextReviewDate": "2026-09-27",
+    "lastReviewDate": "2026-09-20",
     "phonetic": ""
   },
   {
@@ -4708,9 +4708,9 @@
     "example": "If you work hard, you will eventually succeed in achieving your goals.",
     "exampleTranslation": "如果你努力工作，你最终会成功实现你的目标。(词根：ced/cess (走) / 构词：suc- (在下面) + ceed (走) → 跟在下面走 → 成功；继承)",
     "createdDate": "2026-09-20",
-    "level": 0,
-    "nextReviewDate": "2026-09-20",
-    "lastReviewDate": null,
+    "level": 1,
+    "nextReviewDate": "2026-09-21",
+    "lastReviewDate": "2026-09-20",
     "phonetic": ""
   },
   {
