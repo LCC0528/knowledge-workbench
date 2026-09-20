@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>璁拌处宸ヤ綔鍙?路 绠€鏄撹璐?/title>
+    <title>记账工作台 · 简易记账</title>
     <style>
         :root {
             --bg: #f8f9fa;
@@ -374,91 +374,91 @@
 <body>
 <div class="container">
     <header>
-        <h1>馃挵 璁拌处宸ヤ綔鍙?/h1>
-        <div class="sub">绠€鏄撹璐?路 鏀舵敮绠＄悊 路 鏁版嵁缁熻</div>
+        <h1>💰 记账工作台</h1>
+        <div class="sub">简易记账 · 收支管理 · 数据统计</div>
         <div class="nav-tabs">
-            <button class="active" onclick="showTab('home')">棣栭〉</button>
-            <button onclick="showTab('records')">璁板綍</button>
-            <button onclick="showTab('stats')">缁熻</button>
-            <button onclick="showTab('settings')">璁剧疆</button>
+            <button class="active" onclick="showTab('home')">首页</button>
+            <button onclick="showTab('records')">记录</button>
+            <button onclick="showTab('stats')">统计</button>
+            <button onclick="showTab('settings')">设置</button>
         </div>
     </header>
 
-    <!-- 棣栭〉 -->
+    <!-- 首页 -->
     <div id="tab-home" class="tab-content">
         <div class="card">
             <div class="summary-grid">
                 <div class="summary-item income">
-                    <div class="label">鏈湀鏀跺叆</div>
+                    <div class="label">本月收入</div>
                     <div class="amount" id="monthIncome">0.00</div>
                 </div>
                 <div class="summary-item expense">
-                    <div class="label">鏈湀鏀嚭</div>
+                    <div class="label">本月支出</div>
                     <div class="amount" id="monthExpense">0.00</div>
                 </div>
                 <div class="summary-item balance">
-                    <div class="label">鏈湀缁撲綑</div>
+                    <div class="label">本月结余</div>
                     <div class="amount" id="monthBalance">0.00</div>
                 </div>
             </div>
 
             <div class="record-form">
                 <div class="type-toggle">
-                    <button class="expense active" onclick="setType('expense')">鏀嚭</button>
-                    <button class="income" onclick="setType('income')">鏀跺叆</button>
+                    <button class="expense active" onclick="setType('expense')">支出</button>
+                    <button class="income" onclick="setType('income')">收入</button>
                 </div>
 
                 <div class="form-group">
-                    <label>閲戦</label>
-                    <input type="number" id="amount" placeholder="璇疯緭鍏ラ噾棰? step="0.01" min="0">
+                    <label>金额</label>
+                    <input type="number" id="amount" placeholder="请输入金额" step="0.01" min="0">
                 </div>
 
                 <div class="form-group">
-                    <label>鍒嗙被</label>
+                    <label>分类</label>
                     <div class="category-grid" id="categoryGrid"></div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>鏃ユ湡</label>
+                        <label>日期</label>
                         <input type="date" id="date">
                     </div>
                     <div class="form-group">
-                        <label>澶囨敞</label>
-                        <input type="text" id="note" placeholder="鍙€夊娉?>
+                        <label>备注</label>
+                        <input type="text" id="note" placeholder="可选备注">
                     </div>
                 </div>
 
-                <button class="btn btn-primary btn-block" onclick="addRecord()">璁颁竴绗?/button>
+                <button class="btn btn-primary btn-block" onclick="addRecord()">记一笔</button>
             </div>
         </div>
 
         <div class="card">
-            <h3 style="font-size:16px;color:var(--primary-dark);margin-bottom:12px">馃搮 浠婃棩鏀嚭</h3>
+            <h3 style="font-size:16px;color:var(--primary-dark);margin-bottom:12px">📅 今日支出</h3>
             <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:12px">
                 <span style="font-size:28px;font-weight:700;color:var(--danger)" id="todayExpense">0.00</span>
-                <span style="font-size:13px;color:var(--text-light)" id="todayExpenseCount">0 绗?/span>
+                <span style="font-size:13px;color:var(--text-light)" id="todayExpenseCount">0 笔</span>
             </div>
             <ul class="record-list" id="todayExpenseList"></ul>
         </div>
 
         <div class="card">
-            <h3 style="font-size:16px;color:var(--primary-dark);margin-bottom:12px">鏈€杩戣褰?/h3>
+            <h3 style="font-size:16px;color:var(--primary-dark);margin-bottom:12px">最近记录</h3>
             <ul class="record-list" id="recentRecords"></ul>
         </div>
     </div>
 
-    <!-- 璁板綍鍒楄〃 -->
+    <!-- 记录列表 -->
     <div id="tab-records" class="tab-content hidden">
         <div class="card">
             <div class="filter-bar">
                 <select id="filterType" onchange="renderRecords()">
-                    <option value="all">鍏ㄩ儴绫诲瀷</option>
-                    <option value="expense">鏀嚭</option>
-                    <option value="income">鏀跺叆</option>
+                    <option value="all">全部类型</option>
+                    <option value="expense">支出</option>
+                    <option value="income">收入</option>
                 </select>
                 <select id="filterCategory" onchange="renderRecords()">
-                    <option value="all">鍏ㄩ儴鍒嗙被</option>
+                    <option value="all">全部分类</option>
                 </select>
                 <input type="month" id="filterMonth" onchange="renderRecords()">
             </div>
@@ -466,87 +466,87 @@
         </div>
     </div>
 
-    <!-- 缁熻 -->
+    <!-- 统计 -->
     <div id="tab-stats" class="tab-content hidden">
         <div class="card">
-            <h3 style="font-size:16px;color:var(--primary-dark);margin-bottom:12px">鏈堝害鏀舵敮瓒嬪娍</h3>
+            <h3 style="font-size:16px;color:var(--primary-dark);margin-bottom:12px">月度收支趋势</h3>
             <div class="chart-container" id="monthlyChart"></div>
         </div>
 
         <div class="card">
-            <h3 style="font-size:16px;color:var(--primary-dark);margin-bottom:12px">鍒嗙被缁熻</h3>
+            <h3 style="font-size:16px;color:var(--primary-dark);margin-bottom:12px">分类统计</h3>
             <div id="categoryStats"></div>
         </div>
     </div>
 
-    <!-- 璁剧疆 -->
+    <!-- 设置 -->
     <div id="tab-settings" class="tab-content hidden">
         <div class="card">
-            <h3 style="font-size:16px;color:var(--primary-dark);margin-bottom:16px">鏁版嵁绠＄悊</h3>
+            <h3 style="font-size:16px;color:var(--primary-dark);margin-bottom:16px">数据管理</h3>
             <div class="settings-item">
-                <div class="label">瀵煎嚭鏁版嵁</div>
-                <button class="btn btn-secondary" onclick="exportData()">瀵煎嚭 JSON</button>
+                <div class="label">导出数据</div>
+                <button class="btn btn-secondary" onclick="exportData()">导出 JSON</button>
             </div>
             <div class="settings-item">
-                <div class="label">瀵煎叆鏁版嵁</button>
+                <div class="label">导入数据</button>
                 <input type="file" id="importFile" accept=".json" onchange="importData(event)" style="display:none">
-                <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()">瀵煎叆 JSON</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()">导入 JSON</button>
             </div>
             <div class="settings-item">
-                <div class="label">娓呯┖鏁版嵁</div>
-                <button class="btn btn-danger" onclick="clearData()">娓呯┖</button>
+                <div class="label">清空数据</div>
+                <button class="btn btn-danger" onclick="clearData()">清空</button>
             </div>
         </div>
 
         <div class="card">
-            <h3 style="font-size:16px;color:var(--primary-dark);margin-bottom:16px">浜戝悓姝?/h3>
+            <h3 style="font-size:16px;color:var(--primary-dark);margin-bottom:16px">云同步</h3>
             <div class="form-group">
                 <label>GitHub Token</label>
                 <input type="password" id="githubTokenInput" placeholder="ghp_xxxx">
             </div>
             <div class="form-group" style="margin-top:12px">
-                <label>浠撳簱璺緞 (owner/repo/path)</label>
+                <label>仓库路径 (owner/repo/path)</label>
                 <input type="text" id="githubPathInput" placeholder="LCC0528/knowledge-workbench/data/accounting.json">
             </div>
             <div style="display:flex;gap:8px;margin-top:16px">
-                <button class="btn btn-primary" onclick="pushToGitHub()">鎺ㄩ€佸埌浜戠</button>
-                <button class="btn btn-secondary" onclick="pullFromGitHub()">浠庝簯绔媺鍙?/button>
+                <button class="btn btn-primary" onclick="pushToGitHub()">推送到云端</button>
+                <button class="btn btn-secondary" onclick="pullFromGitHub()">从云端拉取</button>
             </div>
         </div>
     </div>
 </div>
 
-<!-- 缂栬緫寮圭獥 -->
+<!-- 编辑弹窗 -->
 <div id="editModal" class="modal hidden">
     <div class="modal-content">
         <div class="modal-header">
-            <h3>缂栬緫璁板綍</h3>
-            <button class="modal-close" onclick="closeModal()">脳</button>
+            <h3>编辑记录</h3>
+            <button class="modal-close" onclick="closeModal()">×</button>
         </div>
         <div class="record-form">
             <div class="type-toggle">
-                <button class="expense" onclick="setEditType('expense')">鏀嚭</button>
-                <button class="income" onclick="setEditType('income')">鏀跺叆</button>
+                <button class="expense" onclick="setEditType('expense')">支出</button>
+                <button class="income" onclick="setEditType('income')">收入</button>
             </div>
             <div class="form-group">
-                <label>閲戦</label>
+                <label>金额</label>
                 <input type="number" id="editAmount" step="0.01" min="0">
             </div>
             <div class="form-group">
-                <label>鍒嗙被</label>
+                <label>分类</label>
                 <div class="category-grid" id="editCategoryGrid"></div>
             </div>
             <div class="form-row">
                 <div class="form-group">
-                    <label>鏃ユ湡</label>
+                    <label>日期</label>
                     <input type="date" id="editDate">
                 </div>
                 <div class="form-group">
-                    <label>澶囨敞</label>
+                    <label>备注</label>
                     <input type="text" id="editNote">
                 </div>
             </div>
-            <button class="btn btn-primary btn-block" onclick="saveEdit()">淇濆瓨</button>
+            <button class="btn btn-primary btn-block" onclick="saveEdit()">保存</button>
         </div>
     </div>
 </div>
@@ -555,36 +555,36 @@
 
 <script>
 (function() {
-    // 甯搁噺
+    // 常量
     const STORAGE_KEY = 'accounting_workbench_data';
     const SETTINGS_KEY = 'accounting_workbench_settings';
     const GITHUB_TOKEN_KEY = 'accounting_github_token';
     const GITHUB_PATH_KEY = 'accounting_github_path';
 
-    // 榛樿鍒嗙被
+    // 默认分类
     const DEFAULT_CATEGORIES = {
         expense: [
-            { id: 'food', name: '椁愰ギ', icon: '馃崪' },
-            { id: 'transport', name: '浜ら€?, icon: '馃殫' },
-            { id: 'shopping', name: '璐墿', icon: '馃洅' },
-            { id: 'entertainment', name: '濞变箰', icon: '馃幃' },
-            { id: 'housing', name: '浣忔埧', icon: '馃彔' },
-            { id: 'medical', name: '鍖荤枟', icon: '馃彞' },
-            { id: 'education', name: '鏁欒偛', icon: '馃摎' },
-            { id: 'other_expense', name: '鍏朵粬', icon: '馃摝' }
+            { id: 'food', name: '餐饮', icon: '🍜' },
+            { id: 'transport', name: '交通', icon: '🚗' },
+            { id: 'shopping', name: '购物', icon: '🛒' },
+            { id: 'entertainment', name: '娱乐', icon: '🎮' },
+            { id: 'housing', name: '住房', icon: '🏠' },
+            { id: 'medical', name: '医疗', icon: '🏥' },
+            { id: 'education', name: '教育', icon: '📚' },
+            { id: 'other_expense', name: '其他', icon: '📦' }
         ],
         income: [
-            { id: 'salary', name: '宸ヨ祫', icon: '馃捈' },
-            { id: 'bonus', name: '濂栭噾', icon: '馃巵' },
-            { id: 'investment', name: '鎶曡祫', icon: '馃搱' },
-            { id: 'parttime', name: '鍏艰亴', icon: '馃捇' },
-            { id: 'gift', name: '绾㈠寘', icon: '馃Ё' },
-            { id: 'refund', name: '閫€娆?, icon: '鈫╋笍' },
-            { id: 'other_income', name: '鍏朵粬', icon: '馃拵' }
+            { id: 'salary', name: '工资', icon: '💼' },
+            { id: 'bonus', name: '奖金', icon: '🎁' },
+            { id: 'investment', name: '投资', icon: '📈' },
+            { id: 'parttime', name: '兼职', icon: '💻' },
+            { id: 'gift', name: '红包', icon: '🧧' },
+            { id: 'refund', name: '退款', icon: '↩️' },
+            { id: 'other_income', name: '其他', icon: '💎' }
         ]
     };
 
-    // 鐘舵€?
+    // 状态
     let state = {
         records: [],
         type: 'expense',
@@ -594,7 +594,7 @@
         editingId: null
     };
 
-    // 宸ュ叿鍑芥暟
+    // 工具函数
     function generateId() {
         return Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
     }
@@ -620,7 +620,7 @@
         setTimeout(() => toast.classList.remove('show'), 2000);
     }
 
-    // 鏁版嵁鎸佷箙鍖?
+    // 数据持久化
     function loadData() {
         try {
             const data = localStorage.getItem(STORAGE_KEY);
@@ -642,7 +642,7 @@
         localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
     }
 
-    // GitHub 浜戝悓姝?
+    // GitHub 云同步
     function getGhToken() {
         try { return localStorage.getItem(GITHUB_TOKEN_KEY) || ''; } catch { return ''; }
     }
@@ -663,13 +663,13 @@
         const token = getGhToken();
         const path = getGhPath();
         if (!token || !path) {
-            showToast('璇峰厛閰嶇疆 Token 鍜屼粨搴撹矾寰?);
+            showToast('请先配置 Token 和仓库路径');
             return;
         }
 
         const parts = path.split('/');
         if (parts.length < 3) {
-            showToast('浠撳簱璺緞鏍煎紡: owner/repo/path');
+            showToast('仓库路径格式: owner/repo/path');
             return;
         }
 
@@ -679,7 +679,7 @@
         const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
 
         try {
-            // 鑾峰彇鐜版湁鏂囦欢
+            // 获取现有文件
             let sha = null;
             const getResp = await fetch(apiUrl, {
                 headers: { 'Authorization': `token ${token}` }
@@ -689,12 +689,12 @@
                 sha = data.sha;
             }
 
-            // 鍑嗗鍐呭
+            // 准备内容
             const content = btoa(unescape(encodeURIComponent(JSON.stringify(state.records, null, 2))));
 
-            // 鎻愪氦
+            // 提交
             const body = {
-                message: `鏇存柊璁拌处鏁版嵁 ${new Date().toISOString()}`,
+                message: `更新记账数据 ${new Date().toISOString()}`,
                 content: content
             };
             if (sha) body.sha = sha;
@@ -709,12 +709,12 @@
             });
 
             if (putResp.ok) {
-                showToast('鎺ㄩ€佹垚鍔?);
+                showToast('推送成功');
             } else {
-                showToast('鎺ㄩ€佸け璐? ' + putResp.statusText);
+                showToast('推送失败: ' + putResp.statusText);
             }
         } catch (e) {
-            showToast('缃戠粶閿欒: ' + e.message);
+            showToast('网络错误: ' + e.message);
         }
     }
 
@@ -722,13 +722,13 @@
         const token = getGhToken();
         const path = getGhPath();
         if (!token || !path) {
-            showToast('璇峰厛閰嶇疆 Token 鍜屼粨搴撹矾寰?);
+            showToast('请先配置 Token 和仓库路径');
             return;
         }
 
         const parts = path.split('/');
         if (parts.length < 3) {
-            showToast('浠撳簱璺緞鏍煎紡: owner/repo/path');
+            showToast('仓库路径格式: owner/repo/path');
             return;
         }
 
@@ -742,7 +742,7 @@
                 headers: { 'Authorization': `token ${token}` }
             });
             if (!resp.ok) {
-                showToast('鎷夊彇澶辫触: ' + resp.statusText);
+                showToast('拉取失败: ' + resp.statusText);
                 return;
             }
             const data = await resp.json();
@@ -752,14 +752,14 @@
                 state.records = records;
                 saveData();
                 renderAll();
-                showToast('鎷夊彇鎴愬姛');
+                showToast('拉取成功');
             }
         } catch (e) {
-            showToast('缃戠粶閿欒: ' + e.message);
+            showToast('网络错误: ' + e.message);
         }
     }
 
-    // 鍒嗙被娓叉煋
+    // 分类渲染
     function renderCategories() {
         const grid = document.getElementById('categoryGrid');
         const categories = DEFAULT_CATEGORIES[state.type];
@@ -789,10 +789,10 @@
             const cat = DEFAULT_CATEGORIES[type].find(c => c.id === id);
             if (cat) return cat;
         }
-        return { id, name: id, icon: '鉂? };
+        return { id, name: id, icon: '❓' };
     }
 
-    // 璁板綍鎿嶄綔
+    // 记录操作
     window.setType = function(type) {
         state.type = type;
         state.category = DEFAULT_CATEGORIES[type][0].id;
@@ -826,7 +826,7 @@
     window.addRecord = function() {
         const amount = parseFloat(document.getElementById('amount').value);
         if (!amount || amount <= 0) {
-            showToast('璇疯緭鍏ユ湁鏁堥噾棰?);
+            showToast('请输入有效金额');
             return;
         }
 
@@ -844,10 +844,10 @@
         saveData();
         renderAll();
 
-        // 閲嶇疆琛ㄥ崟
+        // 重置表单
         document.getElementById('amount').value = '';
         document.getElementById('note').value = '';
-        showToast('璁板綍宸叉坊鍔?);
+        showToast('记录已添加');
     };
 
     window.editRecord = function(id) {
@@ -879,7 +879,7 @@
     window.saveEdit = function() {
         const amount = parseFloat(document.getElementById('editAmount').value);
         if (!amount || amount <= 0) {
-            showToast('璇疯緭鍏ユ湁鏁堥噾棰?);
+            showToast('请输入有效金额');
             return;
         }
 
@@ -895,24 +895,24 @@
         saveData();
         renderAll();
         closeModal();
-        showToast('璁板綍宸叉洿鏂?);
+        showToast('记录已更新');
     };
 
     window.deleteRecord = function(id) {
-        if (!confirm('纭畾鍒犻櫎杩欐潯璁板綍锛?)) return;
+        if (!confirm('确定删除这条记录？')) return;
         state.records = state.records.filter(r => r.id !== id);
         saveData();
         renderAll();
-        showToast('璁板綍宸插垹闄?);
+        showToast('记录已删除');
     };
 
-    // 娓叉煋
+    // 渲染
     function renderRecentRecords() {
         const list = document.getElementById('recentRecords');
         const recent = state.records.slice(0, 5);
 
         if (recent.length === 0) {
-            list.innerHTML = '<div class="empty-state"><div class="icon">馃摑</div><div>鏆傛棤璁板綍</div></div>';
+            list.innerHTML = '<div class="empty-state"><div class="icon">📝</div><div>暂无记录</div></div>';
             return;
         }
 
@@ -928,8 +928,8 @@
                     </div>
                     <div class="amount ${r.type}">${r.type === 'expense' ? '-' : '+'}${formatAmount(r.amount)}</div>
                     <div class="actions">
-                        <button onclick="editRecord('${r.id}')" title="缂栬緫">鉁忥笍</button>
-                        <button onclick="deleteRecord('${r.id}')" title="鍒犻櫎">馃棏锔?/button>
+                        <button onclick="editRecord('${r.id}')" title="编辑">✏️</button>
+                        <button onclick="deleteRecord('${r.id}')" title="删除">🗑️</button>
                     </div>
                 </li>
             `;
@@ -955,7 +955,7 @@
         }
 
         if (filtered.length === 0) {
-            list.innerHTML = '<div class="empty-state"><div class="icon">馃摑</div><div>鏆傛棤璁板綍</div></div>';
+            list.innerHTML = '<div class="empty-state"><div class="icon">📝</div><div>暂无记录</div></div>';
             return;
         }
 
@@ -971,8 +971,8 @@
                     </div>
                     <div class="amount ${r.type}">${r.type === 'expense' ? '-' : '+'}${formatAmount(r.amount)}</div>
                     <div class="actions">
-                        <button onclick="editRecord('${r.id}')" title="缂栬緫">鉁忥笍</button>
-                        <button onclick="deleteRecord('${r.id}')" title="鍒犻櫎">馃棏锔?/button>
+                        <button onclick="editRecord('${r.id}')" title="编辑">✏️</button>
+                        <button onclick="deleteRecord('${r.id}')" title="删除">🗑️</button>
                     </div>
                 </li>
             `;
@@ -998,11 +998,11 @@
         const total = todayRecords.reduce((sum, r) => sum + r.amount, 0);
 
         document.getElementById('todayExpense').textContent = formatAmount(total);
-        document.getElementById('todayExpenseCount').textContent = todayRecords.length + ' 绗?;
+        document.getElementById('todayExpenseCount').textContent = todayRecords.length + ' 笔';
 
         const list = document.getElementById('todayExpenseList');
         if (todayRecords.length === 0) {
-            list.innerHTML = '<div class="empty-state" style="padding:20px"><div class="icon">馃摑</div><div>浠婃棩鏆傛棤鏀嚭</div></div>';
+            list.innerHTML = '<div class="empty-state" style="padding:20px"><div class="icon">📝</div><div>今日暂无支出</div></div>';
             return;
         }
 
@@ -1048,7 +1048,7 @@
                 <div class="bar income" style="height: ${(d.income / maxAmount) * 150}px"></div>
                 <div class="bar expense" style="height: ${(d.expense / maxAmount) * 150}px; margin-top: 4px;"></div>
                 <div class="value">${d.expense > 0 ? formatAmount(d.expense) : ''}</div>
-                <div class="label">${d.month.split('-')[1]}鏈?/div>
+                <div class="label">${d.month.split('-')[1]}月</div>
             </div>
         `).join('');
     }
@@ -1072,7 +1072,7 @@
         );
 
         if (entries.length === 0) {
-            container.innerHTML = '<div class="empty-state"><div class="icon">馃搳</div><div>鏈湀鏆傛棤鏁版嵁</div></div>';
+            container.innerHTML = '<div class="empty-state"><div class="icon">📊</div><div>本月暂无数据</div></div>';
             return;
         }
 
@@ -1084,7 +1084,7 @@
                     <div class="icon ${data.expense > 0 ? 'expense' : 'income'}">${cat.icon}</div>
                     <div class="info">
                         <div class="category">${cat.name}</div>
-                        <div class="note">鏀跺叆: ${formatAmount(data.income)} 路 鏀嚭: ${formatAmount(data.expense)}</div>
+                        <div class="note">收入: ${formatAmount(data.income)} · 支出: ${formatAmount(data.expense)}</div>
                     </div>
                     <div class="amount" style="color:var(--text)">${formatAmount(total)}</div>
                 </div>
@@ -1095,7 +1095,7 @@
     function renderFilterCategories() {
         const select = document.getElementById('filterCategory');
         const allCats = [...DEFAULT_CATEGORIES.expense, ...DEFAULT_CATEGORIES.income];
-        select.innerHTML = '<option value="all">鍏ㄩ儴鍒嗙被</option>' + 
+        select.innerHTML = '<option value="all">全部分类</option>' + 
             allCats.map(c => `<option value="${c.id}">${c.icon} ${c.name}</option>`).join('');
     }
 
@@ -1110,7 +1110,7 @@
         renderFilterCategories();
     }
 
-    // Tab 鍒囨崲
+    // Tab 切换
     window.showTab = function(tab) {
         document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
         document.getElementById('tab-' + tab).classList.remove('hidden');
@@ -1119,7 +1119,7 @@
         event.target.classList.add('active');
     };
 
-    // 鏁版嵁瀵煎嚭瀵煎叆
+    // 数据导出导入
     window.exportData = function() {
         const data = JSON.stringify(state.records, null, 2);
         const blob = new Blob([data], { type: 'application/json' });
@@ -1129,7 +1129,7 @@
         a.download = `accounting-data-${formatDate(new Date())}.json`;
         a.click();
         URL.revokeObjectURL(url);
-        showToast('鏁版嵁宸插鍑?);
+        showToast('数据已导出');
     };
 
     window.importData = function(event) {
@@ -1141,51 +1141,51 @@
             try {
                 const data = JSON.parse(e.target.result);
                 if (Array.isArray(data)) {
-                    if (confirm(`纭畾瀵煎叆 ${data.length} 鏉¤褰曪紵杩欏皢瑕嗙洊鐜版湁鏁版嵁`)) {
+                    if (confirm(`确定导入 ${data.length} 条记录？这将覆盖现有数据`)) {
                         state.records = data;
                         saveData();
                         renderAll();
-                        showToast('鏁版嵁宸插鍏?);
+                        showToast('数据已导入');
                     }
                 } else {
-                    showToast('鏃犳晥鐨勬暟鎹牸寮?);
+                    showToast('无效的数据格式');
                 }
             } catch {
-                showToast('鏂囦欢瑙ｆ瀽澶辫触');
+                showToast('文件解析失败');
             }
         };
         reader.readAsText(file);
     };
 
     window.clearData = function() {
-        if (confirm('纭畾娓呯┖鎵€鏈夋暟鎹紵姝ゆ搷浣滀笉鍙仮澶?)) {
+        if (confirm('确定清空所有数据？此操作不可恢复')) {
             state.records = [];
             saveData();
             renderAll();
-            showToast('鏁版嵁宸叉竻绌?);
+            showToast('数据已清空');
         }
     };
 
-    // 鍒濆鍖?
+    // 初始化
     function init() {
-        // 璁剧疆榛樿鏃ユ湡
+        // 设置默认日期
         document.getElementById('date').value = formatDate(new Date());
 
-        // 鍔犺浇璁剧疆
+        // 加载设置
         const settings = getSettings();
         if (settings.githubToken) {
-            document.getElementById('githubTokenInput').value = settings.githubToken.substring(0, 10) + '路路路';
+            document.getElementById('githubTokenInput').value = settings.githubToken.substring(0, 10) + '···';
         }
         if (settings.githubPath) {
             document.getElementById('githubPathInput').value = settings.githubPath;
         }
 
-        // 鐩戝惉璁剧疆杈撳叆
+        // 监听设置输入
         document.getElementById('githubTokenInput').addEventListener('change', function() {
             const token = this.value.trim();
             if (token) {
                 setGhToken(token);
-                showToast('Token 宸蹭繚瀛?);
+                showToast('Token 已保存');
             }
         });
 
@@ -1193,24 +1193,24 @@
             const path = this.value.trim();
             if (path) {
                 setGhPath(path);
-                showToast('璺緞宸蹭繚瀛?);
+                showToast('路径已保存');
             }
         });
 
-        // URL Token 鑷姩閰嶇疆
+        // URL Token 自动配置
         const params = new URLSearchParams(window.location.search);
         const urlToken = params.get('token');
         if (urlToken && urlToken.startsWith('ghp_')) {
             setGhToken(urlToken);
             window.history.replaceState({}, document.title, window.location.pathname);
-            setTimeout(() => showToast('Token 宸茶嚜鍔ㄩ厤缃?), 500);
+            setTimeout(() => showToast('Token 已自动配置'), 500);
         }
 
         loadData();
         renderAll();
     }
 
-    // 鏆撮湶鍏ㄥ眬鍑芥暟
+    // 暴露全局函数
     window.pushToGitHub = pushToGitHub;
     window.pullFromGitHub = pullFromGitHub;
 
