@@ -557,8 +557,8 @@
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
     "level": 0,
-    "nextReviewDate": "2026-09-18",
-    "lastReviewDate": "2026-09-17"
+    "nextReviewDate": "2026-09-21",
+    "lastReviewDate": "2026-09-20"
   },
   {
     "id": 1785328044674,
@@ -2421,9 +2421,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-30",
-    "level": 2,
-    "nextReviewDate": "2026-09-19",
-    "lastReviewDate": "2026-09-16",
+    "level": 3,
+    "nextReviewDate": "2026-09-27",
+    "lastReviewDate": "2026-09-20",
     "phonetic": ""
   },
   {
@@ -3712,9 +3712,9 @@
     "example": "The moon's gravitational pull is responsible for the ocean tides on Earth.",
     "exampleTranslation": "月球的引力是造成地球海洋潮汐的原因。",
     "createdDate": "2026-09-17",
-    "level": 0,
-    "nextReviewDate": "2026-09-17",
-    "lastReviewDate": null,
+    "level": 1,
+    "nextReviewDate": "2026-09-21",
+    "lastReviewDate": "2026-09-20",
     "phonetic": ""
   },
   {
