@@ -1,7 +1,77 @@
 {
-  "updated": "2026-09-21",
-  "count": 243,
+  "updated": "2026-09-22",
+  "count": 250,
   "items": [
+    {
+      "title": "Transformers Explained Visually",
+      "url": "https://poloclub.github.io/transformer-explainer/",
+      "source": "Hacker News",
+      "score": 208,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-22",
+      "topic": "ai"
+    },
+    {
+      "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
+      "url": "https://linear.app/now/ci-bottleneck-reworked",
+      "source": "Hacker News",
+      "score": 143,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-22",
+      "topic": "ai"
+    },
+    {
+      "title": "Why does mathmain need an encrypted loader?",
+      "url": "https://safedep.io/mathmain-encrypted-loader/",
+      "source": "Hacker News",
+      "score": 111,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-22",
+      "topic": "ai"
+    },
+    {
+      "title": "Frontier AI on Your Own Hardware",
+      "url": "https://timdettmers.com/2026/09/21/dlab-open-source-week/",
+      "source": "Hacker News",
+      "score": 103,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-22",
+      "topic": "ai"
+    },
+    {
+      "title": "Kev: Tiny Jev-like family of decision models built on top of Qwen3.5",
+      "url": "https://github.com/jaredpalmer/kev/tree/main",
+      "source": "Hacker News",
+      "score": 407,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-22",
+      "topic": "ai"
+    },
+    {
+      "title": "Python Workers are now generally available",
+      "url": "https://blog.cloudflare.com/python-workers-ga/",
+      "source": "Hacker News",
+      "score": 183,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-22",
+      "topic": "ai"
+    },
+    {
+      "title": "US halts flights at busy East Coast airports, says fiber line cut",
+      "url": "https://www.reuters.com/world/us/faa-halts-some-us-east-coast-flights-due-communication-issues-2026-09-21/",
+      "source": "Hacker News",
+      "score": 201,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-22",
+      "topic": "ai"
+    },
     {
       "title": "ChatGPT now knows what you do on other websites via ad collector",
       "url": "https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/",
