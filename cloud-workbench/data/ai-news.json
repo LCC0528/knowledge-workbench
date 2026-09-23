@@ -1,7 +1,57 @@
 {
-  "updated": "2026-09-22",
-  "count": 250,
+  "updated": "2026-09-23",
+  "count": 255,
   "items": [
+    {
+      "title": "GPT-6 Sol and Luna",
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+      "source": "Hacker News",
+      "score": 1186,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-09-23",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
+      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+      "source": "Hacker News",
+      "score": 561,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-09-23",
+      "topic": "ai"
+    },
+    {
+      "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school",
+      "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
+      "source": "Hacker News",
+      "score": 421,
+      "text": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;0V37g\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;0V37g</a>",
+      "ai_score": 6.0,
+      "date": "2026-09-23",
+      "topic": "ai"
+    },
+    {
+      "title": "Unreal Agent",
+      "url": "https://unreallabs.ai/blog/unreal-agent/",
+      "source": "Hacker News",
+      "score": 133,
+      "text": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;unreallabsai&#x2F;unreal-agent\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;unreallabsai&#x2F;unreal-agent</a>",
+      "ai_score": 6.0,
+      "date": "2026-09-23",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI is well positioned to fast-follow Jev",
+      "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
+      "source": "Hacker News",
+      "score": 260,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-23",
+      "topic": "ai"
+    },
     {
       "title": "Transformers Explained Visually",
       "url": "https://poloclub.github.io/transformer-explainer/",
