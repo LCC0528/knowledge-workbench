@@ -1,7 +1,37 @@
 {
-  "updated": "2026-09-24",
-  "count": 258,
+  "updated": "2026-09-25",
+  "count": 261,
   "items": [
+    {
+      "title": "Rails World 2026 Opening Keynote [video]",
+      "url": "https://www.youtube.com/watch?v=vDjW_dRyKXY",
+      "source": "Hacker News",
+      "score": 239,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-25",
+      "topic": "ai"
+    },
+    {
+      "title": "Show HN: Koi.rest – watch some fish and regain your balance",
+      "url": "https://koi.rest",
+      "source": "Hacker News",
+      "score": 132,
+      "text": "Hi there. My name is Paul. I’m a developer, an explorer and I’ve got ADHD. As of the beginning of August, I’m also unemployed.<p>This last part, along with everything else this past year, has caused me a great deal of stress.<p>While our balcony zen garden project is yet to be completed, I had an idea to create a virtual one that everyone can use.<p>It&#x27;s an idea that, unfortunately, I’ve been postponing for a while now, mostly because I have no fucking idea how to do it as I don’t know JavaScript, and I don&#x27;t have the capacity to learn it right now.<p>So I let perfect be the enemy of good and, well... just kept the idea to myself.<p>Then I said &quot;fuck it&quot; and used AI to make the thing I really wanted to make.<p>I realized I didn&#x27;t want &quot;perfect&quot;. I wanted &quot;good enough&quot;.<p>I tweaked, added, removed, drew, researched, questioned, tested... I just wasn&#x27;t the one coding it.<p>So now, instead of occupying my brain, it now lives on the internet for others to enjoy.<p>Yes, there’s something noble about making something entirely on your own, but what good is an idea that just sits in my head?<p>So here I am. I made the thing. The weird, little, quiet koi pond.<p>The silly project of passion. The little corner of the internet to let strangers watch fish quietly, together.<p>I hope this pond helps you as much as it helped me.",
+      "ai_score": 6.0,
+      "date": "2026-09-25",
+      "topic": "ai"
+    },
+    {
+      "title": "Early rogue AI agent activity and attempts to hack found on urlquery.net",
+      "url": "https://transluce.org/agent-activity",
+      "source": "Hacker News",
+      "score": 245,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-25",
+      "topic": "ai"
+    },
     {
       "title": "VSCode's SSH Agent Is Bananas (2025)",
       "url": "https://fly.io/blog/vscode-ssh-wtf/",
