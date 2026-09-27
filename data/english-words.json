@@ -1797,9 +1797,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-04",
-    "level": 1,
-    "nextReviewDate": "2026-09-18",
-    "lastReviewDate": "2026-09-17",
+    "level": 0,
+    "nextReviewDate": "2026-09-28",
+    "lastReviewDate": "2026-09-27",
     "phonetic": ""
   },
   {
@@ -2710,8 +2710,8 @@
     "exampleTranslation": "",
     "createdDate": "2026-08-30",
     "level": 0,
-    "nextReviewDate": "2026-09-16",
-    "lastReviewDate": "2026-09-15",
+    "nextReviewDate": "2026-09-28",
+    "lastReviewDate": "2026-09-27",
     "phonetic": ""
   },
   {
@@ -4420,9 +4420,9 @@
     "example": "The teacher made the students drill the grammar rules until they memorized them.",
     "exampleTranslation": "老师让学生们反复练习语法规则，直到他们记住为止。",
     "createdDate": "2026-09-17",
-    "level": 0,
-    "nextReviewDate": "2026-09-17",
-    "lastReviewDate": null,
+    "level": 1,
+    "nextReviewDate": "2026-09-28",
+    "lastReviewDate": "2026-09-27",
     "phonetic": ""
   },
   {
