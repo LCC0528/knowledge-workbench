@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-27",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "A searchable library of forgotten public-domain film clips from 1915 onward",
+      "url": "https://www.movingimagearchive.com/",
+      "source": "Hacker News",
+      "score": 115,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Drawgent: Coding agent on a live Excalidraw canvas",
+      "url": "https://tangled.org/yanndegat.tngl.sh/drawgent",
+      "source": "Hacker News",
+      "score": 110,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "How I changed teaching after AI managed to do all my homework assignments",
+      "url": "https://thelastsoftwareengineer.substack.com/p/how-i-changed-teaching-after-ai-managed",
+      "source": "Hacker News",
+      "score": 138,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "How to keep enjoying programming in a world of LLMs",
+      "url": "https://discourse.haskell.org/t/how-to-keep-enjoying-programming-in-a-world-of-llms/14705",
+      "source": "Hacker News",
+      "score": 160,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}
