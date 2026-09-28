@@ -3213,9 +3213,9 @@
     "example": "He abandoned his car in the snow.",
     "exampleTranslation": "他把车丢弃在雪地里。",
     "createdDate": "2026-09-15",
-    "level": 2,
-    "nextReviewDate": "2026-09-20",
-    "lastReviewDate": "2026-09-17",
+    "level": 3,
+    "nextReviewDate": "2026-10-05",
+    "lastReviewDate": "2026-09-28",
     "phonetic": ""
   },
   {
@@ -4986,6 +4986,18 @@
     "createdDate": "2026-09-20",
     "level": 0,
     "nextReviewDate": "2026-09-20",
+    "lastReviewDate": null,
+    "phonetic": ""
+  },
+  {
+    "id": 1790580540349,
+    "word": "sustainable",
+    "translation": "adj. 可持续的；可以忍受的 (形容词，无变形) 【易混淆词：sustained, maintainable】【派生词：sustain (v. 维持；支撑), sustainably (adv. 可持续地)】",
+    "example": "We need to develop sustainable energy sources to protect the environment.",
+    "exampleTranslation": "我们需要发展可持续能源来保护环境。(词根：tain (保持) / 构词：sus- (在下面) + tain (保持) + -able (能够) → 能够在下面保持的 → 可持续的)",
+    "createdDate": "2026-09-28",
+    "level": 0,
+    "nextReviewDate": "2026-09-28",
     "lastReviewDate": null,
     "phonetic": ""
   }
