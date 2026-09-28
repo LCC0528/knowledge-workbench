@@ -109,6 +109,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            background: linear-gradient(145deg, #ffffff 0%, #f5f8fc 100%);
+            border-radius: 16px;
+            border: 1px solid rgba(74, 144, 164, 0.1);
+            box-shadow: 0 4px 16px rgba(74, 144, 164, 0.06);
         }
         .review-card .word {
             font-size: 32px;
@@ -234,23 +238,33 @@
         .stat-item .num { font-size: 24px; font-weight: 700; color: var(--primary-dark); }
         .stat-item .label { font-size: 12px; color: var(--text-light); margin-top: 2px; }
 
-        .word-list { list-style: none; max-height: 360px; overflow-y: auto; }
+        .word-list { list-style: none; max-height: 360px; overflow-y: auto; padding: 4px 0; }
         .word-list li {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 14px;
-            border-bottom: 1px solid #f0f0f0;
+            padding: 12px 14px;
+            margin: 4px 8px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #eef2f7 100%);
+            border-bottom: none;
+            transition: all 0.2s ease;
+        }
+        .word-list li:hover {
+            background: linear-gradient(135deg, #e8f4f8 0%, #e0ecf5 100%);
+            transform: translateX(3px);
+            box-shadow: 0 2px 8px rgba(74, 144, 164, 0.08);
         }
         .word-list li:last-child { border-bottom: none; }
-        .word-list .w-en { font-weight: 500; color: var(--primary-dark); }
-        .word-list .w-zh { color: var(--text-light); font-size: 13px; }
+        .word-list .w-en { font-weight: 600; color: var(--primary-dark); font-size: 15px; letter-spacing: 0.3px; }
+        .word-list .w-zh { color: var(--text-light); font-size: 13px; margin-top: 3px; }
         .word-list .w-level {
             font-size: 11px;
-            padding: 2px 10px;
-            border-radius: 10px;
+            padding: 3px 10px;
+            border-radius: 12px;
             background: var(--primary-light);
             color: var(--primary);
+            font-weight: 500;
         }
         .word-list .w-del {
             background: none;
@@ -597,18 +611,18 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
 
             <div id="wrongContent">
                 <div style="display:flex;gap:0;background:var(--border);border-radius:8px;padding:3px;margin-bottom:14px">
-                    <button class="btn btn-sm" style="flex:1;border:none;border-radius:6px;padding:6px;font-size:13px;font-weight:600" id="tabWrongToday" onclick="switchWrongTab('today')">📅 今日</button>
-                    <button class="btn btn-sm" style="flex:1;border:none;border-radius:6px;padding:6px;font-size:13px;font-weight:600;background:transparent;color:var(--text-light)" id="tabWrongAll" onclick="switchWrongTab('all')">📚 全部</button>
+                    <button class="btn btn-sm" style="flex:1;border:none;border-radius:10px;padding:8px 12px;font-size:13px;font-weight:600;background:var(--primary);color:#fff;box-shadow:0 2px 8px rgba(74,144,164,0.2)" id="tabWrongToday" onclick="switchWrongTab('today')">📅 今日</button>
+                    <button class="btn btn-sm" style="flex:1;border:none;border-radius:10px;padding:8px 12px;font-size:13px;font-weight:600;background:transparent;color:var(--text-light)" id="tabWrongAll" onclick="switchWrongTab('all')">📚 全部</button>
                 </div>
 
                 <div id="wrongTodayPanel">
                     <div style="margin-bottom:14px">
                         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-                            <span style="font-size:14px;color:var(--danger);font-weight:600">❌ 今日错词</span>
+                            <span style="font-size:14px;color:var(--danger);font-weight:600;background:rgba(201,123,123,0.1);padding:4px 10px;border-radius:8px">❌ 今日错词</span>
                             <span style="font-size:12px;color:var(--text-light)" id="todayWrongCount">0 个</span>
                         </div>
                         <ul class="word-list" id="todayWrongList" style="max-height:180px"></ul>
-                        <div id="todayWrongEmpty" style="text-align:center;padding:16px;color:var(--text-light);font-size:13px">今日暂无错词</div>
+                        <div id="todayWrongEmpty" style="text-align:center;padding:20px;color:var(--text-light);font-size:13px;background:rgba(201,123,123,0.05);border-radius:12px;border:1px dashed rgba(201,123,123,0.2)">今日暂无错词</div>
                         <div style="display:flex;gap:8px;margin-top:8px">
                             <button class="btn btn-primary btn-sm" onclick="practiceFromList('todayWrong')" id="btnTodayWrongReview" style="flex:1;display:none">📖 复习</button>
                             <button class="btn btn-outline btn-sm" onclick="clearWrongList('today')" id="btnTodayWrongClear" style="flex:1;display:none">🗑 清空</button>
@@ -616,11 +630,11 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
                     </div>
                     <div>
                         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-                            <span style="font-size:14px;color:var(--accent);font-weight:600">🔄 今日再看一次</span>
+                            <span style="font-size:14px;color:var(--accent);font-weight:600;background:rgba(232,168,124,0.1);padding:4px 10px;border-radius:8px">🔄 今日再看一次</span>
                             <span style="font-size:12px;color:var(--text-light)" id="todayAgainCount">0 个</span>
                         </div>
                         <ul class="word-list" id="todayAgainList" style="max-height:180px"></ul>
-                        <div id="todayAgainEmpty" style="text-align:center;padding:16px;color:var(--text-light);font-size:13px">今日暂无再看一次的单词</div>
+                        <div id="todayAgainEmpty" style="text-align:center;padding:20px;color:var(--text-light);font-size:13px;background:rgba(232,168,124,0.05);border-radius:12px;border:1px dashed rgba(232,168,124,0.2)">今日暂无再看一次的单词</div>
                         <div style="display:flex;gap:8px;margin-top:8px">
                             <button class="btn btn-primary btn-sm" onclick="practiceFromList('todayAgain')" id="btnTodayAgainReview" style="flex:1;display:none">📖 复习</button>
                             <button class="btn btn-outline btn-sm" onclick="clearWrongList('todayAgain')" id="btnTodayAgainClear" style="flex:1;display:none">🗑 清空</button>
@@ -631,11 +645,11 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
                 <div id="wrongAllPanel" class="hidden">
                     <div style="margin-bottom:14px">
                         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-                            <span style="font-size:14px;color:var(--danger);font-weight:600">❌ 全部错词</span>
+                            <span style="font-size:14px;color:var(--danger);font-weight:600;background:rgba(201,123,123,0.1);padding:4px 10px;border-radius:8px">❌ 全部错词</span>
                             <span style="font-size:12px;color:var(--text-light)" id="allWrongCount">0 个</span>
                         </div>
                         <ul class="word-list" id="allWrongList" style="max-height:180px"></ul>
-                        <div id="allWrongEmpty" style="text-align:center;padding:16px;color:var(--text-light);font-size:13px">暂无错词记录</div>
+                        <div id="allWrongEmpty" style="text-align:center;padding:20px;color:var(--text-light);font-size:13px;background:rgba(201,123,123,0.05);border-radius:12px;border:1px dashed rgba(201,123,123,0.2)">暂无错词记录</div>
                         <div style="display:flex;gap:8px;margin-top:8px">
                             <button class="btn btn-primary btn-sm" onclick="practiceFromList('allWrong')" id="btnAllWrongReview" style="flex:1;display:none">📖 复习</button>
                             <button class="btn btn-outline btn-sm" onclick="clearWrongList('all')" id="btnAllWrongClear" style="flex:1;display:none">🗑 清空</button>
@@ -643,11 +657,11 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
                     </div>
                     <div>
                         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-                            <span style="font-size:14px;color:var(--accent);font-weight:600">🔄 全部再看一次</span>
+                            <span style="font-size:14px;color:var(--accent);font-weight:600;background:rgba(232,168,124,0.1);padding:4px 10px;border-radius:8px">🔄 全部再看一次</span>
                             <span style="font-size:12px;color:var(--text-light)" id="allAgainCount">0 个</span>
                         </div>
                         <ul class="word-list" id="allAgainList" style="max-height:180px"></ul>
-                        <div id="allAgainEmpty" style="text-align:center;padding:16px;color:var(--text-light);font-size:13px">暂无再看一次的记录</div>
+                        <div id="allAgainEmpty" style="text-align:center;padding:20px;color:var(--text-light);font-size:13px;background:rgba(232,168,124,0.05);border-radius:12px;border:1px dashed rgba(232,168,124,0.2)">暂无再看一次的记录</div>
                         <div style="display:flex;gap:8px;margin-top:8px">
                             <button class="btn btn-primary btn-sm" onclick="practiceFromList('allAgain')" id="btnAllAgainReview" style="flex:1;display:none">📖 复习</button>
                             <button class="btn btn-outline btn-sm" onclick="clearWrongList('allAgain')" id="btnAllAgainClear" style="flex:1;display:none">🗑 清空</button>
@@ -1636,15 +1650,19 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         if (tab === 'today') {
             todayBtn.style.background = 'var(--primary)';
             todayBtn.style.color = '#fff';
+            todayBtn.style.boxShadow = '0 2px 8px rgba(74,144,164,0.2)';
             allBtn.style.background = 'transparent';
             allBtn.style.color = 'var(--text-light)';
+            allBtn.style.boxShadow = 'none';
             todayPanel.classList.remove('hidden');
             allPanel.classList.add('hidden');
         } else {
             allBtn.style.background = 'var(--primary)';
             allBtn.style.color = '#fff';
+            allBtn.style.boxShadow = '0 2px 8px rgba(74,144,164,0.2)';
             todayBtn.style.background = 'transparent';
             todayBtn.style.color = 'var(--text-light)';
+            todayBtn.style.boxShadow = 'none';
             allPanel.classList.remove('hidden');
             todayPanel.classList.add('hidden');
         }
@@ -1699,7 +1717,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             reviewBtn.style.display = '';
             clearBtn.style.display = '';
             list.innerHTML = words.map(function(w) {
-                return '<li class="word-item" style="display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-bottom:1px solid var(--border)">' +
+                return '<li class="word-item" style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px;margin:4px 8px;border-radius:12px;background:linear-gradient(135deg, #f8f9fa 0%, #eef2f7 100%);border-bottom:none;transition:all 0.2s ease">' +
                     '<div><span class="w-en">' + escHtml(w.word) + '</span><div class="w-zh">' + escHtml(w.translation) + '</div></div></li>';
             }).join('');
         }
