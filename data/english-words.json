@@ -83,9 +83,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 3,
-    "nextReviewDate": "2026-09-22",
-    "lastReviewDate": "2026-09-15"
+    "level": 4,
+    "nextReviewDate": "2026-10-13",
+    "lastReviewDate": "2026-09-28"
   },
   {
     "id": 1785328044629,
@@ -1869,9 +1869,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-04",
-    "level": 3,
-    "nextReviewDate": "2026-09-21",
-    "lastReviewDate": "2026-09-14",
+    "level": 4,
+    "nextReviewDate": "2026-10-13",
+    "lastReviewDate": "2026-09-28",
     "phonetic": ""
   },
   {
@@ -4372,9 +4372,9 @@
     "example": "The government has launched a new program to help college graduates find jobs.",
     "exampleTranslation": "政府启动了一个帮助大学毕业生找工作的新项目。",
     "createdDate": "2026-09-17",
-    "level": 0,
-    "nextReviewDate": "2026-09-22",
-    "lastReviewDate": "2026-09-21",
+    "level": 1,
+    "nextReviewDate": "2026-09-29",
+    "lastReviewDate": "2026-09-28",
     "phonetic": ""
   },
   {
