@@ -561,15 +561,6 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
     <div id="tab-wrong" class="hidden">
         <div class="card" id="wrongCard">
             <h2 style="color: var(--primary-dark); font-size: 18px; margin-bottom: 12px;">❌ 错词本</h2>
-            <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
-                <button class="btn btn-primary btn-sm" onclick="practiceWrongWords()" id="btnStartWrongReview">📖 复习错词</button>
-                <button class="btn btn-outline btn-sm" onclick="clearWrongLog()">🗑 清空记录</button>
-            </div>
-            <div class="stats-grid" style="margin-bottom:14px">
-                <div class="stat-item"><div class="num" id="wrongTotal">0</div><div class="label">错词总数</div></div>
-                <div class="stat-item"><div class="num" id="wrongAccuracy">0%</div><div class="label">正确率</div></div>
-                <div class="stat-item"><div class="num" id="wrongTop">0</div><div class="label">最易错(次)</div></div>
-            </div>
 
             <div id="wrongReviewArea" class="hidden">
                 <div style="margin-bottom:10px;display:flex;justify-content:space-between;align-items:center">
@@ -598,41 +589,70 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
                 </div>
                 <div id="wrongReviewEmpty" class="hidden" style="text-align:center;padding:20px">
                     <div style="font-size:36px;margin-bottom:8px">🎉</div>
-                    <div style="font-size:16px;color:var(--primary-dark);font-weight:600;margin-bottom:6px">错词复习完成！</div>
+                    <div style="font-size:16px;color:var(--primary-dark);font-weight:600;margin-bottom:6px">复习完成！</div>
                     <div style="font-size:13px;color:var(--text-light);margin-bottom:12px">记住了 <span id="wrongRememberCount">0</span> 个，没记住 <span id="wrongForgotCount">0</span> 个</div>
-                    <button class="btn btn-primary btn-sm" onclick="exitWrongReview()">返回错词列表</button>
+                    <button class="btn btn-primary btn-sm" onclick="exitWrongReview()">返回列表</button>
                 </div>
             </div>
 
-            <div id="wrongMainList">
-                <div id="wrongFilter" style="display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap">
-                    <button class="btn btn-sm" style="flex:1;background:var(--primary);color:#fff;border:none;border-radius:8px;padding:6px" onclick="renderWrongWords('all')">全部</button>
-                    <button class="btn btn-sm" style="flex:1;background:var(--danger);color:#fff;border:none;border-radius:8px;padding:6px;opacity:0.6" onclick="renderWrongWords('top')">高频错</button>
-                    <button class="btn btn-sm" style="flex:1;background:var(--success);color:#fff;border:none;border-radius:8px;padding:6px;opacity:0.6" onclick="renderWrongWords('recent')">近期错</button>
+            <div id="wrongContent">
+                <div style="display:flex;gap:0;background:var(--border);border-radius:8px;padding:3px;margin-bottom:14px">
+                    <button class="btn btn-sm" style="flex:1;border:none;border-radius:6px;padding:6px;font-size:13px;font-weight:600" id="tabWrongToday" onclick="switchWrongTab('today')">📅 今日</button>
+                    <button class="btn btn-sm" style="flex:1;border:none;border-radius:6px;padding:6px;font-size:13px;font-weight:600;background:transparent;color:var(--text-light)" id="tabWrongAll" onclick="switchWrongTab('all')">📚 全部</button>
                 </div>
-                <ul class="word-list" id="wrongList" style="max-height:400px"></ul>
-                <div id="wrongEmpty" class="hidden" style="text-align:center;padding:30px;color:var(--text-light);font-size:14px">
-                    ✅ 暂无错词，继续保持！
-                </div>
-            </div>
 
-            <div id="wrongSubLists" class="hidden">
-                <div style="margin-bottom:14px">
-                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-                        <span style="font-size:14px;color:var(--danger);font-weight:600">📅 今日错词</span>
-                        <span style="font-size:12px;color:var(--text-light)" id="todayWrongCount">0 个</span>
+                <div id="wrongTodayPanel">
+                    <div style="margin-bottom:14px">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span style="font-size:14px;color:var(--danger);font-weight:600">❌ 今日错词</span>
+                            <span style="font-size:12px;color:var(--text-light)" id="todayWrongCount">0 个</span>
+                        </div>
+                        <ul class="word-list" id="todayWrongList" style="max-height:180px"></ul>
+                        <div id="todayWrongEmpty" style="text-align:center;padding:16px;color:var(--text-light);font-size:13px">今日暂无错词</div>
+                        <div style="display:flex;gap:8px;margin-top:8px">
+                            <button class="btn btn-primary btn-sm" onclick="practiceFromList('todayWrong')" id="btnTodayWrongReview" style="flex:1;display:none">📖 复习</button>
+                            <button class="btn btn-outline btn-sm" onclick="clearWrongList('today')" id="btnTodayWrongClear" style="flex:1;display:none">🗑 清空</button>
+                        </div>
                     </div>
-                    <ul class="word-list" id="todayWrongList" style="max-height:200px"></ul>
-                    <div id="todayWrongEmpty" style="text-align:center;padding:16px;color:var(--text-light);font-size:13px">今日暂无错词</div>
+                    <div>
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span style="font-size:14px;color:var(--accent);font-weight:600">🔄 今日再看一次</span>
+                            <span style="font-size:12px;color:var(--text-light)" id="todayAgainCount">0 个</span>
+                        </div>
+                        <ul class="word-list" id="todayAgainList" style="max-height:180px"></ul>
+                        <div id="todayAgainEmpty" style="text-align:center;padding:16px;color:var(--text-light);font-size:13px">今日暂无再看一次的单词</div>
+                        <div style="display:flex;gap:8px;margin-top:8px">
+                            <button class="btn btn-primary btn-sm" onclick="practiceFromList('todayAgain')" id="btnTodayAgainReview" style="flex:1;display:none">📖 复习</button>
+                            <button class="btn btn-outline btn-sm" onclick="clearWrongList('todayAgain')" id="btnTodayAgainClear" style="flex:1;display:none">🗑 清空</button>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-                        <span style="font-size:14px;color:var(--accent);font-weight:600">🔄 再看一次</span>
-                        <button class="btn btn-sm btn-primary" onclick="practiceReviewAgainList()" id="btnPracticeAgain" style="padding:4px 12px;font-size:12px;display:none">复习这组</button>
-                        <span style="font-size:12px;color:var(--text-light)" id="reviewAgainCount">0 个</span>
+
+                <div id="wrongAllPanel" class="hidden">
+                    <div style="margin-bottom:14px">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span style="font-size:14px;color:var(--danger);font-weight:600">❌ 全部错词</span>
+                            <span style="font-size:12px;color:var(--text-light)" id="allWrongCount">0 个</span>
+                        </div>
+                        <ul class="word-list" id="allWrongList" style="max-height:180px"></ul>
+                        <div id="allWrongEmpty" style="text-align:center;padding:16px;color:var(--text-light);font-size:13px">暂无错词记录</div>
+                        <div style="display:flex;gap:8px;margin-top:8px">
+                            <button class="btn btn-primary btn-sm" onclick="practiceFromList('allWrong')" id="btnAllWrongReview" style="flex:1;display:none">📖 复习</button>
+                            <button class="btn btn-outline btn-sm" onclick="clearWrongList('all')" id="btnAllWrongClear" style="flex:1;display:none">🗑 清空</button>
+                        </div>
                     </div>
-                    <ul class="word-list" id="reviewAgainList" style="max-height:200px"></ul>
-                    <div id="reviewAgainEmpty" style="text-align:center;padding:16px;color:var(--text-light);font-size:13px">暂无再看一次的单词</div>
+                    <div>
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span style="font-size:14px;color:var(--accent);font-weight:600">🔄 全部再看一次</span>
+                            <span style="font-size:12px;color:var(--text-light)" id="allAgainCount">0 个</span>
+                        </div>
+                        <ul class="word-list" id="allAgainList" style="max-height:180px"></ul>
+                        <div id="allAgainEmpty" style="text-align:center;padding:16px;color:var(--text-light);font-size:13px">暂无再看一次的记录</div>
+                        <div style="display:flex;gap:8px;margin-top:8px">
+                            <button class="btn btn-primary btn-sm" onclick="practiceFromList('allAgain')" id="btnAllAgainReview" style="flex:1;display:none">📖 复习</button>
+                            <button class="btn btn-outline btn-sm" onclick="clearWrongList('allAgain')" id="btnAllAgainClear" style="flex:1;display:none">🗑 清空</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -703,8 +723,6 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         queue: [],
         index: 0,
         answerShown: false,
-        todayWrongWords: [],
-        reviewAgainWords: [],
         rememberCount: 0,
         forgotCount: 0
     };
@@ -1496,37 +1514,15 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         var weak = getWeakWords().filter(function(x) { return x.forgot > 0; });
         if (weak.length === 0) { showToast('✅ 没有错词需要复习'); return; }
         weak.sort(function(a,b) { return b.forgot - a.forgot; });
-        state.reviewQueue = shuffle(weak.map(function(x) { return x.word; }));
-        state.reviewIndex = 0;
-        state.currentAnswerShown = false;
-        window._wrongPractice = true;
-        switchTab('review');
-        var welcome = document.getElementById('reviewWelcome');
-        var card = document.getElementById('reviewCard');
-        var empty = document.getElementById('reviewEmpty');
-        welcome.classList.add('hidden');
-        empty.classList.add('hidden');
-        card.classList.remove('hidden');
-        showCurrentWord();
-        updateProgress();
-        showToast('📖 错词复习：共 ' + state.reviewQueue.length + ' 个');
-    }
-
-    function practiceWrongWords() {
-        var weak = getWeakWords().filter(function(x) { return x.forgot > 0; });
-        if (weak.length === 0) { showToast('✅ 没有错词需要复习'); return; }
-        weak.sort(function(a,b) { return b.forgot - a.forgot; });
         wrongState.queue = shuffle(weak.map(function(x) { return x.word; }));
         wrongState.index = 0;
         wrongState.answerShown = false;
-        wrongState.todayWrongWords = [];
-        wrongState.reviewAgainWords = [];
         wrongState.rememberCount = 0;
         wrongState.forgotCount = 0;
-        document.getElementById('wrongMainList').classList.add('hidden');
-        document.getElementById('wrongSubLists').classList.add('hidden');
+        document.getElementById('wrongContent').classList.add('hidden');
         document.getElementById('wrongReviewArea').classList.remove('hidden');
-        document.getElementById('btnStartWrongReview').classList.add('hidden');
+        document.getElementById('wrongReviewEmpty').classList.add('hidden');
+        document.getElementById('wrongReviewCard').classList.remove('hidden');
         wrongShowCurrentWord();
         showToast('📖 错词复习：共 ' + wrongState.queue.length + ' 个');
     }
@@ -1600,20 +1596,14 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         addReviewLog(w.id, 'forgot');
         saveWords();
         wrongState.forgotCount++;
-        if (!wrongState.todayWrongWords.some(function(x) { return x.id === w.id; })) {
-            wrongState.todayWrongWords.push(w);
-        }
         wrongState.index++;
-        showToast('没记住，已加入今日错词');
+        showToast('没记住');
         wrongShowCurrentWord();
     }
 
     function wrongMarkReviewAgain() {
         if (!wrongState.answerShown) { showToast('先看答案再判断'); return; }
         var w = wrongState.queue[wrongState.index];
-        if (!wrongState.reviewAgainWords.some(function(x) { return x.id === w.id; })) {
-            wrongState.reviewAgainWords.push(w);
-        }
         addReviewLog(w.id, 'review_again');
         saveWords();
         wrongState.index++;
@@ -1628,80 +1618,135 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         document.getElementById('wrongForgotCount').textContent = wrongState.forgotCount;
         document.getElementById('wrongProgressFill').style.width = '100%';
         document.getElementById('wrongProgressText').textContent = wrongState.queue.length + ' / ' + wrongState.queue.length;
-        renderWrongSubLists();
     }
 
     function exitWrongReview() {
         document.getElementById('wrongReviewArea').classList.add('hidden');
         document.getElementById('wrongReviewEmpty').classList.add('hidden');
         document.getElementById('wrongReviewCard').classList.remove('hidden');
-        document.getElementById('btnStartWrongReview').classList.remove('hidden');
-        if (wrongState.todayWrongWords.length > 0 || wrongState.reviewAgainWords.length > 0) {
-            document.getElementById('wrongSubLists').classList.remove('hidden');
-            document.getElementById('wrongMainList').classList.add('hidden');
-            renderWrongSubLists();
-        } else {
-            document.getElementById('wrongSubLists').classList.add('hidden');
-            document.getElementById('wrongMainList').classList.remove('hidden');
-            renderWrongWords();
-        }
+        document.getElementById('wrongContent').classList.remove('hidden');
+        renderWrongPage();
     }
 
-    function renderWrongSubLists() {
-        var twl = document.getElementById('todayWrongList');
-        var twc = document.getElementById('todayWrongCount');
-        var twe = document.getElementById('todayWrongEmpty');
-        var rwl = document.getElementById('reviewAgainList');
-        var rwc = document.getElementById('reviewAgainCount');
-        var rwe = document.getElementById('reviewAgainEmpty');
-        var btnP = document.getElementById('btnPracticeAgain');
-        twc.textContent = wrongState.todayWrongWords.length + ' 个';
-        if (wrongState.todayWrongWords.length === 0) {
-            twl.innerHTML = '';
-            twe.classList.remove('hidden');
+    function switchWrongTab(tab) {
+        var todayBtn = document.getElementById('tabWrongToday');
+        var allBtn = document.getElementById('tabWrongAll');
+        var todayPanel = document.getElementById('wrongTodayPanel');
+        var allPanel = document.getElementById('wrongAllPanel');
+        if (tab === 'today') {
+            todayBtn.style.background = 'var(--primary)';
+            todayBtn.style.color = '#fff';
+            allBtn.style.background = 'transparent';
+            allBtn.style.color = 'var(--text-light)';
+            todayPanel.classList.remove('hidden');
+            allPanel.classList.add('hidden');
         } else {
-            twe.classList.add('hidden');
-            twl.innerHTML = wrongState.todayWrongWords.map(function(w) {
+            allBtn.style.background = 'var(--primary)';
+            allBtn.style.color = '#fff';
+            todayBtn.style.background = 'transparent';
+            todayBtn.style.color = 'var(--text-light)';
+            allPanel.classList.remove('hidden');
+            todayPanel.classList.add('hidden');
+        }
+        renderWrongPage();
+    }
+
+    function getWrongAndAgainWords() {
+        var logs = getReviewLogs();
+        var todayLogs = logs.filter(function(l) { return l.date === state.todayStr; });
+        var todayForgot = todayLogs.filter(function(l) { return l.result === 'forgot'; });
+        var todayAgain = todayLogs.filter(function(l) { return l.result === 'review_again'; });
+        var allForgot = logs.filter(function(l) { return l.result === 'forgot'; });
+        var allAgain = logs.filter(function(l) { return l.result === 'review_again'; });
+        function toWords(logArr) {
+            var seen = {};
+            return logArr.map(function(l) {
+                var w = state.words.find(function(x) { return x.id === l.wordId; });
+                if (w && !seen[w.id]) { seen[w.id] = true; return w; }
+                return null;
+            }).filter(Boolean);
+        }
+        return {
+            todayWrong: toWords(todayForgot),
+            todayAgain: toWords(todayAgain),
+            allWrong: toWords(allForgot),
+            allAgain: toWords(allAgain)
+        };
+    }
+
+    function renderWrongPage() {
+        var data = getWrongAndAgainWords();
+        renderWrongList('todayWrongList', 'todayWrongEmpty', 'todayWrongCount', 'btnTodayWrongReview', 'btnTodayWrongClear', data.todayWrong);
+        renderWrongList('todayAgainList', 'todayAgainEmpty', 'todayAgainCount', 'btnTodayAgainReview', 'btnTodayAgainClear', data.todayAgain);
+        renderWrongList('allWrongList', 'allWrongEmpty', 'allWrongCount', 'btnAllWrongReview', 'btnAllWrongClear', data.allWrong);
+        renderWrongList('allAgainList', 'allAgainEmpty', 'allAgainCount', 'btnAllAgainReview', 'btnAllAgainClear', data.allAgain);
+    }
+
+    function renderWrongList(listId, emptyId, countId, reviewBtnId, clearBtnId, words) {
+        var list = document.getElementById(listId);
+        var empty = document.getElementById(emptyId);
+        var count = document.getElementById(countId);
+        var reviewBtn = document.getElementById(reviewBtnId);
+        var clearBtn = document.getElementById(clearBtnId);
+        count.textContent = words.length + ' 个';
+        if (words.length === 0) {
+            list.innerHTML = '';
+            empty.classList.remove('hidden');
+            reviewBtn.style.display = 'none';
+            clearBtn.style.display = 'none';
+        } else {
+            empty.classList.add('hidden');
+            reviewBtn.style.display = '';
+            clearBtn.style.display = '';
+            list.innerHTML = words.map(function(w) {
                 return '<li class="word-item" style="display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-bottom:1px solid var(--border)">' +
                     '<div><span class="w-en">' + escHtml(w.word) + '</span><div class="w-zh">' + escHtml(w.translation) + '</div></div></li>';
             }).join('');
         }
-        rwc.textContent = wrongState.reviewAgainWords.length + ' 个';
-        if (wrongState.reviewAgainWords.length === 0) {
-            rwl.innerHTML = '';
-            rwe.classList.remove('hidden');
-            btnP.style.display = 'none';
-        } else {
-            rwe.classList.add('hidden');
-            btnP.style.display = '';
-            rwl.innerHTML = wrongState.reviewAgainWords.map(function(w) {
-                return '<li class="word-item" style="display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-bottom:1px solid var(--border)">' +
-                    '<div><span class="w-en">' + escHtml(w.word) + '</span><div class="w-zh">' + escHtml(w.translation) + '</div></div></li>';
-            }).join('');
-        }
     }
 
-    function practiceReviewAgainList() {
-        if (wrongState.reviewAgainWords.length === 0) { showToast('没有需要复习的单词'); return; }
-        wrongState.queue = wrongState.reviewAgainWords.slice();
-        wrongState.reviewAgainWords = [];
+    function practiceFromList(type) {
+        var data = getWrongAndAgainWords();
+        var words;
+        if (type === 'todayWrong') words = data.todayWrong;
+        else if (type === 'todayAgain') words = data.todayAgain;
+        else if (type === 'allWrong') words = data.allWrong;
+        else if (type === 'allAgain') words = data.allAgain;
+        if (!words || words.length === 0) { showToast('没有单词可复习'); return; }
+        wrongState.queue = shuffle(words.slice());
         wrongState.index = 0;
         wrongState.answerShown = false;
         wrongState.rememberCount = 0;
         wrongState.forgotCount = 0;
-        document.getElementById('wrongSubLists').classList.add('hidden');
+        document.getElementById('wrongContent').classList.add('hidden');
         document.getElementById('wrongReviewArea').classList.remove('hidden');
         document.getElementById('wrongReviewEmpty').classList.add('hidden');
         document.getElementById('wrongReviewCard').classList.remove('hidden');
         wrongShowCurrentWord();
-        showToast('🔄 再看一次：共 ' + wrongState.queue.length + ' 个');
+        showToast('📖 复习：共 ' + wrongState.queue.length + ' 个');
     }
 
-    function clearWrongLog() {
-        if (!confirm('确定清空所有错词记录？')) return;
-        localStorage.removeItem(REVIEW_LOG_KEY);
-        renderWrongWords();
-        showToast('错词记录已清空');
+    function clearWrongList(type) {
+        if (!confirm('确定清空该列表的记录？')) return;
+        var logs = getReviewLogs();
+        var targetResult;
+        var targetDate;
+        if (type === 'today') { targetResult = 'forgot'; targetDate = state.todayStr; }
+        else if (type === 'todayAgain') { targetResult = 'review_again'; targetDate = state.todayStr; }
+        else if (type === 'all') { targetResult = 'forgot'; targetDate = null; }
+        else if (type === 'allAgain') { targetResult = 'review_again'; targetDate = null; }
+        logs = logs.filter(function(l) {
+            if (l.result !== targetResult) return true;
+            if (targetDate && l.date !== targetDate) return true;
+            return false;
+        });
+        localStorage.setItem(REVIEW_LOG_KEY, JSON.stringify(logs));
+        renderWrongPage();
+        showToast('已清空');
+    }
+
+    function renderWrongWords() {
+        renderWrongPage();
     }
 
     function deleteWord(id) {
