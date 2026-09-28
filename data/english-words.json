@@ -886,9 +886,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 0,
-    "nextReviewDate": "2026-09-21",
-    "lastReviewDate": "2026-09-20"
+    "level": 1,
+    "nextReviewDate": "2026-09-29",
+    "lastReviewDate": "2026-09-28"
   },
   {
     "id": 1785328044707,
@@ -1494,9 +1494,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-02",
-    "level": 2,
-    "nextReviewDate": "2026-09-23",
-    "lastReviewDate": "2026-09-20",
+    "level": 3,
+    "nextReviewDate": "2026-10-05",
+    "lastReviewDate": "2026-09-28",
     "phonetic": "",
     "pos": ""
   },
