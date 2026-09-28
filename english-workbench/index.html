@@ -977,9 +977,24 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             return;
         }
 
-        const exists = state.words.some(w => w.word.toLowerCase() === word.toLowerCase());
-        if (exists) {
-            showToast('这个单词已存在');
+        const existIdx = state.words.findIndex(w => w.word.toLowerCase() === word.toLowerCase());
+        const pos = posHint.replace(/^📎 词性：/, '').replace(/ · .*$/, '').replace(/^✅.*$/, '').replace(/^⚠️.*$/, '').trim();
+        if (existIdx >= 0) {
+            const existing = state.words[existIdx];
+            existing.translation = translation;
+            existing.example = example;
+            existing.exampleTranslation = exampleTranslation;
+            if (phonetic) existing.phonetic = phonetic;
+            if (pos) existing.pos = pos;
+            showToast('已覆盖更新：' + word);
+            saveWords();
+            document.getElementById('inputWord').value = '';
+            document.getElementById('inputTranslation').value = '';
+            document.getElementById('inputTranslation').dataset.phonetic = '';
+            document.getElementById('inputExample').value = '';
+            document.getElementById('inputExampleTranslation').value = '';
+            document.getElementById('autoFillStatus').textContent = '';
+            updateDailyStats();
             return;
         }
 
@@ -994,7 +1009,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             nextReviewDate: state.todayStr,
             lastReviewDate: null,
             phonetic: phonetic,
-            pos: posHint.replace(/^📎 词性：/, '').replace(/ · .*$/, '').replace(/^✅.*$/, '').replace(/^⚠️.*$/, '').trim()
+            pos: pos
         };
         state.words.push(newWord);
 
@@ -1525,11 +1540,18 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         if (window._batchEntries && window._batchEntries.length > 0) {
             var entries = window._batchEntries;
             window._batchEntries = null;
-            var addedAuto = 0, skippedAuto = 0;
+            var addedAuto = 0, updatedAuto = 0;
             entries.forEach(function(e) {
                 if (!e.word || !e.translation) return;
-                var exists = state.words.some(function(w) { return w.word.toLowerCase() === e.word.toLowerCase(); });
-                if (exists) { skippedAuto++; return; }
+                var existIdx = state.words.findIndex(function(w) { return w.word.toLowerCase() === e.word.toLowerCase(); });
+                if (existIdx >= 0) {
+                    state.words[existIdx].translation = e.translation;
+                    state.words[existIdx].example = e.example || '';
+                    state.words[existIdx].exampleTranslation = e.exampleTranslation || '';
+                    if (e.phonetic) state.words[existIdx].phonetic = e.phonetic;
+                    updatedAuto++;
+                    return;
+                }
                 var w = {
                     id: Date.now() + addedAuto,
                     word: e.word,
@@ -1546,8 +1568,8 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
                 fetchPhonetic(w);
                 addedAuto++;
             });
-            if (addedAuto > 0) { saveWords(); updateDailyStats(); }
-            showToast('✅ 导入 ' + addedAuto + ' 个单词' + (skippedAuto ? '，跳过 ' + skippedAuto + ' 个重复' : ''));
+            if (addedAuto > 0 || updatedAuto > 0) { saveWords(); updateDailyStats(); }
+            showToast('✅ 导入 ' + addedAuto + ' 个单词' + (updatedAuto ? '，覆盖更新 ' + updatedAuto + ' 个' : ''));
             document.getElementById('batchInput').value = '';
             document.getElementById('batchResult').classList.add('hidden');
             return;
@@ -1556,7 +1578,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         const text = document.getElementById('batchInput').value.trim();
 
         const lines = text.split('\n').map(l => l.trim()).filter(l => l);
-        let added = 0, skipped = 0, errors = [];
+        let added = 0, updated = 0, errors = [];
 
         lines.forEach((line, idx) => {
             let parts;
@@ -1582,8 +1604,14 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
                 return;
             }
 
-            const exists = state.words.some(w => w.word.toLowerCase() === word.toLowerCase());
-            if (exists) { skipped++; return; }
+            const existIdx = state.words.findIndex(w => w.word.toLowerCase() === word.toLowerCase());
+            if (existIdx >= 0) {
+                state.words[existIdx].translation = translation;
+                state.words[existIdx].example = example;
+                state.words[existIdx].exampleTranslation = exampleTranslation;
+                updated++;
+                return;
+            }
 
             const w = {
                 id: Date.now() + added,
@@ -1610,7 +1638,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         result.innerHTML = '';
         const msgs = [];
         if (added > 0) msgs.push('✅ 成功导入 <strong>' + added + '</strong> 个单词');
-        if (skipped > 0) msgs.push('⏭ 跳过重复 <strong>' + skipped + '</strong> 个');
+        if (updated > 0) msgs.push('🔄 覆盖更新 <strong>' + updated + '</strong> 个重复单词');
         if (errors.length > 0) msgs.push('⚠️ ' + errors.slice(0, 3).join('<br>') + (errors.length > 3 ? '<br>...还有 ' + (errors.length-3) + ' 条错误' : ''));
         result.innerHTML = msgs.join('<br>');
 
