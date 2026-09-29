@@ -1095,9 +1095,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 3,
-    "nextReviewDate": "2026-09-27",
-    "lastReviewDate": "2026-09-20"
+    "level": 4,
+    "nextReviewDate": "2026-10-14",
+    "lastReviewDate": "2026-09-29"
   },
   {
     "id": 1785328044731,
@@ -1183,9 +1183,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 3,
-    "nextReviewDate": "2026-09-27",
-    "lastReviewDate": "2026-09-20"
+    "level": 4,
+    "nextReviewDate": "2026-10-14",
+    "lastReviewDate": "2026-09-29"
   },
   {
     "id": 1785328044739,
@@ -1260,9 +1260,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-30",
-    "level": 3,
-    "nextReviewDate": "2026-09-25",
-    "lastReviewDate": "2026-09-18",
+    "level": 4,
+    "nextReviewDate": "2026-10-14",
+    "lastReviewDate": "2026-09-29",
     "phonetic": "/dɪˈpɛndənt/",
     "pos": "📎 noun, adjective"
   },
@@ -1677,9 +1677,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-04",
-    "level": 2,
-    "nextReviewDate": "2026-09-20",
-    "lastReviewDate": "2026-09-17",
+    "level": 3,
+    "nextReviewDate": "2026-10-06",
+    "lastReviewDate": "2026-09-29",
     "phonetic": ""
   },
   {
@@ -2337,9 +2337,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-12",
-    "level": 3,
-    "nextReviewDate": "2026-09-25",
-    "lastReviewDate": "2026-09-18",
+    "level": 4,
+    "nextReviewDate": "2026-10-14",
+    "lastReviewDate": "2026-09-29",
     "phonetic": ""
   },
   {
@@ -3178,8 +3178,8 @@
     "exampleTranslation": "这种情况需要立即采取行动。",
     "createdDate": "2026-09-15",
     "level": 0,
-    "nextReviewDate": "2026-09-15",
-    "lastReviewDate": null,
+    "nextReviewDate": "2026-09-30",
+    "lastReviewDate": "2026-09-29",
     "phonetic": ""
   },
   {
