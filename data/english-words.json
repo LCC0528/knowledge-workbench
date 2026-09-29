@@ -5180,5 +5180,17 @@
     "nextReviewDate": "2026-09-29",
     "lastReviewDate": null,
     "phonetic": ""
+  },
+  {
+    "id": 1790687060119,
+    "word": "approximately",
+    "translation": "adv. 大约，大概，近于 (副词，无变形) 【易混淆词：about, roughly, nearly】【派生词：approximate (adj. 大约的，接近的), approximation (n. 近似值)】",
+    "example": "The flight takes approximately three hours from Shanghai to Beijing.",
+    "exampleTranslation": "从上海到北京的航班大约需要三个小时。(词根：proxim (最接近的) / 构词：ap- (向) + proxim (最接近的) + -ate (形容词后缀) + -ly (副词后缀) → 接近地 → 大约)",
+    "createdDate": "2026-09-29",
+    "level": 0,
+    "nextReviewDate": "2026-09-29",
+    "lastReviewDate": null,
+    "phonetic": ""
   }
 ]
