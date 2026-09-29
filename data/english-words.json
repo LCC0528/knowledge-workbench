@@ -897,9 +897,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 2,
-    "nextReviewDate": "2026-09-18",
-    "lastReviewDate": "2026-09-15"
+    "level": 3,
+    "nextReviewDate": "2026-10-06",
+    "lastReviewDate": "2026-09-29"
   },
   {
     "id": 1785328044709,
@@ -1150,9 +1150,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 3,
-    "nextReviewDate": "2026-09-24",
-    "lastReviewDate": "2026-09-17"
+    "level": 4,
+    "nextReviewDate": "2026-10-14",
+    "lastReviewDate": "2026-09-29"
   },
   {
     "id": 1785328044736,
@@ -2949,9 +2949,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-30",
-    "level": 3,
-    "nextReviewDate": "2026-09-27",
-    "lastReviewDate": "2026-09-20",
+    "level": 4,
+    "nextReviewDate": "2026-10-14",
+    "lastReviewDate": "2026-09-29",
     "phonetic": ""
   },
   {
@@ -5130,6 +5130,18 @@
     "createdDate": "2026-09-28",
     "level": 0,
     "nextReviewDate": "2026-09-28",
+    "lastReviewDate": null,
+    "phonetic": ""
+  },
+  {
+    "id": 1790686707792,
+    "word": "research",
+    "translation": "n. 研究，调查；v. 研究，调查 (research-researched-researched) 【易混淆词：search, study, survey】【派生词：researcher (n. 研究员), researchable (adj. 可研究的)】",
+    "example": "The scientist has been conducting research on renewable energy for many years.",
+    "exampleTranslation": "这位科学家多年来一直在对可再生能源进行研究。(词根：search (搜寻) / 构词：re- (反复/再) + search (搜寻) → 反复搜寻 → 研究，调查)",
+    "createdDate": "2026-09-29",
+    "level": 0,
+    "nextReviewDate": "2026-09-29",
     "lastReviewDate": null,
     "phonetic": ""
   }
