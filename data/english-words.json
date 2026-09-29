@@ -5156,5 +5156,29 @@
     "nextReviewDate": "2026-09-29",
     "lastReviewDate": null,
     "phonetic": ""
+  },
+  {
+    "id": 1790686822189,
+    "word": "maximize",
+    "translation": "v. 最大化；使增至最大限度 (maximize-maximized-maximized) 【易混淆词：minimize (最小化), enlarge (扩大), optimize (优化)】【派生词：maximum (n. 最大值 adj. 最大的), maximization (n. 最大化)】",
+    "example": "To maximize profits, the company decided to cut down on unnecessary expenses.",
+    "exampleTranslation": "为了最大化利润，公司决定削减不必要的开支。(词根：maxim (最大) / 构词：maxim (最大) + -ize (使...) → 使最大化)",
+    "createdDate": "2026-09-29",
+    "level": 0,
+    "nextReviewDate": "2026-09-29",
+    "lastReviewDate": null,
+    "phonetic": ""
+  },
+  {
+    "id": 1790686988725,
+    "word": "actually",
+    "translation": "adv. 实际上，事实上；居然，竟然 (副词，无变形) 【易混淆词：currently, truly, in fact】【派生词：actual (adj. 实际的，真实的), actuality (n. 现实，实际情况), actualize (v. 实现)】",
+    "example": "He looks very young, but he is actually over forty years old.",
+    "exampleTranslation": "他看起来很年轻，但实际上已经四十多岁了。(词根：act (做，行动) / 构词：act (做，行动) + -ual (形容词后缀) + -ly (副词后缀) → 实际地，事实上)",
+    "createdDate": "2026-09-29",
+    "level": 0,
+    "nextReviewDate": "2026-09-29",
+    "lastReviewDate": null,
+    "phonetic": ""
   }
 ]
