@@ -5192,5 +5192,29 @@
     "nextReviewDate": "2026-09-29",
     "lastReviewDate": null,
     "phonetic": ""
+  },
+  {
+    "id": 1790687087482,
+    "word": "crucial",
+    "translation": "adj. 至关重要的，决定性的 (形容词，无变形) 【易混淆词：critical, vital, essential, significant】【派生词：crucially (adv. 至关重要地)】",
+    "example": "Teamwork is crucial to the success of the project.",
+    "exampleTranslation": "团队合作对项目的成功至关重要。(词根：cruc (十字/交叉) / 构词：cruc (十字/交叉) + -ial (形容词后缀) → 处在十字路口的 → 决定性的，至关重要的)",
+    "createdDate": "2026-09-29",
+    "level": 0,
+    "nextReviewDate": "2026-09-29",
+    "lastReviewDate": null,
+    "phonetic": ""
+  },
+  {
+    "id": 1790687591144,
+    "word": "install",
+    "translation": "v. 安装；任命；安顿 (install-installed-installed) 【易混淆词：equip (装备), fix (修理), setup (设置)】【派生词：installation (n. 安装；装置；就职), installer (n. 安装者/安装程序)】",
+    "example": "You need to install this application before you can use its full features.",
+    "exampleTranslation": "在使用其全部功能之前，你需要先安装这个应用程序。(词根：stall (站立/位置) / 构词：in- (进入) + stall (站立/位置) → 安置于内 → 安装；任命)",
+    "createdDate": "2026-09-29",
+    "level": 0,
+    "nextReviewDate": "2026-09-29",
+    "lastReviewDate": null,
+    "phonetic": ""
   }
 ]
