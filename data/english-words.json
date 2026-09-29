@@ -2457,9 +2457,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-30",
-    "level": 2,
-    "nextReviewDate": "2026-09-27",
-    "lastReviewDate": "2026-09-24",
+    "level": 3,
+    "nextReviewDate": "2026-10-06",
+    "lastReviewDate": "2026-09-29",
     "phonetic": ""
   },
   {
@@ -5607,6 +5607,18 @@
     "translation": "n. 原则，原理；准则 (名词，无变形) 【易混淆词：principal (主要的/校长)】【派生词：principled (adj. 有原则的)】",
     "example": "He is a man of principle and never tells lies.",
     "exampleTranslation": "他是一个有原则的人，从不说谎。(词根：prin (第一) / 构词：prin (第一) + cip (拿) + -le → 拿第一的东西 → 原则)",
+    "createdDate": "2026-09-29",
+    "level": 0,
+    "nextReviewDate": "2026-09-29",
+    "lastReviewDate": null,
+    "phonetic": ""
+  },
+  {
+    "id": 1790689142862,
+    "word": "scenery",
+    "translation": "n. 风景，景色；舞台布景 (名词，无变形) 【易混淆词：scene (场景), view (视野/景色), landscape (风景)】【派生词：scenic (adj. 风景优美的), scenically (adv. 风景优美地)】",
+    "example": "The scenery along the river is so beautiful that it attracts thousands of tourists every year.",
+    "exampleTranslation": "沿河的风景如此美丽，以至于每年吸引成千上万的游客。(词根：scen (场景) / 构词：scene (场景) + -ry (名词后缀，表总称) → 风景；舞台布景)",
     "createdDate": "2026-09-29",
     "level": 0,
     "nextReviewDate": "2026-09-29",
