@@ -963,9 +963,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 0,
-    "nextReviewDate": "2026-09-29",
-    "lastReviewDate": "2026-09-28"
+    "level": 1,
+    "nextReviewDate": "2026-10-01",
+    "lastReviewDate": "2026-09-30"
   },
   {
     "id": 1785328044715,
@@ -2229,9 +2229,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-12",
-    "level": 3,
-    "nextReviewDate": "2026-09-21",
-    "lastReviewDate": "2026-09-14",
+    "level": 4,
+    "nextReviewDate": "2026-10-15",
+    "lastReviewDate": "2026-09-30",
     "phonetic": ""
   },
   {
@@ -4396,9 +4396,9 @@
     "example": "Her performance in the final exam was excellent, which surprised all her teachers.",
     "exampleTranslation": "她在期末考试中的表现非常出色，这让所有老师都很惊讶。",
     "createdDate": "2026-09-17",
-    "level": 0,
-    "nextReviewDate": "2026-09-17",
-    "lastReviewDate": null,
+    "level": 1,
+    "nextReviewDate": "2026-10-01",
+    "lastReviewDate": "2026-09-30",
     "phonetic": ""
   },
   {
