@@ -1312,9 +1312,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-02",
-    "level": 4,
-    "nextReviewDate": "2026-09-30",
-    "lastReviewDate": "2026-09-15",
+    "level": 5,
+    "nextReviewDate": "2026-10-30",
+    "lastReviewDate": "2026-09-30",
     "phonetic": "",
     "pos": ""
   },
@@ -4660,9 +4660,9 @@
     "example": "The birth rate in this country has been on the decline in recent years.",
     "exampleTranslation": "近年来，这个国家的出生率一直在下降。(词根：clin (倾斜) / 构词：de- (向下) + clin (倾斜) + -e → 向下倾斜 → 下降；衰退)",
     "createdDate": "2026-09-20",
-    "level": 0,
-    "nextReviewDate": "2026-09-22",
-    "lastReviewDate": "2026-09-21",
+    "level": 1,
+    "nextReviewDate": "2026-10-01",
+    "lastReviewDate": "2026-09-30",
     "phonetic": ""
   },
   {
