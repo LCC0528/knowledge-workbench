@@ -424,9 +424,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 3,
-    "nextReviewDate": "2026-09-29",
-    "lastReviewDate": "2026-09-22"
+    "level": 4,
+    "nextReviewDate": "2026-10-17",
+    "lastReviewDate": "2026-10-02"
   },
   {
     "id": 1785328044661,
@@ -5176,9 +5176,9 @@
     "example": "He looks very young, but he is actually over forty years old.",
     "exampleTranslation": "他看起来很年轻，但实际上已经四十多岁了。(词根：act (做，行动) / 构词：act (做，行动) + -ual (形容词后缀) + -ly (副词后缀) → 实际地，事实上)",
     "createdDate": "2026-09-29",
-    "level": 0,
-    "nextReviewDate": "2026-09-29",
-    "lastReviewDate": null,
+    "level": 1,
+    "nextReviewDate": "2026-10-03",
+    "lastReviewDate": "2026-10-02",
     "phonetic": ""
   },
   {
