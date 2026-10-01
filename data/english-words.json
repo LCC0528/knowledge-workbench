@@ -1351,9 +1351,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-02",
-    "level": 2,
-    "nextReviewDate": "2026-09-20",
-    "lastReviewDate": "2026-09-17",
+    "level": 3,
+    "nextReviewDate": "2026-10-09",
+    "lastReviewDate": "2026-10-02",
     "phonetic": "",
     "pos": ""
   },
@@ -4120,9 +4120,9 @@
     "example": "Please buckle your seatbelt; we are encountering some turbulence.",
     "exampleTranslation": "请扣好安全带；我们遇到了气流颠簸。",
     "createdDate": "2026-09-17",
-    "level": 0,
-    "nextReviewDate": "2026-09-17",
-    "lastReviewDate": null,
+    "level": 1,
+    "nextReviewDate": "2026-10-03",
+    "lastReviewDate": "2026-10-02",
     "phonetic": ""
   },
   {
