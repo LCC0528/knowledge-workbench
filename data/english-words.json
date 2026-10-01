@@ -1216,9 +1216,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 1,
-    "nextReviewDate": "2026-10-01",
-    "lastReviewDate": "2026-09-30"
+    "level": 2,
+    "nextReviewDate": "2026-10-05",
+    "lastReviewDate": "2026-10-02"
   },
   {
     "id": 1785328044742,
@@ -3238,8 +3238,8 @@
     "exampleTranslation": "面对突如其来的危机，政府立即采取了行动以稳定经济。",
     "createdDate": "2026-09-15",
     "level": 0,
-    "nextReviewDate": "2026-09-29",
-    "lastReviewDate": "2026-09-28",
+    "nextReviewDate": "2026-10-03",
+    "lastReviewDate": "2026-10-02",
     "phonetic": ""
   },
   {
@@ -3320,9 +3320,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 2,
-    "nextReviewDate": "2026-10-01",
-    "lastReviewDate": "2026-09-28"
+    "level": 3,
+    "nextReviewDate": "2026-10-09",
+    "lastReviewDate": "2026-10-02"
   },
   {
     "id": 1785328044708,
