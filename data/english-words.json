@@ -2133,9 +2133,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-12",
-    "level": 0,
-    "nextReviewDate": "2026-09-22",
-    "lastReviewDate": "2026-09-21",
+    "level": 1,
+    "nextReviewDate": "2026-10-03",
+    "lastReviewDate": "2026-10-02",
     "phonetic": ""
   },
   {
@@ -2265,9 +2265,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-12",
-    "level": 1,
-    "nextReviewDate": "2026-09-18",
-    "lastReviewDate": "2026-09-17",
+    "level": 2,
+    "nextReviewDate": "2026-10-05",
+    "lastReviewDate": "2026-10-02",
     "phonetic": ""
   },
   {
@@ -5681,8 +5681,8 @@
     "exampleTranslation": "定期的体育锻炼对你的身体和心灵都有好处。(词根：phys (自然；身体) / 构词：phys (自然；身体) + -ical (形容词后缀) → 身体的；物理的)",
     "createdDate": "2026-10-01",
     "level": 0,
-    "nextReviewDate": "2026-10-01",
-    "lastReviewDate": null,
+    "nextReviewDate": "2026-10-03",
+    "lastReviewDate": "2026-10-02",
     "phonetic": ""
   },
   {
