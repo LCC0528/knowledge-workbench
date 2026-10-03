@@ -2301,9 +2301,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-12",
-    "level": 0,
-    "nextReviewDate": "2026-09-18",
-    "lastReviewDate": "2026-09-17",
+    "level": 1,
+    "nextReviewDate": "2026-10-04",
+    "lastReviewDate": "2026-10-03",
     "phonetic": ""
   },
   {
@@ -2685,9 +2685,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-30",
-    "level": 3,
-    "nextReviewDate": "2026-10-01",
-    "lastReviewDate": "2026-09-24",
+    "level": 4,
+    "nextReviewDate": "2026-10-18",
+    "lastReviewDate": "2026-10-03",
     "phonetic": ""
   },
   {
@@ -5620,9 +5620,9 @@
     "example": "The scenery along the river is so beautiful that it attracts thousands of tourists every year.",
     "exampleTranslation": "沿河的风景如此美丽，以至于每年吸引成千上万的游客。(词根：scen (场景) / 构词：scene (场景) + -ry (名词后缀，表总称) → 风景；舞台布景)",
     "createdDate": "2026-09-29",
-    "level": 1,
-    "nextReviewDate": "2026-10-03",
-    "lastReviewDate": "2026-10-02",
+    "level": 0,
+    "nextReviewDate": "2026-10-04",
+    "lastReviewDate": "2026-10-03",
     "phonetic": ""
   },
   {
