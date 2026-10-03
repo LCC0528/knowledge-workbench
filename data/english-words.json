@@ -809,9 +809,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 1,
-    "nextReviewDate": "2026-10-03",
-    "lastReviewDate": "2026-10-02"
+    "level": 2,
+    "nextReviewDate": "2026-10-06",
+    "lastReviewDate": "2026-10-03"
   },
   {
     "id": 1785328044699,
@@ -2109,9 +2109,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-12",
-    "level": 0,
-    "nextReviewDate": "2026-09-15",
-    "lastReviewDate": "2026-09-14",
+    "level": 1,
+    "nextReviewDate": "2026-10-04",
+    "lastReviewDate": "2026-10-03",
     "phonetic": ""
   },
   {
@@ -5692,9 +5692,9 @@
     "example": "The original plan was to finish the project by Friday, but we had to change it.",
     "exampleTranslation": "原计划是在周五前完成项目，但我们不得不改变它。(词根：ori (升起；开始) / 构词：ori (升起；开始) + gin (产生) + -al (形容词后缀) → 最初的)",
     "createdDate": "2026-10-01",
-    "level": 0,
-    "nextReviewDate": "2026-10-01",
-    "lastReviewDate": null,
+    "level": 1,
+    "nextReviewDate": "2026-10-04",
+    "lastReviewDate": "2026-10-03",
     "phonetic": ""
   },
   {
