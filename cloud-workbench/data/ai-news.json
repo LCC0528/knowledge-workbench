@@ -1,7 +1,27 @@
 {
-  "updated": "2026-10-03",
-  "count": 288,
+  "updated": "2026-10-04",
+  "count": 290,
   "items": [
+    {
+      "title": "Kolibri: A Sovereign Open-Weight Model",
+      "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+      "source": "Hacker News",
+      "score": 531,
+      "text": "tech report: <a href=\"https:&#x2F;&#x2F;aleph-alpha.com&#x2F;downloads&#x2F;tech-report.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;aleph-alpha.com&#x2F;downloads&#x2F;tech-report.pdf</a><p>additional paper: <a href=\"https:&#x2F;&#x2F;tej.as&#x2F;blog&#x2F;aleph-alpha-kolibri\" rel=\"nofollow\">https:&#x2F;&#x2F;tej.as&#x2F;blog&#x2F;aleph-alpha-kolibri</a>",
+      "ai_score": 7.0,
+      "date": "2026-10-04",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI safety leader quits, warning AI company's culture is 'broken'",
+      "url": "https://www.theguardian.com/technology/2026/oct/03/openai-safety-leader-quits-warning-ai-companys-culture-is-broken",
+      "source": "Hacker News",
+      "score": 200,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-04",
+      "topic": "ai"
+    },
     {
       "title": "With most information hidden, the game Stratego had stumped AI until now",
       "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
