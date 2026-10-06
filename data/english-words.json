@@ -2193,9 +2193,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-12",
-    "level": 0,
-    "nextReviewDate": "2026-10-02",
-    "lastReviewDate": "2026-10-01",
+    "level": 1,
+    "nextReviewDate": "2026-10-07",
+    "lastReviewDate": "2026-10-06",
     "phonetic": ""
   },
   {
@@ -4756,9 +4756,9 @@
     "example": "Two plus three equals five, which is a basic math fact.",
     "exampleTranslation": "二加三等于五，这是一个基本的数学事实。(词根：plu (更多) / 构词：plus (更多) → 加)",
     "createdDate": "2026-09-20",
-    "level": 1,
-    "nextReviewDate": "2026-09-29",
-    "lastReviewDate": "2026-09-28",
+    "level": 2,
+    "nextReviewDate": "2026-10-09",
+    "lastReviewDate": "2026-10-06",
     "phonetic": ""
   },
   {
