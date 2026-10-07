@@ -1,7 +1,47 @@
 {
-  "updated": "2026-10-06",
-  "count": 295,
+  "updated": "2026-10-07",
+  "count": 299,
   "items": [
+    {
+      "title": "Sharing AI progress in mathematics",
+      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+      "source": "Hacker News",
+      "score": 480,
+      "text": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math</a><p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math&#x2F;tree&#x2F;main&#x2F;preprints\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math&#x2F;tree&#x2F;main&#x2F;preprints</a>",
+      "ai_score": 6.0,
+      "date": "2026-10-07",
+      "topic": "ai"
+    },
+    {
+      "title": "EmbeddingGemma 2: An open, lightweight multimodal embedding model",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+      "source": "Hacker News",
+      "score": 232,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-07",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenTPU – An open-source AI accelerator, developed by AI",
+      "url": "https://github.com/FeSens/openTPU",
+      "source": "Hacker News",
+      "score": 241,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-07",
+      "topic": "ai"
+    },
+    {
+      "title": "Claude Code’s suggested message feature: I think the real customer is the model",
+      "url": "https://www.zohaib.cc/blog/smartest-claude-code-feature",
+      "source": "Hacker News",
+      "score": 113,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-07",
+      "topic": "ai"
+    },
     {
       "title": "Beam: Reflection's 501B open-weight model",
       "url": "https://reflection.ai/blog/introducing-beam",
