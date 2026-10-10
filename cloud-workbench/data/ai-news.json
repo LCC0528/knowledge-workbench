@@ -1,7 +1,47 @@
 {
-  "updated": "2026-10-09",
-  "count": 304,
+  "updated": "2026-10-10",
+  "count": 308,
   "items": [
+    {
+      "title": "Typesafe AI raises $870M at $7.5B",
+      "url": "https://typesafe.ai/blog/series-ai",
+      "source": "Hacker News",
+      "score": 285,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Pointing AI at archives found a forgotten meteorite, lost rhinos, and more",
+      "url": "https://jessewaites.com/blog/post/i-pointed-ai-at-400-years-of-archives/",
+      "source": "Hacker News",
+      "score": 110,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Microsoft-Decision-1, our model for fast decision-making",
+      "url": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/",
+      "source": "Hacker News",
+      "score": 153,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen",
+      "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+      "source": "Hacker News",
+      "score": 385,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-10",
+      "topic": "ai"
+    },
     {
       "title": "Sharing AI progress in mathematics",
       "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
