@@ -1,27 +1,47 @@
-# AI 人工智能 日报 - 2026-10-10
+# AI 人工智能 日报 - 2026-10-11
 
-> 自动生成于 2026-10-10 02:54
+> 自动生成于 2026-10-11 02:24
 
-## 今日热点（共 4 条）
+## 今日热点（共 8 条）
 
-### 1. Typesafe AI raises $870M at $7.5B (6.0/10)
+### 1. Build your own decision model (6.0/10)
 
-**原文**: [Typesafe AI raises $870M at $7.5B](https://typesafe.ai/blog/series-ai)
+**原文**: [Build your own decision model](https://nishtahir.com/build-your-own-decision-model/)
 **来源**: Hacker News
 
-### 2. Pointing AI at archives found a forgotten meteorite, lost rhinos, and more (6.0/10)
+### 2. Talorys – A self-hosted personal AI agent on Cloudflare's free tier (6.0/10)
 
-**原文**: [Pointing AI at archives found a forgotten meteorite, lost rhinos, and more](https://jessewaites.com/blog/post/i-pointed-ai-at-400-years-of-archives/)
+**原文**: [Talorys – A self-hosted personal AI agent on Cloudflare's free tier](https://github.com/rociiu/talorys)
 **来源**: Hacker News
 
-### 3. Microsoft-Decision-1, our model for fast decision-making (6.0/10)
+### 3. Mxc: Microsoft Execution Containers version 1.0.0 (6.0/10)
 
-**原文**: [Microsoft-Decision-1, our model for fast decision-making](https://commandline.microsoft.com/microsoft-decision-1-model-foundry/)
+**原文**: [Mxc: Microsoft Execution Containers version 1.0.0](https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/)
 **来源**: Hacker News
 
-### 4. Show HN: Let your AI agents paint big arrows, boxes and text on your screen (6.0/10)
+### 4. OpenSCAD the Programmers Solid 3D CAD Modeller (6.0/10)
 
-**原文**: [Show HN: Let your AI agents paint big arrows, boxes and text on your screen](https://github.com/franzenzenhofer/big-arrow-on-the-screen)
+**原文**: [OpenSCAD the Programmers Solid 3D CAD Modeller](https://openscad.org/)
+**来源**: Hacker News
+
+### 5. Grieving the loss of details (6.0/10)
+
+**原文**: [Grieving the loss of details](https://purplesyringa.moe/blog/grieving-the-loss-of-details/)
+**来源**: Hacker News
+
+### 6. Nvidia in talks to acquire US 'open' model startup Reflection AI (6.0/10)
+
+**原文**: [Nvidia in talks to acquire US 'open' model startup Reflection AI](https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a)
+**来源**: Hacker News
+
+### 7. Food processing influences metabolism and brain activity (6.0/10)
+
+**原文**: [Food processing influences metabolism and brain activity](https://news.vt.edu/articles/2026/10/research_fralinbiomed_upfhutelin.html)
+**来源**: Hacker News
+
+### 8. Bitwarden Dual License Model (6.0/10)
+
+**原文**: [Bitwarden Dual License Model](https://community.bitwarden.com/t/published-version-update-in-app-stores/102750)
 **来源**: Hacker News
 
 ---
