@@ -1,7 +1,27 @@
 {
-  "updated": "2026-10-11",
-  "count": 316,
+  "updated": "2026-10-12",
+  "count": 318,
   "items": [
+    {
+      "title": "The gap in shared understanding of LLM capability is widening",
+      "url": "https://twitter.com/karpathy/status/2109361546505966046",
+      "source": "Hacker News",
+      "score": 274,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-12",
+      "topic": "ai"
+    },
+    {
+      "title": "500B tokens later: Letting AI agents decompile a first-person shooter",
+      "url": "https://momo5502.com/posts/2026-10-09-game-decompilation/",
+      "source": "Hacker News",
+      "score": 171,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-12",
+      "topic": "ai"
+    },
     {
       "title": "Build your own decision model",
       "url": "https://nishtahir.com/build-your-own-decision-model/",
