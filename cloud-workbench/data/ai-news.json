@@ -1,7 +1,47 @@
 {
-  "updated": "2026-10-13",
-  "count": 322,
+  "updated": "2026-10-14",
+  "count": 326,
   "items": [
+    {
+      "title": "I posted to HN, and then my website was flooded with AI bot traffic",
+      "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
+      "source": "Hacker News",
+      "score": 260,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-14",
+      "topic": "ai"
+    },
+    {
+      "title": "We turned EmbeddingGemma 2 into a speech-to-text model",
+      "url": "https://eg2.haku.sh/",
+      "source": "Hacker News",
+      "score": 400,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-14",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI engineer arrested in bugging of executive conference room",
+      "url": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
+      "source": "Hacker News",
+      "score": 426,
+      "text": "<a href=\"https:&#x2F;&#x2F;x.com&#x2F;OpenAINewsroom&#x2F;status&#x2F;2110095403198849132\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;OpenAINewsroom&#x2F;status&#x2F;2110095403198849132</a>",
+      "ai_score": 6.0,
+      "date": "2026-10-14",
+      "topic": "ai"
+    },
+    {
+      "title": "Apple's new 'Switch to Safari' campaign details why you should ditch Chrome",
+      "url": "https://9to5mac.com/2026/10/12/apples-new-switch-to-safari-campaign-details-why-you-should-ditch-chrome/",
+      "source": "Hacker News",
+      "score": 193,
+      "text": "<a href=\"https:&#x2F;&#x2F;www.apple.com&#x2F;safari&#x2F;switch&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.apple.com&#x2F;safari&#x2F;switch&#x2F;</a>",
+      "ai_score": 6.0,
+      "date": "2026-10-14",
+      "topic": "ai"
+    },
     {
       "title": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
       "url": "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html",

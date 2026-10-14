@@ -1,27 +1,27 @@
-# AI 人工智能 日报 - 2026-10-13
+# AI 人工智能 日报 - 2026-10-14
 
-> 自动生成于 2026-10-13 04:04
+> 自动生成于 2026-10-14 02:18
 
 ## 今日热点（共 4 条）
 
-### 1. Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X (6.0/10)
+### 1. I posted to HN, and then my website was flooded with AI bot traffic (6.0/10)
 
-**原文**: [Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X](https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html)
+**原文**: [I posted to HN, and then my website was flooded with AI bot traffic](https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic)
 **来源**: Hacker News
 
-### 2. AI is a tool and using it well takes skill (6.0/10)
+### 2. We turned EmbeddingGemma 2 into a speech-to-text model (6.0/10)
 
-**原文**: [AI is a tool and using it well takes skill](https://yyhh.org/blog/2026/10/ai-is-a-tool/)
+**原文**: [We turned EmbeddingGemma 2 into a speech-to-text model](https://eg2.haku.sh/)
 **来源**: Hacker News
 
-### 3. Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents (6.0/10)
+### 3. OpenAI engineer arrested in bugging of executive conference room (6.0/10)
 
-**原文**: [Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents](https://news.ycombinator.com/item?id=50059096)
+**原文**: [OpenAI engineer arrested in bugging of executive conference room](https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/)
 **来源**: Hacker News
 
-### 4. Kevin Kelly's 2016 AI Predictions, 10 Years Later (6.0/10)
+### 4. Apple's new 'Switch to Safari' campaign details why you should ditch Chrome (6.0/10)
 
-**原文**: [Kevin Kelly's 2016 AI Predictions, 10 Years Later](https://taylor.town/kk-ai-2026)
+**原文**: [Apple's new 'Switch to Safari' campaign details why you should ditch Chrome](https://9to5mac.com/2026/10/12/apples-new-switch-to-safari-campaign-details-why-you-should-ditch-chrome/)
 **来源**: Hacker News
 
 ---
