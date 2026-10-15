@@ -1,27 +1,17 @@
-# AI 人工智能 日报 - 2026-10-14
+# AI 人工智能 日报 - 2026-10-15
 
-> 自动生成于 2026-10-14 02:18
+> 自动生成于 2026-10-15 01:59
 
-## 今日热点（共 4 条）
+## 今日热点（共 2 条）
 
-### 1. I posted to HN, and then my website was flooded with AI bot traffic (6.0/10)
+### 1. Containment and monitoring failures are to blame for AI hacking reports: experts (7.0/10)
 
-**原文**: [I posted to HN, and then my website was flooded with AI bot traffic](https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic)
+**原文**: [Containment and monitoring failures are to blame for AI hacking reports: experts](https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html)
 **来源**: Hacker News
 
-### 2. We turned EmbeddingGemma 2 into a speech-to-text model (6.0/10)
+### 2. Banks are now trying to offload the AI data center debt they just underwrote (6.0/10)
 
-**原文**: [We turned EmbeddingGemma 2 into a speech-to-text model](https://eg2.haku.sh/)
-**来源**: Hacker News
-
-### 3. OpenAI engineer arrested in bugging of executive conference room (6.0/10)
-
-**原文**: [OpenAI engineer arrested in bugging of executive conference room](https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/)
-**来源**: Hacker News
-
-### 4. Apple's new 'Switch to Safari' campaign details why you should ditch Chrome (6.0/10)
-
-**原文**: [Apple's new 'Switch to Safari' campaign details why you should ditch Chrome](https://9to5mac.com/2026/10/12/apples-new-switch-to-safari-campaign-details-why-you-should-ditch-chrome/)
+**原文**: [Banks are now trying to offload the AI data center debt they just underwrote](https://startupfortune.com/banks-are-now-trying-to-offload-the-ai-data-center-debt-they-just-underwrote/)
 **来源**: Hacker News
 
 ---
