@@ -1,17 +1,17 @@
-# AI 人工智能 日报 - 2026-10-15
+# AI 人工智能 日报 - 2026-10-16
 
-> 自动生成于 2026-10-15 01:59
+> 自动生成于 2026-10-16 01:49
 
 ## 今日热点（共 2 条）
 
-### 1. Containment and monitoring failures are to blame for AI hacking reports: experts (7.0/10)
+### 1. Krea 3 – An image model built for editing at scale (6.0/10)
 
-**原文**: [Containment and monitoring failures are to blame for AI hacking reports: experts](https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html)
+**原文**: [Krea 3 – An image model built for editing at scale](https://www.krea.ai/krea-3)
 **来源**: Hacker News
 
-### 2. Banks are now trying to offload the AI data center debt they just underwrote (6.0/10)
+### 2. Using AI to reverse engineer hardware (6.0/10)
 
-**原文**: [Banks are now trying to offload the AI data center debt they just underwrote](https://startupfortune.com/banks-are-now-trying-to-offload-the-ai-data-center-debt-they-just-underwrote/)
+**原文**: [Using AI to reverse engineer hardware](https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/)
 **来源**: Hacker News
 
 ---
