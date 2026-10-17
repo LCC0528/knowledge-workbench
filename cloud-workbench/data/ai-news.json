@@ -1,7 +1,87 @@
 {
-  "updated": "2026-10-16",
-  "count": 330,
+  "updated": "2026-10-17",
+  "count": 338,
   "items": [
+    {
+      "title": "Meta Releases Muse Spark Open: 816B Open-Weight MoE With 1M Context",
+      "url": "https://www.marktechpost.com/2026/10/15/meta-muse-spark-open-816b-open-weight-model/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Meta released Muse Spark Open, an 816B-parameter open-weight MoE model with 42B active parameters and a 1M-token context. It leads open models on MCP-Atlas and runs on 2 M5 Ultra Mac Studios.</p>\n<",
+      "ai_score": 8.0,
+      "date": "2026-10-17",
+      "topic": "ai"
+    },
+    {
+      "title": "NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model",
+      "url": "https://www.marktechpost.com/2026/10/15/nvidia-nemotron-3-5-super-vl-release/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>NVIDIA released Nemotron 3.5 Super VL, an open 120B-parameter multimodal MoE model with 12B active parameters, 1M-token context and NVFP4 weights that run on 1 DGX Spark, plus 2 Bolt edge models.</",
+      "ai_score": 8.0,
+      "date": "2026-10-17",
+      "topic": "ai"
+    },
+    {
+      "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
+      "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
+      "source": "Hacker News",
+      "score": 399,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-10-17",
+      "topic": "ai"
+    },
+    {
+      "title": "CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data",
+      "url": "https://www.marktechpost.com/2026/10/15/copilotkit-releases-clif-a-continual-learning-platform-that-turns-agent-traces-and-user-actions-into-skills-evals-and-fine-tuning-data/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Introduction Teams shipping AI agents at scale keep running into the same pattern. Even agents built on top-tier models like Fable and Astra struggle to carry out complex, end-to-end tasks inside a",
+      "ai_score": 7.0,
+      "date": "2026-10-17",
+      "topic": "ai"
+    },
+    {
+      "title": "Fish Audio Releases Drama 3, a 35B Open-Weight MoE Text-to-Speech Model",
+      "url": "https://www.marktechpost.com/2026/10/14/fish-audio-drama-3-open-weight-tts-model/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Fish Audio released Drama 3, a 35B mixture-of-experts text-to-speech model with about 3B active parameters. It takes plain-language direction, covers 83 languages and ships open weights under a rev",
+      "ai_score": 7.0,
+      "date": "2026-10-17",
+      "topic": "ai"
+    },
+    {
+      "title": "Liquid AI Releases d1-ultra: A Multimodal Decision Model That Scores 65 on the AA Decision Index",
+      "url": "https://www.marktechpost.com/2026/10/15/liquid-ai-d1-ultra-decision-model/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Liquid AI released d1-ultra, a text and image decision model that returns calibrated probabilities in 1 forward pass. It scores 65 on the Artificial Analysis Decision Index and costs $0.042 per mil",
+      "ai_score": 6.0,
+      "date": "2026-10-17",
+      "topic": "ai"
+    },
+    {
+      "title": "Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis",
+      "url": "https://www.marktechpost.com/2026/10/14/meet-grok-voice-3-0-spacexai-voice-agent-model-ranks-1-on-artificial-analysis/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>SpaceXAI just released Grok Voice 3.0. Grok Voice 3.0 is a SpaceXAI speech-to-speech model that listens, reasons, calls tools and speaks. It now ranks first on the Artificial Analysis Speech-to-Spe",
+      "ai_score": 6.0,
+      "date": "2026-10-17",
+      "topic": "ai"
+    },
+    {
+      "title": "Datalab Releases OmniParseBench: An Open OCR Benchmark With 16,288 Pass/Fail Tests to Audit OCR Parsers",
+      "url": "https://www.marktechpost.com/2026/10/14/datalab-omniparsebench-open-ocr-document-parsing-benchmark/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Datalab released OmniParseBench, an open OCR benchmark with 16,288 yes/no tests on 2,937 pages in 92 languages. Every score is a pass rate you can slice by tag, script or language.</p>\n<p>The post ",
+      "ai_score": 6.0,
+      "date": "2026-10-17",
+      "topic": "ai"
+    },
     {
       "title": "Krea 3 – An image model built for editing at scale",
       "url": "https://www.krea.ai/krea-3",
