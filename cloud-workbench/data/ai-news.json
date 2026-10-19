@@ -1,7 +1,77 @@
 {
-  "updated": "2026-10-18",
-  "count": 346,
+  "updated": "2026-10-19",
+  "count": 353,
   "items": [
+    {
+      "title": "StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context",
+      "url": "https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>StepFun has released Step 5 Preview as open weights. FP8 and BF16 checkpoints are live on Hugging Face and ModelScope. Step 5 Preview is a sparse Mixture-of-Experts model from StepFun built for lon",
+      "ai_score": 8.0,
+      "date": "2026-10-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
+      "url": "https://arxiv.org/abs/2610.18861",
+      "source": "Hacker News",
+      "score": 212,
+      "text": "<a href=\"https:&#x2F;&#x2F;x.com&#x2F;Jiaru_Zou&#x2F;status&#x2F;2110400256647340476\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;Jiaru_Zou&#x2F;status&#x2F;2110400256647340476</a><p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;togethercomputer&#x2F;HybridAgent\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;togethercomputer&#x2F;HybridAgent</a><p><a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;collections&#x2F;togethercomputer&#x2F;hybridagent\" rel=\"nofollow\">https:&#x2F;&#x2F;huggingface.co&#x2F;collections&#x2F;togethercomputer&#x2F;hybridag...</a><p>Evaluations: <a href=\"https:&#x2F;&#x2F;arxiv.org&#x2F;html&#x2F;2610.18861v1#S5\" rel=\"nofollow\">https:&#x2F;&#x2F;arxiv.org&#x2F;html&#x2F;2610.18861v1#S5</a>",
+      "ai_score": 7.0,
+      "date": "2026-10-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+      "url": "https://www.marktechpost.com/2026/10/17/meet-kyutai-reki-the-2-4b-vla-model-bringing-efficient-memory-to-robot-manipulation/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipulation. The REKI vision-language-action model is pretrained only on public data.",
+      "ai_score": 7.0,
+      "date": "2026-10-19",
+      "topic": "ai"
+    },
+    {
+      "title": "DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API",
+      "url": "https://www.marktechpost.com/2026/10/17/deepseek-just-released-v4-1-flash-1017-scores-77-0-on-deepswe-opens-search-api/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>DeepSeek has just released DeepSeek-V4.1-Flash-1017, a new checkpoint of its V4.1-Flash model. It is live on the DeepSeek website, app and API. DeepSeek claims stronger scores, faster task completi",
+      "ai_score": 7.0,
+      "date": "2026-10-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Perplexity Open-Sources SPACE, a Firecracker MicroVM Sandbox for AI Agents",
+      "url": "https://www.marktechpost.com/2026/10/16/perplexity-open-sources-space-firecracker-microvm-sandbox-ai-agents/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Perplexity has open-sourced SPACE, the sandbox platform behind every task in Perplexity Computer. The Perplexity SPACE sandbox gives each agent task its own Firecracker microVM. Credentials and out",
+      "ai_score": 7.0,
+      "date": "2026-10-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Liquid AI Releases d1-ultra: A Multimodal Decision Model That Scores 65 on the AA Decision Index",
+      "url": "https://www.marktechpost.com/2026/10/15/liquid-ai-d1-ultra-decision-model/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Liquid AI released d1-ultra, a text and image decision model that returns calibrated probabilities in 1 forward pass. It scores 65 on the Artificial Analysis Decision Index and costs $0.042 per mil",
+      "ai_score": 7.0,
+      "date": "2026-10-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Google Open-Sources Harness2, a Recursive Agent Harnessing Framework",
+      "url": "https://www.marktechpost.com/2026/10/18/google-harness2-recursive-agent-harnessing-framework/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Google Research released Harness2, an Apache-2.0 framework that rewrites an agent's harness at test time. One refinement step lifted GLM-5 by 11.5 points on WorkBuddy-Bench with no weight updates.<",
+      "ai_score": 6.0,
+      "date": "2026-10-19",
+      "topic": "ai"
+    },
     {
       "title": "Meta Releases Muse Spark Open: 816B Open-Weight MoE With 1M Context",
       "url": "https://www.marktechpost.com/2026/10/15/meta-muse-spark-open-816b-open-weight-model/",
