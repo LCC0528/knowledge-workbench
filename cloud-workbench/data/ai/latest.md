@@ -1,43 +1,38 @@
-# AI 人工智能 日报 - 2026-10-19
+# AI 人工智能 日报 - 2026-10-20
 
-> 自动生成于 2026-10-19 01:58
+> 自动生成于 2026-10-20 02:16
 
-## 今日热点（共 7 条）
+## 今日热点（共 6 条）
 
-### 1. StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context (8.0/10)
+### 1. Timestral: Mistral's time-series foundation models (7.0/10)
 
-**原文**: [StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context](https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/)
-**来源**: www.marktechpost.com
-
-### 2. Hybrid Reasoning Agents: LLM agents that think in latent space, act through text (7.0/10)
-
-**原文**: [Hybrid Reasoning Agents: LLM agents that think in latent space, act through text](https://arxiv.org/abs/2610.18861)
+**原文**: [Timestral: Mistral's time-series foundation models](https://mistral.ai/news/timestral/)
 **来源**: Hacker News
 
-### 3. Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation (7.0/10)
+### 2. Lula supporters protest against Meta to denounce its 'electoral interference' (6.0/10)
 
-**原文**: [Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation](https://www.marktechpost.com/2026/10/17/meet-kyutai-reki-the-2-4b-vla-model-bringing-efficient-memory-to-robot-manipulation/)
-**来源**: www.marktechpost.com
+**原文**: [Lula supporters protest against Meta to denounce its 'electoral interference'](https://efe.com/english/latest-news/2026-10-20/lula-supporters-protest-against-meta-to-denounce-its-electoral-interference/)
+**来源**: Hacker News
 
-### 4. DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API (7.0/10)
+### 3. RuneScape Bench: MMOs for Agents [video] (6.0/10)
 
-**原文**: [DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API](https://www.marktechpost.com/2026/10/17/deepseek-just-released-v4-1-flash-1017-scores-77-0-on-deepswe-opens-search-api/)
-**来源**: www.marktechpost.com
+**原文**: [RuneScape Bench: MMOs for Agents [video]](https://www.youtube.com/watch?v=cNm4zyUtWj0)
+**来源**: Hacker News
 
-### 5. Perplexity Open-Sources SPACE, a Firecracker MicroVM Sandbox for AI Agents (7.0/10)
+### 4. Ukraine claims first drone evacuation of wounded soldier (6.0/10)
 
-**原文**: [Perplexity Open-Sources SPACE, a Firecracker MicroVM Sandbox for AI Agents](https://www.marktechpost.com/2026/10/16/perplexity-open-sources-space-firecracker-microvm-sandbox-ai-agents/)
-**来源**: www.marktechpost.com
+**原文**: [Ukraine claims first drone evacuation of wounded soldier](https://www.nbcnews.com/world/ukraine/ukraine-first-drone-evacuation-wounded-soldier-frontlines-hexacopter-rcna604310)
+**来源**: Hacker News
 
-### 6. Liquid AI Releases d1-ultra: A Multimodal Decision Model That Scores 65 on the AA Decision Index (7.0/10)
+### 5. Ask HN: How to deal with shipping AI-written code you don't understand? (6.0/10)
 
-**原文**: [Liquid AI Releases d1-ultra: A Multimodal Decision Model That Scores 65 on the AA Decision Index](https://www.marktechpost.com/2026/10/15/liquid-ai-d1-ultra-decision-model/)
-**来源**: www.marktechpost.com
+**原文**: [Ask HN: How to deal with shipping AI-written code you don't understand?](https://news.ycombinator.com/item?id=50151036)
+**来源**: Hacker News
 
-### 7. Google Open-Sources Harness2, a Recursive Agent Harnessing Framework (6.0/10)
+### 6. The fire retardant in the seafood chain (6.0/10)
 
-**原文**: [Google Open-Sources Harness2, a Recursive Agent Harnessing Framework](https://www.marktechpost.com/2026/10/18/google-harness2-recursive-agent-harnessing-framework/)
-**来源**: www.marktechpost.com
+**原文**: [The fire retardant in the seafood chain](https://insideclimatenews.org/news/14102026/ethoxyquin-fire-retardant-in-seafood-chain/)
+**来源**: Hacker News
 
 ---
 
