@@ -1,37 +1,32 @@
-# AI 人工智能 日报 - 2026-10-22
+# AI 人工智能 日报 - 2026-10-23
 
-> 自动生成于 2026-10-22 02:04
+> 自动生成于 2026-10-23 02:08
 
-## 今日热点（共 6 条）
+## 今日热点（共 5 条）
 
-### 1. Railway Security Disclosure (6.0/10)
+### 1. Jailbreaking the Switch 2 (7.0/10)
 
-**原文**: [Railway Security Disclosure](https://blog.railway.com/p/security-disclosure-wednesday-october-21st)
+**原文**: [Jailbreaking the Switch 2](https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/)
 **来源**: Hacker News
 
-### 2. Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor (6.0/10)
+### 2. LLMs are making formal software verification feasible at a much larger scale (6.0/10)
 
-**原文**: [Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor](https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/)
+**原文**: [LLMs are making formal software verification feasible at a much larger scale](https://www.anthropic.com/research/formal-verification)
 **来源**: Hacker News
 
-### 3. OpenAI models are coming to Google Cloud (6.0/10)
+### 3. OpenShell – A safe, private runtime for fleets of autonomous AI agents (6.0/10)
 
-**原文**: [OpenAI models are coming to Google Cloud](https://openai.com/index/openai-models-google-cloud/)
+**原文**: [OpenShell – A safe, private runtime for fleets of autonomous AI agents](https://github.com/NVIDIA/OpenShell)
 **来源**: Hacker News
 
-### 4. Patch the Planet: global response coordination as agents uncover vulnerabilities (6.0/10)
+### 4. Every AI model has the same "controversial" take on humans (6.0/10)
 
-**原文**: [Patch the Planet: global response coordination as agents uncover vulnerabilities](https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/)
+**原文**: [Every AI model has the same "controversial" take on humans](https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans)
 **来源**: Hacker News
 
-### 5. Airbnb bans making guests do dishes and take out the trash (6.0/10)
+### 5. AI and the Enclosure of the Scientific Commons (6.0/10)
 
-**原文**: [Airbnb bans making guests do dishes and take out the trash](https://www.theverge.com/tech/1015844/airbnb-chores-house-rules-update)
-**来源**: Hacker News
-
-### 6. Using thousands of AI agents to uncover new leads in biological data (6.0/10)
-
-**原文**: [Using thousands of AI agents to uncover new leads in biological data](https://openai.com/index/scaling-ai-research-for-complex-biological-data/)
+**原文**: [AI and the Enclosure of the Scientific Commons](https://arxiv.org/abs/2610.27251)
 **来源**: Hacker News
 
 ---
