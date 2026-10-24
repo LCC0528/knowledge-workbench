@@ -1,7 +1,27 @@
 {
-  "updated": "2026-10-23",
-  "count": 371,
+  "updated": "2026-10-24",
+  "count": 373,
   "items": [
+    {
+      "title": "Dessa: the most authentic full-duplex speech model ever built",
+      "url": "https://block.xyz/dessa",
+      "source": "Hacker News",
+      "score": 237,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-24",
+      "topic": "ai"
+    },
+    {
+      "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
+      "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
+      "source": "Hacker News",
+      "score": 282,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-24",
+      "topic": "ai"
+    },
     {
       "title": "Jailbreaking the Switch 2",
       "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",

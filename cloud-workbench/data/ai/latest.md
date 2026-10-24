@@ -1,32 +1,17 @@
-# AI 人工智能 日报 - 2026-10-23
+# AI 人工智能 日报 - 2026-10-24
 
-> 自动生成于 2026-10-23 02:08
+> 自动生成于 2026-10-24 02:07
 
-## 今日热点（共 5 条）
+## 今日热点（共 2 条）
 
-### 1. Jailbreaking the Switch 2 (7.0/10)
+### 1. Dessa: the most authentic full-duplex speech model ever built (6.0/10)
 
-**原文**: [Jailbreaking the Switch 2](https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/)
+**原文**: [Dessa: the most authentic full-duplex speech model ever built](https://block.xyz/dessa)
 **来源**: Hacker News
 
-### 2. LLMs are making formal software verification feasible at a much larger scale (6.0/10)
+### 2. Now Google says it might use your Gmail and Google Photos data to target ads (6.0/10)
 
-**原文**: [LLMs are making formal software verification feasible at a much larger scale](https://www.anthropic.com/research/formal-verification)
-**来源**: Hacker News
-
-### 3. OpenShell – A safe, private runtime for fleets of autonomous AI agents (6.0/10)
-
-**原文**: [OpenShell – A safe, private runtime for fleets of autonomous AI agents](https://github.com/NVIDIA/OpenShell)
-**来源**: Hacker News
-
-### 4. Every AI model has the same "controversial" take on humans (6.0/10)
-
-**原文**: [Every AI model has the same "controversial" take on humans](https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans)
-**来源**: Hacker News
-
-### 5. AI and the Enclosure of the Scientific Commons (6.0/10)
-
-**原文**: [AI and the Enclosure of the Scientific Commons](https://arxiv.org/abs/2610.27251)
+**原文**: [Now Google says it might use your Gmail and Google Photos data to target ads](https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update)
 **来源**: Hacker News
 
 ---
