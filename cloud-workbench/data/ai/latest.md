@@ -1,17 +1,17 @@
-# AI 人工智能 日报 - 2026-10-24
+# AI 人工智能 日报 - 2026-10-25
 
-> 自动生成于 2026-10-24 02:07
+> 自动生成于 2026-10-25 01:54
 
 ## 今日热点（共 2 条）
 
-### 1. Dessa: the most authentic full-duplex speech model ever built (6.0/10)
+### 1. America Has Lost 200k of Jobs in Media, Film and the Arts. How Much Is AI? (6.0/10)
 
-**原文**: [Dessa: the most authentic full-duplex speech model ever built](https://block.xyz/dessa)
+**原文**: [America Has Lost 200k of Jobs in Media, Film and the Arts. How Much Is AI?](https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class)
 **来源**: Hacker News
 
-### 2. Now Google says it might use your Gmail and Google Photos data to target ads (6.0/10)
+### 2. No signs of AI payoff outside the tech sector (6.0/10)
 
-**原文**: [Now Google says it might use your Gmail and Google Photos data to target ads](https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update)
+**原文**: [No signs of AI payoff outside the tech sector](https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector)
 **来源**: Hacker News
 
 ---
