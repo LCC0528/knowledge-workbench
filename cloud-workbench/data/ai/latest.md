@@ -1,17 +1,22 @@
-# AI 人工智能 日报 - 2026-10-25
+# AI 人工智能 日报 - 2026-10-26
 
-> 自动生成于 2026-10-25 01:54
+> 自动生成于 2026-10-26 01:55
 
-## 今日热点（共 2 条）
+## 今日热点（共 3 条）
 
-### 1. America Has Lost 200k of Jobs in Media, Film and the Arts. How Much Is AI? (6.0/10)
+### 1. A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis (6.0/10)
 
-**原文**: [America Has Lost 200k of Jobs in Media, Film and the Arts. How Much Is AI?](https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class)
+**原文**: [A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis](https://lynchlab.net/llm-skin-cancer)
 **来源**: Hacker News
 
-### 2. No signs of AI payoff outside the tech sector (6.0/10)
+### 2. OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why? (6.0/10)
 
-**原文**: [No signs of AI payoff outside the tech sector](https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector)
+**原文**: [OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?](https://minimaxir.com/2026/10/cheap-llms/)
+**来源**: Hacker News
+
+### 3. JetBrains Thinkrail (6.0/10)
+
+**原文**: [JetBrains Thinkrail](https://github.com/JetBrains/thinkrail)
 **来源**: Hacker News
 
 ---

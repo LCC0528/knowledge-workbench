@@ -1,7 +1,37 @@
 {
-  "updated": "2026-10-25",
-  "count": 375,
+  "updated": "2026-10-26",
+  "count": 378,
   "items": [
+    {
+      "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+      "url": "https://lynchlab.net/llm-skin-cancer",
+      "source": "Hacker News",
+      "score": 436,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-26",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+      "url": "https://minimaxir.com/2026/10/cheap-llms/",
+      "source": "Hacker News",
+      "score": 149,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-26",
+      "topic": "ai"
+    },
+    {
+      "title": "JetBrains Thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "source": "Hacker News",
+      "score": 183,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-26",
+      "topic": "ai"
+    },
     {
       "title": "America Has Lost 200k of Jobs in Media, Film and the Arts. How Much Is AI?",
       "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
