@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-28",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Tailscale SSH: Investigation and remediation update",
+      "url": "https://tailscale.com/ssh-investigation-update",
+      "source": "Hacker News",
+      "score": 205,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+      "url": "https://www.brangus.io/survival-llm",
+      "source": "Hacker News",
+      "score": 204,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees",
+      "url": "https://bret.dk/raspberry-pi-zero-3-w-pi-4-model-a/",
+      "source": "Hacker News",
+      "score": 107,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

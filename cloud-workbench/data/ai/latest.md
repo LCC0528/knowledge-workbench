@@ -1,32 +1,22 @@
-# AI 人工智能 日报 - 2026-10-27
+# AI 人工智能 日报 - 2026-10-28
 
-> 自动生成于 2026-10-27 02:34
+> 自动生成于 2026-10-28 02:42
 
-## 今日热点（共 5 条）
+## 今日热点（共 3 条）
 
-### 1. Sebastian Raschka's from-scratch video course on building reasoning models (7.0/10)
+### 1. Tailscale SSH: Investigation and remediation update (6.0/10)
 
-**原文**: [Sebastian Raschka's from-scratch video course on building reasoning models](https://magazine.sebastianraschka.com/p/building-reasoning-models)
+**原文**: [Tailscale SSH: Investigation and remediation update](https://tailscale.com/ssh-investigation-update)
 **来源**: Hacker News
 
-### 2. GPT-6.1 Terra (7.0/10)
+### 2. Survival LLM: AI assistant and emergency library that runs on your own computer (6.0/10)
 
-**原文**: [GPT-6.1 Terra](https://openai.com/index/introducing-gpt-6-1-terra/)
+**原文**: [Survival LLM: AI assistant and emergency library that runs on your own computer](https://www.brangus.io/survival-llm)
 **来源**: Hacker News
 
-### 3. Blaise Pascal invented fixed route public transport (2024) (6.0/10)
+### 3. Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees (6.0/10)
 
-**原文**: [Blaise Pascal invented fixed route public transport (2024)](https://humantransit.org/2024/12/one-of-the-greatest-inventions-in-the-history-of-human-transport.html)
-**来源**: Hacker News
-
-### 4. Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT (6.0/10)
-
-**原文**: [Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT](https://github.com/FrigadeHQ/hob)
-**来源**: Hacker News
-
-### 5. Fixing Tool-Call Accuracy in vLLM (6.0/10)
-
-**原文**: [Fixing Tool-Call Accuracy in vLLM](https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm)
+**原文**: [Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees](https://bret.dk/raspberry-pi-zero-3-w-pi-4-model-a/)
 **来源**: Hacker News
 
 ---
