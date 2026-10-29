@@ -1,22 +1,22 @@
-# AI 人工智能 日报 - 2026-10-28
+# AI 人工智能 日报 - 2026-10-29
 
-> 自动生成于 2026-10-28 02:42
+> 自动生成于 2026-10-29 03:01
 
 ## 今日热点（共 3 条）
 
-### 1. Tailscale SSH: Investigation and remediation update (6.0/10)
+### 1. Dayjob: Tax – evaluating AI agents on 50 professional tax assignments (6.0/10)
 
-**原文**: [Tailscale SSH: Investigation and remediation update](https://tailscale.com/ssh-investigation-update)
+**原文**: [Dayjob: Tax – evaluating AI agents on 50 professional tax assignments](https://surgehq.ai/blog/dayjob-tax)
 **来源**: Hacker News
 
-### 2. Survival LLM: AI assistant and emergency library that runs on your own computer (6.0/10)
+### 2. The Agent SDK (6.0/10)
 
-**原文**: [Survival LLM: AI assistant and emergency library that runs on your own computer](https://www.brangus.io/survival-llm)
+**原文**: [The Agent SDK](https://cursor.com/blog/agent-sdk)
 **来源**: Hacker News
 
-### 3. Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees (6.0/10)
+### 3. Kentucky man becomes the first humanist granted religious exemption from AI (6.0/10)
 
-**原文**: [Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees](https://bret.dk/raspberry-pi-zero-3-w-pi-4-model-a/)
+**原文**: [Kentucky man becomes the first humanist granted religious exemption from AI](https://religionnews.com/2026/10/26/in-a-first-a-humanist-granted-a-religious-exemption-from-using-ai/)
 **来源**: Hacker News
 
 ---

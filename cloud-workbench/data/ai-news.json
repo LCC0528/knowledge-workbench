@@ -1,7 +1,37 @@
 {
-  "updated": "2026-10-28",
-  "count": 386,
+  "updated": "2026-10-29",
+  "count": 389,
   "items": [
+    {
+      "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
+      "url": "https://surgehq.ai/blog/dayjob-tax",
+      "source": "Hacker News",
+      "score": 211,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-29",
+      "topic": "ai"
+    },
+    {
+      "title": "The Agent SDK",
+      "url": "https://cursor.com/blog/agent-sdk",
+      "source": "Hacker News",
+      "score": 103,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-29",
+      "topic": "ai"
+    },
+    {
+      "title": "Kentucky man becomes the first humanist granted religious exemption from AI",
+      "url": "https://religionnews.com/2026/10/26/in-a-first-a-humanist-granted-a-religious-exemption-from-using-ai/",
+      "source": "Hacker News",
+      "score": 440,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-29",
+      "topic": "ai"
+    },
     {
       "title": "Tailscale SSH: Investigation and remediation update",
       "url": "https://tailscale.com/ssh-investigation-update",
