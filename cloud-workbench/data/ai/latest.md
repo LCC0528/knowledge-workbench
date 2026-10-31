@@ -1,27 +1,32 @@
-# AI 人工智能 日报 - 2026-10-30
+# AI 人工智能 日报 - 2026-10-31
 
-> 自动生成于 2026-10-30 03:06
+> 自动生成于 2026-10-31 02:53
 
-## 今日热点（共 4 条）
+## 今日热点（共 5 条）
 
-### 1. We ran AI agent swarms in Minecraft and Mindustry (6.0/10)
+### 1. AI isn't replacing SREs, it's deskilling them (7.0/10)
 
-**原文**: [We ran AI agent swarms in Minecraft and Mindustry](https://labs.ycombinator.com/projects/games/index.html)
+**原文**: [AI isn't replacing SREs, it's deskilling them](https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling)
 **来源**: Hacker News
 
-### 2. A tiny world model running games on a Raspberry Pi Pico 2 W (6.0/10)
+### 2. Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man (6.0/10)
 
-**原文**: [A tiny world model running games on a Raspberry Pi Pico 2 W](https://github.com/SheepSeb/tinyworldformer)
+**原文**: [Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man](https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/)
 **来源**: Hacker News
 
-### 3. LLM Voice (6.0/10)
+### 3. Cisco gives engineer unlimited AI tokens to rewrite legacy code (6.0/10)
 
-**原文**: [LLM Voice](https://martinfowler.com/bliki/LLM-Voice.html)
+**原文**: [Cisco gives engineer unlimited AI tokens to rewrite legacy code](https://fortune.com/2026/10/30/cisco-president-jeetu-patel-gen-z-27-year-old-unlimited-ai-tokens-rewrite-legacy-code-entry-level-jobs/)
 **来源**: Hacker News
 
-### 4. Chained PHP2Shell exploit roots 25 servers, including US Government servers (6.0/10)
+### 4. Building an AI-native engineering org (6.0/10)
 
-**原文**: [Chained PHP2Shell exploit roots 25 servers, including US Government servers](https://dreamgroup.com/blog/chained-php2shell-exploit-roots-25-servers)
+**原文**: [Building an AI-native engineering org](https://twitter.com/sgondala2/status/2115832070274723875)
+**来源**: Hacker News
+
+### 5. Sleep framework: A new way for LLMs to retain knowledge in continual learning (6.0/10)
+
+**原文**: [Sleep framework: A new way for LLMs to retain knowledge in continual learning](https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/)
 **来源**: Hacker News
 
 ---
