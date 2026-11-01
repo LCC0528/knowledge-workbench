@@ -1,7 +1,37 @@
 {
-  "updated": "2026-10-31",
-  "count": 398,
+  "updated": "2026-11-01",
+  "count": 401,
   "items": [
+    {
+      "title": "Serbia just elected the world's brainiest parliament",
+      "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
+      "source": "Hacker News",
+      "score": 822,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-11-01",
+      "topic": "ai"
+    },
+    {
+      "title": "Do the math: How we took over ChatGPT accounts",
+      "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+      "source": "Hacker News",
+      "score": 304,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-01",
+      "topic": "ai"
+    },
+    {
+      "title": "Anthropic blocks users for anything touching training larger models",
+      "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+      "source": "Hacker News",
+      "score": 213,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-01",
+      "topic": "ai"
+    },
     {
       "title": "AI isn't replacing SREs, it's deskilling them",
       "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
