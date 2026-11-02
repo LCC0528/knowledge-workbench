@@ -1,7 +1,27 @@
 {
-  "updated": "2026-11-01",
-  "count": 401,
+  "updated": "2026-11-02",
+  "count": 403,
   "items": [
+    {
+      "title": "The AI cost of JavaScript frameworks",
+      "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
+      "source": "Hacker News",
+      "score": 311,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-02",
+      "topic": "ai"
+    },
+    {
+      "title": "AI delivers 'zero financial payoff' to most companies, Apollo economist says",
+      "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+      "source": "Hacker News",
+      "score": 194,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-02",
+      "topic": "ai"
+    },
     {
       "title": "Serbia just elected the world's brainiest parliament",
       "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
