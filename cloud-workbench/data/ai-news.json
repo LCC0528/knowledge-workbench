@@ -1,7 +1,77 @@
 {
-  "updated": "2026-11-04",
-  "count": 411,
+  "updated": "2026-11-05",
+  "count": 418,
   "items": [
+    {
+      "title": "AI is forcing us to pay off 40 years of technical debt",
+      "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
+      "source": "Hacker News",
+      "score": 1113,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-11-05",
+      "topic": "ai"
+    },
+    {
+      "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+      "url": "https://www.ricursive.com/ripple",
+      "source": "Hacker News",
+      "score": 243,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-05",
+      "topic": "ai"
+    },
+    {
+      "title": "Kimi K3.1 Pro model weights are out",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+      "source": "Hacker News",
+      "score": 415,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-05",
+      "topic": "ai"
+    },
+    {
+      "title": "Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s",
+      "url": "https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra",
+      "source": "Hacker News",
+      "score": 115,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-05",
+      "topic": "ai"
+    },
+    {
+      "title": "Progress on provable inference for large language models",
+      "url": "https://www.anthropic.com/research/provable-inference",
+      "source": "Hacker News",
+      "score": 187,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-05",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI to acquire Pierre Computer Company",
+      "url": "https://openai.com/index/openai-to-acquire-pierre/",
+      "source": "Hacker News",
+      "score": 210,
+      "text": "<a href=\"https:&#x2F;&#x2F;twitter.com&#x2F;pierrecomputer&#x2F;status&#x2F;2117999036175188183\" rel=\"nofollow\">https:&#x2F;&#x2F;twitter.com&#x2F;pierrecomputer&#x2F;status&#x2F;211799903617518818...</a>",
+      "ai_score": 6.0,
+      "date": "2026-11-05",
+      "topic": "ai"
+    },
+    {
+      "title": "Ask HN: What's your current AI agentic setup?",
+      "url": "https://news.ycombinator.com/item?id=50366117",
+      "source": "Hacker News",
+      "score": 167,
+      "text": "I&#x27;m curious how people on HN are using AI day to day, and came up with a list of questions I thought could be interesting to know. No need to answer every question of course, just wanted to get a gut feel how people are using AI.<p>1) What AI subscriptions are you personally paying for? (Claude, ChatGPT&#x2F;Codex, Cursor, etc)<p>- Which tiers?<p>- Have you purchased multiple subscriptions from the same provider (eg two Claude accounts)?<p>2) Are you using models outside (or instead) of those subscriptions? For example, pay-as-you-go APIs, OpenRouter, or locally hosted models.<p>- Which models and providers?<p>3) What coding harnesses and interfaces are you using? Are you sticking with the default CLIs or IDE integrations, or using alternatives like OpenCode, Pi, Aider, Muse Code, or custom-built harnesses?<p>- What made you switch harnesses (if you switched)?<p>4) Are you using any agent orchestration or swarm tools?<p>- For example, Munder Difflin, Gas Town, Ruflo, or something custom.<p>5) Are you using broader agent platforms like OpenClaw &#x2F; Hermes Agent &#x2F; Grok bot &#x2F; Dots &#x2F; Muse?<p>- If you are using them, what are your main use cases?<p>-----<p>I know my workflow has differed significantly from a year ago, and so it would be interesting to capture a snapshot today of what people are using and why.",
+      "ai_score": 6.0,
+      "date": "2026-11-05",
+      "topic": "ai"
+    },
     {
       "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
       "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
