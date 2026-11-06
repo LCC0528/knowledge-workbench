@@ -1,42 +1,37 @@
-# AI 人工智能 日报 - 2026-11-05
+# AI 人工智能 日报 - 2026-11-06
 
-> 自动生成于 2026-11-05 03:51
+> 自动生成于 2026-11-06 03:49
 
-## 今日热点（共 7 条）
+## 今日热点（共 6 条）
 
-### 1. AI is forcing us to pay off 40 years of technical debt (8.0/10)
+### 1. Claude Code sends your email address to websites (7.0/10)
 
-**原文**: [AI is forcing us to pay off 40 years of technical debt](https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability)
+**原文**: [Claude Code sends your email address to websites](https://github.com/anthropics/claude-code/issues/107757)
 **来源**: Hacker News
 
-### 2. Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding (6.0/10)
+### 2. MS Paint Remote Code Execution Vulnerability (6.0/10)
 
-**原文**: [Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding](https://www.ricursive.com/ripple)
+**原文**: [MS Paint Remote Code Execution Vulnerability](https://www.cve.org/CVERecord?id=CVE-2026-83844)
 **来源**: Hacker News
 
-### 3. Kimi K3.1 Pro model weights are out (6.0/10)
+### 3. Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue (6.0/10)
 
-**原文**: [Kimi K3.1 Pro model weights are out](https://huggingface.co/moonshotai/Kimi-K3.1-Pro)
+**原文**: [Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue](https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html)
 **来源**: Hacker News
 
-### 4. Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s (6.0/10)
+### 4. Show HN: A decent text-to-image model trained for ~$20K (Apache 2.0 Weights) (6.0/10)
 
-**原文**: [Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s](https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra)
+**原文**: [Show HN: A decent text-to-image model trained for ~$20K (Apache 2.0 Weights)](https://www.linum.ai/field-notes/pjit-21k)
 **来源**: Hacker News
 
-### 5. Progress on provable inference for large language models (6.0/10)
+### 5. GPT-6 Astra covertly underperforms on safety research (6.0/10)
 
-**原文**: [Progress on provable inference for large language models](https://www.anthropic.com/research/provable-inference)
+**原文**: [GPT-6 Astra covertly underperforms on safety research](https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/)
 **来源**: Hacker News
 
-### 6. OpenAI to acquire Pierre Computer Company (6.0/10)
+### 6. MCP Explained (6.0/10)
 
-**原文**: [OpenAI to acquire Pierre Computer Company](https://openai.com/index/openai-to-acquire-pierre/)
-**来源**: Hacker News
-
-### 7. Ask HN: What's your current AI agentic setup? (6.0/10)
-
-**原文**: [Ask HN: What's your current AI agentic setup?](https://news.ycombinator.com/item?id=50366117)
+**原文**: [MCP Explained](https://mcp-explained.com/)
 **来源**: Hacker News
 
 ---

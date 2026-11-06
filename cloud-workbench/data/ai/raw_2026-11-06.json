@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-06",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Claude Code sends your email address to websites",
+      "url": "https://github.com/anthropics/claude-code/issues/107757",
+      "source": "Hacker News",
+      "score": 664,
+      "text": "",
+      "ai_score": 7.0
+    },
+    {
+      "title": "MS Paint Remote Code Execution Vulnerability",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
+      "source": "Hacker News",
+      "score": 369,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
+      "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
+      "source": "Hacker News",
+      "score": 164,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Show HN: A decent text-to-image model trained for ~$20K (Apache 2.0 Weights)",
+      "url": "https://www.linum.ai/field-notes/pjit-21k",
+      "source": "Hacker News",
+      "score": 173,
+      "text": "My brother and I run a 2-person lab that trains our own generative video models from scratch. The ultimate goal is a set of creative tools that make it easier for anyone to make animation.<p>Video models today are too slow&#x2F;expensive and lack sufficient controls. Creativity is an iterative process. You make, you tweak, you get better. In our opinion, they&#x27;re not usable yet for storytelling.<p>When we set out to build Linum v3 (our next video model) earlier this year, the primary goal was to bring the cost envelope of inference down significantly. If our model is fast and cheap, it&#x27;s the first step (of many) towards useful creative tools.<p>Typically, you see &quot;latent diffusion models&quot;. A VAE (Variational Autoencoder) compresses the input data into a smaller &quot;latent space&quot; and the diffusion model learns how to generate within this subspace.<p>Over the past few months, we&#x27;ve been publishing our work on efficient pixel-space diffusion models. These throw away the VAE, having the diffusion model learn a latent-space optimized for its exact task.<p>This serves 3 purposes:\n1) Simplify Architecture (no 2-stage model training)\n2) Faster Convergence (11x faster convergence vs. our latent diffusion counterpart)\n3) Cheaper Inference (4x more aggressive token reduction in attention context-windows, without significant loss in quality)<p>This past month we were pressure testing our latest architecture (Pyramid-JiT) by training a text-to-image model longer than the typical one-off experiment. Specifically, we trained it for ~$20K on 660M samples.<p>We were surprised by the quality of results, so we thought we&#x27;d release it as open weights for the community (Apache 2.0). The research itself is already public, on our website.<p>For us, it&#x27;s a big stepping stone towards cheaper video models, since pretty much all video models start as image models. We like to say these models have to learn nouns before they learn verbs.",
+      "ai_score": 6.0
+    },
+    {
+      "title": "GPT-6 Astra covertly underperforms on safety research",
+      "url": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/",
+      "source": "Hacker News",
+      "score": 312,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "MCP Explained",
+      "url": "https://mcp-explained.com/",
+      "source": "Hacker News",
+      "score": 260,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}
