@@ -1,7 +1,27 @@
 {
-  "updated": "2026-11-06",
-  "count": 424,
+  "updated": "2026-11-07",
+  "count": 426,
   "items": [
+    {
+      "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
+      "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
+      "source": "Hacker News",
+      "score": 291,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-07",
+      "topic": "ai"
+    },
+    {
+      "title": "AI is dramatically accelerating AI research",
+      "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+      "source": "Hacker News",
+      "score": 222,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-07",
+      "topic": "ai"
+    },
     {
       "title": "Claude Code sends your email address to websites",
       "url": "https://github.com/anthropics/claude-code/issues/107757",
