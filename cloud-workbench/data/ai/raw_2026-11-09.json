@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-09",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "source": "Hacker News",
+      "score": 594,
+      "text": "",
+      "ai_score": 7.0
+    },
+    {
+      "title": "Outlook.com Is Quietly Rejecting Email from Domains Without DMARC",
+      "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
+      "source": "Hacker News",
+      "score": 275,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "How I Fight AI Brain Fry",
+      "url": "https://sergeykuhne.com/blog/fighting-ai-brain-fry",
+      "source": "Hacker News",
+      "score": 169,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+      "url": "https://www.axios.com/2026/11/08/nvidia-ceo-jensen-huang-affair-email-to-company",
+      "source": "Hacker News",
+      "score": 394,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}
