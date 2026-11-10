@@ -1,7 +1,57 @@
 {
-  "updated": "2026-11-09",
-  "count": 433,
+  "updated": "2026-11-10",
+  "count": 438,
   "items": [
+    {
+      "title": "Foldable Flight: The Best Paper Airplanes",
+      "url": "https://www.foldableflight.com",
+      "source": "Hacker News",
+      "score": 903,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-11-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system",
+      "url": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy",
+      "source": "Hacker News",
+      "score": 493,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Semi-transparent, colored cadmium telluride photovoltaic panels in agrivoltaics",
+      "url": "https://www.anthropocenemagazine.org/2026/10/magenta-solar-panels-may-be-agrivoltaics-cleverest-trick-yet/",
+      "source": "Hacker News",
+      "score": 292,
+      "text": "<a href=\"https:&#x2F;&#x2F;www.cell.com&#x2F;cell-reports-physical-science&#x2F;fulltext&#x2F;S2666-3864(26)00461-3\" rel=\"nofollow\">https:&#x2F;&#x2F;www.cell.com&#x2F;cell-reports-physical-science&#x2F;fulltext&#x2F;...</a>",
+      "ai_score": 6.0,
+      "date": "2026-11-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Google Gemini routes personal Drive files and emails to human annotators",
+      "url": "https://github.com/thisisme6598/gemini_files/",
+      "source": "Hacker News",
+      "score": 486,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Muse Ember: Our smallest, most efficient model",
+      "url": "https://research.meta.ai/blog/muse-ember",
+      "source": "Hacker News",
+      "score": 269,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-10",
+      "topic": "ai"
+    },
     {
       "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
       "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
