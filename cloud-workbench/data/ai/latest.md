@@ -1,32 +1,32 @@
-# AI 人工智能 日报 - 2026-11-10
+# AI 人工智能 日报 - 2026-11-11
 
-> 自动生成于 2026-11-10 04:52
+> 自动生成于 2026-11-11 03:19
 
 ## 今日热点（共 5 条）
 
-### 1. Foldable Flight: The Best Paper Airplanes (7.0/10)
+### 1. After 7 months, Glasswing overwelms maintainers with underwhelming findings (6.0/10)
 
-**原文**: [Foldable Flight: The Best Paper Airplanes](https://www.foldableflight.com)
+**原文**: [After 7 months, Glasswing overwelms maintainers with underwhelming findings](https://www.vulncheck.com/blog/anthropic-glasswing-november-update)
 **来源**: Hacker News
 
-### 2. Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system (6.0/10)
+### 2. Synaptics patent claims stop work on DisplayLink drivers (6.0/10)
 
-**原文**: [Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system](https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy)
+**原文**: [Synaptics patent claims stop work on DisplayLink drivers](https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/)
 **来源**: Hacker News
 
-### 3. Semi-transparent, colored cadmium telluride photovoltaic panels in agrivoltaics (6.0/10)
+### 3. Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives (6.0/10)
 
-**原文**: [Semi-transparent, colored cadmium telluride photovoltaic panels in agrivoltaics](https://www.anthropocenemagazine.org/2026/10/magenta-solar-panels-may-be-agrivoltaics-cleverest-trick-yet/)
+**原文**: [Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives](https://github.com/GoogleChrome/modern-web-guidance)
 **来源**: Hacker News
 
-### 4. Google Gemini routes personal Drive files and emails to human annotators (6.0/10)
+### 4. Show HN: Valencia, Spain in Sim City/Isometric View (6.0/10)
 
-**原文**: [Google Gemini routes personal Drive files and emails to human annotators](https://github.com/thisisme6598/gemini_files/)
+**原文**: [Show HN: Valencia, Spain in Sim City/Isometric View](https://tinyvalencia.com/)
 **来源**: Hacker News
 
-### 5. Muse Ember: Our smallest, most efficient model (6.0/10)
+### 5. AI usage generates a fragile codebase (6.0/10)
 
-**原文**: [Muse Ember: Our smallest, most efficient model](https://research.meta.ai/blog/muse-ember)
+**原文**: [AI usage generates a fragile codebase](https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/)
 **来源**: Hacker News
 
 ---
