@@ -1,32 +1,32 @@
-# AI 人工智能 日报 - 2026-11-11
+# AI 人工智能 日报 - 2026-11-12
 
-> 自动生成于 2026-11-11 03:19
+> 自动生成于 2026-11-12 04:30
 
 ## 今日热点（共 5 条）
 
-### 1. After 7 months, Glasswing overwelms maintainers with underwhelming findings (6.0/10)
+### 1. My AI agents found an unmapped Maya site? (7.0/10)
 
-**原文**: [After 7 months, Glasswing overwelms maintainers with underwhelming findings](https://www.vulncheck.com/blog/anthropic-glasswing-november-update)
+**原文**: [My AI agents found an unmapped Maya site?](https://pietromiotti.com/latest/maya-site)
 **来源**: Hacker News
 
-### 2. Synaptics patent claims stop work on DisplayLink drivers (6.0/10)
+### 2. 93% of paint splatters are valid Perl programs (2019) (6.0/10)
 
-**原文**: [Synaptics patent claims stop work on DisplayLink drivers](https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/)
+**原文**: [93% of paint splatters are valid Perl programs (2019)](https://www.mcmillen.dev/sigbovik/)
 **来源**: Hacker News
 
-### 3. Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives (6.0/10)
+### 3. United Airlines bans AI agents from booking flights on behalf of travelers (6.0/10)
 
-**原文**: [Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives](https://github.com/GoogleChrome/modern-web-guidance)
+**原文**: [United Airlines bans AI agents from booking flights on behalf of travelers](https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/)
 **来源**: Hacker News
 
-### 4. Show HN: Valencia, Spain in Sim City/Isometric View (6.0/10)
+### 4. Jensen Huang said to have had relationship with executive who reports to him (6.0/10)
 
-**原文**: [Show HN: Valencia, Spain in Sim City/Isometric View](https://tinyvalencia.com/)
+**原文**: [Jensen Huang said to have had relationship with executive who reports to him](https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html)
 **来源**: Hacker News
 
-### 5. AI usage generates a fragile codebase (6.0/10)
+### 5. Atuin Threads: All your agent sessions on every machine (6.0/10)
 
-**原文**: [AI usage generates a fragile codebase](https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/)
+**原文**: [Atuin Threads: All your agent sessions on every machine](https://blog.atuin.sh/threads-agent-sessions/)
 **来源**: Hacker News
 
 ---
