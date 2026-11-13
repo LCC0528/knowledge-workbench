@@ -1,32 +1,32 @@
-# AI 人工智能 日报 - 2026-11-12
+# AI 人工智能 日报 - 2026-11-13
 
-> 自动生成于 2026-11-12 04:30
+> 自动生成于 2026-11-13 03:44
 
 ## 今日热点（共 5 条）
 
-### 1. My AI agents found an unmapped Maya site? (7.0/10)
+### 1. Edge0-145B: Frontier AI Capabilities on Your Own Computer (6.0/10)
 
-**原文**: [My AI agents found an unmapped Maya site?](https://pietromiotti.com/latest/maya-site)
+**原文**: [Edge0-145B: Frontier AI Capabilities on Your Own Computer](https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer)
 **来源**: Hacker News
 
-### 2. 93% of paint splatters are valid Perl programs (2019) (6.0/10)
+### 2. Foundation Models framework (6.0/10)
 
-**原文**: [93% of paint splatters are valid Perl programs (2019)](https://www.mcmillen.dev/sigbovik/)
+**原文**: [Foundation Models framework](https://developer.apple.com/foundation-models-framework/)
 **来源**: Hacker News
 
-### 3. United Airlines bans AI agents from booking flights on behalf of travelers (6.0/10)
+### 3. I'm making LLMs work on small and old devices (6.0/10)
 
-**原文**: [United Airlines bans AI agents from booking flights on behalf of travelers](https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/)
+**原文**: [I'm making LLMs work on small and old devices](https://github.com/hyperionaidev/smolmaxxing/)
 **来源**: Hacker News
 
-### 4. Jensen Huang said to have had relationship with executive who reports to him (6.0/10)
+### 4. AI is turning Apple's app review process into a nightmare for synth developers (6.0/10)
 
-**原文**: [Jensen Huang said to have had relationship with executive who reports to him](https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html)
+**原文**: [AI is turning Apple's app review process into a nightmare for synth developers](https://synthanatomy.com/2026/11/ai-is-turning-apples-app-review-process-into-a-nightmare-for-developers.html)
 **来源**: Hacker News
 
-### 5. Atuin Threads: All your agent sessions on every machine (6.0/10)
+### 5. Chinese frontier AI models carry the fingerprint of export-controlled GPUs (6.0/10)
 
-**原文**: [Atuin Threads: All your agent sessions on every machine](https://blog.atuin.sh/threads-agent-sessions/)
+**原文**: [Chinese frontier AI models carry the fingerprint of export-controlled GPUs](https://unemploymentlabs.com/checkpoint-forensics)
 **来源**: Hacker News
 
 ---
