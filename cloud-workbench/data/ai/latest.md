@@ -1,32 +1,37 @@
-# AI 人工智能 日报 - 2026-11-13
+# AI 人工智能 日报 - 2026-11-14
 
-> 自动生成于 2026-11-13 03:44
+> 自动生成于 2026-11-14 03:43
 
-## 今日热点（共 5 条）
+## 今日热点（共 6 条）
 
-### 1. Edge0-145B: Frontier AI Capabilities on Your Own Computer (6.0/10)
+### 1. Reverse engineering my Coway air purifier to ditch the cloud (7.0/10)
 
-**原文**: [Edge0-145B: Frontier AI Capabilities on Your Own Computer](https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer)
+**原文**: [Reverse engineering my Coway air purifier to ditch the cloud](https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/)
 **来源**: Hacker News
 
-### 2. Foundation Models framework (6.0/10)
+### 2. Live airband on all frequencies from KORS. Victoria, CA also ground stopped (6.0/10)
 
-**原文**: [Foundation Models framework](https://developer.apple.com/foundation-models-framework/)
+**原文**: [Live airband on all frequencies from KORS. Victoria, CA also ground stopped](https://orcasairband.com/)
 **来源**: Hacker News
 
-### 3. I'm making LLMs work on small and old devices (6.0/10)
+### 3. Ukraine knocks out 36% of Russia's oil refining capacity in under two weeks (6.0/10)
 
-**原文**: [I'm making LLMs work on small and old devices](https://github.com/hyperionaidev/smolmaxxing/)
+**原文**: [Ukraine knocks out 36% of Russia's oil refining capacity in under two weeks](https://english.nv.ua/nation/thirteen-day-drone-blitz-paralyzes-36-of-moscow-s-oil-50658616.html)
 **来源**: Hacker News
 
-### 4. AI is turning Apple's app review process into a nightmare for synth developers (6.0/10)
+### 4. After 600 experiments, here's what I discovered about JEPA world models (6.0/10)
 
-**原文**: [AI is turning Apple's app review process into a nightmare for synth developers](https://synthanatomy.com/2026/11/ai-is-turning-apples-app-review-process-into-a-nightmare-for-developers.html)
+**原文**: [After 600 experiments, here's what I discovered about JEPA world models](https://haddyalchaer.com/jepa)
 **来源**: Hacker News
 
-### 5. Chinese frontier AI models carry the fingerprint of export-controlled GPUs (6.0/10)
+### 5. Perplexity Decider v1.3: Training, eval, and use cases (6.0/10)
 
-**原文**: [Chinese frontier AI models carry the fingerprint of export-controlled GPUs](https://unemploymentlabs.com/checkpoint-forensics)
+**原文**: [Perplexity Decider v1.3: Training, eval, and use cases](https://www.perplexity.ai/hub/blog/perplexity-decider)
+**来源**: Hacker News
+
+### 6. All US airports are currently ground stopped (6.0/10)
+
+**原文**: [All US airports are currently ground stopped](https://twitter.com/flightradar24/status/2121347654714077605)
 **来源**: Hacker News
 
 ---
