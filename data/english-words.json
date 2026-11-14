@@ -282,8 +282,8 @@
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
     "level": 5,
-    "nextReviewDate": "2026-10-16",
-    "lastReviewDate": "2026-09-16"
+    "nextReviewDate": "2026-12-14",
+    "lastReviewDate": "2026-11-14"
   },
   {
     "id": 1785328044648,
@@ -601,8 +601,8 @@
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
     "level": 5,
-    "nextReviewDate": "2026-10-15",
-    "lastReviewDate": "2026-09-15"
+    "nextReviewDate": "2026-12-14",
+    "lastReviewDate": "2026-11-14"
   },
   {
     "id": 1785328044678,
@@ -2781,9 +2781,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-30",
-    "level": 4,
-    "nextReviewDate": "2026-10-25",
-    "lastReviewDate": "2026-10-10",
+    "level": 5,
+    "nextReviewDate": "2026-12-14",
+    "lastReviewDate": "2026-11-14",
     "phonetic": ""
   },
   {
@@ -3057,9 +3057,9 @@
     "example": "This cup is made of fine china.",
     "exampleTranslation": "这个杯子是由精美的瓷器制成的。",
     "createdDate": "2026-09-15",
-    "level": 4,
-    "nextReviewDate": "2026-10-13",
-    "lastReviewDate": "2026-09-28",
+    "level": 5,
+    "nextReviewDate": "2026-12-14",
+    "lastReviewDate": "2026-11-14",
     "phonetic": ""
   },
   {
