@@ -1,7 +1,27 @@
 {
-  "updated": "2026-11-15",
-  "count": 462,
+  "updated": "2026-11-16",
+  "count": 464,
   "items": [
+    {
+      "title": "A short explainer on how El Niño works [video]",
+      "url": "https://www.youtube.com/watch?v=7_JF3etiAv8",
+      "source": "Hacker News",
+      "score": 188,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-16",
+      "topic": "ai"
+    },
+    {
+      "title": "Understanding Positional Embeddings in Modern LLMs",
+      "url": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings",
+      "source": "Hacker News",
+      "score": 215,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-16",
+      "topic": "ai"
+    },
     {
       "title": "Lovable apps expose passport details and more than 200K private messages",
       "url": "https://www.crissyfield.de/research/lovable-en/",
