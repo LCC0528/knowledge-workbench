@@ -1,7 +1,37 @@
 {
-  "updated": "2026-11-16",
-  "count": 464,
+  "updated": "2026-11-17",
+  "count": 467,
   "items": [
+    {
+      "title": "Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use",
+      "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
+      "source": "Hacker News",
+      "score": 398,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-17",
+      "topic": "ai"
+    },
+    {
+      "title": "Microsoft blames monster email outage on software defect introduced in July fix",
+      "url": "https://www.theregister.com/saas/2026/11/16/microsoft-blames-monster-email-outage-on-software-defect-introduced-in-july-fix/5310026",
+      "source": "Hacker News",
+      "score": 261,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-17",
+      "topic": "ai"
+    },
+    {
+      "title": "United Airlines experiencing a widespread system outage, airline says",
+      "url": "https://www.cnn.com/2026/11/16/us/united-airlines-outage",
+      "source": "Hacker News",
+      "score": 220,
+      "text": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50524260\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50524260</a>",
+      "ai_score": 6.0,
+      "date": "2026-11-17",
+      "topic": "ai"
+    },
     {
       "title": "A short explainer on how El Niño works [video]",
       "url": "https://www.youtube.com/watch?v=7_JF3etiAv8",
