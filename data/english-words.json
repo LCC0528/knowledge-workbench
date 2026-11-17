@@ -227,8 +227,8 @@
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
     "level": 5,
-    "nextReviewDate": "2026-10-07",
-    "lastReviewDate": "2026-09-07"
+    "nextReviewDate": "2026-12-15",
+    "lastReviewDate": "2026-11-15"
   },
   {
     "id": 1785328044643,
@@ -2073,9 +2073,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-12",
-    "level": 4,
-    "nextReviewDate": "2026-10-14",
-    "lastReviewDate": "2026-09-29",
+    "level": 5,
+    "nextReviewDate": "2026-12-15",
+    "lastReviewDate": "2026-11-15",
     "phonetic": ""
   },
   {
@@ -3784,9 +3784,9 @@
     "example": "Darwin's theory of evolution revolutionized our understanding of life.",
     "exampleTranslation": "达尔文的进化论彻底改变了我们对生命的理解。",
     "createdDate": "2026-09-17",
-    "level": 0,
-    "nextReviewDate": "2026-09-22",
-    "lastReviewDate": "2026-09-21",
+    "level": 1,
+    "nextReviewDate": "2026-11-16",
+    "lastReviewDate": "2026-11-15",
     "phonetic": ""
   },
   {
@@ -4192,9 +4192,9 @@
     "example": "You should wear formal clothes to attend the job interview.",
     "exampleTranslation": "你应该穿正装去参加求职面试。",
     "createdDate": "2026-09-17",
-    "level": 0,
-    "nextReviewDate": "2026-09-17",
-    "lastReviewDate": null,
+    "level": 1,
+    "nextReviewDate": "2026-11-16",
+    "lastReviewDate": "2026-11-15",
     "phonetic": ""
   },
   {
