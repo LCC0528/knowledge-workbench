@@ -1,7 +1,67 @@
 {
-  "updated": "2026-11-17",
-  "count": 467,
+  "updated": "2026-11-18",
+  "count": 473,
   "items": [
+    {
+      "title": "GPT‑6.2 Astra and Sol",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+      "source": "Hacker News",
+      "score": 1167,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-11-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Google's AI answers reducing search traffic by 40%",
+      "url": "https://revscope.co/blog/search-seo-geo-2026/",
+      "source": "Hacker News",
+      "score": 202,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-18",
+      "topic": "ai"
+    },
+    {
+      "title": "MAI Code 2 and Code 2 Flash",
+      "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
+      "source": "Hacker News",
+      "score": 312,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Harvard researchers find AI coding agents shifted the bottleneck to code review",
+      "url": "https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review/",
+      "source": "Hacker News",
+      "score": 104,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-18",
+      "topic": "ai"
+    },
+    {
+      "title": "What is the best harness for each model?",
+      "url": "https://runta.com/blog/introducing-frontierharness-eval-v1-1/",
+      "source": "Hacker News",
+      "score": 350,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Not Everything Needs an LLM",
+      "url": "https://newsletter.posthog.com/p/decision-models",
+      "source": "Hacker News",
+      "score": 123,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-18",
+      "topic": "ai"
+    },
     {
       "title": "Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use",
       "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
