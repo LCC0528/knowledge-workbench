@@ -1,37 +1,22 @@
-# AI 人工智能 日报 - 2026-11-19
+# AI 人工智能 日报 - 2026-11-20
 
-> 自动生成于 2026-11-19 04:40
+> 自动生成于 2026-11-20 04:31
 
-## 今日热点（共 6 条）
+## 今日热点（共 3 条）
 
-### 1. Seven new models at scalable price-performance (6.0/10)
+### 1. Gemini 4 Neon is the new #1 on the Models Engineering Index (6.0/10)
 
-**原文**: [Seven new models at scalable price-performance](https://microsoft.ai/news/microsoft-ignite-2026/)
+**原文**: [Gemini 4 Neon is the new #1 on the Models Engineering Index](https://git-aarvin.github.io/mei/)
 **来源**: Hacker News
 
-### 2. AI agents ask better questions than KPMG accountants in audit trial (6.0/10)
+### 2. The 98% Slot Machine: How Paid Advertising Became an Extraction Tax (6.0/10)
 
-**原文**: [AI agents ask better questions than KPMG accountants in audit trial](https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/)
+**原文**: [The 98% Slot Machine: How Paid Advertising Became an Extraction Tax](https://globalcommercegraph.com/writing/the-ninety-eight-percent-slot-machine)
 **来源**: Hacker News
 
-### 3. LLM assisted reverse engineering (6.0/10)
+### 3. An Oregon library ditched Dewey Decimal and got people excited about books again (6.0/10)
 
-**原文**: [LLM assisted reverse engineering](https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering)
-**来源**: Hacker News
-
-### 4. DaisyRose-27B (6.0/10)
-
-**原文**: [DaisyRose-27B](https://www.radixark.com/blog/daisyrose-27b)
-**来源**: Hacker News
-
-### 5. Genie 4 is now available (6.0/10)
-
-**原文**: [Genie 4 is now available](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/)
-**来源**: Hacker News
-
-### 6. Advancing chip design with OpenAI models (6.0/10)
-
-**原文**: [Advancing chip design with OpenAI models](https://openai.com/index/advancing-chip-design-with-our-models/)
+**原文**: [An Oregon library ditched Dewey Decimal and got people excited about books again](https://www.fastcompany.com/91597520/oregon-library-ditched-dewey-decimal-wayfinding-system)
 **来源**: Hacker News
 
 ---
