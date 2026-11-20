@@ -1,0 +1,46 @@
+{
+  "date": "2026-09-16",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Introducing System One Models and Jev",
+      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "source": "Hacker News",
+      "score": 770,
+      "text": "",
+      "ai_score": 7.0
+    },
+    {
+      "title": "Let's make quality the norm again",
+      "url": "https://www.forbrukerradet.no/short-life/",
+      "source": "Hacker News",
+      "score": 309,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Suspected sabotage causes major Netherlands rail disruption",
+      "url": "https://www.bbc.com/news/articles/c8ly49w9g1edo",
+      "source": "Hacker News",
+      "score": 437,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "A single firm is behind OpenAI, Anthropic, and Meta hacking scandals",
+      "url": "https://www.effort.news/irregular",
+      "source": "Hacker News",
+      "score": 460,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Why I'm still bearish on LLMs after Navier-Stokes",
+      "url": "https://dank.systems/posts/2026-09-15-ai-bear.html",
+      "source": "Hacker News",
+      "score": 146,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

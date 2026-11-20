@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-11",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Build your own decision model",
+      "url": "https://nishtahir.com/build-your-own-decision-model/",
+      "source": "Hacker News",
+      "score": 123,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
+      "url": "https://github.com/rociiu/talorys",
+      "source": "Hacker News",
+      "score": 257,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Mxc: Microsoft Execution Containers version 1.0.0",
+      "url": "https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/",
+      "source": "Hacker News",
+      "score": 163,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "OpenSCAD the Programmers Solid 3D CAD Modeller",
+      "url": "https://openscad.org/",
+      "source": "Hacker News",
+      "score": 109,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Grieving the loss of details",
+      "url": "https://purplesyringa.moe/blog/grieving-the-loss-of-details/",
+      "source": "Hacker News",
+      "score": 356,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Nvidia in talks to acquire US 'open' model startup Reflection AI",
+      "url": "https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a",
+      "source": "Hacker News",
+      "score": 126,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Food processing influences metabolism and brain activity",
+      "url": "https://news.vt.edu/articles/2026/10/research_fralinbiomed_upfhutelin.html",
+      "source": "Hacker News",
+      "score": 109,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Bitwarden Dual License Model",
+      "url": "https://community.bitwarden.com/t/published-version-update-in-app-stores/102750",
+      "source": "Hacker News",
+      "score": 354,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

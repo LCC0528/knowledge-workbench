@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-02",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
+      "url": "https://blog.cloudflare.com/clef-decision-models/",
+      "source": "Hacker News",
+      "score": 443,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Context Language Models",
+      "url": "https://arxiv.org/abs/2609.37725",
+      "source": "Hacker News",
+      "score": 113,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
+      "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
+      "source": "Hacker News",
+      "score": 172,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

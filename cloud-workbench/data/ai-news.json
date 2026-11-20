@@ -1,7 +1,2947 @@
 {
-  "updated": "2026-09-06",
-  "count": 185,
+  "updated": "2026-11-19",
+  "count": 479,
   "items": [
+    {
+      "title": "Seven new models at scalable price-performance",
+      "url": "https://microsoft.ai/news/microsoft-ignite-2026/",
+      "source": "Hacker News",
+      "score": 480,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-19",
+      "topic": "ai"
+    },
+    {
+      "title": "AI agents ask better questions than KPMG accountants in audit trial",
+      "url": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/",
+      "source": "Hacker News",
+      "score": 407,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-19",
+      "topic": "ai"
+    },
+    {
+      "title": "LLM assisted reverse engineering",
+      "url": "https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering",
+      "source": "Hacker News",
+      "score": 112,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-19",
+      "topic": "ai"
+    },
+    {
+      "title": "DaisyRose-27B",
+      "url": "https://www.radixark.com/blog/daisyrose-27b",
+      "source": "Hacker News",
+      "score": 162,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Genie 4 is now available",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/",
+      "source": "Hacker News",
+      "score": 209,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Advancing chip design with OpenAI models",
+      "url": "https://openai.com/index/advancing-chip-design-with-our-models/",
+      "source": "Hacker News",
+      "score": 175,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-19",
+      "topic": "ai"
+    },
+    {
+      "title": "GPT‑6.2 Astra and Sol",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+      "source": "Hacker News",
+      "score": 1167,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-11-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Google's AI answers reducing search traffic by 40%",
+      "url": "https://revscope.co/blog/search-seo-geo-2026/",
+      "source": "Hacker News",
+      "score": 202,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-18",
+      "topic": "ai"
+    },
+    {
+      "title": "MAI Code 2 and Code 2 Flash",
+      "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
+      "source": "Hacker News",
+      "score": 312,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Harvard researchers find AI coding agents shifted the bottleneck to code review",
+      "url": "https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review/",
+      "source": "Hacker News",
+      "score": 104,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-18",
+      "topic": "ai"
+    },
+    {
+      "title": "What is the best harness for each model?",
+      "url": "https://runta.com/blog/introducing-frontierharness-eval-v1-1/",
+      "source": "Hacker News",
+      "score": 350,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Not Everything Needs an LLM",
+      "url": "https://newsletter.posthog.com/p/decision-models",
+      "source": "Hacker News",
+      "score": 123,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use",
+      "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
+      "source": "Hacker News",
+      "score": 398,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-17",
+      "topic": "ai"
+    },
+    {
+      "title": "Microsoft blames monster email outage on software defect introduced in July fix",
+      "url": "https://www.theregister.com/saas/2026/11/16/microsoft-blames-monster-email-outage-on-software-defect-introduced-in-july-fix/5310026",
+      "source": "Hacker News",
+      "score": 261,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-17",
+      "topic": "ai"
+    },
+    {
+      "title": "United Airlines experiencing a widespread system outage, airline says",
+      "url": "https://www.cnn.com/2026/11/16/us/united-airlines-outage",
+      "source": "Hacker News",
+      "score": 220,
+      "text": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50524260\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50524260</a>",
+      "ai_score": 6.0,
+      "date": "2026-11-17",
+      "topic": "ai"
+    },
+    {
+      "title": "A short explainer on how El Niño works [video]",
+      "url": "https://www.youtube.com/watch?v=7_JF3etiAv8",
+      "source": "Hacker News",
+      "score": 188,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-16",
+      "topic": "ai"
+    },
+    {
+      "title": "Understanding Positional Embeddings in Modern LLMs",
+      "url": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings",
+      "source": "Hacker News",
+      "score": 215,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-16",
+      "topic": "ai"
+    },
+    {
+      "title": "Lovable apps expose passport details and more than 200K private messages",
+      "url": "https://www.crissyfield.de/research/lovable-en/",
+      "source": "Hacker News",
+      "score": 686,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-11-15",
+      "topic": "ai"
+    },
+    {
+      "title": "Generative AI uses more energy on non-English text",
+      "url": "https://news.umich.edu/generative-ai-uses-more-energy-on-non-english-text/",
+      "source": "Hacker News",
+      "score": 187,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-15",
+      "topic": "ai"
+    },
+    {
+      "title": "Tech companies are trying to shift the concept of privacy again",
+      "url": "https://www.eff.org/deeplinks/2026/11/tech-companies-are-trying-shift-entire-concept-privacy-again",
+      "source": "Hacker News",
+      "score": 486,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-15",
+      "topic": "ai"
+    },
+    {
+      "title": "Reverse engineering my Coway air purifier to ditch the cloud",
+      "url": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
+      "source": "Hacker News",
+      "score": 695,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-11-14",
+      "topic": "ai"
+    },
+    {
+      "title": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
+      "url": "https://orcasairband.com/",
+      "source": "Hacker News",
+      "score": 226,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-14",
+      "topic": "ai"
+    },
+    {
+      "title": "Ukraine knocks out 36% of Russia's oil refining capacity in under two weeks",
+      "url": "https://english.nv.ua/nation/thirteen-day-drone-blitz-paralyzes-36-of-moscow-s-oil-50658616.html",
+      "source": "Hacker News",
+      "score": 200,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-14",
+      "topic": "ai"
+    },
+    {
+      "title": "After 600 experiments, here's what I discovered about JEPA world models",
+      "url": "https://haddyalchaer.com/jepa",
+      "source": "Hacker News",
+      "score": 220,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-14",
+      "topic": "ai"
+    },
+    {
+      "title": "Perplexity Decider v1.3: Training, eval, and use cases",
+      "url": "https://www.perplexity.ai/hub/blog/perplexity-decider",
+      "source": "Hacker News",
+      "score": 105,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-14",
+      "topic": "ai"
+    },
+    {
+      "title": "All US airports are currently ground stopped",
+      "url": "https://twitter.com/flightradar24/status/2121347654714077605",
+      "source": "Hacker News",
+      "score": 176,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-14",
+      "topic": "ai"
+    },
+    {
+      "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
+      "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
+      "source": "Hacker News",
+      "score": 101,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-13",
+      "topic": "ai"
+    },
+    {
+      "title": "Foundation Models framework",
+      "url": "https://developer.apple.com/foundation-models-framework/",
+      "source": "Hacker News",
+      "score": 154,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-13",
+      "topic": "ai"
+    },
+    {
+      "title": "I'm making LLMs work on small and old devices",
+      "url": "https://github.com/hyperionaidev/smolmaxxing/",
+      "source": "Hacker News",
+      "score": 294,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-13",
+      "topic": "ai"
+    },
+    {
+      "title": "AI is turning Apple's app review process into a nightmare for synth developers",
+      "url": "https://synthanatomy.com/2026/11/ai-is-turning-apples-app-review-process-into-a-nightmare-for-developers.html",
+      "source": "Hacker News",
+      "score": 120,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-13",
+      "topic": "ai"
+    },
+    {
+      "title": "Chinese frontier AI models carry the fingerprint of export-controlled GPUs",
+      "url": "https://unemploymentlabs.com/checkpoint-forensics",
+      "source": "Hacker News",
+      "score": 198,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-13",
+      "topic": "ai"
+    },
+    {
+      "title": "My AI agents found an unmapped Maya site?",
+      "url": "https://pietromiotti.com/latest/maya-site",
+      "source": "Hacker News",
+      "score": 949,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-11-12",
+      "topic": "ai"
+    },
+    {
+      "title": "93% of paint splatters are valid Perl programs (2019)",
+      "url": "https://www.mcmillen.dev/sigbovik/",
+      "source": "Hacker News",
+      "score": 250,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-12",
+      "topic": "ai"
+    },
+    {
+      "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+      "source": "Hacker News",
+      "score": 462,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-12",
+      "topic": "ai"
+    },
+    {
+      "title": "Jensen Huang said to have had relationship with executive who reports to him",
+      "url": "https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html",
+      "source": "Hacker News",
+      "score": 299,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-12",
+      "topic": "ai"
+    },
+    {
+      "title": "Atuin Threads: All your agent sessions on every machine",
+      "url": "https://blog.atuin.sh/threads-agent-sessions/",
+      "source": "Hacker News",
+      "score": 199,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-12",
+      "topic": "ai"
+    },
+    {
+      "title": "After 7 months, Glasswing overwelms maintainers with underwhelming findings",
+      "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+      "source": "Hacker News",
+      "score": 302,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-11",
+      "topic": "ai"
+    },
+    {
+      "title": "Synaptics patent claims stop work on DisplayLink drivers",
+      "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
+      "source": "Hacker News",
+      "score": 320,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-11",
+      "topic": "ai"
+    },
+    {
+      "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance",
+      "source": "Hacker News",
+      "score": 279,
+      "text": "Browsers natively handle a lot of what used to take 50 lines of JS (or a dependency): `CSS.highlights` for text range highlighting without &lt;span&gt;s everywhere, `&lt;dialog&gt;` and showModal() give you backdrops and ideal focus management, `field-sizing` to auto-grow textareas as the user types.. (Something yesterday&#x27;s ftrain post touched on [0])<p>Models know about some of these by name, but consistently won&#x27;t default to using the platform-native solution and instead prefer the incumbent &lt;div&gt;+JS based pattern.  We started an effort in Chrome to supplement coding agents with this key domain knowledge and we&#x27;re shipping our 1.0 today, in collaboration with Firefox, MDN, and Edge.<p>200+ guides (~1.7MB) of curated, hand-crafted implementation best-practices from web experts, updated as the web evolves.  (Open source, obv, so.. we&#x27;ll welcome your bikeshedding ;) Readable versions here: [1]<p>I&#x27;ve spent the last 9 months obsessing over how to ship this as an agent skill + (Agentic RAG) CLI without blowing up your context window. (Or cedeing activation mechanics to MCP dynamic tool search). The skill description is minmaxed for activating on relevant frontend tasks. The RAG work I&#x27;m pretty proud of… originally a 500mb native stack down to a ~7MB pure-JS package, ~10ms search on your CPU.<p>We just introduced a deterministic &#x27;legacy-scan&#x27; (trained on 30k github repos) to identify old &#x27;n dusted patterns that your agent can modernize. (92% avg precision on held-out repos.)<p>People make a lot of claims about what coding agents are good&#x2F;bad at. We wanted receipts, so we invested heavily in eval infra [2] to help us hill-climb, but also to identify when knowledge is common enough we can prune our guides. (Ofc, some of the things we thought AI didn&#x27;t know turned out to be wrong :)  We run codex&#x2F;claude&#x2F;agy against 200 tasks without the skill and then with.. In total ~1,700 playwright&#x2F;AST-based assertions. Agents go from 55% pass unguided to 92% guided.<p>Try it out:<p><pre><code>    DISABLE_TELEMETRY=1 npx modern-web-guidance@latest install\n    DISABLE_TELEMETRY=1 npx modern-web-guidance@latest search &quot;animate dialog modal&quot;\n    DISABLE_TELEMETRY=1 npx modern-web-guidance@latest legacy-scan .&#x2F;src\n</code></pre>\nIf you spot something wrong or weird, give us a holler!<p>Longer write-up on the 1.0:  <a href=\"https:&#x2F;&#x2F;developer.chrome.com&#x2F;blog&#x2F;modern-web-guidance-v1\" rel=\"nofollow\">https:&#x2F;&#x2F;developer.chrome.com&#x2F;blog&#x2F;modern-web-guidance-v1</a><p>---<p>0: <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50416456\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50416456</a><p>1: <a href=\"https:&#x2F;&#x2F;developer.chrome.com&#x2F;docs&#x2F;modern-web-guidance&#x2F;guides\" rel=\"nofollow\">https:&#x2F;&#x2F;developer.chrome.com&#x2F;docs&#x2F;modern-web-guidance&#x2F;guides</a><p>2: <a href=\"https:&#x2F;&#x2F;googlechrome.github.io&#x2F;modern-web-guidance-src&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;googlechrome.github.io&#x2F;modern-web-guidance-src&#x2F;</a>",
+      "ai_score": 6.0,
+      "date": "2026-11-11",
+      "topic": "ai"
+    },
+    {
+      "title": "Show HN: Valencia, Spain in Sim City/Isometric View",
+      "url": "https://tinyvalencia.com/",
+      "source": "Hacker News",
+      "score": 207,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-11",
+      "topic": "ai"
+    },
+    {
+      "title": "AI usage generates a fragile codebase",
+      "url": "https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/",
+      "source": "Hacker News",
+      "score": 406,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-11",
+      "topic": "ai"
+    },
+    {
+      "title": "Foldable Flight: The Best Paper Airplanes",
+      "url": "https://www.foldableflight.com",
+      "source": "Hacker News",
+      "score": 903,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-11-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system",
+      "url": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy",
+      "source": "Hacker News",
+      "score": 493,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Semi-transparent, colored cadmium telluride photovoltaic panels in agrivoltaics",
+      "url": "https://www.anthropocenemagazine.org/2026/10/magenta-solar-panels-may-be-agrivoltaics-cleverest-trick-yet/",
+      "source": "Hacker News",
+      "score": 292,
+      "text": "<a href=\"https:&#x2F;&#x2F;www.cell.com&#x2F;cell-reports-physical-science&#x2F;fulltext&#x2F;S2666-3864(26)00461-3\" rel=\"nofollow\">https:&#x2F;&#x2F;www.cell.com&#x2F;cell-reports-physical-science&#x2F;fulltext&#x2F;...</a>",
+      "ai_score": 6.0,
+      "date": "2026-11-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Google Gemini routes personal Drive files and emails to human annotators",
+      "url": "https://github.com/thisisme6598/gemini_files/",
+      "source": "Hacker News",
+      "score": 486,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Muse Ember: Our smallest, most efficient model",
+      "url": "https://research.meta.ai/blog/muse-ember",
+      "source": "Hacker News",
+      "score": 269,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "source": "Hacker News",
+      "score": 594,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-11-09",
+      "topic": "ai"
+    },
+    {
+      "title": "Outlook.com Is Quietly Rejecting Email from Domains Without DMARC",
+      "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
+      "source": "Hacker News",
+      "score": 275,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-09",
+      "topic": "ai"
+    },
+    {
+      "title": "How I Fight AI Brain Fry",
+      "url": "https://sergeykuhne.com/blog/fighting-ai-brain-fry",
+      "source": "Hacker News",
+      "score": 169,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-09",
+      "topic": "ai"
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+      "url": "https://www.axios.com/2026/11/08/nvidia-ceo-jensen-huang-affair-email-to-company",
+      "source": "Hacker News",
+      "score": 394,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-09",
+      "topic": "ai"
+    },
+    {
+      "title": "The end of Microsoft Research's AI Frontiers group",
+      "url": "https://hunch.net/?p=13764006",
+      "source": "Hacker News",
+      "score": 402,
+      "text": "<a href=\"https:&#x2F;&#x2F;archive.is&#x2F;AaY5O\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.is&#x2F;AaY5O</a><p><a href=\"https:&#x2F;&#x2F;businessexaminer.ca&#x2F;victoria-articles&#x2F;item&#x2F;microsoft-researcher-john-langford-exits-as-ai-frontiers-group-is-declared&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;businessexaminer.ca&#x2F;victoria-articles&#x2F;item&#x2F;microsoft...</a>",
+      "ai_score": 6.0,
+      "date": "2026-11-08",
+      "topic": "ai"
+    },
+    {
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "source": "Hacker News",
+      "score": 200,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-08",
+      "topic": "ai"
+    },
+    {
+      "title": "How Long Can Life Wait?",
+      "url": "https://mceglowski.substack.com/p/how-long-can-life-wait",
+      "source": "Hacker News",
+      "score": 130,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-08",
+      "topic": "ai"
+    },
+    {
+      "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
+      "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
+      "source": "Hacker News",
+      "score": 291,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-07",
+      "topic": "ai"
+    },
+    {
+      "title": "AI is dramatically accelerating AI research",
+      "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+      "source": "Hacker News",
+      "score": 222,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-07",
+      "topic": "ai"
+    },
+    {
+      "title": "Claude Code sends your email address to websites",
+      "url": "https://github.com/anthropics/claude-code/issues/107757",
+      "source": "Hacker News",
+      "score": 664,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-11-06",
+      "topic": "ai"
+    },
+    {
+      "title": "MS Paint Remote Code Execution Vulnerability",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
+      "source": "Hacker News",
+      "score": 369,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-06",
+      "topic": "ai"
+    },
+    {
+      "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
+      "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
+      "source": "Hacker News",
+      "score": 164,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-06",
+      "topic": "ai"
+    },
+    {
+      "title": "Show HN: A decent text-to-image model trained for ~$20K (Apache 2.0 Weights)",
+      "url": "https://www.linum.ai/field-notes/pjit-21k",
+      "source": "Hacker News",
+      "score": 173,
+      "text": "My brother and I run a 2-person lab that trains our own generative video models from scratch. The ultimate goal is a set of creative tools that make it easier for anyone to make animation.<p>Video models today are too slow&#x2F;expensive and lack sufficient controls. Creativity is an iterative process. You make, you tweak, you get better. In our opinion, they&#x27;re not usable yet for storytelling.<p>When we set out to build Linum v3 (our next video model) earlier this year, the primary goal was to bring the cost envelope of inference down significantly. If our model is fast and cheap, it&#x27;s the first step (of many) towards useful creative tools.<p>Typically, you see &quot;latent diffusion models&quot;. A VAE (Variational Autoencoder) compresses the input data into a smaller &quot;latent space&quot; and the diffusion model learns how to generate within this subspace.<p>Over the past few months, we&#x27;ve been publishing our work on efficient pixel-space diffusion models. These throw away the VAE, having the diffusion model learn a latent-space optimized for its exact task.<p>This serves 3 purposes:\n1) Simplify Architecture (no 2-stage model training)\n2) Faster Convergence (11x faster convergence vs. our latent diffusion counterpart)\n3) Cheaper Inference (4x more aggressive token reduction in attention context-windows, without significant loss in quality)<p>This past month we were pressure testing our latest architecture (Pyramid-JiT) by training a text-to-image model longer than the typical one-off experiment. Specifically, we trained it for ~$20K on 660M samples.<p>We were surprised by the quality of results, so we thought we&#x27;d release it as open weights for the community (Apache 2.0). The research itself is already public, on our website.<p>For us, it&#x27;s a big stepping stone towards cheaper video models, since pretty much all video models start as image models. We like to say these models have to learn nouns before they learn verbs.",
+      "ai_score": 6.0,
+      "date": "2026-11-06",
+      "topic": "ai"
+    },
+    {
+      "title": "GPT-6 Astra covertly underperforms on safety research",
+      "url": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/",
+      "source": "Hacker News",
+      "score": 312,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-06",
+      "topic": "ai"
+    },
+    {
+      "title": "MCP Explained",
+      "url": "https://mcp-explained.com/",
+      "source": "Hacker News",
+      "score": 260,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-06",
+      "topic": "ai"
+    },
+    {
+      "title": "AI is forcing us to pay off 40 years of technical debt",
+      "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
+      "source": "Hacker News",
+      "score": 1113,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-11-05",
+      "topic": "ai"
+    },
+    {
+      "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+      "url": "https://www.ricursive.com/ripple",
+      "source": "Hacker News",
+      "score": 243,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-05",
+      "topic": "ai"
+    },
+    {
+      "title": "Kimi K3.1 Pro model weights are out",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+      "source": "Hacker News",
+      "score": 415,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-05",
+      "topic": "ai"
+    },
+    {
+      "title": "Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s",
+      "url": "https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra",
+      "source": "Hacker News",
+      "score": 115,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-05",
+      "topic": "ai"
+    },
+    {
+      "title": "Progress on provable inference for large language models",
+      "url": "https://www.anthropic.com/research/provable-inference",
+      "source": "Hacker News",
+      "score": 187,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-05",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI to acquire Pierre Computer Company",
+      "url": "https://openai.com/index/openai-to-acquire-pierre/",
+      "source": "Hacker News",
+      "score": 210,
+      "text": "<a href=\"https:&#x2F;&#x2F;twitter.com&#x2F;pierrecomputer&#x2F;status&#x2F;2117999036175188183\" rel=\"nofollow\">https:&#x2F;&#x2F;twitter.com&#x2F;pierrecomputer&#x2F;status&#x2F;211799903617518818...</a>",
+      "ai_score": 6.0,
+      "date": "2026-11-05",
+      "topic": "ai"
+    },
+    {
+      "title": "Ask HN: What's your current AI agentic setup?",
+      "url": "https://news.ycombinator.com/item?id=50366117",
+      "source": "Hacker News",
+      "score": 167,
+      "text": "I&#x27;m curious how people on HN are using AI day to day, and came up with a list of questions I thought could be interesting to know. No need to answer every question of course, just wanted to get a gut feel how people are using AI.<p>1) What AI subscriptions are you personally paying for? (Claude, ChatGPT&#x2F;Codex, Cursor, etc)<p>- Which tiers?<p>- Have you purchased multiple subscriptions from the same provider (eg two Claude accounts)?<p>2) Are you using models outside (or instead) of those subscriptions? For example, pay-as-you-go APIs, OpenRouter, or locally hosted models.<p>- Which models and providers?<p>3) What coding harnesses and interfaces are you using? Are you sticking with the default CLIs or IDE integrations, or using alternatives like OpenCode, Pi, Aider, Muse Code, or custom-built harnesses?<p>- What made you switch harnesses (if you switched)?<p>4) Are you using any agent orchestration or swarm tools?<p>- For example, Munder Difflin, Gas Town, Ruflo, or something custom.<p>5) Are you using broader agent platforms like OpenClaw &#x2F; Hermes Agent &#x2F; Grok bot &#x2F; Dots &#x2F; Muse?<p>- If you are using them, what are your main use cases?<p>-----<p>I know my workflow has differed significantly from a year ago, and so it would be interesting to capture a snapshot today of what people are using and why.",
+      "ai_score": 6.0,
+      "date": "2026-11-05",
+      "topic": "ai"
+    },
+    {
+      "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
+      "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+      "source": "Hacker News",
+      "score": 1084,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-11-04",
+      "topic": "ai"
+    },
+    {
+      "title": "Jailbreaking my car's navigation system just so I can change the time",
+      "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
+      "source": "Hacker News",
+      "score": 647,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-11-04",
+      "topic": "ai"
+    },
+    {
+      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "source": "Hacker News",
+      "score": 512,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-11-04",
+      "topic": "ai"
+    },
+    {
+      "title": "Fujifilm to boost tape production 5x as AI fuels archiving demand",
+      "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
+      "source": "Hacker News",
+      "score": 402,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-04",
+      "topic": "ai"
+    },
+    {
+      "title": "The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer",
+      "url": "https://arxiv.org/abs/2605.29713",
+      "source": "Hacker News",
+      "score": 260,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-04",
+      "topic": "ai"
+    },
+    {
+      "title": "How I use AI (Oct 2026)",
+      "url": "https://ben.stolovitz.com/posts/how-use-ai-oct-2026/",
+      "source": "Hacker News",
+      "score": 101,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-04",
+      "topic": "ai"
+    },
+    {
+      "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+      "url": "https://momentic.ai/",
+      "source": "Hacker News",
+      "score": 133,
+      "text": "Hey HN, we’re Wei-Wei and Jeff. We’re building Momentic, QA agents that autonomously plan, explore, and bug-bash controls and user flows in your web, iOS, Android, and (soon) desktop apps to catch bugs.<p>Here’s a demo: <a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;BFsM-Se1Fh8\" rel=\"nofollow\">https:&#x2F;&#x2F;youtu.be&#x2F;BFsM-Se1Fh8</a><p>We’re both software engineers that spent our careers on dev tooling and infra across companies like Robinhood, Retool, WeWork, and Qualtrics. Testing was always a pain in the ass (esp Playwright and Selenium), so we built agents to do it for us.<p>Modern day software has a ton of bugs and the change failure rate is only growing faster as coding agent adoption scales. LLMs are really good at generating code, but reinforce their own assumptions, write a ton of useless tests, and are bad at visual understanding. On DeepSWE v1.1, Sonnet 5.5 hit 66.2% pass rate when banned from writing tests, versus 65.3% when allowed.<p>OSS end-to-end testing frameworks like Playwright, Selenium, or Maestro force you to hardcode implementation details like XPath, text, or aria-* attributes in your tests. Even with agents, these take a nontrivial amount of time and tokens to build and maintain.<p>In 2023, we saw Nat Friedman drive a browser with GPT-3 via natbot. We were inspired to use this technology to automate the most painful and tedious parts of software engineering: testing. We started with using LLMs to generate and maintain Playwright, but quickly realized that those primitives were fundamentally misaligned with the agentic SDLC. We think the future of QA is agents testing themselves, not writing scripts.<p>Mo is a custom agent harness for catching bugs that builds on the past 3 years of Momentic and millions of test traces from complex, real-world applications. Mo is built for recall: it finds the most real bugs, though Codex is a bit more precise at 86% vs 84%. The tradeoff is cost: Mo costs $2.67 per bug vs $0.80 for Codex, less than Claude Code and Devin.<p>- Self-organizing agent graph. Mo builds a directed acyclic graph (DAG) as it explores. Large product areas automatically fork into parallel sub-agents, each with their own browser or device for concurrent execution.<p>- Specialized agents for domain specific tasks. Planner agents reason over screenshots and video while dedicated locator agents inspect page structure to resolve plain-English interaction targets. Others include image analysis, video understanding, audio generation, and more.<p>- Parallel agents coordinate through cooperative resource leases. Agents can announce that they’re “using” or “modifying” overlapping resources or fixtures. Multiple “using” claims can coexist, but only a single “modifying” claim can be active on any particular one.<p>- Scaled infrastructure. Mo ships with a tunnel that lets users expose private sites and local apps to our hosted agents and infra. A single bug bash can spin up 100s of concurrent browsers and devices.<p>We benchmarked Mo against coding agents on 4 popular open-source apps: Gitea (58.8k stars), Metabase, Twenty (YC), and Saleor, with 1,396 human-labeled bugs. Each agent got the same brief, a fresh E2B sandbox, and no access to source code. Codex and Claude Code used hosted Browserbase browsers, while Devin used its built-in browser. For evaluators, we implemented LLM as a judge (GPT-6.1 Sol) with a human reviewer.<p>Results from a time-boxed 60-minute run:<p>- Mo: 269 bugs, 19.3% recall, 84% precision, $2.67 per bug<p>- Codex (GPT-6.1 Sol + Playwright MCP): 86 bugs, 6.2% recall, 86% precision, $0.80 per bug<p>- Claude Code (Opus 5.5 + Playwright MCP): 59 bugs, 4.2% recall, 80% precision, $4.09 per bug<p>- Devin: 27 bugs, 1.9% recall, 84% precision, $3.89 per bug<p>Mo finds more bugs the more time it has. From 30 to 60 minutes, it went from 177 to 269 bugs (+52%), while Codex gained only 16%.<p>Results: <a href=\"https:&#x2F;&#x2F;momentic.ai&#x2F;qa-bench\">https:&#x2F;&#x2F;momentic.ai&#x2F;qa-bench</a><p>Write-up: <a href=\"https:&#x2F;&#x2F;momentic.ai&#x2F;blog&#x2F;qa-bench\">https:&#x2F;&#x2F;momentic.ai&#x2F;blog&#x2F;qa-bench</a><p>Dataset: <a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;datasets&#x2F;momentic&#x2F;qa-bench\" rel=\"nofollow\">https:&#x2F;&#x2F;huggingface.co&#x2F;datasets&#x2F;momentic&#x2F;qa-bench</a><p>Harness: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;momentic-ai&#x2F;qa-bench\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;momentic-ai&#x2F;qa-bench</a><p>We just shipped PR testing for Vercel and Cloudflare deploy previews and we’re giving every new signup $250 in Mo spend. Paid plans have higher infra capacity and included usage along with options to top up.<p>We’d love for you to try it out and give us feedback. Feel free to comment here, we’ll be around all day!",
+      "ai_score": 6.0,
+      "date": "2026-11-03",
+      "topic": "ai"
+    },
+    {
+      "title": "Egoless Mathematics in the AI Era",
+      "url": "https://terrytao.wordpress.com/2026/11/02/egoless-mathematics-in-the-ai-era/",
+      "source": "Hacker News",
+      "score": 129,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-03",
+      "topic": "ai"
+    },
+    {
+      "title": "The AI cost of JavaScript frameworks",
+      "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
+      "source": "Hacker News",
+      "score": 311,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-02",
+      "topic": "ai"
+    },
+    {
+      "title": "AI delivers 'zero financial payoff' to most companies, Apollo economist says",
+      "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+      "source": "Hacker News",
+      "score": 194,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-02",
+      "topic": "ai"
+    },
+    {
+      "title": "Serbia just elected the world's brainiest parliament",
+      "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
+      "source": "Hacker News",
+      "score": 822,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-11-01",
+      "topic": "ai"
+    },
+    {
+      "title": "Do the math: How we took over ChatGPT accounts",
+      "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+      "source": "Hacker News",
+      "score": 304,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-01",
+      "topic": "ai"
+    },
+    {
+      "title": "Anthropic blocks users for anything touching training larger models",
+      "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+      "source": "Hacker News",
+      "score": 213,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-01",
+      "topic": "ai"
+    },
+    {
+      "title": "AI isn't replacing SREs, it's deskilling them",
+      "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
+      "source": "Hacker News",
+      "score": 521,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-10-31",
+      "topic": "ai"
+    },
+    {
+      "title": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
+      "url": "https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/",
+      "source": "Hacker News",
+      "score": 230,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-31",
+      "topic": "ai"
+    },
+    {
+      "title": "Cisco gives engineer unlimited AI tokens to rewrite legacy code",
+      "url": "https://fortune.com/2026/10/30/cisco-president-jeetu-patel-gen-z-27-year-old-unlimited-ai-tokens-rewrite-legacy-code-entry-level-jobs/",
+      "source": "Hacker News",
+      "score": 117,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-31",
+      "topic": "ai"
+    },
+    {
+      "title": "Building an AI-native engineering org",
+      "url": "https://twitter.com/sgondala2/status/2115832070274723875",
+      "source": "Hacker News",
+      "score": 112,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-31",
+      "topic": "ai"
+    },
+    {
+      "title": "Sleep framework: A new way for LLMs to retain knowledge in continual learning",
+      "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
+      "source": "Hacker News",
+      "score": 178,
+      "text": "<a href=\"https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;2606.03979\" rel=\"nofollow\">https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;2606.03979</a>",
+      "ai_score": 6.0,
+      "date": "2026-10-31",
+      "topic": "ai"
+    },
+    {
+      "title": "We ran AI agent swarms in Minecraft and Mindustry",
+      "url": "https://labs.ycombinator.com/projects/games/index.html",
+      "source": "Hacker News",
+      "score": 195,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-30",
+      "topic": "ai"
+    },
+    {
+      "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
+      "url": "https://github.com/SheepSeb/tinyworldformer",
+      "source": "Hacker News",
+      "score": 148,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-30",
+      "topic": "ai"
+    },
+    {
+      "title": "LLM Voice",
+      "url": "https://martinfowler.com/bliki/LLM-Voice.html",
+      "source": "Hacker News",
+      "score": 367,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-30",
+      "topic": "ai"
+    },
+    {
+      "title": "Chained PHP2Shell exploit roots 25 servers, including US Government servers",
+      "url": "https://dreamgroup.com/blog/chained-php2shell-exploit-roots-25-servers",
+      "source": "Hacker News",
+      "score": 297,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-30",
+      "topic": "ai"
+    },
+    {
+      "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
+      "url": "https://surgehq.ai/blog/dayjob-tax",
+      "source": "Hacker News",
+      "score": 211,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-29",
+      "topic": "ai"
+    },
+    {
+      "title": "The Agent SDK",
+      "url": "https://cursor.com/blog/agent-sdk",
+      "source": "Hacker News",
+      "score": 103,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-29",
+      "topic": "ai"
+    },
+    {
+      "title": "Kentucky man becomes the first humanist granted religious exemption from AI",
+      "url": "https://religionnews.com/2026/10/26/in-a-first-a-humanist-granted-a-religious-exemption-from-using-ai/",
+      "source": "Hacker News",
+      "score": 440,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-29",
+      "topic": "ai"
+    },
+    {
+      "title": "Tailscale SSH: Investigation and remediation update",
+      "url": "https://tailscale.com/ssh-investigation-update",
+      "source": "Hacker News",
+      "score": 205,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-28",
+      "topic": "ai"
+    },
+    {
+      "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+      "url": "https://www.brangus.io/survival-llm",
+      "source": "Hacker News",
+      "score": 204,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-28",
+      "topic": "ai"
+    },
+    {
+      "title": "Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees",
+      "url": "https://bret.dk/raspberry-pi-zero-3-w-pi-4-model-a/",
+      "source": "Hacker News",
+      "score": 107,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-28",
+      "topic": "ai"
+    },
+    {
+      "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
+      "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
+      "source": "Hacker News",
+      "score": 571,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-10-27",
+      "topic": "ai"
+    },
+    {
+      "title": "GPT-6.1 Terra",
+      "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+      "source": "Hacker News",
+      "score": 518,
+      "text": "<a href=\"https:&#x2F;&#x2F;developers.openai.com&#x2F;api&#x2F;docs&#x2F;models&#x2F;gpt-6.1-terra\" rel=\"nofollow\">https:&#x2F;&#x2F;developers.openai.com&#x2F;api&#x2F;docs&#x2F;models&#x2F;gpt-6.1-terra</a>",
+      "ai_score": 7.0,
+      "date": "2026-10-27",
+      "topic": "ai"
+    },
+    {
+      "title": "Blaise Pascal invented fixed route public transport (2024)",
+      "url": "https://humantransit.org/2024/12/one-of-the-greatest-inventions-in-the-history-of-human-transport.html",
+      "source": "Hacker News",
+      "score": 265,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-27",
+      "topic": "ai"
+    },
+    {
+      "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
+      "url": "https://github.com/FrigadeHQ/hob",
+      "source": "Hacker News",
+      "score": 123,
+      "text": "Hey HN, I&#x27;m Christian and this is a new OSS project I&#x27;ve been noodling on for the last couple of weeks. Hob is a free, MIT-licensed desktop app for Mac, Windows and Linux that works on your files the way the Claude and ChatGPT desktop apps do, except the model runs on your own computer. It uses open-weight models (currently Gemma 4 and gpt-oss). All your chats and files never leave your system. The only things that go online are web search (can be turned off in settings) and any MCP connectors you add yourself.<p>Main features:<p>- Automatically finds the best open-weight model for your hardware on first install (Mac&#x2F;Linux&#x2F;Windows)<p>- Writes sandboxed Python code for ad hoc tools (data processing, document conversion, graphs etc.)<p>- Built-in web search (powered by SearXNG)<p>- MCP support<p>- Image recognition<p>- CRUD to your local filesystem<p>- Works fully offline with no internet<p>Before building this I tried every local AI app I could find, but it seemed each one had different problems. The main thing I noticed is that none of them could do what the ChatGPT and Claude apps do with your files, e.g. read and change files in a folder, look at images, run code in a sandbox, draw a chart. The most advanced thing any of them did was paste a plain text file into a small context window, which basically failed as soon as you had a file larger than a few KB. I couldn&#x27;t find anything that could easily parse images and bigger PDFs.<p>The OSS solutions that were more advanced all seemed to default to hosted models (either OSS or closed), which defeats the entire point of the privacy that on-device OSS offers. They also seemed to push towards an account&#x2F;open-core style business.<p>I build it using Electron bridged with llama.cpp in its own process. On initial load, the system will try and figure out if you have a compatible graphics card and if not default to CPU-only (I ran into a lot of issues of graphics card beeing seemingly compatible but then crashing on first query, there&#x27;s a whole saga to this lol). Code execution happens in a sandbox that can only write to the chat&#x27;s folder and has no network unless asked (sandbox-exec on macOS, Landlock on Linux and a low-integrity process on Windows). Images go to a small Qwen3-VL model. Dictation is a local Whisper model.<p>The hardest part was definitely to get the smaller models to use tools reliably. Ran into a ton of issues of 4B models happily saying &quot;here&#x27;s your chart&quot; without ever calling the chart tool or get stuck in an infinite call loop. I spent a fair amount of the work building guards vs tweaking prompts (that didn&#x27;t really work for small models).<p>I understand the pushback that local models are weaker than frontier cloud models. This is true, but for most tasks for most normal people, I&#x27;d argue you rarely need the newest frontier model. From my own evals, systems with 16+ GB of RAM do really well, and if you have a GPU or more RAM, you get very close to what you&#x27;ll get out of the box with a frontier hosted model.<p>Excited to hear what you think and see how it runs on other systems!",
+      "ai_score": 6.0,
+      "date": "2026-10-27",
+      "topic": "ai"
+    },
+    {
+      "title": "Fixing Tool-Call Accuracy in vLLM",
+      "url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm",
+      "source": "Hacker News",
+      "score": 149,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-27",
+      "topic": "ai"
+    },
+    {
+      "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+      "url": "https://lynchlab.net/llm-skin-cancer",
+      "source": "Hacker News",
+      "score": 436,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-26",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+      "url": "https://minimaxir.com/2026/10/cheap-llms/",
+      "source": "Hacker News",
+      "score": 149,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-26",
+      "topic": "ai"
+    },
+    {
+      "title": "JetBrains Thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "source": "Hacker News",
+      "score": 183,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-26",
+      "topic": "ai"
+    },
+    {
+      "title": "America Has Lost 200k of Jobs in Media, Film and the Arts. How Much Is AI?",
+      "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
+      "source": "Hacker News",
+      "score": 160,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-25",
+      "topic": "ai"
+    },
+    {
+      "title": "No signs of AI payoff outside the tech sector",
+      "url": "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector",
+      "source": "Hacker News",
+      "score": 482,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-25",
+      "topic": "ai"
+    },
+    {
+      "title": "Dessa: the most authentic full-duplex speech model ever built",
+      "url": "https://block.xyz/dessa",
+      "source": "Hacker News",
+      "score": 237,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-24",
+      "topic": "ai"
+    },
+    {
+      "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
+      "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
+      "source": "Hacker News",
+      "score": 282,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-24",
+      "topic": "ai"
+    },
+    {
+      "title": "Jailbreaking the Switch 2",
+      "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
+      "source": "Hacker News",
+      "score": 728,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-10-23",
+      "topic": "ai"
+    },
+    {
+      "title": "LLMs are making formal software verification feasible at a much larger scale",
+      "url": "https://www.anthropic.com/research/formal-verification",
+      "source": "Hacker News",
+      "score": 121,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-23",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "source": "Hacker News",
+      "score": 310,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-23",
+      "topic": "ai"
+    },
+    {
+      "title": "Every AI model has the same \"controversial\" take on humans",
+      "url": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
+      "source": "Hacker News",
+      "score": 248,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-23",
+      "topic": "ai"
+    },
+    {
+      "title": "AI and the Enclosure of the Scientific Commons",
+      "url": "https://arxiv.org/abs/2610.27251",
+      "source": "Hacker News",
+      "score": 115,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-23",
+      "topic": "ai"
+    },
+    {
+      "title": "Railway Security Disclosure",
+      "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+      "source": "Hacker News",
+      "score": 315,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-22",
+      "topic": "ai"
+    },
+    {
+      "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+      "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+      "source": "Hacker News",
+      "score": 440,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-22",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI models are coming to Google Cloud",
+      "url": "https://openai.com/index/openai-models-google-cloud/",
+      "source": "Hacker News",
+      "score": 242,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-22",
+      "topic": "ai"
+    },
+    {
+      "title": "Patch the Planet: global response coordination as agents uncover vulnerabilities",
+      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/",
+      "source": "Hacker News",
+      "score": 236,
+      "text": "<a href=\"https:&#x2F;&#x2F;patchtheplanet.org&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;patchtheplanet.org&#x2F;</a>",
+      "ai_score": 6.0,
+      "date": "2026-10-22",
+      "topic": "ai"
+    },
+    {
+      "title": "Airbnb bans making guests do dishes and take out the trash",
+      "url": "https://www.theverge.com/tech/1015844/airbnb-chores-house-rules-update",
+      "source": "Hacker News",
+      "score": 105,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-22",
+      "topic": "ai"
+    },
+    {
+      "title": "Using thousands of AI agents to uncover new leads in biological data",
+      "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
+      "source": "Hacker News",
+      "score": 135,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-22",
+      "topic": "ai"
+    },
+    {
+      "title": "DeepInfer: High-performance inference framework for DeepSeek models",
+      "url": "https://github.com/deepseek-ai/DeepInfer",
+      "source": "Hacker News",
+      "score": 2142,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-10-21",
+      "topic": "ai"
+    },
+    {
+      "title": "Timestral: Mistral's time-series foundation models",
+      "url": "https://mistral.ai/news/timestral/",
+      "source": "Hacker News",
+      "score": 556,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-10-20",
+      "topic": "ai"
+    },
+    {
+      "title": "Lula supporters protest against Meta to denounce its 'electoral interference'",
+      "url": "https://efe.com/english/latest-news/2026-10-20/lula-supporters-protest-against-meta-to-denounce-its-electoral-interference/",
+      "source": "Hacker News",
+      "score": 106,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-20",
+      "topic": "ai"
+    },
+    {
+      "title": "RuneScape Bench: MMOs for Agents [video]",
+      "url": "https://www.youtube.com/watch?v=cNm4zyUtWj0",
+      "source": "Hacker News",
+      "score": 158,
+      "text": "Related: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;LostCityRS&#x2F;Server\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;LostCityRS&#x2F;Server</a>",
+      "ai_score": 6.0,
+      "date": "2026-10-20",
+      "topic": "ai"
+    },
+    {
+      "title": "Ukraine claims first drone evacuation of wounded soldier",
+      "url": "https://www.nbcnews.com/world/ukraine/ukraine-first-drone-evacuation-wounded-soldier-frontlines-hexacopter-rcna604310",
+      "source": "Hacker News",
+      "score": 128,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-20",
+      "topic": "ai"
+    },
+    {
+      "title": "Ask HN: How to deal with shipping AI-written code you don't understand?",
+      "url": "https://news.ycombinator.com/item?id=50151036",
+      "source": "Hacker News",
+      "score": 279,
+      "text": "I saw this LinkedIn post from a Meta engineer and it resonated with me:<p><a href=\"https:&#x2F;&#x2F;www.linkedin.com&#x2F;posts&#x2F;ali-hamie_im-an-engineer-at-meta-and-i-never-felt-share-7517317918666211328-7C8N\" rel=\"nofollow\">https:&#x2F;&#x2F;www.linkedin.com&#x2F;posts&#x2F;ali-hamie_im-an-engineer-at-m...</a><p>&gt; I&#x27;m an engineer at Meta and I never felt this uncomfortable doing my job. I&#x27;m writing code these days and it all feels like a black box. This new standard of shipping with AI is moving so fast that if we&#x27;re going to spend our time checking each line of code, it&#x27;s going to take forever. That means you can end up with systems you&#x27;ve built where you don&#x27;t truly understand how all the code works. You understand the high level, but not every detail. And maybe this is becoming the new standard. It goes against every instinct of being a software engineer. I&#x27;m used to understanding what I&#x27;m building. Now I&#x27;m trying to figure out how much I need to understand before I&#x27;m comfortable moving forward. Are other engineers feeling this too?<p>How are you handling this?",
+      "ai_score": 6.0,
+      "date": "2026-10-20",
+      "topic": "ai"
+    },
+    {
+      "title": "The fire retardant in the seafood chain",
+      "url": "https://insideclimatenews.org/news/14102026/ethoxyquin-fire-retardant-in-seafood-chain/",
+      "source": "Hacker News",
+      "score": 112,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-20",
+      "topic": "ai"
+    },
+    {
+      "title": "StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context",
+      "url": "https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>StepFun has released Step 5 Preview as open weights. FP8 and BF16 checkpoints are live on Hugging Face and ModelScope. Step 5 Preview is a sparse Mixture-of-Experts model from StepFun built for lon",
+      "ai_score": 8.0,
+      "date": "2026-10-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
+      "url": "https://arxiv.org/abs/2610.18861",
+      "source": "Hacker News",
+      "score": 212,
+      "text": "<a href=\"https:&#x2F;&#x2F;x.com&#x2F;Jiaru_Zou&#x2F;status&#x2F;2110400256647340476\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;Jiaru_Zou&#x2F;status&#x2F;2110400256647340476</a><p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;togethercomputer&#x2F;HybridAgent\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;togethercomputer&#x2F;HybridAgent</a><p><a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;collections&#x2F;togethercomputer&#x2F;hybridagent\" rel=\"nofollow\">https:&#x2F;&#x2F;huggingface.co&#x2F;collections&#x2F;togethercomputer&#x2F;hybridag...</a><p>Evaluations: <a href=\"https:&#x2F;&#x2F;arxiv.org&#x2F;html&#x2F;2610.18861v1#S5\" rel=\"nofollow\">https:&#x2F;&#x2F;arxiv.org&#x2F;html&#x2F;2610.18861v1#S5</a>",
+      "ai_score": 7.0,
+      "date": "2026-10-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+      "url": "https://www.marktechpost.com/2026/10/17/meet-kyutai-reki-the-2-4b-vla-model-bringing-efficient-memory-to-robot-manipulation/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipulation. The REKI vision-language-action model is pretrained only on public data.",
+      "ai_score": 7.0,
+      "date": "2026-10-19",
+      "topic": "ai"
+    },
+    {
+      "title": "DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API",
+      "url": "https://www.marktechpost.com/2026/10/17/deepseek-just-released-v4-1-flash-1017-scores-77-0-on-deepswe-opens-search-api/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>DeepSeek has just released DeepSeek-V4.1-Flash-1017, a new checkpoint of its V4.1-Flash model. It is live on the DeepSeek website, app and API. DeepSeek claims stronger scores, faster task completi",
+      "ai_score": 7.0,
+      "date": "2026-10-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Perplexity Open-Sources SPACE, a Firecracker MicroVM Sandbox for AI Agents",
+      "url": "https://www.marktechpost.com/2026/10/16/perplexity-open-sources-space-firecracker-microvm-sandbox-ai-agents/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Perplexity has open-sourced SPACE, the sandbox platform behind every task in Perplexity Computer. The Perplexity SPACE sandbox gives each agent task its own Firecracker microVM. Credentials and out",
+      "ai_score": 7.0,
+      "date": "2026-10-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Liquid AI Releases d1-ultra: A Multimodal Decision Model That Scores 65 on the AA Decision Index",
+      "url": "https://www.marktechpost.com/2026/10/15/liquid-ai-d1-ultra-decision-model/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Liquid AI released d1-ultra, a text and image decision model that returns calibrated probabilities in 1 forward pass. It scores 65 on the Artificial Analysis Decision Index and costs $0.042 per mil",
+      "ai_score": 7.0,
+      "date": "2026-10-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Google Open-Sources Harness2, a Recursive Agent Harnessing Framework",
+      "url": "https://www.marktechpost.com/2026/10/18/google-harness2-recursive-agent-harnessing-framework/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Google Research released Harness2, an Apache-2.0 framework that rewrites an agent's harness at test time. One refinement step lifted GLM-5 by 11.5 points on WorkBuddy-Bench with no weight updates.<",
+      "ai_score": 6.0,
+      "date": "2026-10-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Meta Releases Muse Spark Open: 816B Open-Weight MoE With 1M Context",
+      "url": "https://www.marktechpost.com/2026/10/15/meta-muse-spark-open-816b-open-weight-model/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Meta released Muse Spark Open, an 816B-parameter open-weight MoE model with 42B active parameters and a 1M-token context. It leads open models on MCP-Atlas and runs on 2 M5 Ultra Mac Studios.</p>\n<",
+      "ai_score": 8.0,
+      "date": "2026-10-18",
+      "topic": "ai"
+    },
+    {
+      "title": "NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model",
+      "url": "https://www.marktechpost.com/2026/10/15/nvidia-nemotron-3-5-super-vl-release/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>NVIDIA released Nemotron 3.5 Super VL, an open 120B-parameter multimodal MoE model with 12B active parameters, 1M-token context and NVFP4 weights that run on 1 DGX Spark, plus 2 Bolt edge models.</",
+      "ai_score": 8.0,
+      "date": "2026-10-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+      "url": "https://www.marktechpost.com/2026/10/17/meet-kyutai-reki-the-2-4b-vla-model-bringing-efficient-memory-to-robot-manipulation/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Kyutai, with Inria and École des Ponts, has released REKI, a 2.4B vision-language-action model (VLA) for robot manipulation. The REKI vision-language-action model is pretrained only on public data.",
+      "ai_score": 7.0,
+      "date": "2026-10-18",
+      "topic": "ai"
+    },
+    {
+      "title": "DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API",
+      "url": "https://www.marktechpost.com/2026/10/17/deepseek-just-released-v4-1-flash-1017-scores-77-0-on-deepswe-opens-search-api/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>DeepSeek has just released DeepSeek-V4.1-Flash-1017, a new checkpoint of its V4.1-Flash model. It is live on the DeepSeek website, app and API. DeepSeek claims stronger scores, faster task completi",
+      "ai_score": 7.0,
+      "date": "2026-10-18",
+      "topic": "ai"
+    },
+    {
+      "title": "StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context",
+      "url": "https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>StepFun has released Step 5 Preview as open weights. FP8 and BF16 checkpoints are live on Hugging Face and ModelScope. Step 5 Preview is a sparse Mixture-of-Experts model from StepFun built for lon",
+      "ai_score": 7.0,
+      "date": "2026-10-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Perplexity Open-Sources SPACE, a Firecracker MicroVM Sandbox for AI Agents",
+      "url": "https://www.marktechpost.com/2026/10/16/perplexity-open-sources-space-firecracker-microvm-sandbox-ai-agents/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Perplexity has open-sourced SPACE, the sandbox platform behind every task in Perplexity Computer. The Perplexity SPACE sandbox gives each agent task its own Firecracker microVM. Credentials and out",
+      "ai_score": 7.0,
+      "date": "2026-10-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Liquid AI Releases d1-ultra: A Multimodal Decision Model That Scores 65 on the AA Decision Index",
+      "url": "https://www.marktechpost.com/2026/10/15/liquid-ai-d1-ultra-decision-model/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Liquid AI released d1-ultra, a text and image decision model that returns calibrated probabilities in 1 forward pass. It scores 65 on the Artificial Analysis Decision Index and costs $0.042 per mil",
+      "ai_score": 6.0,
+      "date": "2026-10-18",
+      "topic": "ai"
+    },
+    {
+      "title": "CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data",
+      "url": "https://www.marktechpost.com/2026/10/15/copilotkit-releases-clif-a-continual-learning-platform-that-turns-agent-traces-and-user-actions-into-skills-evals-and-fine-tuning-data/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Introduction Teams shipping AI agents at scale keep running into the same pattern. Even agents built on top-tier models like Fable and Astra struggle to carry out complex, end-to-end tasks inside a",
+      "ai_score": 6.0,
+      "date": "2026-10-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Meta Releases Muse Spark Open: 816B Open-Weight MoE With 1M Context",
+      "url": "https://www.marktechpost.com/2026/10/15/meta-muse-spark-open-816b-open-weight-model/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Meta released Muse Spark Open, an 816B-parameter open-weight MoE model with 42B active parameters and a 1M-token context. It leads open models on MCP-Atlas and runs on 2 M5 Ultra Mac Studios.</p>\n<",
+      "ai_score": 8.0,
+      "date": "2026-10-17",
+      "topic": "ai"
+    },
+    {
+      "title": "NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open Multimodal Agent Model",
+      "url": "https://www.marktechpost.com/2026/10/15/nvidia-nemotron-3-5-super-vl-release/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>NVIDIA released Nemotron 3.5 Super VL, an open 120B-parameter multimodal MoE model with 12B active parameters, 1M-token context and NVFP4 weights that run on 1 DGX Spark, plus 2 Bolt edge models.</",
+      "ai_score": 8.0,
+      "date": "2026-10-17",
+      "topic": "ai"
+    },
+    {
+      "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
+      "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
+      "source": "Hacker News",
+      "score": 399,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-10-17",
+      "topic": "ai"
+    },
+    {
+      "title": "CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data",
+      "url": "https://www.marktechpost.com/2026/10/15/copilotkit-releases-clif-a-continual-learning-platform-that-turns-agent-traces-and-user-actions-into-skills-evals-and-fine-tuning-data/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Introduction Teams shipping AI agents at scale keep running into the same pattern. Even agents built on top-tier models like Fable and Astra struggle to carry out complex, end-to-end tasks inside a",
+      "ai_score": 7.0,
+      "date": "2026-10-17",
+      "topic": "ai"
+    },
+    {
+      "title": "Fish Audio Releases Drama 3, a 35B Open-Weight MoE Text-to-Speech Model",
+      "url": "https://www.marktechpost.com/2026/10/14/fish-audio-drama-3-open-weight-tts-model/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Fish Audio released Drama 3, a 35B mixture-of-experts text-to-speech model with about 3B active parameters. It takes plain-language direction, covers 83 languages and ships open weights under a rev",
+      "ai_score": 7.0,
+      "date": "2026-10-17",
+      "topic": "ai"
+    },
+    {
+      "title": "Liquid AI Releases d1-ultra: A Multimodal Decision Model That Scores 65 on the AA Decision Index",
+      "url": "https://www.marktechpost.com/2026/10/15/liquid-ai-d1-ultra-decision-model/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Liquid AI released d1-ultra, a text and image decision model that returns calibrated probabilities in 1 forward pass. It scores 65 on the Artificial Analysis Decision Index and costs $0.042 per mil",
+      "ai_score": 6.0,
+      "date": "2026-10-17",
+      "topic": "ai"
+    },
+    {
+      "title": "Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis",
+      "url": "https://www.marktechpost.com/2026/10/14/meet-grok-voice-3-0-spacexai-voice-agent-model-ranks-1-on-artificial-analysis/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>SpaceXAI just released Grok Voice 3.0. Grok Voice 3.0 is a SpaceXAI speech-to-speech model that listens, reasons, calls tools and speaks. It now ranks first on the Artificial Analysis Speech-to-Spe",
+      "ai_score": 6.0,
+      "date": "2026-10-17",
+      "topic": "ai"
+    },
+    {
+      "title": "Datalab Releases OmniParseBench: An Open OCR Benchmark With 16,288 Pass/Fail Tests to Audit OCR Parsers",
+      "url": "https://www.marktechpost.com/2026/10/14/datalab-omniparsebench-open-ocr-document-parsing-benchmark/",
+      "source": "www.marktechpost.com",
+      "score": 0,
+      "text": "<p>Datalab released OmniParseBench, an open OCR benchmark with 16,288 yes/no tests on 2,937 pages in 92 languages. Every score is a pass rate you can slice by tag, script or language.</p>\n<p>The post ",
+      "ai_score": 6.0,
+      "date": "2026-10-17",
+      "topic": "ai"
+    },
+    {
+      "title": "Krea 3 – An image model built for editing at scale",
+      "url": "https://www.krea.ai/krea-3",
+      "source": "Hacker News",
+      "score": 250,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-16",
+      "topic": "ai"
+    },
+    {
+      "title": "Using AI to reverse engineer hardware",
+      "url": "https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/",
+      "source": "Hacker News",
+      "score": 113,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-16",
+      "topic": "ai"
+    },
+    {
+      "title": "Containment and monitoring failures are to blame for AI hacking reports: experts",
+      "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
+      "source": "Hacker News",
+      "score": 838,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-10-15",
+      "topic": "ai"
+    },
+    {
+      "title": "Banks are now trying to offload the AI data center debt they just underwrote",
+      "url": "https://startupfortune.com/banks-are-now-trying-to-offload-the-ai-data-center-debt-they-just-underwrote/",
+      "source": "Hacker News",
+      "score": 290,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-15",
+      "topic": "ai"
+    },
+    {
+      "title": "I posted to HN, and then my website was flooded with AI bot traffic",
+      "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
+      "source": "Hacker News",
+      "score": 260,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-14",
+      "topic": "ai"
+    },
+    {
+      "title": "We turned EmbeddingGemma 2 into a speech-to-text model",
+      "url": "https://eg2.haku.sh/",
+      "source": "Hacker News",
+      "score": 400,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-14",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI engineer arrested in bugging of executive conference room",
+      "url": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
+      "source": "Hacker News",
+      "score": 426,
+      "text": "<a href=\"https:&#x2F;&#x2F;x.com&#x2F;OpenAINewsroom&#x2F;status&#x2F;2110095403198849132\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;OpenAINewsroom&#x2F;status&#x2F;2110095403198849132</a>",
+      "ai_score": 6.0,
+      "date": "2026-10-14",
+      "topic": "ai"
+    },
+    {
+      "title": "Apple's new 'Switch to Safari' campaign details why you should ditch Chrome",
+      "url": "https://9to5mac.com/2026/10/12/apples-new-switch-to-safari-campaign-details-why-you-should-ditch-chrome/",
+      "source": "Hacker News",
+      "score": 193,
+      "text": "<a href=\"https:&#x2F;&#x2F;www.apple.com&#x2F;safari&#x2F;switch&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.apple.com&#x2F;safari&#x2F;switch&#x2F;</a>",
+      "ai_score": 6.0,
+      "date": "2026-10-14",
+      "topic": "ai"
+    },
+    {
+      "title": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
+      "url": "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html",
+      "source": "Hacker News",
+      "score": 107,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-13",
+      "topic": "ai"
+    },
+    {
+      "title": "AI is a tool and using it well takes skill",
+      "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
+      "source": "Hacker News",
+      "score": 273,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-13",
+      "topic": "ai"
+    },
+    {
+      "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
+      "url": "https://news.ycombinator.com/item?id=50059096",
+      "source": "Hacker News",
+      "score": 120,
+      "text": "Hey HN, I’m Vishnu from Agent37 (<a href=\"https:&#x2F;&#x2F;agent37.com\">https:&#x2F;&#x2F;agent37.com</a>). We build sandboxes for running AI agents at under 10% of the cost of most sandbox providers. Our customers spend an average of $0.37&#x2F;month per sandbox.<p>You can view a video walkthrough of the product here: <a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;DK5ISR2tbNo\" rel=\"nofollow\">https:&#x2F;&#x2F;youtu.be&#x2F;DK5ISR2tbNo</a><p>We started as one of those OpenClaw wrapper companies back in February (yup.. judge me). In time we added more and more harnesses.<p>One of the goals I had at the time was to offer a free plan to users, so as to gain more market share. But it was too cost prohibitive to do it right away. Especially since we were bootstrapped and servers were running on my savings.<p>Today we’re actually able to offer the free plan thanks to the optimizations we’ve made since. Over 90% of the new signups we have are just free plan users and they host their personal Hermes&#x2F;Openclaw&#x2F;Claude Code etc on our cloud. Our infrastructure cost for the free sandboxes averages around $0.05 to $0.10 per user per month.<p>Here are some techniques that have worked for lowering cost:<p>* When you look at agent harnesses, they have certain patterns in the way they consume CPU and RAM. They need CPU in bursts when they’re initializing or performing certain tasks, but beyond that, they’re often not peaking. They need more RAM for things like browser and computer-use tasks. Once the task is done, usage often comes back down. This is a key insight in lowering cost, so by efficiently managing the CPU&#x2F;RAM utilization we could lower the cost.<p>* Secondly, you have to skip the hyperscalers when renting the Hosts. I worked at Amazon before and they have 80-90% margins on VMs. So it was an obvious choice once I looked at the prices to go one layer down to vendors like Hetzner and OVH. This alone was probably one of the biggest cost levers in reducing the cost.<p>* Thirdly, you also want to pick a technology stack that lets you efficiently cache and share resources across the host. We use gVisor for better utilization and fast boot times. It lets us use available host memory across sandboxes without reserving a full VM’s memory for each one. There are tradeoffs: our gVisor sandboxes don’t support workloads like Docker-in-Docker or Android emulators.<p>* And finally the size and shape of the hosts you buy also makes a big difference. RAM is typically the bottleneck when it comes to cost and not the CPU. This is specifically true for agent harness workloads, so when buying servers, we optimize for packing more RAM into a given host.<p>We also host full VM sandboxes for workloads that need them, including running Docker at a slightly higher price, but they are still pretty low cost given the rest of the techniques.<p>Overall, my learning has been that just by focusing on a niche of sandbox usecases, and optimizing for it you can give a much better cost&#x2F;performance tradeoff.<p>I was previously a Senior Software Engineer at Amazon and an Engineering Manager at Quantcast. I built Amazon&#x27;s internal AI chatbot, Diya, and their internal coding harness, Ziya.<p>If you’re someone who’s looking to run agents on sandbox and are exploring a sandbox vendor, come check us out. We’re particularly looking for developers building messaging agents to try their workloads and challenge the limits and economics of our platform.<p>Thanks!<p><a href=\"https:&#x2F;&#x2F;agent37.com\">https:&#x2F;&#x2F;agent37.com</a>",
+      "ai_score": 6.0,
+      "date": "2026-10-13",
+      "topic": "ai"
+    },
+    {
+      "title": "Kevin Kelly's 2016 AI Predictions, 10 Years Later",
+      "url": "https://taylor.town/kk-ai-2026",
+      "source": "Hacker News",
+      "score": 155,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-13",
+      "topic": "ai"
+    },
+    {
+      "title": "The gap in shared understanding of LLM capability is widening",
+      "url": "https://twitter.com/karpathy/status/2109361546505966046",
+      "source": "Hacker News",
+      "score": 274,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-12",
+      "topic": "ai"
+    },
+    {
+      "title": "500B tokens later: Letting AI agents decompile a first-person shooter",
+      "url": "https://momo5502.com/posts/2026-10-09-game-decompilation/",
+      "source": "Hacker News",
+      "score": 171,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-12",
+      "topic": "ai"
+    },
+    {
+      "title": "Build your own decision model",
+      "url": "https://nishtahir.com/build-your-own-decision-model/",
+      "source": "Hacker News",
+      "score": 123,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-11",
+      "topic": "ai"
+    },
+    {
+      "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
+      "url": "https://github.com/rociiu/talorys",
+      "source": "Hacker News",
+      "score": 257,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-11",
+      "topic": "ai"
+    },
+    {
+      "title": "Mxc: Microsoft Execution Containers version 1.0.0",
+      "url": "https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/",
+      "source": "Hacker News",
+      "score": 163,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-11",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenSCAD the Programmers Solid 3D CAD Modeller",
+      "url": "https://openscad.org/",
+      "source": "Hacker News",
+      "score": 109,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-11",
+      "topic": "ai"
+    },
+    {
+      "title": "Grieving the loss of details",
+      "url": "https://purplesyringa.moe/blog/grieving-the-loss-of-details/",
+      "source": "Hacker News",
+      "score": 356,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-11",
+      "topic": "ai"
+    },
+    {
+      "title": "Nvidia in talks to acquire US 'open' model startup Reflection AI",
+      "url": "https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a",
+      "source": "Hacker News",
+      "score": 126,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-11",
+      "topic": "ai"
+    },
+    {
+      "title": "Food processing influences metabolism and brain activity",
+      "url": "https://news.vt.edu/articles/2026/10/research_fralinbiomed_upfhutelin.html",
+      "source": "Hacker News",
+      "score": 109,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-11",
+      "topic": "ai"
+    },
+    {
+      "title": "Bitwarden Dual License Model",
+      "url": "https://community.bitwarden.com/t/published-version-update-in-app-stores/102750",
+      "source": "Hacker News",
+      "score": 354,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-11",
+      "topic": "ai"
+    },
+    {
+      "title": "Typesafe AI raises $870M at $7.5B",
+      "url": "https://typesafe.ai/blog/series-ai",
+      "source": "Hacker News",
+      "score": 285,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Pointing AI at archives found a forgotten meteorite, lost rhinos, and more",
+      "url": "https://jessewaites.com/blog/post/i-pointed-ai-at-400-years-of-archives/",
+      "source": "Hacker News",
+      "score": 110,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Microsoft-Decision-1, our model for fast decision-making",
+      "url": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/",
+      "source": "Hacker News",
+      "score": 153,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen",
+      "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+      "source": "Hacker News",
+      "score": 385,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Sharing AI progress in mathematics",
+      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+      "source": "Hacker News",
+      "score": 1243,
+      "text": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math</a><p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math&#x2F;tree&#x2F;main&#x2F;preprints\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math&#x2F;tree&#x2F;main&#x2F;preprints</a>",
+      "ai_score": 8.0,
+      "date": "2026-10-08",
+      "topic": "ai"
+    },
+    {
+      "title": "Claude Haiku 5.5",
+      "url": "https://www.anthropic.com/claude-haiku-5-5",
+      "source": "Hacker News",
+      "score": 721,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-10-08",
+      "topic": "ai"
+    },
+    {
+      "title": "GPT‑6 and Intelligent UI for everyone",
+      "url": "https://openai.com/index/gpt-6-for-everyone/",
+      "source": "Hacker News",
+      "score": 524,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-10-08",
+      "topic": "ai"
+    },
+    {
+      "title": "Docker Agent",
+      "url": "https://github.com/docker/docker-agent",
+      "source": "Hacker News",
+      "score": 188,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-08",
+      "topic": "ai"
+    },
+    {
+      "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
+      "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
+      "source": "Hacker News",
+      "score": 292,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-08",
+      "topic": "ai"
+    },
+    {
+      "title": "Sharing AI progress in mathematics",
+      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+      "source": "Hacker News",
+      "score": 480,
+      "text": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math</a><p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math&#x2F;tree&#x2F;main&#x2F;preprints\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math&#x2F;tree&#x2F;main&#x2F;preprints</a>",
+      "ai_score": 6.0,
+      "date": "2026-10-07",
+      "topic": "ai"
+    },
+    {
+      "title": "EmbeddingGemma 2: An open, lightweight multimodal embedding model",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+      "source": "Hacker News",
+      "score": 232,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-07",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenTPU – An open-source AI accelerator, developed by AI",
+      "url": "https://github.com/FeSens/openTPU",
+      "source": "Hacker News",
+      "score": 241,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-07",
+      "topic": "ai"
+    },
+    {
+      "title": "Claude Code’s suggested message feature: I think the real customer is the model",
+      "url": "https://www.zohaib.cc/blog/smartest-claude-code-feature",
+      "source": "Hacker News",
+      "score": 113,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-07",
+      "topic": "ai"
+    },
+    {
+      "title": "Beam: Reflection's 501B open-weight model",
+      "url": "https://reflection.ai/blog/introducing-beam",
+      "source": "Hacker News",
+      "score": 344,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-06",
+      "topic": "ai"
+    },
+    {
+      "title": "Dust: Pretraining Transformers Without Backpropagation",
+      "url": "https://qlabs.sh/research/dust",
+      "source": "Hacker News",
+      "score": 121,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-06",
+      "topic": "ai"
+    },
+    {
+      "title": "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons",
+      "url": "https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/",
+      "source": "Hacker News",
+      "score": 324,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-06",
+      "topic": "ai"
+    },
+    {
+      "title": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
+      "url": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors",
+      "source": "Hacker News",
+      "score": 237,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-06",
+      "topic": "ai"
+    },
+    {
+      "title": "Show HN: AI search for every photo and every frame of video on macOS",
+      "url": "https://github.com/allenv0/SCM",
+      "source": "Hacker News",
+      "score": 141,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-05",
+      "topic": "ai"
+    },
+    {
+      "title": "Kolibri: A Sovereign Open-Weight Model",
+      "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+      "source": "Hacker News",
+      "score": 531,
+      "text": "tech report: <a href=\"https:&#x2F;&#x2F;aleph-alpha.com&#x2F;downloads&#x2F;tech-report.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;aleph-alpha.com&#x2F;downloads&#x2F;tech-report.pdf</a><p>additional paper: <a href=\"https:&#x2F;&#x2F;tej.as&#x2F;blog&#x2F;aleph-alpha-kolibri\" rel=\"nofollow\">https:&#x2F;&#x2F;tej.as&#x2F;blog&#x2F;aleph-alpha-kolibri</a>",
+      "ai_score": 7.0,
+      "date": "2026-10-04",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI safety leader quits, warning AI company's culture is 'broken'",
+      "url": "https://www.theguardian.com/technology/2026/oct/03/openai-safety-leader-quits-warning-ai-companys-culture-is-broken",
+      "source": "Hacker News",
+      "score": 200,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-04",
+      "topic": "ai"
+    },
+    {
+      "title": "With most information hidden, the game Stratego had stumped AI until now",
+      "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
+      "source": "Hacker News",
+      "score": 186,
+      "text": "<a href=\"https:&#x2F;&#x2F;www.nature.com&#x2F;articles&#x2F;s41586-026-11036-y\" rel=\"nofollow\">https:&#x2F;&#x2F;www.nature.com&#x2F;articles&#x2F;s41586-026-11036-y</a><p><a href=\"https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2511.07312\" rel=\"nofollow\">https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2511.07312</a>",
+      "ai_score": 6.0,
+      "date": "2026-10-03",
+      "topic": "ai"
+    },
+    {
+      "title": "From the creator of Redis; run LLM locally with ds4",
+      "url": "https://dwarfstar.sh/",
+      "source": "Hacker News",
+      "score": 156,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-03",
+      "topic": "ai"
+    },
+    {
+      "title": "Greg Kroah-Hartman – Security in the LLM Age [video]",
+      "url": "https://www.youtube.com/watch?v=NnV_cWeoo5Q",
+      "source": "Hacker News",
+      "score": 182,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-03",
+      "topic": "ai"
+    },
+    {
+      "title": "Sites in ChatGPT",
+      "url": "https://chatgpt.com/features/sites/",
+      "source": "Hacker News",
+      "score": 219,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-03",
+      "topic": "ai"
+    },
+    {
+      "title": "Show HN: Giving Opus 5.5 a simulated paint canvas",
+      "url": "https://stillwet.art/",
+      "source": "Hacker News",
+      "score": 208,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-03",
+      "topic": "ai"
+    },
+    {
+      "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
+      "url": "https://blog.cloudflare.com/clef-decision-models/",
+      "source": "Hacker News",
+      "score": 443,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-02",
+      "topic": "ai"
+    },
+    {
+      "title": "Context Language Models",
+      "url": "https://arxiv.org/abs/2609.37725",
+      "source": "Hacker News",
+      "score": 113,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-02",
+      "topic": "ai"
+    },
+    {
+      "title": "GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
+      "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
+      "source": "Hacker News",
+      "score": 172,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-02",
+      "topic": "ai"
+    },
+    {
+      "title": "Surprisingly complex waves reveal the brain's inner workings",
+      "url": "https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/",
+      "source": "Hacker News",
+      "score": 128,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-10-01",
+      "topic": "ai"
+    },
+    {
+      "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
+      "url": "https://github.com/magnitudedev/magnitude",
+      "source": "Hacker News",
+      "score": 129,
+      "text": "Hey HN, Anders and Tom here. We&#x27;re building Magnitude, an inference engine for agents that optimizes itself to run as fast as possible on your hardware. It works on Mac, Linux, and Windows on any hardware and is up to 2x faster than llama.cpp.<p>We&#x27;re both software engineers and previously built an open source browser agent to 4k+ GH stars and 100k+ downloads. We increasingly wanted to run it on local models, but found that no inference engine worked for our use case.<p>Inference engines today all make a performance tradeoff. They are either:<p>- Built for batched inference on datacenter hardware at the cost of single-session performance (vLLM, SGLang)\n- Designed for broad compatibility instead of optimizing for specific hardware (llama.cpp, Ollama)\n- Specialized for specific hardware or models but lacking engine completeness (oMLX, ds4)<p>Plus none of them are designed for running agents locally. Sessions are long, several often run at once, and you still want to use your computer for other things.<p>Magnitude is built for maximum performance on your hardware and running local agents:<p>- On-device compilation and tuning: Kernels are written with flexible parameters that are tuned on your actual device before the model runs. This gives you broad hardware compatibility with the same performance ceiling as hardware-specific kernels.<p>- Focus on best architectures: We write our tunable, highly efficient kernels for the most popular open-weights families. This allows us to achieve and surpass the performance of hardware or model specialized engines, without forcing ourselves to over-generalize at the cost of performance.<p>- Dynamic memory allocation: Magnitude reserves only enough memory up front to hold model weights. As your agent sessions grow, the memory heap dynamically increases, and frees itself when agents stop. Your hardware can still be used for other stuff while agents run.<p>- Hybrid paged attention: We borrow the best ideas from engines like SGLang to allow concurrent sessions to share prefix caches, but optimize placement for memory-adjacency so single-session performance doesn&#x27;t suffer.<p>Magnitude is fully open source (Apache 2.0). We built it in Rust, including a custom GPU kernel runtime and autotuner. We take inspiration from the best innovations in inference from academics (e.g. FlashAttention, FlashInfer, TurboQuant) as well as other engines (e.g. SGLang radix attention) to reach the performance ceiling.<p>Benchmarked against llama.cpp with Qwen 3.6 35B A3B (4 bit), 64k context, no speculative decoding:<p>Metal (Mac M4 Pro 48 GB)\n- 92% faster decode (30 tok&#x2F;s → 57 tok&#x2F;s)\n- 9% faster prefill (466 tok&#x2F;s → 507 tok&#x2F;s)\n- 28% less per-agent memory usage<p>CUDA (DGX Spark)\n- 19% faster decode (49 tok&#x2F;s → 58 tok&#x2F;s)\n- 23% faster prefill (2,033 tok&#x2F;s → 2,507 tok&#x2F;s)\n- 27% less per-agent memory usage<p>Magnitude ships as a desktop app that you can easily connect with whatever agents you already use (Pi, OpenCode, Hermes, Codex, and more). It automatically runs models on demand when these agents actually need them, and shuts them down after inactivity.\nHere&#x27;s what it looks like: <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=0qE8BWEZu7o\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=0qE8BWEZu7o</a><p>We&#x27;re excited to push Magnitude further to let you run bigger models on the same hardware while continuing to improve performance. Our plans include:<p>- Expert streaming: store experts on RAM or disk and load them just-in-time. This lets you run models bigger than what otherwise would fit on your GPU.<p>- Kernel compiler: our current kernels tune a few parameters to fit your hardware. We can take this further with a fully custom compiler that automatically chooses how to fuse kernels and which implementations to use, to make it fit to your hardware even better.<p>- Multi-device utilization: Make the best possible use of all hardware on a system (CPU, GPUs, RAM, disk) by detecting these and automatically solving for the best model layout.<p>We&#x27;d love for more people to try it out and give us feedback. Feel free to comment here, we&#x27;ll be around all day!",
+      "ai_score": 6.0,
+      "date": "2026-10-01",
+      "topic": "ai"
+    },
+    {
+      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "source": "Hacker News",
+      "score": 806,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-09-30",
+      "topic": "ai"
+    },
+    {
+      "title": "Jeeves. Reasoning improves Jev-like decision models",
+      "url": "https://github.com/PostHog/jeeves",
+      "source": "Hacker News",
+      "score": 228,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-30",
+      "topic": "ai"
+    },
+    {
+      "title": "Dots: Always-on agents",
+      "url": "https://openai.com/index/introducing-dots/",
+      "source": "Hacker News",
+      "score": 471,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-30",
+      "topic": "ai"
+    },
+    {
+      "title": "Sustainable energy without the hot air (2008)",
+      "url": "https://www.withouthotair.com/",
+      "source": "Hacker News",
+      "score": 136,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-30",
+      "topic": "ai"
+    },
+    {
+      "title": "Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms",
+      "url": "https://github.com/firelex/jeff",
+      "source": "Hacker News",
+      "score": 309,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-29",
+      "topic": "ai"
+    },
+    {
+      "title": "MicroLLM Lab – Try 7 tiny LLM's in the browser",
+      "url": "https://stateofutopia.com/experiments/microllmlab/",
+      "source": "Hacker News",
+      "score": 144,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-29",
+      "topic": "ai"
+    },
+    {
+      "title": "It's Time to Investigate the AI Labs",
+      "url": "https://calnewport.com/its-time-to-investigate-the-ai-labs/",
+      "source": "Hacker News",
+      "score": 322,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-29",
+      "topic": "ai"
+    },
+    {
+      "title": "Nvidia wants to put a watchdog chip next to every AI agent",
+      "url": "https://www.cnbc.com/2026/09/28/nvidia-releases.html",
+      "source": "Hacker News",
+      "score": 111,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-29",
+      "topic": "ai"
+    },
+    {
+      "title": "Cf: The Agentic CLI for the Cloudflare API",
+      "url": "https://blog.cloudflare.com/cloudflare-cf-cli-launch/",
+      "source": "Hacker News",
+      "score": 127,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-29",
+      "topic": "ai"
+    },
+    {
+      "title": "A searchable library of forgotten public-domain film clips from 1915 onward",
+      "url": "https://www.movingimagearchive.com/",
+      "source": "Hacker News",
+      "score": 115,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-27",
+      "topic": "ai"
+    },
+    {
+      "title": "Drawgent: Coding agent on a live Excalidraw canvas",
+      "url": "https://tangled.org/yanndegat.tngl.sh/drawgent",
+      "source": "Hacker News",
+      "score": 110,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-27",
+      "topic": "ai"
+    },
+    {
+      "title": "How I changed teaching after AI managed to do all my homework assignments",
+      "url": "https://thelastsoftwareengineer.substack.com/p/how-i-changed-teaching-after-ai-managed",
+      "source": "Hacker News",
+      "score": 138,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-27",
+      "topic": "ai"
+    },
+    {
+      "title": "How to keep enjoying programming in a world of LLMs",
+      "url": "https://discourse.haskell.org/t/how-to-keep-enjoying-programming-in-a-world-of-llms/14705",
+      "source": "Hacker News",
+      "score": 160,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-27",
+      "topic": "ai"
+    },
+    {
+      "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
+      "url": "https://swarmtraces.org/",
+      "source": "Hacker News",
+      "score": 223,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-26",
+      "topic": "ai"
+    },
+    {
+      "title": "Ollaya – Ollama for open-source, Jev-style decision models",
+      "url": "https://ollaya.dev/",
+      "source": "Hacker News",
+      "score": 340,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-26",
+      "topic": "ai"
+    },
+    {
+      "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
+      "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
+      "source": "Hacker News",
+      "score": 390,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-26",
+      "topic": "ai"
+    },
+    {
+      "title": "Meta's Muse appears to use an OpenAI model labeled muse-special",
+      "url": "https://mouse.dev/blog/muse-special/",
+      "source": "Hacker News",
+      "score": 113,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-26",
+      "topic": "ai"
+    },
+    {
+      "title": "Rails World 2026 Opening Keynote [video]",
+      "url": "https://www.youtube.com/watch?v=vDjW_dRyKXY",
+      "source": "Hacker News",
+      "score": 239,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-25",
+      "topic": "ai"
+    },
+    {
+      "title": "Show HN: Koi.rest – watch some fish and regain your balance",
+      "url": "https://koi.rest",
+      "source": "Hacker News",
+      "score": 132,
+      "text": "Hi there. My name is Paul. I’m a developer, an explorer and I’ve got ADHD. As of the beginning of August, I’m also unemployed.<p>This last part, along with everything else this past year, has caused me a great deal of stress.<p>While our balcony zen garden project is yet to be completed, I had an idea to create a virtual one that everyone can use.<p>It&#x27;s an idea that, unfortunately, I’ve been postponing for a while now, mostly because I have no fucking idea how to do it as I don’t know JavaScript, and I don&#x27;t have the capacity to learn it right now.<p>So I let perfect be the enemy of good and, well... just kept the idea to myself.<p>Then I said &quot;fuck it&quot; and used AI to make the thing I really wanted to make.<p>I realized I didn&#x27;t want &quot;perfect&quot;. I wanted &quot;good enough&quot;.<p>I tweaked, added, removed, drew, researched, questioned, tested... I just wasn&#x27;t the one coding it.<p>So now, instead of occupying my brain, it now lives on the internet for others to enjoy.<p>Yes, there’s something noble about making something entirely on your own, but what good is an idea that just sits in my head?<p>So here I am. I made the thing. The weird, little, quiet koi pond.<p>The silly project of passion. The little corner of the internet to let strangers watch fish quietly, together.<p>I hope this pond helps you as much as it helped me.",
+      "ai_score": 6.0,
+      "date": "2026-09-25",
+      "topic": "ai"
+    },
+    {
+      "title": "Early rogue AI agent activity and attempts to hack found on urlquery.net",
+      "url": "https://transluce.org/agent-activity",
+      "source": "Hacker News",
+      "score": 245,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-25",
+      "topic": "ai"
+    },
+    {
+      "title": "VSCode's SSH Agent Is Bananas (2025)",
+      "url": "https://fly.io/blog/vscode-ssh-wtf/",
+      "source": "Hacker News",
+      "score": 126,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-24",
+      "topic": "ai"
+    },
+    {
+      "title": "I don't want the details",
+      "url": "https://michaelheap.com/i-dont-want-the-details/",
+      "source": "Hacker News",
+      "score": 356,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-24",
+      "topic": "ai"
+    },
+    {
+      "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
+      "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+      "source": "Hacker News",
+      "score": 452,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-24",
+      "topic": "ai"
+    },
+    {
+      "title": "GPT-6 Sol and Luna",
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+      "source": "Hacker News",
+      "score": 1186,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-09-23",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
+      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+      "source": "Hacker News",
+      "score": 561,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-09-23",
+      "topic": "ai"
+    },
+    {
+      "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school",
+      "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
+      "source": "Hacker News",
+      "score": 421,
+      "text": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;0V37g\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;0V37g</a>",
+      "ai_score": 6.0,
+      "date": "2026-09-23",
+      "topic": "ai"
+    },
+    {
+      "title": "Unreal Agent",
+      "url": "https://unreallabs.ai/blog/unreal-agent/",
+      "source": "Hacker News",
+      "score": 133,
+      "text": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;unreallabsai&#x2F;unreal-agent\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;unreallabsai&#x2F;unreal-agent</a>",
+      "ai_score": 6.0,
+      "date": "2026-09-23",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI is well positioned to fast-follow Jev",
+      "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
+      "source": "Hacker News",
+      "score": 260,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-23",
+      "topic": "ai"
+    },
+    {
+      "title": "Transformers Explained Visually",
+      "url": "https://poloclub.github.io/transformer-explainer/",
+      "source": "Hacker News",
+      "score": 208,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-22",
+      "topic": "ai"
+    },
+    {
+      "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
+      "url": "https://linear.app/now/ci-bottleneck-reworked",
+      "source": "Hacker News",
+      "score": 143,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-22",
+      "topic": "ai"
+    },
+    {
+      "title": "Why does mathmain need an encrypted loader?",
+      "url": "https://safedep.io/mathmain-encrypted-loader/",
+      "source": "Hacker News",
+      "score": 111,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-22",
+      "topic": "ai"
+    },
+    {
+      "title": "Frontier AI on Your Own Hardware",
+      "url": "https://timdettmers.com/2026/09/21/dlab-open-source-week/",
+      "source": "Hacker News",
+      "score": 103,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-22",
+      "topic": "ai"
+    },
+    {
+      "title": "Kev: Tiny Jev-like family of decision models built on top of Qwen3.5",
+      "url": "https://github.com/jaredpalmer/kev/tree/main",
+      "source": "Hacker News",
+      "score": 407,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-22",
+      "topic": "ai"
+    },
+    {
+      "title": "Python Workers are now generally available",
+      "url": "https://blog.cloudflare.com/python-workers-ga/",
+      "source": "Hacker News",
+      "score": 183,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-22",
+      "topic": "ai"
+    },
+    {
+      "title": "US halts flights at busy East Coast airports, says fiber line cut",
+      "url": "https://www.reuters.com/world/us/faa-halts-some-us-east-coast-flights-due-communication-issues-2026-09-21/",
+      "source": "Hacker News",
+      "score": 201,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-22",
+      "topic": "ai"
+    },
+    {
+      "title": "ChatGPT now knows what you do on other websites via ad collector",
+      "url": "https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/",
+      "source": "Hacker News",
+      "score": 605,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-09-21",
+      "topic": "ai"
+    },
+    {
+      "title": "Google's Open Agentic Orchestrator",
+      "url": "https://agentexecutor.io",
+      "source": "Hacker News",
+      "score": 192,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-21",
+      "topic": "ai"
+    },
+    {
+      "title": "Pirate Face Rescues LLM Models from Deletion",
+      "url": "https://pirateface.co/",
+      "source": "Hacker News",
+      "score": 448,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-21",
+      "topic": "ai"
+    },
+    {
+      "title": "Spain Orders Blocks on Archive.today and Its Mirrors",
+      "url": "https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors",
+      "source": "Hacker News",
+      "score": 253,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-21",
+      "topic": "ai"
+    },
+    {
+      "title": "I built non-autoregressive decision models with RL a year ago",
+      "url": "https://laya.convaiinnovations.com/",
+      "source": "Hacker News",
+      "score": 1093,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-09-20",
+      "topic": "ai"
+    },
+    {
+      "title": "AI-generated posters don’t have to be horrible",
+      "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
+      "source": "Hacker News",
+      "score": 1381,
+      "text": "",
+      "ai_score": 8.0,
+      "date": "2026-09-20",
+      "topic": "ai"
+    },
+    {
+      "title": "How to Write with an LLM",
+      "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
+      "source": "Hacker News",
+      "score": 628,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-09-20",
+      "topic": "ai"
+    },
+    {
+      "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
+      "url": "https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html",
+      "source": "Hacker News",
+      "score": 613,
+      "text": "<a href=\"https:&#x2F;&#x2F;www.nature.com&#x2F;articles&#x2F;s41593-026-02433-7\" rel=\"nofollow\">https:&#x2F;&#x2F;www.nature.com&#x2F;articles&#x2F;s41593-026-02433-7</a>",
+      "ai_score": 7.0,
+      "date": "2026-09-20",
+      "topic": "ai"
+    },
+    {
+      "title": "I think you should almost never use AI to write",
+      "url": "https://erichgrunewald.substack.com/p/why-you-should-almost-never-use-ai",
+      "source": "Hacker News",
+      "score": 232,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-20",
+      "topic": "ai"
+    },
+    {
+      "title": "Claude Code now reads AGENTS.md if there is no Claude.md",
+      "url": "https://code.claude.com/docs/en/changelog",
+      "source": "Hacker News",
+      "score": 508,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-09-19",
+      "topic": "ai"
+    },
+    {
+      "title": "How to Write with an LLM",
+      "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
+      "source": "Hacker News",
+      "score": 390,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
+      "url": "https://cactuscompute.com/needle",
+      "source": "Hacker News",
+      "score": 164,
+      "text": "Hey HN, Henry from Cactus here.<p>We submitted Needle 2 here a few weeks ago, and the feedback in the discussion thread was incredibly valuable, thanks! Thanks to all that feedback, we’ve been able to move quickly to release Needle 3 and I&#x27;d love to hear what you think again.<p>The key features:<p>1) Automation (tool calls &amp; structured JSON output): Needle still doesn&#x27;t chat by design, its quite challenging to pack general capacity into such small models, so we focus on tool calls and structured JSON. If no tool you declared fits the request, you get an empty list back (note for when playing with the demo).<p>2) Intelligence Laddering: Every layer (2 to 20) is a deployable subnetwork, so one set of weights, 25 to 121 million parameters at 2-bit, shipping as 8-29MB binaries. On a Raspberry Pi 5 it decodes at up to 4k tokens&#x2F;sec and prefills at up to 10k.<p>3) Monarch Hadamard MLP: replaces the dense FFN with three learnable Walsh-Hadamard-initialized Kronecker (Monarch) factor pairs interleaved with per-channel diagonal scales, fixed permutations, a SiLU nonlinearity, and a rank-8 input-conditioned gate, so each token gets a fully mixed nonlinear transform of its d_model channels at O(d√d) parameters and compute instead of the O(d²) a dense 4x-expansion MLP would cost.<p>4) Performance: On Mobile Actions (phone commands, scored on the exact call) the 20-layer model gets 86.0 through the shipped 2-bit binary; LFM2.5 1.2B is at 82.4, Qwen3.5 0.8B at 76.0, Apple&#x27;s on-device model at 57.6, all at f16. More results on the link, we do not win everywhere ofc.<p>5) Multilingual: Needle 3 now supports English, French, Spanish, German, Dutch, Italian, Polish, with more languages coming.<p>6) Finetuning: You can achieve DeepSeek v4 Flash grade performance on a narrow task with just 4L, stress on &quot;narrow task&quot;, we found that production users often prefer tuning before production.<p>7) Triggers: Grounding is a common challenge for tool call, at least for Needle 2, so we added support case-insensitive regular expressions matched against each request to gate false negatives.<p>8) Confidence: Every response also carries a calibrated confidence score, the minimum of a judgement on the finished call and its decode probability. Act above your threshold, show the call and ask below it, or escalate to a bigger model.<p>9) Supported Platforms: macOS, Linux on x86-64, ARM64, ARMv7, RISC-V and MIPS32, Windows x64 and ARM, Android, iOS, watchOS, tvOS, the browser as WebAssembly, and a WASI component.<p>Thanks for reading and as always, thoughts appreciated!",
+      "ai_score": 6.0,
+      "date": "2026-09-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
+      "url": "https://www.newscientist.com/article/2589739-our-brain-evolved-from-two-primitive-nervous-systems-that-merged/",
+      "source": "Hacker News",
+      "score": 103,
+      "text": "<a href=\"https:&#x2F;&#x2F;archive.is&#x2F;1CFX9\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.is&#x2F;1CFX9</a><p><a href=\"https:&#x2F;&#x2F;med.stanford.edu&#x2F;news&#x2F;all-news&#x2F;2026&#x2F;09&#x2F;two-separate-brains.html\" rel=\"nofollow\">https:&#x2F;&#x2F;med.stanford.edu&#x2F;news&#x2F;all-news&#x2F;2026&#x2F;09&#x2F;two-separate-...</a><p>Preprint of paper: <a href=\"https:&#x2F;&#x2F;www.biorxiv.org&#x2F;content&#x2F;10.1101&#x2F;2025.07.02.662771v1\" rel=\"nofollow\">https:&#x2F;&#x2F;www.biorxiv.org&#x2F;content&#x2F;10.1101&#x2F;2025.07.02.662771v1</a>",
+      "ai_score": 6.0,
+      "date": "2026-09-19",
+      "topic": "ai"
+    },
+    {
+      "title": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
+      "url": "https://prismml.com/news/bonsai-2-27b",
+      "source": "Hacker News",
+      "score": 216,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Bend – A language that blocks AI mistakes via proof, on CPU and GPU",
+      "url": "https://bend-lang.com/",
+      "source": "Hacker News",
+      "score": 280,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data",
+      "url": "https://arxiv.org/abs/2609.18842",
+      "source": "Hacker News",
+      "score": 109,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-18",
+      "topic": "ai"
+    },
+    {
+      "title": "CCC invites all model citizens to 40C3",
+      "url": "https://events.ccc.de/en/2026/09/12/40c3-model-citizens/",
+      "source": "Hacker News",
+      "score": 336,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Show HN: Share your AI Setup, Learn from others",
+      "url": "https://mysetup.ai/",
+      "source": "Hacker News",
+      "score": 184,
+      "text": "I kept seeing engineers share what they were building with AI; however, I was always more curious about how they worked. Which agents did they use? What skills and tools had stuck or been thrown out the window? How did they manage longer-running tasks?   So I built this with the hope we could have a dedicated space to share and be open about our setups.",
+      "ai_score": 6.0,
+      "date": "2026-09-18",
+      "topic": "ai"
+    },
+    {
+      "title": "Training a 4B model to produce 81% faster query plans than Postgres",
+      "url": "https://rohanbansal.com/qorl",
+      "source": "Hacker News",
+      "score": 402,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-17",
+      "topic": "ai"
+    },
+    {
+      "title": "Xiaomi Mimo 2.6 live post-training dashboard",
+      "url": "https://mimo.xiaomi.com/rl/",
+      "source": "Hacker News",
+      "score": 261,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-17",
+      "topic": "ai"
+    },
+    {
+      "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
+      "url": "https://arxiv.org/abs/2609.16338",
+      "source": "Hacker News",
+      "score": 143,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-17",
+      "topic": "ai"
+    },
+    {
+      "title": "Introducing System One Models and Jev",
+      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "source": "Hacker News",
+      "score": 770,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-09-16",
+      "topic": "ai"
+    },
+    {
+      "title": "Let's make quality the norm again",
+      "url": "https://www.forbrukerradet.no/short-life/",
+      "source": "Hacker News",
+      "score": 309,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-16",
+      "topic": "ai"
+    },
+    {
+      "title": "Suspected sabotage causes major Netherlands rail disruption",
+      "url": "https://www.bbc.com/news/articles/c8ly49w9g1edo",
+      "source": "Hacker News",
+      "score": 437,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-16",
+      "topic": "ai"
+    },
+    {
+      "title": "A single firm is behind OpenAI, Anthropic, and Meta hacking scandals",
+      "url": "https://www.effort.news/irregular",
+      "source": "Hacker News",
+      "score": 460,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-16",
+      "topic": "ai"
+    },
+    {
+      "title": "Why I'm still bearish on LLMs after Navier-Stokes",
+      "url": "https://dank.systems/posts/2026-09-15-ai-bear.html",
+      "source": "Hacker News",
+      "score": 146,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-16",
+      "topic": "ai"
+    },
+    {
+      "title": "Pion, an agent designed to run any company autonomously",
+      "url": "https://andonlabs.com/blog/why-we-built-pion",
+      "source": "Hacker News",
+      "score": 291,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-15",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI bots knew about the RubyGems caching vulnerability",
+      "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
+      "source": "Hacker News",
+      "score": 379,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-15",
+      "topic": "ai"
+    },
+    {
+      "title": "Why don't machine learning research agents overfit?",
+      "url": "https://www.amazon.science/blog/why-dont-machine-learning-research-agents-overfit",
+      "source": "Hacker News",
+      "score": 107,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-15",
+      "topic": "ai"
+    },
+    {
+      "title": "GPT-5.6 Luna vs. GPT-6 Astra: Is a $1.20 Model Good Enough for Code Review?",
+      "url": "https://entelligence.ai/blogs/gpt-5.6-luna-vs-gpt-6-astra-is-a-1.20-model-good-enough-for-code-review",
+      "source": "Hacker News",
+      "score": 110,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-15",
+      "topic": "ai"
+    },
+    {
+      "title": "Garry Tan wants US open-weight AI labs to 'distill' frontier models, too",
+      "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
+      "source": "Hacker News",
+      "score": 359,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-14",
+      "topic": "ai"
+    },
+    {
+      "title": "David Sacks: OpenAI and Anthropic Don't Need Regulations to Pace Frontier Models",
+      "url": "https://twitter.com/DavidSacks/status/2098973625252708460",
+      "source": "Hacker News",
+      "score": 262,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-14",
+      "topic": "ai"
+    },
+    {
+      "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
+      "url": "https://withspecific.com/benchmarks/real-swe",
+      "source": "Hacker News",
+      "score": 111,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-13",
+      "topic": "ai"
+    },
+    {
+      "title": "Nvidia is the central bank of AI",
+      "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
+      "source": "Hacker News",
+      "score": 392,
+      "text": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;kt50V\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;kt50V</a>",
+      "ai_score": 6.0,
+      "date": "2026-09-13",
+      "topic": "ai"
+    },
+    {
+      "title": "LG denies TV spying claims, says tracking and snooping concerns 'not true'",
+      "url": "https://www.tomshardware.com/tech-industry/big-tech/lg-strongly-denies-tv-security-claims-says-tracking-and-snooping-concerns-not-true-online-investigation-claims-216-000-000-spy-tvs-record-audio",
+      "source": "Hacker News",
+      "score": 438,
+      "text": "<a href=\"https:&#x2F;&#x2F;www.lg.com&#x2F;global&#x2F;newsroom&#x2F;news&#x2F;statements&#x2F;statement-understanding-privacy-on-lg-smart-tvs&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.lg.com&#x2F;global&#x2F;newsroom&#x2F;news&#x2F;statements&#x2F;statement...</a>",
+      "ai_score": 6.0,
+      "date": "2026-09-13",
+      "topic": "ai"
+    },
+    {
+      "title": "I fixed a tractor using John Deere's self-repair service. Farmers aren't sold",
+      "url": "https://www.wired.com/story/i-fixed-a-tractor-john-deere-self-repair-service/",
+      "source": "Hacker News",
+      "score": 102,
+      "text": "<a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20260911105205&#x2F;https:&#x2F;&#x2F;www.wired.com&#x2F;story&#x2F;i-fixed-a-tractor-john-deere-self-repair-service&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20260911105205&#x2F;https:&#x2F;&#x2F;www.wired...</a><p><a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;1xTJ3\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;1xTJ3</a>",
+      "ai_score": 6.0,
+      "date": "2026-09-13",
+      "topic": "ai"
+    },
+    {
+      "title": "A misalignment of AI in mathematics",
+      "url": "https://mathandai.org/",
+      "source": "Hacker News",
+      "score": 641,
+      "text": "<a href=\"https:&#x2F;&#x2F;terrytao.wordpress.com&#x2F;2026&#x2F;09&#x2F;11&#x2F;a-severe-misalignment-of-ai-in-mathematics&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;terrytao.wordpress.com&#x2F;2026&#x2F;09&#x2F;11&#x2F;a-severe-misalignm...</a><p><a href=\"https:&#x2F;&#x2F;www.economist.com&#x2F;science-and-technology&#x2F;2026&#x2F;09&#x2F;11&#x2F;top-mathematicians-are-outraged-by-openais-methods\" rel=\"nofollow\">https:&#x2F;&#x2F;www.economist.com&#x2F;science-and-technology&#x2F;2026&#x2F;09&#x2F;11&#x2F;...</a>, <a href=\"https:&#x2F;&#x2F;unwall.app&#x2F;www.economist.com&#x2F;science-and-technology&#x2F;2026&#x2F;09&#x2F;11&#x2F;top-mathematicians-are-outraged-by-openais-methods\" rel=\"nofollow\">https:&#x2F;&#x2F;unwall.app&#x2F;www.economist.com&#x2F;science-and-technology&#x2F;...</a>",
+      "ai_score": 7.0,
+      "date": "2026-09-12",
+      "topic": "ai"
+    },
+    {
+      "title": "Claude is only available to people over 18 years",
+      "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
+      "source": "Hacker News",
+      "score": 577,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-09-12",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
+      "url": "https://www.rubyhack.ai/",
+      "source": "Hacker News",
+      "score": 310,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-12",
+      "topic": "ai"
+    },
+    {
+      "title": "A Design Space Exploration of Async/Await",
+      "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
+      "source": "Hacker News",
+      "score": 144,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-12",
+      "topic": "ai"
+    },
+    {
+      "title": "CIA Releases President's Daily Briefs in Commemoration of 9/11",
+      "url": "https://www.cia.gov/stories/story/cia-releases-presidents-daily-briefs-in-commemoration-of-the-25th-anniversary-of-9-11/",
+      "source": "Hacker News",
+      "score": 115,
+      "text": "<a href=\"https:&#x2F;&#x2F;www.cia.gov&#x2F;stories&#x2F;story&#x2F;cia-releases-presidents-daily-briefs-in-commemoration-of-the-25th-anniversary-of-9-11&#x2F;seventy-one-declassified-presidents-daily-brief-products&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.cia.gov&#x2F;stories&#x2F;story&#x2F;cia-releases-presidents-da...</a>",
+      "ai_score": 6.0,
+      "date": "2026-09-12",
+      "topic": "ai"
+    },
+    {
+      "title": "More questions about whether researchers can trust OpenAI with unpublished math",
+      "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
+      "source": "Hacker News",
+      "score": 663,
+      "text": "<a href=\"https:&#x2F;&#x2F;mathstodon.xyz&#x2F;@andreasthom&#x2F;117240536885387540\" rel=\"nofollow\">https:&#x2F;&#x2F;mathstodon.xyz&#x2F;@andreasthom&#x2F;117240536885387540</a><p><a href=\"https:&#x2F;&#x2F;mathstodon.xyz&#x2F;@andreasthom&#x2F;117240537520615623\" rel=\"nofollow\">https:&#x2F;&#x2F;mathstodon.xyz&#x2F;@andreasthom&#x2F;117240537520615623</a><p><a href=\"https:&#x2F;&#x2F;x.com&#x2F;ValerioCapraro&#x2F;status&#x2F;2097791836269977996\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;ValerioCapraro&#x2F;status&#x2F;2097791836269977996</a>, <a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;ValerioCapraro&#x2F;status&#x2F;2097791836269977996\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;ValerioCapraro&#x2F;status&#x2F;209779183626997799...</a><p><a href=\"https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;did:plc:ckaz32jwl6t2cno6fmuw2nhn&#x2F;post&#x2F;3mv4mt4ikss2d\" rel=\"nofollow\">https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;did:plc:ckaz32jwl6t2cno6fmuw2nhn&#x2F;po...</a>",
+      "ai_score": 7.0,
+      "date": "2026-09-11",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI Agents API",
+      "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+      "source": "Hacker News",
+      "score": 128,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-11",
+      "topic": "ai"
+    },
+    {
+      "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+      "url": "https://cognition.com/blog/swe-2",
+      "source": "Hacker News",
+      "score": 352,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-11",
+      "topic": "ai"
+    },
+    {
+      "title": "OpenAI’s Navier-Stokes release included a Lean 4 formal proof",
+      "url": "https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/",
+      "source": "Hacker News",
+      "score": 139,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-11",
+      "topic": "ai"
+    },
+    {
+      "title": "Shopify acquires Tailwind",
+      "url": "https://tailwindcss.com/blog/tailwind-is-joining-shopify",
+      "source": "Hacker News",
+      "score": 887,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-09-10",
+      "topic": "ai"
+    },
+    {
+      "title": "AirPods 5",
+      "url": "https://www.apple.com/newsroom/2026/09/apple-introduces-airpods-5-with-best-in-class-open-ear-active-noise-cancellation/",
+      "source": "Hacker News",
+      "score": 372,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-10",
+      "topic": "ai"
+    },
+    {
+      "title": "GPT-6 Astra, looped transformers, and hidden reasoning",
+      "url": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
+      "source": "Hacker News",
+      "score": 348,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Qwen 3.8 follows GPT-5.5 Pro reasoning prefills",
+      "url": "https://gist.github.com/wsxiaoys/e0286dc6bb624ff5fdf49e7f4c528ba3",
+      "source": "Hacker News",
+      "score": 173,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Desert Ant Labs: local, fast models that run on device",
+      "url": "https://desertant.com/blog/introducing-desert-ant-labs/",
+      "source": "Hacker News",
+      "score": 392,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Understanding the recent DDoS attack against Read the Docs",
+      "url": "https://about.readthedocs.com/blog/2026/09/2026-ddos-attack/",
+      "source": "Hacker News",
+      "score": 156,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-10",
+      "topic": "ai"
+    },
+    {
+      "title": "Muse – Meta’s personal AI agent",
+      "url": "https://ai.meta.com/muse/",
+      "source": "Hacker News",
+      "score": 299,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-09",
+      "topic": "ai"
+    },
+    {
+      "title": "Tao: Open math problems being non-renewably mined by AI",
+      "url": "https://mathstodon.xyz/@tao/117237320796901560",
+      "source": "Hacker News",
+      "score": 142,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-09",
+      "topic": "ai"
+    },
+    {
+      "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
+      "url": "https://github.com/ayghri/i-have-adhd",
+      "source": "Hacker News",
+      "score": 321,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-09",
+      "topic": "ai"
+    },
+    {
+      "title": "Show HN: LLM Attention Visualization",
+      "url": "https://ishamf.dev/p/llm-attention-visualizer/",
+      "source": "Hacker News",
+      "score": 128,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-09",
+      "topic": "ai"
+    },
+    {
+      "title": "The two Christian saints who are the Buddha",
+      "url": "https://signoregalilei.com/2026/08/30/the-two-christian-saints-who-are-secretly-the-buddha/",
+      "source": "Hacker News",
+      "score": 219,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-09",
+      "topic": "ai"
+    },
+    {
+      "title": "Trusting-Trust Attack against an Entire Linux Distribution",
+      "url": "https://arxiv.org/abs/2607.24888",
+      "source": "Hacker News",
+      "score": 147,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-08",
+      "topic": "ai"
+    },
+    {
+      "title": "Research acceleration: The view inside OpenAI",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+      "source": "Hacker News",
+      "score": 107,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-09-07",
+      "topic": "ai"
+    },
     {
       "title": "Discovery of a new OpenAI agent message board",
       "url": "https://collusion.wiki/",

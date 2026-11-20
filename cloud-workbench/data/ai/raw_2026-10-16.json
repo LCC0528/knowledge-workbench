@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-16",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Krea 3 – An image model built for editing at scale",
+      "url": "https://www.krea.ai/krea-3",
+      "source": "Hacker News",
+      "score": 250,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Using AI to reverse engineer hardware",
+      "url": "https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/",
+      "source": "Hacker News",
+      "score": 113,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-24",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "VSCode's SSH Agent Is Bananas (2025)",
+      "url": "https://fly.io/blog/vscode-ssh-wtf/",
+      "source": "Hacker News",
+      "score": 126,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "I don't want the details",
+      "url": "https://michaelheap.com/i-dont-want-the-details/",
+      "source": "Hacker News",
+      "score": 356,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
+      "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+      "source": "Hacker News",
+      "score": 452,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

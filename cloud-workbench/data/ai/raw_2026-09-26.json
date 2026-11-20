@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-26",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
+      "url": "https://swarmtraces.org/",
+      "source": "Hacker News",
+      "score": 223,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Ollaya – Ollama for open-source, Jev-style decision models",
+      "url": "https://ollaya.dev/",
+      "source": "Hacker News",
+      "score": 340,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
+      "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
+      "source": "Hacker News",
+      "score": 390,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Meta's Muse appears to use an OpenAI model labeled muse-special",
+      "url": "https://mouse.dev/blog/muse-special/",
+      "source": "Hacker News",
+      "score": 113,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

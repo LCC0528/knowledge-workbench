@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-21",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "ChatGPT now knows what you do on other websites via ad collector",
+      "url": "https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/",
+      "source": "Hacker News",
+      "score": 605,
+      "text": "",
+      "ai_score": 7.0
+    },
+    {
+      "title": "Google's Open Agentic Orchestrator",
+      "url": "https://agentexecutor.io",
+      "source": "Hacker News",
+      "score": 192,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Pirate Face Rescues LLM Models from Deletion",
+      "url": "https://pirateface.co/",
+      "source": "Hacker News",
+      "score": 448,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Spain Orders Blocks on Archive.today and Its Mirrors",
+      "url": "https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors",
+      "source": "Hacker News",
+      "score": 253,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

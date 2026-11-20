@@ -1,0 +1,54 @@
+{
+  "date": "2026-09-10",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Shopify acquires Tailwind",
+      "url": "https://tailwindcss.com/blog/tailwind-is-joining-shopify",
+      "source": "Hacker News",
+      "score": 887,
+      "text": "",
+      "ai_score": 7.0
+    },
+    {
+      "title": "AirPods 5",
+      "url": "https://www.apple.com/newsroom/2026/09/apple-introduces-airpods-5-with-best-in-class-open-ear-active-noise-cancellation/",
+      "source": "Hacker News",
+      "score": 372,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "GPT-6 Astra, looped transformers, and hidden reasoning",
+      "url": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
+      "source": "Hacker News",
+      "score": 348,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Qwen 3.8 follows GPT-5.5 Pro reasoning prefills",
+      "url": "https://gist.github.com/wsxiaoys/e0286dc6bb624ff5fdf49e7f4c528ba3",
+      "source": "Hacker News",
+      "score": 173,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Desert Ant Labs: local, fast models that run on device",
+      "url": "https://desertant.com/blog/introducing-desert-ant-labs/",
+      "source": "Hacker News",
+      "score": 392,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Understanding the recent DDoS attack against Read the Docs",
+      "url": "https://about.readthedocs.com/blog/2026/09/2026-ddos-attack/",
+      "source": "Hacker News",
+      "score": 156,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

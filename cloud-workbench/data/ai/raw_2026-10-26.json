@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-26",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+      "url": "https://lynchlab.net/llm-skin-cancer",
+      "source": "Hacker News",
+      "score": 436,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+      "url": "https://minimaxir.com/2026/10/cheap-llms/",
+      "source": "Hacker News",
+      "score": 149,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "JetBrains Thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "source": "Hacker News",
+      "score": 183,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

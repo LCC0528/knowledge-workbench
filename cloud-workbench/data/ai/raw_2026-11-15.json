@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-15",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Lovable apps expose passport details and more than 200K private messages",
+      "url": "https://www.crissyfield.de/research/lovable-en/",
+      "source": "Hacker News",
+      "score": 686,
+      "text": "",
+      "ai_score": 7.0
+    },
+    {
+      "title": "Generative AI uses more energy on non-English text",
+      "url": "https://news.umich.edu/generative-ai-uses-more-energy-on-non-english-text/",
+      "source": "Hacker News",
+      "score": 187,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Tech companies are trying to shift the concept of privacy again",
+      "url": "https://www.eff.org/deeplinks/2026/11/tech-companies-are-trying-shift-entire-concept-privacy-again",
+      "source": "Hacker News",
+      "score": 486,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

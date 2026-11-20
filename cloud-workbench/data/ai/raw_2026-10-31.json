@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-31",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "AI isn't replacing SREs, it's deskilling them",
+      "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
+      "source": "Hacker News",
+      "score": 521,
+      "text": "",
+      "ai_score": 7.0
+    },
+    {
+      "title": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
+      "url": "https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/",
+      "source": "Hacker News",
+      "score": 230,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Cisco gives engineer unlimited AI tokens to rewrite legacy code",
+      "url": "https://fortune.com/2026/10/30/cisco-president-jeetu-patel-gen-z-27-year-old-unlimited-ai-tokens-rewrite-legacy-code-entry-level-jobs/",
+      "source": "Hacker News",
+      "score": 117,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Building an AI-native engineering org",
+      "url": "https://twitter.com/sgondala2/status/2115832070274723875",
+      "source": "Hacker News",
+      "score": 112,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Sleep framework: A new way for LLMs to retain knowledge in continual learning",
+      "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
+      "source": "Hacker News",
+      "score": 178,
+      "text": "<a href=\"https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;2606.03979\" rel=\"nofollow\">https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;2606.03979</a>",
+      "ai_score": 6.0
+    }
+  ]
+}

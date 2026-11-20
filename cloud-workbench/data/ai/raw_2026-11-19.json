@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-19",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Seven new models at scalable price-performance",
+      "url": "https://microsoft.ai/news/microsoft-ignite-2026/",
+      "source": "Hacker News",
+      "score": 480,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "AI agents ask better questions than KPMG accountants in audit trial",
+      "url": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/",
+      "source": "Hacker News",
+      "score": 407,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "LLM assisted reverse engineering",
+      "url": "https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering",
+      "source": "Hacker News",
+      "score": 112,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "DaisyRose-27B",
+      "url": "https://www.radixark.com/blog/daisyrose-27b",
+      "source": "Hacker News",
+      "score": 162,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Genie 4 is now available",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/",
+      "source": "Hacker News",
+      "score": 209,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Advancing chip design with OpenAI models",
+      "url": "https://openai.com/index/advancing-chip-design-with-our-models/",
+      "source": "Hacker News",
+      "score": 175,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}
