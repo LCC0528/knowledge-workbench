@@ -101,6 +101,9 @@
         }
         .progress-text { font-size: 13px; color: var(--text-light); white-space: nowrap; }
 
+        #focusLogList .word-item { cursor: default; }
+        #focusLogList li { list-style: none; }
+
         .review-card {
             text-align: center;
             padding: 32px 20px 24px;
@@ -402,6 +405,7 @@
         <div class="sub">
             <span class="active" data-tab="review" onclick="switchTab('review')">复习</span>
             <span data-tab="add" onclick="switchTab('add')">录入</span>
+            <span data-tab="focus" onclick="switchTab('focus')">专注</span>
             <span data-tab="stats" onclick="switchTab('stats')">统计</span>
             <span data-tab="wrong" onclick="switchTab('wrong')">错词</span>
             <span data-tab="settings" onclick="switchTab('settings')">设置</span>
@@ -432,8 +436,16 @@
                 <div class="progress-text" id="progressText">0 / 0</div>
             </div>
 
+            <div id="quickFocusBar" style="display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#f5f8fc 0%,#eef4f1 100%);border:1px solid rgba(91,122,110,0.12);border-radius:12px;padding:8px 12px;margin-bottom:14px;">
+                <span style="font-size:13px;color:var(--text-light);white-space:nowrap;">⏱ 专注</span>
+                <span id="quickFocusTime" style="flex:1;font-family:Consolas,monospace;font-size:18px;font-weight:700;color:var(--primary-dark);letter-spacing:1px;">00:00</span>
+                <button class="btn btn-sm btn-primary" id="quickFocusToggleBtn" onclick="focusToggle()" style="padding:5px 14px;font-size:12px;">▶ 开始</button>
+                <button class="btn btn-sm btn-outline" id="quickFocusStopBtn" onclick="focusStopSave()" style="padding:5px 12px;font-size:12px;" disabled>■ 结束</button>
+            </div>
+
             <div id="reviewContent">
                 <div id="reviewCard" class="review-card hidden">
+                    <div id="priorityBadge" class="hidden" style="align-self:flex-start;font-size:11px;font-weight:600;color:var(--accent);background:var(--accent-light);padding:3px 10px;border-radius:999px;margin-bottom:8px;">🔥 昨日待巩固 · 优先复习</div>
                     <div class="word" id="wordDisplay"></div>
                     <div style="font-size:14px;color:var(--text-light);margin-bottom:2px;" id="phoneticDisplay"></div>
                     <div style="font-size:13px;color:var(--accent);margin-bottom:6px;" id="posDisplay"></div>
@@ -567,6 +579,12 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
                 <div class="streak-bar" id="streakBar"></div>
             </div>
 
+            <div style="display:flex;align-items:center;gap:8px;background:var(--accent-light);border-radius:12px;padding:10px 14px;margin-bottom:16px;">
+                <span style="font-size:14px;">⏱</span>
+                <span style="font-size:13px;color:var(--text);">今日专注：<strong id="statsFocusToday" style="color:var(--primary-dark);">0 分钟</strong></span>
+                <button class="btn btn-sm btn-outline" onclick="switchTab('focus')" style="margin-left:auto;padding:4px 10px;font-size:12px;">去计时</button>
+            </div>
+
             <h3 style="font-size: 14px; color: var(--text-light); margin-bottom: 8px;">所有单词</h3>
             <ul class="word-list" id="wordList"></ul>
         </div>
@@ -672,6 +690,60 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         </div>
     </div>
 
+    <div id="tab-focus" class="hidden">
+        <div class="card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                <h2 style="color: var(--primary-dark); font-size: 18px;">⏱ 专注计时</h2>
+                <div style="display:flex;gap:6px;background:var(--bg);border-radius:10px;padding:3px;">
+                    <button class="btn btn-sm" id="focusModeStopwatch" onclick="focusSetMode('stopwatch')" style="border:none;border-radius:8px;padding:6px 12px;font-size:12px;font-weight:600;background:var(--primary);color:#fff;">⏱ 正计时</button>
+                    <button class="btn btn-sm" id="focusModePomodoro" onclick="focusSetMode('pomodoro')" style="border:none;border-radius:8px;padding:6px 12px;font-size:12px;font-weight:600;background:transparent;color:var(--text-light);">🍅 番茄钟</button>
+                </div>
+            </div>
+
+            <div id="pomodoroSettings" class="hidden" style="display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:12px;font-size:13px;color:var(--text-light);">
+                <span>每轮</span>
+                <input type="number" id="pomodoroMinutes" min="1" max="90" value="25" style="width:64px;padding:6px 8px;border:1px solid var(--border);border-radius:8px;font-size:14px;text-align:center;background:var(--bg);">
+                <span>分钟</span>
+            </div>
+
+            <div style="text-align:center;padding:24px 0 8px;">
+                <div id="focusModeLabel" style="font-size:13px;color:var(--text-light);margin-bottom:6px;">正计时模式</div>
+                <div id="focusDisplay" style="font-family:Consolas,monospace;font-size:52px;font-weight:700;color:var(--primary-dark);letter-spacing:2px;line-height:1.1;">00:00</div>
+                <div id="focusStatusText" style="font-size:12px;color:var(--text-light);margin-top:6px;">未开始</div>
+            </div>
+
+            <div style="display:flex;gap:10px;justify-content:center;margin-top:16px;flex-wrap:wrap;">
+                <button class="btn btn-primary" id="focusToggleBtn" onclick="focusToggle()" style="min-width:110px;">▶ 开始</button>
+                <button class="btn btn-outline" id="focusStopBtn" onclick="focusStopSave()" style="min-width:110px;" disabled>■ 结束并保存</button>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid #f0f0f0; margin: 20px 0 16px;">
+
+            <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="stat-item">
+                    <div class="num" id="focusTodaySec">0分</div>
+                    <div class="label">今日专注</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num" id="focusWeekSec">0分</div>
+                    <div class="label">本周专注</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num" id="focusTotalSec">0分</div>
+                    <div class="label">累计时长</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num" id="focusTodayCount">0</div>
+                    <div class="label">今日段数</div>
+                </div>
+            </div>
+
+            <h3 style="font-size: 14px; color: var(--text-light); margin: 4px 0 10px;">最近记录</h3>
+            <ul id="focusLogList" class="word-list" style="max-height:240px;overflow-y:auto;"></ul>
+            <div id="focusLogEmpty" style="text-align:center;padding:20px;color:var(--text-light);font-size:13px;background:var(--primary-light);border-radius:12px;border:1px dashed rgba(91,122,110,0.2);">暂无专注记录，点击上方开始计时</div>
+        </div>
+    </div>
+
     <div id="tab-settings" class="hidden">
         <div class="card">
             <h2 style="color: var(--primary-dark); font-size: 18px; margin-bottom: 16px;">⚙️ 设置</h2>
@@ -712,6 +784,8 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
     const CHECKIN_KEY = 'english_workbench_checkin';
     const GITHUB_TOKEN_KEY = 'ew_github_token';
     const REVIEW_LOG_KEY = 'english_workbench_review_log';
+    const FOCUS_LOG_KEY = 'english_workbench_focus_log';
+    const FOCUS_RUNNING_KEY = 'english_workbench_focus_running';
 
     const GITHUB_OWNER = 'LCC0528';
     const GITHUB_REPO = 'knowledge-workbench';
@@ -830,6 +904,364 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
 
     function getDueWords() {
         return state.words.filter(w => w.nextReviewDate <= state.todayStr);
+    }
+
+    function getYesterdayStr(offset) {
+        const d = new Date();
+        d.setDate(d.getDate() - (offset === undefined ? 1 : offset));
+        return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+    }
+
+    function getYesterdayPriorityWordIds() {
+        const yesterday = getYesterdayStr(1);
+        const logs = getReviewLogs();
+        const ids = [];
+        const seen = {};
+        for (let i = logs.length - 1; i >= 0; i--) {
+            const l = logs[i];
+            if (l.date !== yesterday) continue;
+            if (l.result !== 'review_again' && l.result !== 'forgot') continue;
+            if (typeof l.wordId !== 'number') continue;
+            if (seen[l.wordId]) continue;
+            seen[l.wordId] = true;
+            ids.push(l.wordId);
+        }
+        return ids;
+    }
+
+    // ===== 专注计时引擎 =====
+    let focusTimer = {
+        running: false,
+        mode: 'stopwatch',      // 'stopwatch' | 'pomodoro'
+        startedAt: 0,           // timestamp when current run segment started
+        elapsedBase: 0,         // accumulated ms before current run segment
+        pomodoroMin: 25,
+        intervalId: null,
+        currentStartTs: 0       // absolute start ts of the whole session (for saving)
+    };
+
+    function getFocusLogs() {
+        try { return JSON.parse(localStorage.getItem(FOCUS_LOG_KEY)) || []; }
+        catch { return []; }
+    }
+
+    function saveFocusLogs(logs) {
+        localStorage.setItem(FOCUS_LOG_KEY, JSON.stringify(logs));
+    }
+
+    function focusPersistRunning() {
+        if (focusTimer.running) {
+            localStorage.setItem(FOCUS_RUNNING_KEY, JSON.stringify({
+                running: true,
+                mode: focusTimer.mode,
+                startedAt: focusTimer.startedAt,
+                elapsedBase: focusTimer.elapsedBase,
+                pomodoroMin: focusTimer.pomodoroMin,
+                currentStartTs: focusTimer.currentStartTs
+            }));
+        } else if (focusTimer.elapsedBase > 0 || focusTimer.currentStartTs) {
+            localStorage.setItem(FOCUS_RUNNING_KEY, JSON.stringify({
+                running: false,
+                mode: focusTimer.mode,
+                startedAt: 0,
+                elapsedBase: focusTimer.elapsedBase,
+                pomodoroMin: focusTimer.pomodoroMin,
+                currentStartTs: focusTimer.currentStartTs
+            }));
+        } else {
+            localStorage.removeItem(FOCUS_RUNNING_KEY);
+        }
+    }
+
+    function focusRestore() {
+        try {
+            const raw = localStorage.getItem(FOCUS_RUNNING_KEY);
+            if (!raw) return;
+            const s = JSON.parse(raw);
+            if (!s) return;
+            focusTimer.mode = s.mode === 'pomodoro' ? 'pomodoro' : 'stopwatch';
+            focusTimer.pomodoroMin = s.pomodoroMin || 25;
+            focusTimer.elapsedBase = s.elapsedBase || 0;
+            focusTimer.currentStartTs = s.currentStartTs || 0;
+            focusTimer.startedAt = s.startedAt || 0;
+            focusTimer.running = !!s.running;
+            if (focusTimer.running && !focusTimer.startedAt) {
+                focusTimer.startedAt = Date.now();
+            }
+            if (focusTimer.running) focusStartInterval();
+            else focusRender();
+        } catch {}
+    }
+
+    function focusElapsedMs() {
+        let ms = focusTimer.elapsedBase || 0;
+        if (focusTimer.running && focusTimer.startedAt) {
+            ms += Date.now() - focusTimer.startedAt;
+        }
+        if (focusTimer.mode === 'pomodoro') {
+            const total = focusTimer.pomodoroMin * 60 * 1000;
+            if (ms > total) ms = total;
+        }
+        return Math.max(0, ms);
+    }
+
+    function formatMsClock(ms) {
+        const totalSec = Math.floor(ms / 1000);
+        const h = Math.floor(totalSec / 3600);
+        const m = Math.floor((totalSec % 3600) / 60);
+        const s = totalSec % 60;
+        if (h > 0) {
+            return String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+        }
+        return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+    }
+
+    function formatSecHuman(totalSec) {
+        totalSec = Math.floor(totalSec || 0);
+        if (totalSec < 60) return totalSec + '秒';
+        const h = Math.floor(totalSec / 3600);
+        const m = Math.floor((totalSec % 3600) / 60);
+        if (h > 0) return m > 0 ? h + '时' + m + '分' : h + '时';
+        return m + '分';
+    }
+
+    function focusStartInterval() {
+        if (focusTimer.intervalId) clearInterval(focusTimer.intervalId);
+        focusTimer.intervalId = setInterval(() => {
+            if (focusTimer.mode === 'pomodoro' && focusTimer.running) {
+                const total = focusTimer.pomodoroMin * 60 * 1000;
+                if (focusElapsedMs() >= total) {
+                    focusPomodoroComplete();
+                    return;
+                }
+            }
+            focusRender();
+        }, 250);
+    }
+
+    function focusStopInterval() {
+        if (focusTimer.intervalId) {
+            clearInterval(focusTimer.intervalId);
+            focusTimer.intervalId = null;
+        }
+    }
+
+    function focusSetMode(mode) {
+        if (focusTimer.running) {
+            showToast('请先结束当前计时再切换模式');
+            return;
+        }
+        if ((focusTimer.elapsedBase || 0) > 0 && !confirm('切换模式将清空当前未保存的计时，确定切换？')) return;
+        focusTimer.mode = mode === 'pomodoro' ? 'pomodoro' : 'stopwatch';
+        focusTimer.elapsedBase = 0;
+        focusTimer.currentStartTs = 0;
+        focusTimer.startedAt = 0;
+        focusTimer.running = false;
+        focusStopInterval();
+        focusPersistRunning();
+        focusRender();
+        renderFocusPage();
+    }
+
+    function focusToggle() {
+        if (focusTimer.running) {
+            focusPause();
+        } else {
+            focusStart();
+        }
+    }
+
+    function focusStart() {
+        const input = document.getElementById('pomodoroMinutes');
+        if (focusTimer.mode === 'pomodoro' && input) {
+            const v = parseInt(input.value) || 25;
+            focusTimer.pomodoroMin = Math.min(90, Math.max(1, v));
+            input.value = focusTimer.pomodoroMin;
+        }
+        if (!focusTimer.currentStartTs) {
+            focusTimer.currentStartTs = Date.now();
+        }
+        focusTimer.startedAt = Date.now();
+        focusTimer.running = true;
+        focusStartInterval();
+        focusPersistRunning();
+        focusRender();
+    }
+
+    function focusPause() {
+        if (!focusTimer.running) return;
+        focusTimer.elapsedBase = focusElapsedMs();
+        focusTimer.running = false;
+        focusTimer.startedAt = 0;
+        focusStopInterval();
+        focusPersistRunning();
+        focusRender();
+    }
+
+    function focusStopSave() {
+        const ms = focusElapsedMs();
+        focusTimer.running = false;
+        focusTimer.startedAt = 0;
+        focusTimer.elapsedBase = 0;
+        focusTimer.currentStartTs = 0;
+        focusStopInterval();
+        localStorage.removeItem(FOCUS_RUNNING_KEY);
+
+        const sec = Math.floor(ms / 1000);
+        if (sec >= 5) {
+            const logs = getFocusLogs();
+            logs.push({
+                date: state.todayStr || getToday(),
+                startTs: Date.now() - sec * 1000,
+                durationSec: sec,
+                mode: focusTimer.mode
+            });
+            saveFocusLogs(logs);
+            showToast('✅ 已保存专注 ' + formatSecHuman(sec));
+        } else if (sec > 0) {
+            showToast('时长不足 5 秒，未记录');
+        }
+        focusRender();
+        renderFocusPage();
+        renderStatsFocusToday();
+    }
+
+    function focusPomodoroComplete() {
+        focusStopInterval();
+        focusTimer.running = false;
+        const sec = focusTimer.pomodoroMin * 60;
+        const logs = getFocusLogs();
+        logs.push({
+            date: state.todayStr || getToday(),
+            startTs: Date.now() - sec * 1000,
+            durationSec: sec,
+            mode: 'pomodoro'
+        });
+        saveFocusLogs(logs);
+        focusTimer.elapsedBase = 0;
+        focusTimer.currentStartTs = 0;
+        focusTimer.startedAt = 0;
+        localStorage.removeItem(FOCUS_RUNNING_KEY);
+        showToast('🍅 番茄钟 ' + focusTimer.pomodoroMin + ' 分钟完成！已记录');
+        focusRender();
+        renderFocusPage();
+        renderStatsFocusToday();
+    }
+
+    function focusRender() {
+        const text = formatMsClock(focusElapsedMs());
+        const qTime = document.getElementById('quickFocusTime');
+        const fDisplay = document.getElementById('focusDisplay');
+        const qToggle = document.getElementById('quickFocusToggleBtn');
+        const qStop = document.getElementById('quickFocusStopBtn');
+        const fToggle = document.getElementById('focusToggleBtn');
+        const fStop = document.getElementById('focusStopBtn');
+        const status = document.getElementById('focusStatusText');
+        const modeLabel = document.getElementById('focusModeLabel');
+
+        if (qTime) qTime.textContent = text;
+        if (fDisplay) fDisplay.textContent = text;
+
+        const hasTime = focusTimer.running || (focusTimer.elapsedBase || 0) > 0;
+        const label = focusTimer.running ? '⏸ 暂停' : ((focusTimer.elapsedBase || 0) > 0 ? '▶ 继续' : '▶ 开始');
+        if (qToggle) qToggle.textContent = label;
+        if (fToggle) fToggle.textContent = label;
+        if (qStop) qStop.disabled = !hasTime;
+        if (fStop) fStop.disabled = !hasTime;
+
+        if (status) {
+            if (focusTimer.running) status.textContent = focusTimer.mode === 'pomodoro' ? '番茄钟进行中...' : '专注进行中，加油！';
+            else if ((focusTimer.elapsedBase || 0) > 0) status.textContent = '已暂停，可继续或结束保存';
+            else status.textContent = '未开始';
+        }
+        if (modeLabel) {
+            modeLabel.textContent = focusTimer.mode === 'pomodoro'
+                ? '番茄钟模式 · ' + focusTimer.pomodoroMin + ' 分钟'
+                : '正计时模式';
+        }
+
+        const msBtn = document.getElementById('focusModeStopwatch');
+        const pmBtn = document.getElementById('focusModePomodoro');
+        if (msBtn && pmBtn) {
+            const sw = focusTimer.mode === 'stopwatch';
+            msBtn.style.background = sw ? 'var(--primary)' : 'transparent';
+            msBtn.style.color = sw ? '#fff' : 'var(--text-light)';
+            pmBtn.style.background = sw ? 'transparent' : 'var(--primary)';
+            pmBtn.style.color = sw ? 'var(--text-light)' : '#fff';
+        }
+        const pSet = document.getElementById('pomodoroSettings');
+        if (pSet) pSet.classList.toggle('hidden', focusTimer.mode !== 'pomodoro');
+    }
+
+    function focusWeekStartStr() {
+        const d = new Date();
+        const day = d.getDay();
+        const diff = day === 0 ? 6 : day - 1; // Monday start
+        d.setDate(d.getDate() - diff);
+        return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+    }
+
+    function focusStats() {
+        const logs = getFocusLogs();
+        const today = state.todayStr || getToday();
+        const weekStart = focusWeekStartStr();
+        let todaySec = 0, weekSec = 0, totalSec = 0, todayCount = 0;
+        logs.forEach(l => {
+            const s = l.durationSec || 0;
+            totalSec += s;
+            if (l.date === today) { todaySec += s; todayCount++; }
+            if (l.date >= weekStart) weekSec += s;
+        });
+        return { todaySec, weekSec, totalSec, todayCount, logs };
+    }
+
+    function renderStatsFocusToday() {
+        const el = document.getElementById('statsFocusToday');
+        if (el) el.textContent = formatSecHuman(focusStats().todaySec);
+    }
+
+    function renderFocusPage() {
+        const st = focusStats();
+        const tToday = document.getElementById('focusTodaySec');
+        const tWeek = document.getElementById('focusWeekSec');
+        const tTotal = document.getElementById('focusTotalSec');
+        const tCount = document.getElementById('focusTodayCount');
+        if (tToday) tToday.textContent = formatSecHuman(st.todaySec);
+        if (tWeek) tWeek.textContent = formatSecHuman(st.weekSec);
+        if (tTotal) tTotal.textContent = formatSecHuman(st.totalSec);
+        if (tCount) tCount.textContent = st.todayCount;
+
+        const list = document.getElementById('focusLogList');
+        const empty = document.getElementById('focusLogEmpty');
+        if (!list) return;
+
+        const recent = st.logs.slice(-10).reverse();
+        if (recent.length === 0) {
+            list.innerHTML = '';
+            if (empty) empty.classList.remove('hidden');
+        } else {
+            if (empty) empty.classList.add('hidden');
+            list.innerHTML = recent.map(l => {
+                const modeLabel = l.mode === 'pomodoro' ? '🍅 番茄' : '⏱ 正计时';
+                const d = (l.date || '').slice(5).replace('-', '/');
+                return '<li class="word-item" style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;margin:4px 0;border-radius:12px;background:linear-gradient(135deg,#f8f9fa 0%,#eef2f7 100%);border-bottom:none;">' +
+                    '<div><span style="font-size:13px;font-weight:600;color:var(--text);">' + d + '</span>' +
+                    '<div style="font-size:12px;color:var(--text-light);margin-top:2px;">' + modeLabel + '</div></div>' +
+                    '<span style="font-family:Consolas,monospace;font-size:14px;font-weight:700;color:var(--primary-dark);">' + formatSecHuman(l.durationSec || 0) + '</span>' +
+                    '</li>';
+            }).join('');
+        }
+        focusRender();
+    }
+
+    function clearFocusData() {
+        localStorage.removeItem(FOCUS_LOG_KEY);
+        localStorage.removeItem(FOCUS_RUNNING_KEY);
+        focusTimer.running = false;
+        focusTimer.elapsedBase = 0;
+        focusTimer.startedAt = 0;
+        focusTimer.currentStartTs = 0;
+        focusStopInterval();
     }
 
     function getLevel(level) {
@@ -970,7 +1402,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         document.querySelectorAll('[data-tab]').forEach(el => el.classList.remove('active'));
         document.querySelector(`[data-tab="${tab}"]`)?.classList.add('active');
 
-        ['review','add','stats','wrong','settings'].forEach(t => {
+        ['review','add','focus','stats','wrong','settings'].forEach(t => {
             document.getElementById('tab-' + t).classList.toggle('hidden', t !== tab);
         });
 
@@ -983,6 +1415,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         }
         if (tab === 'stats') renderStats();
         if (tab === 'wrong') renderWrongWords();
+        if (tab === 'focus') renderFocusPage();
     }
 
     function autoFillWord() {
@@ -1133,11 +1566,28 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         const newDue = due.filter(w => w.lastReviewDate !== state.todayStr);
         const limit = state.dailyLimit;
 
-        let pool = shuffle(newDue).slice(0, limit);
+        const priorityIds = getYesterdayPriorityWordIds();
+        const priorityIdSet = {};
+        priorityIds.forEach(id => { priorityIdSet[id] = true; });
+
+        const priorityWords = [];
+        const prioritySeen = {};
+        priorityIds.forEach(id => {
+            const w = newDue.find(x => x.id === id);
+            if (w && !prioritySeen[id]) {
+                prioritySeen[id] = true;
+                priorityWords.push(w);
+            }
+        });
+
+        const rest = newDue.filter(w => !priorityIdSet[w.id]);
+        let pool = priorityWords.concat(shuffle(rest).slice(0, limit));
 
         state.reviewQueue = pool;
         state.reviewIndex = 0;
         state.currentAnswerShown = false;
+        state.priorityCount = priorityWords.length;
+        state.priorityIdSet = priorityIdSet;
 
         const welcome = document.getElementById('reviewWelcome');
         const card = document.getElementById('reviewCard');
@@ -1156,6 +1606,10 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
             welcome.classList.add('hidden');
             empty.classList.add('hidden');
             card.classList.remove('hidden');
+            if (priorityWords.length > 0) {
+                document.getElementById('welcomeText').textContent =
+                    '今日 ' + pool.length + ' 个待复习，其中 ' + priorityWords.length + ' 个昨日待巩固将优先出现';
+            }
             showCurrentWord();
         }
 
@@ -1174,6 +1628,11 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         document.getElementById('wordDisplay').className = 'word' + (w.word.length > 12 ? ' word-small' : '');
         document.getElementById('phoneticDisplay').textContent = w.phonetic || '';
         document.getElementById('posDisplay').textContent = w.pos || '';
+
+        const badge = document.getElementById('priorityBadge');
+        if (badge) {
+            badge.classList.toggle('hidden', !(state.priorityIdSet && state.priorityIdSet[w.id]));
+        }
 
         document.getElementById('answerSection').classList.add('hidden');
         document.getElementById('translationDisplay').textContent = '';
@@ -1373,6 +1832,7 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
         });
 
         renderStreakBar();
+        renderStatsFocusToday();
     }
 
     function renderLevelChart() {
@@ -1777,11 +2237,12 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
     }
 
     function clearAllData() {
-        if (!confirm('⚠️ 确定清空所有单词数据和打卡记录？此操作不可恢复！')) return;
+        if (!confirm('⚠️ 确定清空所有单词、打卡和专注记录？此操作不可恢复！')) return;
         if (!confirm('再次确认：真的要清空吗？')) return;
         state.words = [];
         localStorage.removeItem(STORAGE_KEY);
         localStorage.removeItem(CHECKIN_KEY);
+        clearFocusData();
         saveWords();
         renderStats();
         updateDailyStats();
@@ -2015,6 +2476,9 @@ eloquent | 雄辩的 | His speech was eloquent. | 他的演讲很雄辩。" rows
 
         updateDailyStats();
         prepareReview();
+        focusRestore();
+        focusRender();
+        renderStatsFocusToday();
 
         if (state.reviewQueue.length > 0) {
             document.getElementById('reviewWelcome').classList.remove('hidden');
