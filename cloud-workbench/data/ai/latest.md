@@ -1,22 +1,32 @@
-# AI 人工智能 日报 - 2026-11-20
+# AI 人工智能 日报 - 2026-11-21
 
-> 自动生成于 2026-11-20 04:31
+> 自动生成于 2026-11-21 04:25
 
-## 今日热点（共 3 条）
+## 今日热点（共 5 条）
 
-### 1. Gemini 4 Neon is the new #1 on the Models Engineering Index (6.0/10)
+### 1. Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf] (8.0/10)
 
-**原文**: [Gemini 4 Neon is the new #1 on the Models Engineering Index](https://git-aarvin.github.io/mei/)
+**原文**: [Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf]](https://alpo.ge/remark.pdf)
 **来源**: Hacker News
 
-### 2. The 98% Slot Machine: How Paid Advertising Became an Extraction Tax (6.0/10)
+### 2. Restricting AI agents in mobile operating systems platforms from capturing data (7.0/10)
 
-**原文**: [The 98% Slot Machine: How Paid Advertising Became an Extraction Tax](https://globalcommercegraph.com/writing/the-ninety-eight-percent-slot-machine)
+**原文**: [Restricting AI agents in mobile operating systems platforms from capturing data](https://signal.org/blog/protecting-your-privacy/)
 **来源**: Hacker News
 
-### 3. An Oregon library ditched Dewey Decimal and got people excited about books again (6.0/10)
+### 3. NINLIVE: The Nine Inch Nails live archive (6.0/10)
 
-**原文**: [An Oregon library ditched Dewey Decimal and got people excited about books again](https://www.fastcompany.com/91597520/oregon-library-ditched-dewey-decimal-wayfinding-system)
+**原文**: [NINLIVE: The Nine Inch Nails live archive](https://ninlive.com/)
+**来源**: Hacker News
+
+### 4. Language Models Can Rewrite Their Own Weights (6.0/10)
+
+**原文**: [Language Models Can Rewrite Their Own Weights](https://arxiv.org/abs/2611.21885)
+**来源**: Hacker News
+
+### 5. Show HN: I made an audio-to-MIDI model 60x more efficient (6.0/10)
+
+**原文**: [Show HN: I made an audio-to-MIDI model 60x more efficient](https://kobi.music/research/dettato)
 **来源**: Hacker News
 
 ---

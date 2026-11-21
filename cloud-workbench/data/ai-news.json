@@ -1,7 +1,57 @@
 {
-  "updated": "2026-11-20",
-  "count": 482,
+  "updated": "2026-11-21",
+  "count": 487,
   "items": [
+    {
+      "title": "Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf]",
+      "url": "https://alpo.ge/remark.pdf",
+      "source": "Hacker News",
+      "score": 2445,
+      "text": "Related: <i>Hurried Announcement: Alessandro Masullo GRH</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50579568\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50579568</a>",
+      "ai_score": 8.0,
+      "date": "2026-11-21",
+      "topic": "ai"
+    },
+    {
+      "title": "Restricting AI agents in mobile operating systems platforms from capturing data",
+      "url": "https://signal.org/blog/protecting-your-privacy/",
+      "source": "Hacker News",
+      "score": 528,
+      "text": "",
+      "ai_score": 7.0,
+      "date": "2026-11-21",
+      "topic": "ai"
+    },
+    {
+      "title": "NINLIVE: The Nine Inch Nails live archive",
+      "url": "https://ninlive.com/",
+      "source": "Hacker News",
+      "score": 168,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-21",
+      "topic": "ai"
+    },
+    {
+      "title": "Language Models Can Rewrite Their Own Weights",
+      "url": "https://arxiv.org/abs/2611.21885",
+      "source": "Hacker News",
+      "score": 361,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-21",
+      "topic": "ai"
+    },
+    {
+      "title": "Show HN: I made an audio-to-MIDI model 60x more efficient",
+      "url": "https://kobi.music/research/dettato",
+      "source": "Hacker News",
+      "score": 256,
+      "text": "I released dettato, my open weight audio to midi transcription model. It beats muscriptor 1.3b on every set and is roughly 60x smaller, without training on copyrighted recordings. Feel free to ask questions",
+      "ai_score": 6.0,
+      "date": "2026-11-21",
+      "topic": "ai"
+    },
     {
       "title": "Gemini 4 Neon is the new #1 on the Models Engineering Index",
       "url": "https://git-aarvin.github.io/mei/",
