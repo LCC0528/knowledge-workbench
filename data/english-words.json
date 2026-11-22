@@ -2565,8 +2565,8 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-30",
-    "level": 4,
-    "nextReviewDate": "2026-12-07",
+    "level": 5,
+    "nextReviewDate": "2026-12-22",
     "lastReviewDate": "2026-11-22",
     "phonetic": ""
   },
@@ -4468,9 +4468,9 @@
     "example": "You must notify the bank immediately if you lose your credit card.",
     "exampleTranslation": "如果你的信用卡丢失了，你必须立即通知银行。",
     "createdDate": "2026-09-17",
-    "level": 0,
-    "nextReviewDate": "2026-09-17",
-    "lastReviewDate": null,
+    "level": 1,
+    "nextReviewDate": "2026-11-23",
+    "lastReviewDate": "2026-11-22",
     "phonetic": ""
   },
   {
