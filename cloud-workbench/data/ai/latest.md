@@ -1,32 +1,17 @@
-# AI 人工智能 日报 - 2026-11-21
+# AI 人工智能 日报 - 2026-11-22
 
-> 自动生成于 2026-11-21 04:25
+> 自动生成于 2026-11-22 03:40
 
-## 今日热点（共 5 条）
+## 今日热点（共 2 条）
 
-### 1. Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf] (8.0/10)
+### 1. Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades' (7.0/10)
 
-**原文**: [Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf]](https://alpo.ge/remark.pdf)
+**原文**: [Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'](https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib)
 **来源**: Hacker News
 
-### 2. Restricting AI agents in mobile operating systems platforms from capturing data (7.0/10)
+### 2. LLMs can read and write executables byte by byte from a hex dump (6.0/10)
 
-**原文**: [Restricting AI agents in mobile operating systems platforms from capturing data](https://signal.org/blog/protecting-your-privacy/)
-**来源**: Hacker News
-
-### 3. NINLIVE: The Nine Inch Nails live archive (6.0/10)
-
-**原文**: [NINLIVE: The Nine Inch Nails live archive](https://ninlive.com/)
-**来源**: Hacker News
-
-### 4. Language Models Can Rewrite Their Own Weights (6.0/10)
-
-**原文**: [Language Models Can Rewrite Their Own Weights](https://arxiv.org/abs/2611.21885)
-**来源**: Hacker News
-
-### 5. Show HN: I made an audio-to-MIDI model 60x more efficient (6.0/10)
-
-**原文**: [Show HN: I made an audio-to-MIDI model 60x more efficient](https://kobi.music/research/dettato)
+**原文**: [LLMs can read and write executables byte by byte from a hex dump](https://sgiannopoulos.github.io/blog/machine-code-programming/)
 **来源**: Hacker News
 
 ---
