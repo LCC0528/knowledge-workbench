@@ -1073,9 +1073,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 4,
-    "nextReviewDate": "2026-12-05",
-    "lastReviewDate": "2026-11-20"
+    "level": 5,
+    "nextReviewDate": "2026-12-22",
+    "lastReviewDate": "2026-11-22"
   },
   {
     "id": 1785328044729,
@@ -1749,9 +1749,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-04",
-    "level": 1,
-    "nextReviewDate": "2026-10-07",
-    "lastReviewDate": "2026-10-06",
+    "level": 2,
+    "nextReviewDate": "2026-11-25",
+    "lastReviewDate": "2026-11-22",
     "phonetic": ""
   },
   {
@@ -2253,9 +2253,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-12",
-    "level": 3,
-    "nextReviewDate": "2026-10-09",
-    "lastReviewDate": "2026-10-02",
+    "level": 4,
+    "nextReviewDate": "2026-12-07",
+    "lastReviewDate": "2026-11-22",
     "phonetic": ""
   },
   {
@@ -3976,8 +3976,8 @@
     "example": "Many parents disapprove of their children playing video games for too long.",
     "exampleTranslation": "许多家长不赞成他们的孩子长时间玩电子游戏。",
     "createdDate": "2026-09-17",
-    "level": 1,
-    "nextReviewDate": "2026-11-23",
+    "level": 2,
+    "nextReviewDate": "2026-11-25",
     "lastReviewDate": "2026-11-22",
     "phonetic": ""
   },
@@ -4480,9 +4480,9 @@
     "example": "You will receive a notification once your application has been approved.",
     "exampleTranslation": "一旦您的申请获得批准，您将收到通知。",
     "createdDate": "2026-09-17",
-    "level": 0,
-    "nextReviewDate": "2026-09-17",
-    "lastReviewDate": null,
+    "level": 1,
+    "nextReviewDate": "2026-11-23",
+    "lastReviewDate": "2026-11-22",
     "phonetic": ""
   },
   {
