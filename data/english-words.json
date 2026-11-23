@@ -633,9 +633,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 1,
-    "nextReviewDate": "2026-11-21",
-    "lastReviewDate": "2026-11-20"
+    "level": 2,
+    "nextReviewDate": "2026-11-26",
+    "lastReviewDate": "2026-11-23"
   },
   {
     "id": 1785328044681,
@@ -754,9 +754,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 4,
-    "nextReviewDate": "2026-10-17",
-    "lastReviewDate": "2026-10-02"
+    "level": 5,
+    "nextReviewDate": "2026-12-23",
+    "lastReviewDate": "2026-11-23"
   },
   {
     "id": 1785328044694,
@@ -2577,9 +2577,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-30",
-    "level": 3,
-    "nextReviewDate": "2026-10-10",
-    "lastReviewDate": "2026-10-03",
+    "level": 4,
+    "nextReviewDate": "2026-12-08",
+    "lastReviewDate": "2026-11-23",
     "phonetic": ""
   },
   {
@@ -3081,9 +3081,9 @@
     "example": "He was transferred to another department.",
     "exampleTranslation": "他被调到了另一个部门。",
     "createdDate": "2026-09-15",
-    "level": 2,
-    "nextReviewDate": "2026-11-09",
-    "lastReviewDate": "2026-11-06",
+    "level": 3,
+    "nextReviewDate": "2026-11-30",
+    "lastReviewDate": "2026-11-23",
     "phonetic": ""
   },
   {
@@ -4348,9 +4348,9 @@
     "example": "The formulation of a new strategy requires careful consideration.",
     "exampleTranslation": "制定新战略需要仔细考虑。",
     "createdDate": "2026-09-17",
-    "level": 0,
-    "nextReviewDate": "2026-09-25",
-    "lastReviewDate": "2026-09-24",
+    "level": 1,
+    "nextReviewDate": "2026-11-24",
+    "lastReviewDate": "2026-11-23",
     "phonetic": ""
   },
   {
