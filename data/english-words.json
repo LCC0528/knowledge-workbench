@@ -1364,9 +1364,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-08-02",
-    "level": 0,
-    "nextReviewDate": "2026-10-03",
-    "lastReviewDate": "2026-10-02",
+    "level": 1,
+    "nextReviewDate": "2026-11-24",
+    "lastReviewDate": "2026-11-23",
     "phonetic": "",
     "pos": ""
   },
@@ -4216,9 +4216,9 @@
     "example": "The strict rules ensure the uniformity of the products.",
     "exampleTranslation": "严格的规则确保了产品的一致性。",
     "createdDate": "2026-09-17",
-    "level": 1,
-    "nextReviewDate": "2026-09-21",
-    "lastReviewDate": "2026-09-20",
+    "level": 2,
+    "nextReviewDate": "2026-11-26",
+    "lastReviewDate": "2026-11-23",
     "phonetic": ""
   },
   {
@@ -4552,9 +4552,9 @@
     "example": "The local community has organized a charity event to help the poor.",
     "exampleTranslation": "当地社区组织了一场慈善活动来帮助穷人。(词根：commun (共同) / 构词：com- (共同) + mun (服务) + -ity (名词后缀) → 社区；团体)",
     "createdDate": "2026-09-20",
-    "level": 3,
-    "nextReviewDate": "2026-10-11",
-    "lastReviewDate": "2026-10-04",
+    "level": 4,
+    "nextReviewDate": "2026-12-08",
+    "lastReviewDate": "2026-11-23",
     "phonetic": ""
   },
   {
@@ -5788,9 +5788,9 @@
     "example": "The new machine is much more efficient and saves a lot of time.",
     "exampleTranslation": "这台新机器效率高得多，节省了大量时间。(词根：machin (机器) / 构词：machin (机器) + -e → 机器)",
     "createdDate": "2026-10-05",
-    "level": 0,
-    "nextReviewDate": "2026-10-05",
-    "lastReviewDate": null,
+    "level": 1,
+    "nextReviewDate": "2026-11-24",
+    "lastReviewDate": "2026-11-23",
     "phonetic": ""
   },
   {
