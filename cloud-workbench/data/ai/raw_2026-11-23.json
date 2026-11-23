@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-23",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+      "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+      "source": "Hacker News",
+      "score": 329,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Show HN: I built a game where you are an LLM's subagent",
+      "url": "https://github.com/gulivan/worker755",
+      "source": "Hacker News",
+      "score": 287,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

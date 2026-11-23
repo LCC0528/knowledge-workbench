@@ -1,17 +1,17 @@
-# AI 人工智能 日报 - 2026-11-22
+# AI 人工智能 日报 - 2026-11-23
 
-> 自动生成于 2026-11-22 03:40
+> 自动生成于 2026-11-23 04:14
 
 ## 今日热点（共 2 条）
 
-### 1. Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades' (7.0/10)
+### 1. A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth (6.0/10)
 
-**原文**: [Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'](https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib)
+**原文**: [A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth](https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth)
 **来源**: Hacker News
 
-### 2. LLMs can read and write executables byte by byte from a hex dump (6.0/10)
+### 2. Show HN: I built a game where you are an LLM's subagent (6.0/10)
 
-**原文**: [LLMs can read and write executables byte by byte from a hex dump](https://sgiannopoulos.github.io/blog/machine-code-programming/)
+**原文**: [Show HN: I built a game where you are an LLM's subagent](https://github.com/gulivan/worker755)
 **来源**: Hacker News
 
 ---
