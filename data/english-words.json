@@ -50,9 +50,9 @@
     "example": "",
     "exampleTranslation": "",
     "createdDate": "2026-07-29",
-    "level": 2,
-    "nextReviewDate": "2026-10-12",
-    "lastReviewDate": "2026-10-09"
+    "level": 3,
+    "nextReviewDate": "2026-12-01",
+    "lastReviewDate": "2026-11-24"
   },
   {
     "id": 1785328044626,
@@ -4468,9 +4468,9 @@
     "example": "You must notify the bank immediately if you lose your credit card.",
     "exampleTranslation": "如果你的信用卡丢失了，你必须立即通知银行。",
     "createdDate": "2026-09-17",
-    "level": 1,
-    "nextReviewDate": "2026-11-23",
-    "lastReviewDate": "2026-11-22",
+    "level": 2,
+    "nextReviewDate": "2026-11-26",
+    "lastReviewDate": "2026-11-23",
     "phonetic": ""
   },
   {
@@ -4480,9 +4480,9 @@
     "example": "You will receive a notification once your application has been approved.",
     "exampleTranslation": "一旦您的申请获得批准，您将收到通知。",
     "createdDate": "2026-09-17",
-    "level": 1,
-    "nextReviewDate": "2026-11-23",
-    "lastReviewDate": "2026-11-22",
+    "level": 2,
+    "nextReviewDate": "2026-11-26",
+    "lastReviewDate": "2026-11-23",
     "phonetic": ""
   },
   {
