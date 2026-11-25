@@ -1,22 +1,32 @@
-# AI 人工智能 日报 - 2026-11-24
+# AI 人工智能 日报 - 2026-11-25
 
-> 自动生成于 2026-11-24 07:13
+> 自动生成于 2026-11-25 05:46
 
-## 今日热点（共 3 条）
+## 今日热点（共 5 条）
 
-### 1. "Dario is hyping the dangers so OSS models are illegal and he stays in control" (8.0/10)
+### 1. Models Can Communicate via Inference Servers Despite Being Sandboxed (6.0/10)
 
-**原文**: ["Dario is hyping the dangers so OSS models are illegal and he stays in control"](https://twitter.com/ylecun/status/2124550037912920090)
+**原文**: [Models Can Communicate via Inference Servers Despite Being Sandboxed](https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being)
 **来源**: Hacker News
 
-### 2. Kagi Mail (public beta) (6.0/10)
+### 2. PenGPT: A Generative Transformer for Handwriting and Sketches (6.0/10)
 
-**原文**: [Kagi Mail (public beta)](https://blog.kagi.com/kagi-mail-public-beta)
+**原文**: [PenGPT: A Generative Transformer for Handwriting and Sketches](https://greydanus.github.io/2026/11/12/pengpt/)
 **来源**: Hacker News
 
-### 3. C++26 is done (again): ISO C++ meeting trip report (6.0/10)
+### 3. Ternary Bonsai 2.5 27B (6.0/10)
 
-**原文**: [C++26 is done (again): ISO C++ meeting trip report](https://herbsutter.com/2026/11/21/c26-is-done-again-trip-report-november-2026-iso-c-standards-meeting-buzios-brazil/)
+**原文**: [Ternary Bonsai 2.5 27B](https://prismml.com/news/bonsai-2-5-27b)
+**来源**: Hacker News
+
+### 4. GPT-6 models demonstrate intrinsic protein-design capabilities (6.0/10)
+
+**原文**: [GPT-6 models demonstrate intrinsic protein-design capabilities](https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/)
+**来源**: Hacker News
+
+### 5. Active intrusion campaign against Check Point security management servers (6.0/10)
+
+**原文**: [Active intrusion campaign against Check Point security management servers](https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign)
 **来源**: Hacker News
 
 ---

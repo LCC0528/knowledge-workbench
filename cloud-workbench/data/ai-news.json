@@ -1,7 +1,57 @@
 {
-  "updated": "2026-11-24",
-  "count": 494,
+  "updated": "2026-11-25",
+  "count": 499,
   "items": [
+    {
+      "title": "Models Can Communicate via Inference Servers Despite Being Sandboxed",
+      "url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being",
+      "source": "Hacker News",
+      "score": 104,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-25",
+      "topic": "ai"
+    },
+    {
+      "title": "PenGPT: A Generative Transformer for Handwriting and Sketches",
+      "url": "https://greydanus.github.io/2026/11/12/pengpt/",
+      "source": "Hacker News",
+      "score": 154,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-25",
+      "topic": "ai"
+    },
+    {
+      "title": "Ternary Bonsai 2.5 27B",
+      "url": "https://prismml.com/news/bonsai-2-5-27b",
+      "source": "Hacker News",
+      "score": 395,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-25",
+      "topic": "ai"
+    },
+    {
+      "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+      "source": "Hacker News",
+      "score": 228,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-25",
+      "topic": "ai"
+    },
+    {
+      "title": "Active intrusion campaign against Check Point security management servers",
+      "url": "https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign",
+      "source": "Hacker News",
+      "score": 275,
+      "text": "",
+      "ai_score": 6.0,
+      "date": "2026-11-25",
+      "topic": "ai"
+    },
     {
       "title": "\"Dario is hyping the dangers so OSS models are illegal and he stays in control\"",
       "url": "https://twitter.com/ylecun/status/2124550037912920090",
