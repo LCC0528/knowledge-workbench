@@ -1,32 +1,27 @@
-# AI 人工智能 日报 - 2026-11-25
+# AI 人工智能 日报 - 2026-11-26
 
-> 自动生成于 2026-11-25 05:46
+> 自动生成于 2026-11-26 05:37
 
-## 今日热点（共 5 条）
+## 今日热点（共 4 条）
 
-### 1. Models Can Communicate via Inference Servers Despite Being Sandboxed (6.0/10)
+### 1. Tell HN: Lots of Ask HNs again (6.0/10)
 
-**原文**: [Models Can Communicate via Inference Servers Despite Being Sandboxed](https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being)
+**原文**: [Tell HN: Lots of Ask HNs again](https://news.ycombinator.com/item?id=50649864)
 **来源**: Hacker News
 
-### 2. PenGPT: A Generative Transformer for Handwriting and Sketches (6.0/10)
+### 2. GPT-6.2 Astra is the first model to beat Googlers' code golf records (6.0/10)
 
-**原文**: [PenGPT: A Generative Transformer for Handwriting and Sketches](https://greydanus.github.io/2026/11/12/pengpt/)
+**原文**: [GPT-6.2 Astra is the first model to beat Googlers' code golf records](https://bjin.github.io/go-codegolf-benchmark/#leaderboard)
 **来源**: Hacker News
 
-### 3. Ternary Bonsai 2.5 27B (6.0/10)
+### 3. The New York Times warns photographers not to update Photoshop over AI features (6.0/10)
 
-**原文**: [Ternary Bonsai 2.5 27B](https://prismml.com/news/bonsai-2-5-27b)
+**原文**: [The New York Times warns photographers not to update Photoshop over AI features](https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features)
 **来源**: Hacker News
 
-### 4. GPT-6 models demonstrate intrinsic protein-design capabilities (6.0/10)
+### 4. Porting Rockbox to an undocumented $9 AliExpress 'YP3' MP3 player with LLMs (6.0/10)
 
-**原文**: [GPT-6 models demonstrate intrinsic protein-design capabilities](https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/)
-**来源**: Hacker News
-
-### 5. Active intrusion campaign against Check Point security management servers (6.0/10)
-
-**原文**: [Active intrusion campaign against Check Point security management servers](https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign)
+**原文**: [Porting Rockbox to an undocumented $9 AliExpress 'YP3' MP3 player with LLMs](https://jayd.ml/2026/11/14/rockbox-on-yp3.html)
 **来源**: Hacker News
 
 ---
