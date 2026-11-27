@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-27",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "AI made self-hosting fun again",
+      "url": "https://janlukas.blog/posts/ai-self-hosting",
+      "source": "Hacker News",
+      "score": 465,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+      "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+      "source": "Hacker News",
+      "score": 297,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "The USAID Files",
+      "url": "https://reclaimthenet.org/usaid-files",
+      "source": "Hacker News",
+      "score": 200,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "An algebraic quantization of gravity from the null cone",
+      "url": "https://arxiv.org/abs/2611.34924",
+      "source": "Hacker News",
+      "score": 226,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

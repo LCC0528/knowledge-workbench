@@ -1,27 +1,27 @@
-# AI 人工智能 日报 - 2026-11-26
+# AI 人工智能 日报 - 2026-11-27
 
-> 自动生成于 2026-11-26 05:37
+> 自动生成于 2026-11-27 05:30
 
 ## 今日热点（共 4 条）
 
-### 1. Tell HN: Lots of Ask HNs again (6.0/10)
+### 1. AI made self-hosting fun again (6.0/10)
 
-**原文**: [Tell HN: Lots of Ask HNs again](https://news.ycombinator.com/item?id=50649864)
+**原文**: [AI made self-hosting fun again](https://janlukas.blog/posts/ai-self-hosting)
 **来源**: Hacker News
 
-### 2. GPT-6.2 Astra is the first model to beat Googlers' code golf records (6.0/10)
+### 2. Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email (6.0/10)
 
-**原文**: [GPT-6.2 Astra is the first model to beat Googlers' code golf records](https://bjin.github.io/go-codegolf-benchmark/#leaderboard)
+**原文**: [Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email](https://techstackups.com/articles/google-workspace-ai-agents-mcp/)
 **来源**: Hacker News
 
-### 3. The New York Times warns photographers not to update Photoshop over AI features (6.0/10)
+### 3. The USAID Files (6.0/10)
 
-**原文**: [The New York Times warns photographers not to update Photoshop over AI features](https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features)
+**原文**: [The USAID Files](https://reclaimthenet.org/usaid-files)
 **来源**: Hacker News
 
-### 4. Porting Rockbox to an undocumented $9 AliExpress 'YP3' MP3 player with LLMs (6.0/10)
+### 4. An algebraic quantization of gravity from the null cone (6.0/10)
 
-**原文**: [Porting Rockbox to an undocumented $9 AliExpress 'YP3' MP3 player with LLMs](https://jayd.ml/2026/11/14/rockbox-on-yp3.html)
+**原文**: [An algebraic quantization of gravity from the null cone](https://arxiv.org/abs/2611.34924)
 **来源**: Hacker News
 
 ---
