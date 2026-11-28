@@ -6295,7 +6295,7 @@
     "level": 0,
     "nextReviewDate": "2026-11-28",
     "lastReviewDate": null,
-    "phonetic": ""
+    "phonetic": "/daɪˈlɛmə/"
   },
   {
     "id": 1795846204704,
@@ -6307,7 +6307,7 @@
     "level": 0,
     "nextReviewDate": "2026-11-28",
     "lastReviewDate": null,
-    "phonetic": ""
+    "phonetic": "/dɪˈfɪn.ɪt.ɪv/"
   },
   {
     "id": 1795846204706,
@@ -6319,7 +6319,7 @@
     "level": 0,
     "nextReviewDate": "2026-11-28",
     "lastReviewDate": null,
-    "phonetic": ""
+    "phonetic": "/njuːˈtɹɪʃəs/"
   },
   {
     "id": 1795846204707,
@@ -6331,7 +6331,7 @@
     "level": 0,
     "nextReviewDate": "2026-11-28",
     "lastReviewDate": null,
-    "phonetic": ""
+    "phonetic": "/pɚˈspɛktɪv/"
   },
   {
     "id": 1795846204709,
@@ -6343,7 +6343,7 @@
     "level": 0,
     "nextReviewDate": "2026-11-28",
     "lastReviewDate": null,
-    "phonetic": ""
+    "phonetic": "/kənˈvɛnʃənl/"
   },
   {
     "id": 1795846204711,
@@ -6355,7 +6355,7 @@
     "level": 0,
     "nextReviewDate": "2026-11-28",
     "lastReviewDate": null,
-    "phonetic": ""
+    "phonetic": "/kənˌtæmɪˈneɪʃən/"
   },
   {
     "id": 1795846204713,
@@ -6367,7 +6367,7 @@
     "level": 0,
     "nextReviewDate": "2026-11-28",
     "lastReviewDate": null,
-    "phonetic": ""
+    "phonetic": "/kənˈsɪdəɹəbli/"
   },
   {
     "id": 1795846204714,
@@ -6379,7 +6379,7 @@
     "level": 0,
     "nextReviewDate": "2026-11-28",
     "lastReviewDate": null,
-    "phonetic": ""
+    "phonetic": "/ˈæd.və.keɪt/"
   },
   {
     "id": 1795846204717,
@@ -6387,6 +6387,18 @@
     "translation": "n. 效率；效能 (名词，复数 efficiencies) 【易混淆词：effectiveness (有效性), productivity (生产力)】【派生词：efficient (adj. 高效的), efficiently (adv. 高效地)】【固定搭配：energy efficiency (能源效率), improve efficiency (提高效率)】",
     "example": "The new software greatly improves the efficiency of our daily work.",
     "exampleTranslation": "新软件大大提高了我们日常工作的效率。 (词根：fic/fac (做) / 构词：ef- (出) + fic (做) + -iency (名词后缀) → 做出来的结果 → 效率)",
+    "createdDate": "2026-11-28",
+    "level": 0,
+    "nextReviewDate": "2026-11-28",
+    "lastReviewDate": null,
+    "phonetic": "/ɪˈfɪʃn̩si/"
+  },
+  {
+    "id": 1795847014113,
+    "word": "determined",
+    "translation": "adj. 坚决的；有决心的；已确定的 (形容词，无变形；也是determine的过去式/过去分词) 【易混淆词：resolute (坚决的), stubborn (固执的), decided (明确的)】【派生词：determine (v. 决定；决心), determination (n. 决心), determinedly (adv. 坚决地)】【固定搭配：be determined to do sth. (决心做某事), a determined effort (坚决的努力), be determined by (由...决定)】",
+    "example": "She was determined to finish the marathon, no matter how tired she felt.",
+    "exampleTranslation": "无论感觉多累，她都下定决心要完成这场马拉松。",
     "createdDate": "2026-11-28",
     "level": 0,
     "nextReviewDate": "2026-11-28",
