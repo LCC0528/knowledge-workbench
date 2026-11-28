@@ -6260,5 +6260,29 @@
     "nextReviewDate": "2026-10-08",
     "lastReviewDate": null,
     "phonetic": ""
+  },
+  {
+    "id": 1795837036618,
+    "word": "remain",
+    "translation": "v. 保持；仍然是；剩下；留待 (remain-remained-remained，通常不及物，无被动) 【易混淆词：stay (停留), continue (继续), persist (持续)】【派生词：remains (n. 剩余物；遗迹), remainder (n. 剩余部分), remaining (adj. 剩余的)】【固定搭配：remain unchanged (保持不变), remain silent (保持沉默), remain to be done (有待完成), it remains to be seen (尚待观察), remain in contact (保持联系)】",
+    "example": "Despite the difficulties, she remained calm and focused.",
+    "exampleTranslation": "尽管困难重重，她仍然保持冷静和专注。",
+    "createdDate": "2026-11-28",
+    "level": 0,
+    "nextReviewDate": "2026-11-28",
+    "lastReviewDate": null,
+    "phonetic": "/ɹɪˈmeɪn/"
+  },
+  {
+    "id": 1795837059263,
+    "word": "uncertain",
+    "translation": "adj. 不确定的；未知的；犹豫不决的 (形容词，无变形) 【易混淆词：unsure (不确定的), doubtful (怀疑的), hesitant (犹豫的)】【派生词：uncertainty (n. 不确定性), uncertainly (adv. 不确定地)】【固定搭配：be uncertain about (对...不确定), in no uncertain terms (毫不含糊地)】",
+    "example": "It is uncertain whether he will come to the party tomorrow.",
+    "exampleTranslation": "他明天是否会来参加聚会还不确定。",
+    "createdDate": "2026-11-28",
+    "level": 0,
+    "nextReviewDate": "2026-11-28",
+    "lastReviewDate": null,
+    "phonetic": "/ʌnˈsɜːtən/"
   }
 ]
