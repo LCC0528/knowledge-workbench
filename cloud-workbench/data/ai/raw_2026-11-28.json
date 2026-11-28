@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-28",
+  "topic": "ai",
+  "items": [
+    {
+      "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+      "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+      "source": "Hacker News",
+      "score": 241,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "GPT 6.2 Astra Solves a Historical Mystery",
+      "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
+      "source": "Hacker News",
+      "score": 378,
+      "text": "",
+      "ai_score": 6.0
+    },
+    {
+      "title": "Woman evicted after landlord's AI assistant told her she could delay rent",
+      "url": "https://drmahfouz.substack.com/p/woman-evicted-after-landlords-ai",
+      "source": "Hacker News",
+      "score": 119,
+      "text": "",
+      "ai_score": 6.0
+    }
+  ]
+}

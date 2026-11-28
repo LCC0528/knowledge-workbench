@@ -1,27 +1,22 @@
-# AI 人工智能 日报 - 2026-11-27
+# AI 人工智能 日报 - 2026-11-28
 
-> 自动生成于 2026-11-27 05:30
+> 自动生成于 2026-11-28 05:07
 
-## 今日热点（共 4 条）
+## 今日热点（共 3 条）
 
-### 1. AI made self-hosting fun again (6.0/10)
+### 1. Google's DeepCrossAttention achieves comparable model quality up to 3x faster (6.0/10)
 
-**原文**: [AI made self-hosting fun again](https://janlukas.blog/posts/ai-self-hosting)
+**原文**: [Google's DeepCrossAttention achieves comparable model quality up to 3x faster](https://research.google/blog/supercharging-transformer-residual-connections/)
 **来源**: Hacker News
 
-### 2. Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email (6.0/10)
+### 2. GPT 6.2 Astra Solves a Historical Mystery (6.0/10)
 
-**原文**: [Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email](https://techstackups.com/articles/google-workspace-ai-agents-mcp/)
+**原文**: [GPT 6.2 Astra Solves a Historical Mystery](https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical)
 **来源**: Hacker News
 
-### 3. The USAID Files (6.0/10)
+### 3. Woman evicted after landlord's AI assistant told her she could delay rent (6.0/10)
 
-**原文**: [The USAID Files](https://reclaimthenet.org/usaid-files)
-**来源**: Hacker News
-
-### 4. An algebraic quantization of gravity from the null cone (6.0/10)
-
-**原文**: [An algebraic quantization of gravity from the null cone](https://arxiv.org/abs/2611.34924)
+**原文**: [Woman evicted after landlord's AI assistant told her she could delay rent](https://drmahfouz.substack.com/p/woman-evicted-after-landlords-ai)
 **来源**: Hacker News
 
 ---
